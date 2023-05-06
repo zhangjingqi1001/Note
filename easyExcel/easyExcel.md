@@ -1,4 +1,4 @@
-# easyExcel
+# POI 与 easyExcel
 
 
 
@@ -386,7 +386,7 @@ class EasyExcelApplicationTests {
         FileInputStream fileInputStream = new FileInputStream("D:/明细表.xlsx");
 
 //      TODO 创建一个工作薄.Excel能操作的，此工作簿对象都能操作
-        Workbook workbook = new XSSFWorkbook(fileInputStream); // 03版本Excel
+        Workbook workbook = new XSSFWorkbook(fileInputStream); // 07版本Excel
 
 //      TODO 得到表
         Sheet sheet = workbook.getSheetAt(0);//可以通过名字获取表，也可以通过下标，下面这个形式就是通过下标
@@ -416,17 +416,214 @@ class EasyExcelApplicationTests {
 
 ## 4.3 难点 — 读取不同类型的数据
 
+```java
+ @Test
+    void testRead() throws IOException {
+//      TODO 获取文件流,读取工作簿
+        FileInputStream fileInputStream = new FileInputStream("D:/明细表.xls");
+
+//      TODO 创建一个工作薄.Excel能操作的，此工作簿对象都能操作
+        Workbook workbook = new HSSFWorkbook(fileInputStream); // 03版本Excel
+
+//      TODO 获取哪个页面
+        Sheet sheet = workbook.getSheetAt(0);
+
+//      TODO 获取标题内容
+        Row rowTitle = sheet.getRow(0);
+        if (rowTitle != null) {
+            int cellCount = rowTitle.getPhysicalNumberOfCells();  //表示这一行有多少个数据
+//          TODO 每个遍历每个单元格
+            for (int cellNum = 0; cellNum < cellCount; cellNum++) {
+                Cell cell = rowTitle.getCell(cellNum);
+                if (cell != null) {
+                    int cellType = cell.getCellType(); // 获取类型，方便下面判断
+                    String cellValue = cell.getStringCellValue();
+                    System.out.print(cellValue + "|");  //卡号|持卡人|手机号|消费日期|小票号|商品编号|商品条码|商品名称|商品单位|原价|销售价|销售数量|销售金额|优惠金额|是否上架|
+                }
+            }
+            System.out.println();
+        }
+
+//      TODO 获取表中的内容
+        int rowCount = sheet.getPhysicalNumberOfRows(); //   获取行的数量
+        for (int rowNum = 1; rowNum < rowCount; rowNum++) {  //第一行是标题，我们已经提取过了
+//          TODO 读取行
+            Row rowData = sheet.getRow(rowNum);
+
+            if (rowData != null) {
+//              TODO 读取列
+                int cellCount = rowTitle.getPhysicalNumberOfCells();  //表示这一行有多少个数据
+//              TODO 遍历每列单元格
+                for (int cellNum = 0; cellNum < cellCount; cellNum++) {
+                    System.out.print("[" + (rowNum + 1) + "-" + (cellNum + 1) + "]");
+                    Cell cell = rowData.getCell(cellNum);
+//                  TODO 匹配数据类型（就是这个地方麻烦）
+                    if (cell == null){
+                        continue;
+                    }
+                    int cellType = cell.getCellType();
+                    String cellValue = null;
+                    switch (cellType) {
+//                      1 字符串
+                        case HSSFCell.CELL_TYPE_STRING:
+                            System.out.print("[String]");
+                            cellValue = cell.getStringCellValue();
+                            break;
+//                      4 布尔
+                        case HSSFCell.CELL_TYPE_BOOLEAN:
+                            System.out.print("[BOOLEAN]");
+                            cellValue = String.valueOf(cell.getBooleanCellValue());
+                            break;
+//                      3 空
+                        case HSSFCell.CELL_TYPE_BLANK:
+                            System.out.print("[BLANK]");
+                            break;
+//                      0 数字(日期、普通数字)
+                        case HSSFCell.CELL_TYPE_NUMERIC:
+                            System.out.print("[NUMERIC]");
+                            if (HSSFDateUtil.isCellDateFormatted(cell)) {
+                                System.out.print("[日期]");
+                                Date date = cell.getDateCellValue();
+                                cellValue = new DateTime(date).toString();
+                            } else {
+//                              为什么转换成字符串？
+//                                不是日期格式，防止数字过长！
+                                System.out.print("[数字 -转换为字符串输出 ]");
+//                              这个地方比较特别，需要设置一下类型  转换成字符串
+                                cell.setCellType(HSSFCell.CELL_TYPE_STRING);
+                                cellValue = cell.toString();
+                            }
+                            break;
+//                      5 错误
+                        case HSSFCell.CELL_TYPE_ERROR:
+                            System.out.print("[ERROR - 数据类型错误]");
+                            break;
+                    }
+                    System.out.println(cellValue);
+                }
+                System.out.println();
+            }
+        }
+//      TODO 关闭流
+        fileInputStream.close();
+    }
+
+```
 
 
 
+# 五、 计算公式 - 了解
 
-# 五、 计算公式
+前提是知道哪个单元格是需要计算公式的
+
+![image-20230505230030825](https://picture-typora-zhangjingqi.oss-cn-beijing.aliyuncs.com/image-20230505230030825.png)
+
+
+
+```java
+   @Test
+    void sum() throws IOException {
+//      TODO 获取文件流,读取工作簿
+        FileInputStream fileInputStream = new FileInputStream("D:/公式.xls");
+
+//      TODO 创建一个工作薄.Excel能操作的，此工作簿对象都能操作
+        Workbook workbook = new HSSFWorkbook(fileInputStream); // 03版本Excel
+
+//      TODO 获取表
+        Sheet sheet = workbook.getSheetAt(0);
+
+//      TODO 获取行
+        Row row = sheet.getRow(4);
+
+//      TODO 获取列 - 单元格
+        Cell cell = row.getCell(0);
+
+//      TODO 拿到计算公式 eval
+        HSSFFormulaEvaluator hssfFormulaEvaluator = new HSSFFormulaEvaluator((HSSFWorkbook) workbook);
+
+//      TODO 输出单元格的内容
+//      判断类型
+        int cellType = cell.getCellType();
+//      如果cell单元格和计算公式无关，就不会执行下面的代码，也不会报错
+        switch (cellType){
+//          2 公式
+            case  Cell.CELL_TYPE_FORMULA:
+                String cellFormula = cell.getCellFormula();
+                System.out.println(cellFormula); //SUM(A2:A4)
+
+//              TODO 计算
+                CellValue evaluate = hssfFormulaEvaluator.evaluate(cell);
+                System.out.println(evaluate); //org.apache.poi.ss.usermodel.CellValue [600.0]
+                String format = evaluate.formatAsString();
+                System.out.println(format); // 600.0
+
+                break;
+        }
+    }
+```
 
 
 
 
 
 # 六、 EasyExcel 使用
+
+
+
+## 6.1 Maven
+
+这个左边下面还连带这POI的坐标，我们需要把之前导入POI相关坐标删除，防止依赖冲突。
+
+```xml
+<!--easyExcel-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>easyexcel</artifactId>
+            <version>2.2.0-beta2</version>
+        </dependency>
+```
+
+
+
+但是我用上面这个坐标有问题。我用的下面这个
+
+```xml
+<dependency>
+    <groupId>com.alibaba</groupId>
+    <artifactId>easyexcel</artifactId>
+    <version>3.2.1</version>
+</dependency>
+```
+
+
+
+
+
+## 6.2 创建标题类
+
+```java
+@Data
+public class TitleDemo {
+
+    @ExcelProperty("字符串标题")
+    private String string;
+
+    @ExcelProperty("日期标题")
+    private Date date;
+
+    @ExcelProperty("数字标题")
+    private Double doubleData;
+
+
+//  忽略这个字段
+    @ExcelIgnore
+    private String ignore;
+}
+```
+
+
+
+## 6.3  导出
 
 
 
