@@ -568,6 +568,12 @@ class EasyExcelApplicationTests {
 
 # 六、 EasyExcel 使用
 
+easyExcel 官网地址 ： https://github.com/alibaba/easyexcel
+
+
+
+详细帮助文档： https://easyexcel.opensource.alibaba.com/docs/current/
+
 
 
 ## 6.1 Maven
@@ -603,7 +609,7 @@ class EasyExcelApplicationTests {
 
 ```java
 @Data
-public class TitleDemo {
+public class DemoData {
 
     @ExcelProperty("字符串标题")
     private String string;
@@ -623,7 +629,142 @@ public class TitleDemo {
 
 
 
-## 6.3  导出
+## 6.3  导出 - 写出
+
+```java
+    @Test
+    void simpleWrite() {
+//      TODO  写法1
+        String fileName ="D:/" +"EasyTest.xlsx";   //生成到这个位置
+        // 这里 需要指定写用哪个class去读，然后写到第一个sheet，名字为模板 然后文件流会自动关闭
+        // 如果这里想使用03 则 传入excelType参数即可,这里没有使用03
+        // doWrite 里面添加写入数据
+//      write(fileName,格式类)， sheet(表名)，doWrite(数据)
+        EasyExcel.write(fileName, DemoData.class).sheet("模版").doWrite(data());
+//        EasyExcel.write(fileName, DemoData.class)
+//                .sheet("模板")
+//                .doWrite(() -> {
+//                    // 分页查询数据
+//                    return data();
+//                });
+    }
+    private List<DemoData> data() {
+        List<DemoData> list = ListUtils.newArrayList();
+        for (int i = 0; i < 10; i++) {
+            DemoData data = new DemoData();
+            data.setString("字符串" + i);
+            data.setDate(new Date());
+            data.setDoubleData(0.56);
+            list.add(data);
+        }
+        return list;
+    }
+```
+
+![image-20230506170553405](D:\project\睿策\picture\image-20230506170553405.png)
 
 
 
+
+
+## 6.4 读取
+
+读取逻辑在监听器的invoke逻辑里面
+
+
+
+```java
+@Test
+void simpleRead() {
+    String fileName = "D:/" +"EasyTest.xlsx";
+    // 这里 需要指定读用哪个class去读，然后读取第一个sheet 文件流会自动关闭
+    EasyExcel.read(fileName, DemoData.class, new DemoDataListener()).sheet().doRead();
+}
+```
+
+
+
+
+
+```java
+// 有个很重要的点 DemoDataListener 不能被spring管理，要每次读取excel都要new,然后里面用到spring可以构造方法传进去
+@Slf4j
+public class DemoDataListener implements ReadListener<DemoData> {
+
+    /**
+     * 每隔5条存储数据库，实际使用中可以100条，然后清理list ，方便内存回收
+     */
+    private static final int BATCH_COUNT = 100;
+    /**
+     * 缓存的数据
+     */
+    private List<DemoData> cachedDataList = ListUtils.newArrayListWithExpectedSize(BATCH_COUNT);
+    /**
+     * 假设这个是一个DAO，当然有业务逻辑这个也可以是一个service。当然如果不用存储这个对象没用。
+     */
+    private DemoDAO demoDAO;
+
+    public DemoDataListener() {
+        // 这里是demo，所以随便new一个。实际使用如果到了spring,请使用下面的有参构造函数
+        demoDAO = new DemoDAO();
+    }
+
+    /**
+     * 如果使用了spring,请使用这个构造方法。每次创建Listener的时候需要把spring管理的类传进来
+     *
+     * @param demoDAO
+     */
+    public DemoDataListener(DemoDAO demoDAO) {
+        this.demoDAO = demoDAO;
+    }
+
+    /**
+     * 这个每一条数据解析都会来调用
+     *
+     * @param data    one row value. Is is same as {@link AnalysisContext#readRowHolder()}
+     * @param context
+     */
+    @Override
+    public void invoke(DemoData data, AnalysisContext context) {
+        log.info("解析到一条数据:{}", JSON.toJSONString(data));
+        cachedDataList.add(data);
+        // 达到BATCH_COUNT了，需要去存储一次数据库，防止数据几万条数据在内存，容易OOM
+        if (cachedDataList.size() >= BATCH_COUNT) {
+            saveData();
+            // 存储完成清理 list
+            cachedDataList = ListUtils.newArrayListWithExpectedSize(BATCH_COUNT);
+        }
+    }
+
+    /**
+     * 所有数据解析完成了 都会来调用
+     *
+     * @param context
+     */
+    @Override
+    public void doAfterAllAnalysed(AnalysisContext context) {
+        // 这里也要保存数据，确保最后遗留的数据也存储到数据库
+        saveData();
+        log.info("所有数据解析完成！");
+    }
+
+    /**
+     * 加上存储数据库
+     */
+    private void saveData() {
+        log.info("{}条数据，开始存储数据库！", cachedDataList.size());
+        demoDAO.save(cachedDataList);
+        log.info("存储数据库成功！");
+    }
+}
+```
+
+
+
+```java
+public class DemoDAO {
+    public void save(List<DemoData> list) {
+        // 如果是mybatis,尽量别直接调用多次insert,自己写一个mapper里面新增一个方法batchInsert,所有数据一次性插入
+    }
+}
+```
