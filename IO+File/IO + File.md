@@ -523,6 +523,7 @@ public class FileReaderTest {
             fr = new FileReader("E:\\IDEA\\Java\\StudentTwo\\src\\IOTest\\JavaTest.txt");
             /*一次读入4个字符*/
             char[] chars = new char[4];
+            
             int readCount =0;
  
             while(  (readCount = fr.read(chars)) !=-1){
@@ -776,6 +777,612 @@ public class BufferedStreamDemo1 {
 
 
 
+#### 2.4.2.0 字符缓冲流细节
+
+底层自带长度8192的缓冲区提高性能，和字符流缓冲区是相同的。（**这个地方的字符缓冲区是8192大小的字符数组不是字节，我们之前缓冲区都是字节**）
+
+|            方法名称             |        说明        |
+| :-----------------------------: | :----------------: |
+| public BufferedReader(Reader r) | 把基本流变成高级流 |
+| public BufferedWriter(Writer r) | 把基本流变成高级流 |
+
+
+
+但是字符缓冲流提供了两个方法，我们会经常使用
+
+|  字符缓冲输入流特有方法  |                    说明                    |
+| :----------------------: | :----------------------------------------: |
+| public String readLine() | 读取一行数据，如果没有数据可读，会返回null |
+
+readLine()方法在读取的时候一次读取一整行，遇到回车换行结束，但是他不会把回车换行读到内存当中
+
+
+
+| 字符缓冲输出流特有方法 |     说明     |
+| :--------------------: | :----------: |
+| public void newLine()  | 跨平台的换行 |
+
+
+
+**缓冲流有几种？**
+
+    *  字节缓冲输入流 BufferedInputStream
+    *  字节缓冲输出流 BufferedOutputStream
+    *  字符缓冲输入流  BufferedReader
+    *  字符缓冲输出流  BufferedWriter
+
+
+
+**缓冲流为什么能提高性能？**
+
+*  字符缓冲流底层会创建大小为8192的字符数组，一个字符在java中占用两个字节，那这样就是一个16K的一个缓冲区
+*  显著提高字节流的读写性能
+*  对于字符流提升不明显，对于服务缓冲流而言关键点是两个特有的方法
+
+
+
+
+
+#### 2.4.2.1 字符缓冲输入流
+
+```java
+//      TODO 创建字符缓冲输入流对象
+        BufferedReader br = new BufferedReader(new FileReader("D:/test.txt"));
+
+//      TODO 读取数据
+        String line ;
+        while ( (line = br.readLine()) !=null){
+            System.out.println(line);
+        }
+//      TODO 释放资源
+        br.close();
+```
+
+
+
+#### 2.4.2.2 字符缓冲输出流
+
+```java
+//      TODO 创建对象
+        BufferedWriter bw = new BufferedWriter(new FileWriter("D:/test.txt",true));
+
+//      TODO 写出数据
+        bw.newLine();
+        bw.write("你长得很漂亮");
+        bw.newLine();  // 跨平台换行
+        bw.write("精神小伙！");
+
+//      TODO 关闭流
+        bw.flush();
+        bw.close();
+```
+
+
+
+
+
+## 2.5 转换流
+
+### 2.5.0 介绍
+
+   转换流属于字符流，是字符流与字节流之间的桥梁。
+
+​     
+
+​    **InputStreamReader 读取数据**我们需要一个数据源，把数据源中的数据读取到内存当中，当我们创建转换流对象的时候，我们需要创建一个字节输入流，在我们包装之后，字节流就变成字符流了。
+
+​      此时也具有了字符流的特性： 读取数据不会乱码了、根据字符集一次读取多个字节
+
+ 
+
+  **OutputStreamWriter 写出数据**需要一个目的地，将字符流转换成字节流，与读取数据相反。在我们的目的地当中就是一个又一个的字节
+
+
+
+![image-20230509113341262](https://picture-typora-zhangjingqi.oss-cn-beijing.aliyuncs.com/image-20230509113341262.png)
+
+
+
+### 2.5.1 案例 - 利用转换流按照指定字符编码读取
+
+​    需求1 ：  手动创建GBK（ANSI）文件，把文件中的中文读取到内存中，不能出现乱码
+
+​    需求2：   把一段中文按照GBK的方式写到本地文件
+
+​    需求3：    将本地文件中的GBK文件，转成UTF-8
+
+
+
+#### 2.5.1.1 按照指定编码读取数据
+
+
+
+这个方案被淘汰了，了解一下
+
+```java
+//      TODO 创建对象并指定字符编码     第二个参数就是指定字符编码
+        InputStreamReader isr = new InputStreamReader(new FileInputStream("D:/testANSI.txt"), "GBK");
+
+//      TODO 读取数据  完全可以按照字符流的形式读取
+        int ch;
+        while( (ch = isr.read()) !=-1){
+            System.out.print( (char) ch);
+        }
+        isr.close();
+```
+
+
+
+​      **JDK11**后有更好的方案， **FileReader的父类是InputStreamReader(转换流)，InputStreamReader的父类是Reader。**
+
+​    **有了这层关系后新增加了一个构造方法：  public FileReader (File file,Charset charset)**,在这个构造方法里面后调用父类的构造方法创建对象 super(new FileInputStream(file) , charset),其实就是我们上面淘汰代码的写法
+
+![image-20230509115353168](https://picture-typora-zhangjingqi.oss-cn-beijing.aliyuncs.com/image-20230509115353168.png)
+
+
+
+```java
+      FileReader fr = new FileReader( fileName: "myiollgbkfile.txt",    Charset.forName("GBK"));//2.读取数据
+     int ch;
+     while ((ch = fr.read()) != -1)(System.out.print((char)ch);
+//    3.释放资源
+     fr.close();
+```
+
+
+
+
+
+#### 2.5.1.2  按照指定字符编码写出
+
+这种方式同样是被淘汰了，与 2.5.1.1类似
+
+```java
+//      TODO
+        OutputStreamWriter osw = new OutputStreamWriter(new FileOutputStream("D:/testANSI.txt"),"GBK");
+//      TODO 写出数据
+        osw.write("八嘎呀路");
+//      TODO 释放资源
+        osw.close();
+```
+
+
+
+新的代码：
+
+```java
+      FileWriter fw  = new FileWriter("D:/testANSI.txt",Charset.forName("GBK"));
+     
+      fw.write("八嘎呀路");
+      fw.close();
+```
+
+
+
+
+
+#### 2.5.1.3 将本地文件中的GBK文件转成UTF-8
+
+ JDK 11 之前： 转换流
+
+```java
+    InputStreamReader isr = new InputStreamReader(new FileInputStream("D:/testANSI.txt"), "GBK");
+    OutputStreamWriter osw = new OutputStreamWriter(new FileOutputStream("D:/testANSI.txt"),"UTF-8");  //默认UTF-8，不指定也可以
+    
+     int b;
+     while( (b=isr.read())!=-1){
+         osw.write(b);
+     }
+     osw.close();
+     isr.close();
+     
+       
+```
+
+
+
+JDK 11
+
+```java
+      FileReader fr = new FileReader( fileName: "myiollgbkfile.txt",    Charset.forName("GBK"));
+
+      FileWriter fw  = new FileWriter("D:/testANSI.txt",Charset.forName("UTF-8")); //不指定也行，默认UTF-8
+
+     int b;
+     while( (b=fr.read())!=-1){
+         fw.write(b);
+     }
+     osw.close();
+     isr.close();
+```
+
+
+
+
+
+#### 2.5.1.4  读取文件中的数据，每次读取一整行不能出现乱码
+
+①字节流在读取中文 的时候是会出现乱码的，但是字符流可以
+
+②字节流里面是没有读取一整行的方法的，但是字符缓冲流可以
+
+
+
+
+
+
+
+## 2.6 序列化流 与 反序列化流
+
+### 2.6.0 介绍
+
+属于字节流的一种
+
+![image-20230509143100190](https://picture-typora-zhangjingqi.oss-cn-beijing.aliyuncs.com/image-20230509143100190.png)
+
+ 
+
+**小细节**
+
+​    使用对象输出流将对象保存到文件时会出现NotSerializableException异常
+
+​    解决方案： 需要让JavaBean类实现Serializable接口
+
+   Serializable接口接口中没有抽象方法，标记型接口。表示此类可以被序列化
+
+
+
+**序列化流：** 也叫做对象操作输出流，可以把java中的对象写到本地文件中
+
+|                  构造方法                   |         说明         |
+| :-----------------------------------------: | :------------------: |
+| public ObjectOutputStream(OutputStream out) | 把基本流包装成高级流 |
+
+
+
+|                 成员方法                  |             说明             |
+| :---------------------------------------: | :--------------------------: |
+| public final void writeObject(Object obj) | 把对象序列化（写出）到文件中 |
+
+
+
+
+
+**反序列化流：**对象操作输入流，可以把序列化到本地文件中的对象读取到程序中
+
+|                 构造方法                  |        说明        |
+| :---------------------------------------: | :----------------: |
+| public ObjectInputStream(InputStream out) | 把基本流变成高级流 |
+
+
+
+|          成员方法          |                   说明                   |
+| :------------------------: | :--------------------------------------: |
+| public Object readObject() | 把序列化到本地文件中的对象，读取到程序中 |
+
+
+
+
+
+**使用场景：**
+
+​      游戏存档，将数据存起来，但是用户看不懂无法修改
+
+
+
+
+
+### 2.6.1 序列化流
+
+```java
+//      TODO 创建对象
+        Student student = new Student("张三",23);
+
+//      TODO 创建序列化流对象/对象操作输出
+        ObjectOutputStream  oops = new ObjectOutputStream(new FileOutputStream("D:/test.txt"));
+
+//      TODO 写出数据
+        oops.writeObject(student);
+
+//      TODO 关闭流
+        oops.close();
+```
+
+
+
+```java
+@Data
+public class Student implements Serializable {
+    private String name;
+    private int age;
+    
+    public Student(String name, int age) {
+       this.name = name;
+       this.age = age;
+    }
+}
+```
+
+
+
+
+
+### 2.6.2 反序列化流
+
+```java
+//      TODO  创建发序列化流对象
+        ObjectInputStream ois = new ObjectInputStream(new FileInputStream("D:/test.txt"));
+
+//      TODO 读取数据
+        Object o = ois.readObject();
+
+//       打印
+        System.out.println(o);
+
+        ois.close();
+```
+
+
+
+
+
+### 2.6.3 使用细节
+
+​      当我们实现了Serializable接口后，会根据我们类中的变量、方法生成一个Long类型的序列号（版本号）
+
+
+
+比如我们将代码运行后Student类序列号为1，写入本地文件
+
+此后我们**又修改了Student类，然后利用反序列化流读取本地文件就会出错，这是为什么呢？**
+
+​     因为我们反序列读取本地文件的时候序列号为1，但是我们Student类因为修改了文件序列号变成了2，两个版本号不一样，报错。即文件中的版本号与JavaBean中的版本号不匹配。
+
+![image-20230509152858156](https://picture-typora-zhangjingqi.oss-cn-beijing.aliyuncs.com/image-20230509152858156.png)
+
+
+
+**解决方案：**
+
+   将版本号固定，并且版本号的名称只能叫“serialVersionUID”
+
+![image-20230509153101126](https://picture-typora-zhangjingqi.oss-cn-beijing.aliyuncs.com/image-20230509153101126.png)
+
+
+
+但是手动添加太麻烦，我们可以借助IDEA工具，如下所示。当我们勾选上之后，如果bean实现了序列化接口但是没写序列化号会给我们提示。
+
+
+
+![image-20230509154147090](https://picture-typora-zhangjingqi.oss-cn-beijing.aliyuncs.com/image-20230509154147090.png)
+
+
+
+
+
+
+
+**某个字段不想序列化到本地文件怎么办？**
+
+​    transient: 瞬态关键字
+
+```java
+  private  transient  String  address;
+```
+
+
+
+**总结：**
+
+   ①  使用序列化流将对象写到文件时，需要让JavaBean类实现Serivlizable接口，否则会出现NotSerivlizableException
+
+
+
+  ②   序列化流写到文件中的数据是不能修改的，一旦修改就无法再读回来
+
+
+
+  ③    序列化对象后，修改了Javabean类，再次反序列化，会不会有问题？
+
+​             会有问题，会抛出InvalidClassException异常。
+
+​             解决方案： 给JavaBean类添加serialVersionUID（序列号、版本号）
+
+
+
+ ④    如果一个对象中的某个成员变量的值不想被序列化，可以使用transient关键字
+
+  
+
+
+
+
+
+## 2.7 打印流
+
+   **打印流不能读，只能写**
+
+   PrintStream、PrintWriter两个类
+
+**特点**
+
+*  **打印流只操作目的地，不操作数据源**
+
+
+
+*  **特有的写出方法**可以实现，数据原样写出
+
+​          打印“97” ， 文件中“97”
+
+​          打印“true”  文件中“true”
+
+
+
+* **特有的写出方法**，可以实现自动刷新，自动换行
+
+​         打印一次数据 = 写出 + 换行 + 刷新
+
+ 
+
+![image-20230509165959266](https://picture-typora-zhangjingqi.oss-cn-beijing.aliyuncs.com/image-20230509165959266.png)
+
+
+
+### 2.7.1 字节打印流 - PrintStream
+
+|                           构造方法                           |                      说明                      |
+| :----------------------------------------------------------: | :--------------------------------------------: |
+|         public PrintStream(OutputStream/File/String)         |          关联字节输出流/文件/文件路径          |
+|     public PrintStream(String fileName,Charset charset)      |                  指定字符编码                  |
+|   public PrintStream(OutputStream out , boolean autoFlush)   | 自动刷新（字节流底层没有缓冲区，开不开一个样） |
+| public PrintStream(OutputStream out , boolean autoFlush ,String encoding) |             指定字符编码且自动刷新             |
+
+
+
+
+
+|                     成员方法                      |                    说明                     |
+| :-----------------------------------------------: | :-----------------------------------------: |
+|             public void write(int b)              |  常规方法： 规则和之前相同，将指定字节写出  |
+|            public void println(Xxx xx)            | 特有方法： 打印任意数据，自动刷新，自动换行 |
+|             public void print(Xxx xx)             |       特有方法： 打印任意数据，不换行       |
+| public void printf (String format,Object... args) |   特有方法： 带有占位符的打印语句，不换行   |
+
+
+
+
+
+```java
+//      TODO 打印流
+//         第一个参数  关联字节输出流   第二个参数 是否自动刷新   第三个参数 指定编码 或者也能用Charset.forName("UTF-8")
+        PrintStream ps =new PrintStream(new FileOutputStream("D:/test.txt"),true,"UTF-8");
+
+//      TODO 写出数据1
+        ps.println(97);  // 包括三个功能： 写出+自动刷新+自动换行
+
+        ps.print(true);
+
+        ps.printf("%s 爱上了 %s","阿珍","阿强");
+
+//      TODO 释放资源
+        ps.close();
+```
+
+
+
+**占位符：**
+
+| 占位符 |      含义      |
+| :----: | :------------: |
+|   %n   |      换行      |
+|   %s   |     字符串     |
+|   %c   | 把字符换成大写 |
+|   %b   |    布尔类型    |
+|   %d   |  小数的占位符  |
+|  ...   |      ...       |
+|        |                |
+|        |                |
+|        |                |
+
+
+
+
+
+### 2.7.2 字符打印流 - PrintWriter
+
+**字符打印流底层有缓冲区，想要自动刷新需要开启**
+
+
+
+|                           构造方法                           |             说明             |
+| :----------------------------------------------------------: | :--------------------------: |
+|            public PrintWriter(Write/File/String)             | 关联字节输出流/文件/文件路径 |
+|     public PrintWriter(String fileName,Charset charset)      |         指定字符编码         |
+|        public PrintWriter(Write w,boolean autoFlush)         |           自动刷新           |
+| public PrintWriter(OutputStream out,boolean autoFlush,Charset charset) |    指定字符编码且自动刷新    |
+
+
+
+|                     成员方法                      |                    说明                     |
+| :-----------------------------------------------: | :-----------------------------------------: |
+|              public void write(...)               |  常规方法： 规则和之前相同，将指定字节写出  |
+|            public void println(Xxx xx)            | 特有方法： 打印任意数据，自动刷新，自动换行 |
+|             public void print(Xxx xx)             |       特有方法： 打印任意数据，不换行       |
+| public void printf (String format,Object... args) |   特有方法： 带有占位符的打印语句，不换行   |
+
+
+
+```java
+        PrintWriter pw = new PrintWriter(new FileWriter("D:/test.txt"),true);
+
+        pw.println("今天我很帅");
+        pw.print("您好");
+        pw.printf("%s 爱上了 %s","阿珍","阿强");
+//      开启自动刷新后，这个地方不刷新也行
+//      TODO 释放资源
+        pw.close();
+```
+
+
+
+### 2.7.3 输出 - System.out.println 
+
+System是final修饰，是最终类，不能有子类
+
+```java
+public final class System
+```
+
+
+
+out是System的一个静态变量，而且是一个流
+
+```java
+public final static PrintStream out = null;
+```
+
+
+
+拆分出来是下面这个样子。
+
+​    获取打印流对象，此打印流在虚拟机启动的时候，由虚拟机创建，默认只想控制台
+
+​    **特殊的打印流，系统中的标准输出流，不能关闭，因为在系统中是唯一的**
+
+```java
+PrintStream ps = System.out;
+
+ps.println(123); //123
+```
+
+
+
+调用打印流中的方法 println,写出数据，自动换行，自动刷新
+
+```java
+System.out.println(123);
+```
+
+
+
+
+
+## 2.8 解压缩流 与 压缩流
+
+
+
+### 2.8.1 解压缩流
+
+**解压本质：** 压缩包中的把每一个文件在Java中是一个ZipEntry对象，按照层级拷贝到本地另一个文件夹中
+
+
+
+
+
+
+
+
+
 
 
 # 三、 综合练习
@@ -986,6 +1593,81 @@ public class Test03 {
     }
 }
 ```
+
+
+
+
+
+
+
+## 3.4 读写多个对象
+
+​     将多个自定义对象序列化到文件中，但是由于对象个数不确定，反序列化流如何读取？
+
+
+
+### 3.4.1 序列化多个对象
+
+```java
+Student s1 = new Student("zhangsan",23);
+Student s2 = new Student("lisi",23);
+Student s3 = new Student("wangwu",23);
+Student s4 = new Student("zhaoliu",23);
+
+ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("D:/test.txt"));
+oos.writeObject(s1);
+oos.writeObject(s2);
+oos.writeObject(s3);
+oos.writeObject(s4);
+oos.close();
+```
+
+
+
+   但是我们一般不这样写，因为我们在读取的时候会很麻烦。
+
+   如果我们读到文件的末尾了，会返回一个异常并不是-1， 异常：EOFException，表示读到文件末尾，但是我们不能在出现异常的时候停止，所以要修改一下代码。
+
+   
+
+ArrayList类本身实现了序列化接口，所以可以这样做
+
+```java
+Student s1 = new Student("zhangsan",23);
+Student s2 = new Student("lisi",23);
+Student s3 = new Student("wangwu",23);
+Student s4 = new Student("zhaoliu",23);
+
+ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("D:/test.txt"));
+
+ArrayList<Student> list = new ArrayList<>();
+list.add(s1);
+list.add(s2);
+list.add(s3);
+list.add(s4);
+
+oos.writeObject(list);
+
+oos.close();
+```
+
+
+
+### 3.4.2 反序列化多个对象
+
+```java
+//      TODO 创建反序列化流
+        ObjectInputStream ois = new ObjectInputStream(new FileInputStream("D:/test.txt"));
+//      TODO 读取数据
+        ArrayList<Student> list =(ArrayList<Student>) ois.readObject();
+        System.out.println(list); //[Student{name='zhangsan', age=23}, Student{name='lisi', age=23}, Student{name='wangwu', age=23}, Student{name='zhaoliu', age=23}]
+
+        ois.close();
+```
+
+
+
+
 
 
 
