@@ -1369,6 +1369,8 @@ System.out.println(123);
 
 ## 2.8 解压缩流 与 压缩流
 
+注意！在Java文件中只能识别“zip”结尾的压缩文件
+
 
 
 ### 2.8.1 解压缩流
@@ -1376,6 +1378,227 @@ System.out.println(123);
 **解压本质：** 压缩包中的把每一个文件在Java中是一个ZipEntry对象，按照层级拷贝到本地另一个文件夹中
 
 
+
+```java
+//      解压的本质：把压缩包里面的每一个文件或者文件夹读取出来，按照层级拷贝到目的地当中
+//      TODO 创建一个解压缩流来读取压缩包中的数据
+        ZipInputStream zip =new ZipInputStream(new FileInputStream(src));
+//      TODO 获取到压缩包里面每一个zipEntry对象
+        ZipEntry entry = zip.getNextEntry();
+        System.out.println(entry);  //test2/java.txt
+
+        ZipEntry entry2 = zip.getNextEntry();
+        System.out.println(entry2);  // test2/test03/
+
+        ZipEntry entry3 = zip.getNextEntry();
+        System.out.println(entry3);  //  test2/test03/tttttt.txt
+
+        ZipEntry entry4 = zip.getNextEntry();
+        System.out.println(entry4);   // null
+
+//      TODO 经过我们上面尝试，getNextEntry可以获取到压缩包中的文件、文件夹以及子文件中的文件与文件夹
+
+//      但是我们不用上面那个写法,用这个
+        ZipEntry zipEntry ;
+
+        while( (zipEntry = zip.getNextEntry()) !=null){
+            System.out.println(zipEntry);
+        }
+
+
+        zip.close();
+```
+
+
+
+
+
+下面可以正式编写代码：
+
+```java
+public class ZipStreamDemo2 {
+    public static void main(String[] args) throws IOException {
+//      TODO 创建一个File表示要解压的压缩包
+        File src = new File("E:/test2.zip");
+
+//      TODO 创建一个File表示解压的目的地
+        File dest = new File("D:/");
+
+//
+        unZip(src, dest);
+    }
+
+    /**
+     * @param src  要解压的压缩包
+     * @param dest 解压的目的地
+     */
+    public static void unZip(File src, File dest) throws IOException {
+//      解压的本质：把压缩包里面的每一个文件或者文件夹读取出来，按照层级拷贝到目的地当中
+//      TODO 创建一个解压缩流来读取压缩包中的数据
+        ZipInputStream zip = new ZipInputStream(new FileInputStream(src));
+//      TODO 获取到压缩包里面每一个zipEntry对象
+//            表示当前在压缩包中获取到的文件或者文件夹
+        ZipEntry entry;
+
+        while ((entry = zip.getNextEntry()) != null) {
+            System.out.println(entry);
+
+            if (entry.isDirectory()) {
+                //文件夹： 需要在目的地dest处创建一个同样的文件夹
+                // 第一个参数： 父级路径   第二个参数： 子级路径
+                File file = new File(dest,entry.toString()); // 比如 D:/test2/java.txt
+                file.mkdirs();
+            } else {
+                //文件： 读取压缩包中的文件，并且按照层级目录存放到目的地dest文件夹中
+
+                int b; // 一个字节一个字节的读
+                FileOutputStream fos = new FileOutputStream( new File(dest,entry.toString()));
+                while ( (b= zip.read()) != -1){
+                    fos.write(b);
+                }
+                fos.close();
+
+//              TODO 表示在压缩包中的一个文件处理完毕
+                zip.closeEntry();
+            }
+        }
+
+        zip.close();
+    }
+}
+```
+
+
+
+
+
+### 2.8.2 压缩流
+
+**压缩包里面的每一个文件或者文件夹都是ZipExtry对象**
+
+
+
+**压缩本质：**把每一个(文件/文件夹)看成ZipEntry对象放到压缩包中
+
+
+
+#### 2.8.2.1 压缩单个文件
+
+```java
+public class ZipStreamDemo3 {
+    public static void main(String[] args) throws IOException {
+//      TODO 创建File对象表示要压缩的文件
+        File src = new File("E:/java.txt");
+
+//      TODO 创建File对象表示压缩包的位置
+        File dest = new File("D:/");
+
+//      TODO 调用方法压缩
+        toZip(src,dest);
+    }
+
+    /**
+     * @param src  要压缩的文件
+     * @param dest 要压缩的目的地
+     */
+    public static void toZip(File src,  File dest) throws IOException {
+//      TODO 压缩流关联压缩包
+//      new File(dest,"a.zip") ， 父级路径dest， 子级路径a.zip,相当于在磁盘中创建了一个D:/a.zip 压缩文件
+        ZipOutputStream zos = new ZipOutputStream(new FileOutputStream(new File(dest,"a.zip")));
+
+//      TODO 创建ZipEntry对象，表示压缩包里面的每一个文件和文件夹
+        ZipEntry entry = new ZipEntry("a.txt");
+
+//      TODO 把ZipEntry对象放到压缩包当中
+        zos.putNextEntry(entry);
+
+//      TODO 把src文件中的数据写到压缩包当中
+        FileInputStream fis = new FileInputStream(src);
+
+        int b;
+        while ( (b=fis.read()) !=-1){
+            zos.write(b);
+        }
+
+//      TODO 关闭
+        zos.closeEntry();
+        zos.close();
+    }
+}
+```
+
+
+
+
+
+
+
+#### 2.8.2.2 压缩文件夹
+
+ZipEntry里面的参数表示在压缩文件中的路径
+
+```java
+public class ZipStreamDemo4 {
+    public static void main(String[] args) throws IOException {
+//      TODO 要压缩的文件夹
+        File src = new File("E:/test2");
+
+//      TODO 创建File对象表示压缩包的路径(压缩包的父级路径)
+        File destParent = src.getParentFile(); // destParent = E:\
+
+//       src.getName() =test2
+//      TODO 创建File对象表示压缩包的路径
+        File dest = new File(destParent, src.getName() + ".zip"); //dest = E:\test2.zip
+
+//     TODO 创建压缩流关联压缩包
+        ZipOutputStream zos = new ZipOutputStream(new FileOutputStream(dest));
+
+//     TODO 获取src里面的每一个文件，变成ZipEntry对象，放入到压缩包当中
+        toZip(src,zos,src.getName() );
+//     TODO 释放资源
+        zos.close();
+    }
+
+    /**
+     * 作用：
+     * 获取src里面的每一个文件，变成ZipEntry对象，放入到压缩包当中
+     *
+     * @param src  数据源
+     * @param zos  压缩流，已经关联好了压缩文件
+     * @param name 在压缩包内部的路径
+     */
+    public static void toZip(File src, ZipOutputStream zos, String name) throws IOException {
+//      TODO 进入src
+        File[] listFiles = src.listFiles();
+
+//      TODO 遍历数组
+        for (File file : listFiles) {
+            if (file.isFile()) {
+//             文件，编程ZipEntry对象，放入到压缩包当中
+//               这个地方参数不能直接填入file，因为file是一个完整的路径（绝对路径），并不一定压缩包中的路径
+                ZipEntry zipEntry = new ZipEntry(name+"/"+file.getName());
+
+                zos.putNextEntry(zipEntry);
+
+//              TODO 读取文件中的数据到压缩包
+                FileInputStream fis = new FileInputStream(file);
+                int b;
+                while ( (b=fis.read()) !=-1){
+                    zos.write(b);
+                }
+
+                fis.close();
+                zos.closeEntry();
+
+            }else {
+//             文件夹，递归
+                toZip(file,zos,name+"/"+file.getName());
+            }
+        }
+        zos.close();
+    }
+}
+```
 
 
 
@@ -1910,6 +2133,230 @@ oos.close();
         String str3 = new String(bytes2,"GBK");
         System.out.println(str3);  //ai你呦
 ```
+
+
+
+
+
+
+
+# 五、Commons-io 工具包
+
+
+
+Commons-io是apache开源基金组织提供的一组有关IO操作的**开源工具包**。
+
+**作用： 提高IO流的开发效率**
+
+![image-20230510151019766](https://picture-typora-zhangjingqi.oss-cn-beijing.aliyuncs.com/image-20230510151019766.png)
+
+
+
+## 5.2 Maven坐标
+
+```xml
+<dependency>
+    <groupId>commons-io</groupId>
+    <artifactId>commons-io</artifactId>
+    <version>2.11.0</version>
+</dependency>
+```
+
+
+
+
+
+## 5.3 Commons-io 常见方法
+
+### 5.3.1 **与文件夹/文件相关的方法**
+
+![image-20230510151340151](https://picture-typora-zhangjingqi.oss-cn-beijing.aliyuncs.com/image-20230510151340151.png)
+
+
+
+**拷贝文件**
+
+```java
+File src = new File("E:/java.txt");
+File dest = new File("D:/java.txt");
+FileUtils.copyFile(src,dest);
+```
+
+
+
+**拷贝目录**
+
+ 直接拷贝，就是我们理解的拷贝
+
+```java
+File src = new File("E:/test2");
+File dest = new File("D:/test2");
+
+FileUtils.copyDirectory(src,dest);
+```
+
+
+
+这个与上面拷贝文件夹的不同时，现在D:/test2的文件夹中创建一一个test2目录，然后在这个test2目录中添加文件
+
+```java
+File src = new File("E:/test2");
+File dest = new File("D:/test2");
+
+FileUtils.copyDirectoryToDirectory(src,dest);
+```
+
+
+
+
+
+
+
+### 5.3.2 **与IO流相关**
+
+![image-20230510151426495](https://picture-typora-zhangjingqi.oss-cn-beijing.aliyuncs.com/image-20230510151426495.png)
+
+
+
+
+
+
+
+
+
+# 六、 hutool
+
+http://hutool.cn/docs/#/   官方网站
+
+https://apidoc.gitee.com/dromara/hutool/   帮助文档
+
+
+
+![image-20230510171818835](https://picture-typora-zhangjingqi.oss-cn-beijing.aliyuncs.com/image-20230510171818835.png)
+
+
+
+
+
+|      相关类       |             说明              |
+| :---------------: | :---------------------------: |
+|      IoUtil       |         流操作工具类          |
+|     FileUtil      |    文件读写和操作的工具类     |
+|   FileTypeUtil    |      文件类型判断工具类       |
+|   WatchMonitor    |        目录、文件监听         |
+| ClassPathResource | 针对ClassPath中资源的访问封装 |
+|    FileReader     |         封装文件读取          |
+|    FileWriter     |         封装文件写入          |
+
+
+
+##  6.1 Maven 坐标
+
+```xml
+<dependency>
+    <groupId>cn.hutool</groupId>
+    <artifactId>hutool-all</artifactId>
+    <version>5.8.12</version>
+</dependency>
+```
+
+
+
+
+
+
+
+## 6.2 FileUtil 类常用静态方法
+
+
+
+- **file :  根据参数创建一个file对象**
+
+```java
+//      file() 根据参数创建一个file对象，和我们之前说的File对象一模一样，而且多了几个构造方法
+//      下面这个构造方式是之前没有的
+        File file = FileUtil.file("D:/", "aaa", "bb", "test.txt");//D:/aaa/bb/test.txt 文件
+        System.out.println(file); //D:\aaa\bb\test.txt
+```
+
+![image-20230510215703072](https://picture-typora-zhangjingqi.oss-cn-beijing.aliyuncs.com/image-20230510215703072.png)
+
+
+
+
+
+- **touch:  根据参数创建文件，如果父级路径不存在会一块创建**
+
+  FileUtil.touch 语句运行完成之后文件直接创建
+
+```java
+File touch = FileUtil.touch("D:/aaa/bb/test.txt");
+System.out.println(touch);  //D:\aaa\bb\test.txt
+```
+
+
+
+
+
+-  **writeLines:  把集合中的数据写出到文件中，覆盖模式**
+
+```java
+        ArrayList<String> list = new ArrayList<>();
+        list.add("aaa");
+        list.add("aaa");
+        list.add("aaa");
+        FileUtil.writeLines(list,"E:/java.txt","UTF-8",true);
+//写入文件的内容
+//aaa
+//aaa
+//aaa
+```
+
+
+
+
+
+-  **addpendLines: 把集合中的数据写出到文件中，续写模式**
+
+```java
+ArrayList<String> list = new ArrayList<>();
+list.add("aaa");
+list.add("aaa");
+list.add("aaa");
+File file = FileUtil.appendLines(list, "E:/java.txt", "UTF-8");
+System.out.println(file); //E:\java.txt
+```
+
+
+
+
+
+* **readLines: 指定字符编码，把文件中的数据读到集合中**
+
+```java
+        ArrayList<String> strings = FileUtil.readLines("E:/java.txt", "UTF-8", new ArrayList<String>());
+
+//      这个方法的底层会帮我们创建
+        List<String> stringList = FileUtil.readLines("E:/java.txt", "UTF-8");
+//      一行数据，就是集合中的一条元素 
+        System.out.println(stringList);  //[张靖奇你长得很帅, aaa, aaa, aaa, aaa, aaa, aaa]
+```
+
+
+
+
+
+-  **readUtf8Lines: 按照UTF-8的形式，把文件中的数据，读到集合中**
+
+
+
+
+
+*  **copy: 拷贝文件或者文件夹**
+
+
+
+
 
 
 
