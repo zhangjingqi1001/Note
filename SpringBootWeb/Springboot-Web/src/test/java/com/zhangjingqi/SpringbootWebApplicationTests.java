@@ -1,9 +1,14 @@
 package com.zhangjingqi;
 
+import com.example.HeaderConfig;
+import com.example.HeaderParser;
+import com.example.TokenParser;
+import com.google.gson.Gson;
 import com.zhangjingqi.controller.DeptController;
 import com.zhangjingqi.mapper.EmpMapper;
 import com.zhangjingqi.mapper.UserMapper;
 import com.zhangjingqi.pojo.Emp;
+import com.zhangjingqi.pojo.Result;
 import com.zhangjingqi.pojo.User;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
@@ -102,8 +107,8 @@ class SpringbootWebApplicationTests {
     }
 
     //  IOC容器对象
-    @Autowired
-    private ApplicationContext applicationContext;
+//    @Autowired
+//    private ApplicationContext applicationContext;
 
     @Test
     public void testBean() {
@@ -142,6 +147,30 @@ class SpringbootWebApplicationTests {
         System.out.println(name + " : " + age); // Tom : 18
     }
 
+    @Autowired
+    private Gson gson;
 
+    @Test
+    public void testJson(){
+        String json = gson.toJson(Result.class);
+        System.out.println(json);
+    }
+
+    @Autowired
+    private ApplicationContext applicationContext ;
+    @Test
+    public void testTokenParse(){
+        System.out.println(applicationContext.getBean(TokenParser.class));
+    }
+
+    @Test
+    public void testHeaderParser(){
+        System.out.println(applicationContext.getBean(HeaderParser.class));
+    }
+
+    @Test
+    public void testHeaderConfig(){
+        System.out.println(applicationContext.getBean(HeaderConfig.class));
+    }
 }
 //Emp(id=15, username=yulianzhou, password=123456, name=俞莲舟, gender=1, image=15.jpg, job=2, entrydate=2011-05-01, deptId=2, createTime=2023-05-13T11:16:16, updateTime=2023-05-13T11:16:16)
