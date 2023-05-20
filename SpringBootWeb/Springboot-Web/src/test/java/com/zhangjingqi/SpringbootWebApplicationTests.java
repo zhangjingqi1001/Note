@@ -1,5 +1,6 @@
 package com.zhangjingqi;
 
+import com.zhangjingqi.controller.DeptController;
 import com.zhangjingqi.mapper.EmpMapper;
 import com.zhangjingqi.mapper.UserMapper;
 import com.zhangjingqi.pojo.Emp;
@@ -7,9 +8,14 @@ import com.zhangjingqi.pojo.User;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
+import org.dom4j.Document;
+import org.dom4j.DocumentException;
+import org.dom4j.Element;
+import org.dom4j.io.SAXReader;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.context.ApplicationContext;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -84,7 +90,7 @@ class SpringbootWebApplicationTests {
     }
 
     @Test
-    public void testParseJwt(){
+    public void testParseJwt() {
         Claims claims = Jwts.parser()
 //               指定签名秘钥
                 .setSigningKey("zhangjingqi")
@@ -93,6 +99,47 @@ class SpringbootWebApplicationTests {
 //               拿到了我们自定义的内容，也就是Jwt令牌的第二个部分
                 .getBody();
         System.out.println(claims); //{name=tom, id=1, exp=1684216535}
+    }
+
+    //  IOC容器对象
+    @Autowired
+    private ApplicationContext applicationContext;
+
+    @Test
+    public void testBean() {
+//      TODO  根据bean名称获取   若没指定bean名称，默认类名首字母小写
+        DeptController deptControllerBean1 = (DeptController) applicationContext.getBean("deptController");
+        System.out.println(deptControllerBean1); //com.zhangjingqi.controller.DeptController@249b54af
+
+//      TODO 根据bean的类型获取
+        DeptController deptControllerBean2 = applicationContext.getBean(DeptController.class);
+        System.out.println(deptControllerBean2);//com.zhangjingqi.controller.DeptController@249b54af
+
+//      TODO 根据bean的名称 及 类型获取
+        DeptController deptControllerBean3 = applicationContext.getBean("deptController", DeptController.class);
+        System.out.println(deptControllerBean3);//com.zhangjingqi.controller.DeptController@249b54af
+
+    }
+
+    @Test
+    public void testScope() {
+        for (int i = 0; i < 10; i++) {
+            DeptController deptControllerBean2 = applicationContext.getBean(DeptController.class);
+            System.out.println(deptControllerBean2);
+        }
+    }
+
+    @Autowired
+    private SAXReader saxReader;
+    @Test
+    public void testBean2() throws DocumentException {
+        Document document = saxReader.read(this.getClass().getClassLoader().getResource("1.xml")
+                );
+
+        Element rootElement = document.getRootElement();
+        String name = rootElement.element("name").getText();
+        String age = rootElement.element("age").getText();
+        System.out.println(name + " : " + age); // Tom : 18
     }
 
 

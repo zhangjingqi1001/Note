@@ -5,14 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b076f8a7-a2c0-4f25-b17f-7283861c7409" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/aop/MyAspect1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/aop/MyLog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Note/分层解耦.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/cf9dd949-d8a6-440c-81e3-eccce20a4a46.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/cf9dd949-d8a6-440c-81e3-eccce20a4a46.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/config/CommonConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Note/Bean管理.md" beforeDir="false" afterPath="$PROJECT_DIR$/../Note/Bean管理.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Note/IOC与AOP.md" beforeDir="false" afterPath="$PROJECT_DIR$/../Note/IOC与AOP.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/aop/TimeAspect.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/SpringbootWebApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/SpringbootWebApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/aop/MyAspect1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/aop/MyAspect1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/aop/MyLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/aop/MyLog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/controller/DeptController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/controller/DeptController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/zhangjingqi/SpringbootWebApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/zhangjingqi/SpringbootWebApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zhangjingqi/SpringbootWebApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zhangjingqi/SpringbootWebApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zhangjingqi/aop/TimeAspect.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zhangjingqi/controller/DeptController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zhangjingqi/controller/DeptController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/zhangjingqi/SpringbootWebApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/zhangjingqi/SpringbootWebApplicationTests.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,43 +68,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;238f586ae87eeb682c8f1505343601a1&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "File.Encoding",
+    "spring.configuration.checksum": "238f586ae87eeb682c8f1505343601a1",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\Note\SpringBootWeb\Springboot-Web\src\main\java\com\zhangjingqi\utils" />
       <recent name="E:\Note\SpringBootWeb\Springboot-Web\src\main\java\com\zhangjingqi\controller" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.SpringbootWebApplication">
-    <configuration name="Demo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.zhangjingqi.Demo" />
-      <module name="Springboot-Web" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.zhangjingqi.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SpringbootWebApplicationTests.test05" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.SpringbootWebApplicationTests.testBean2">
+    <configuration name="SpringbootWebApplicationTests.testBean" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Springboot-Web" />
       <extension name="coverage">
         <pattern>
@@ -104,13 +106,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.zhangjingqi" />
       <option name="MAIN_CLASS_NAME" value="com.zhangjingqi.SpringbootWebApplicationTests" />
-      <option name="METHOD_NAME" value="test05" />
+      <option name="METHOD_NAME" value="testBean" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SpringbootWebApplicationTests.test06" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SpringbootWebApplicationTests.testBean2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Springboot-Web" />
       <extension name="coverage">
         <pattern>
@@ -120,7 +122,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.zhangjingqi" />
       <option name="MAIN_CLASS_NAME" value="com.zhangjingqi.SpringbootWebApplicationTests" />
-      <option name="METHOD_NAME" value="test06" />
+      <option name="METHOD_NAME" value="testBean2" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -158,6 +160,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SpringbootWebApplicationTests.testScope" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Springboot-Web" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zhangjingqi.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.zhangjingqi" />
+      <option name="MAIN_CLASS_NAME" value="com.zhangjingqi.SpringbootWebApplicationTests" />
+      <option name="METHOD_NAME" value="testScope" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SpringbootWebApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="Springboot-Web" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.zhangjingqi.SpringbootWebApplication" />
@@ -167,11 +185,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SpringbootWebApplicationTests.testBean2" />
+        <item itemvalue="JUnit.SpringbootWebApplicationTests.testScope" />
+        <item itemvalue="JUnit.SpringbootWebApplicationTests.testBean" />
         <item itemvalue="JUnit.SpringbootWebApplicationTests.testParseJwt" />
         <item itemvalue="JUnit.SpringbootWebApplicationTests.testGenJwt" />
-        <item itemvalue="Application.Demo" />
-        <item itemvalue="JUnit.SpringbootWebApplicationTests.test05" />
-        <item itemvalue="JUnit.SpringbootWebApplicationTests.test06" />
       </list>
     </recent_temporary>
   </component>
@@ -192,7 +210,7 @@
       <workItem from="1684286743617" duration="3630000" />
       <workItem from="1684296138173" duration="8688000" />
       <workItem from="1684542483717" duration="423000" />
-      <workItem from="1684542918291" duration="4694000" />
+      <workItem from="1684542918291" duration="10317000" />
     </task>
     <servers />
   </component>
