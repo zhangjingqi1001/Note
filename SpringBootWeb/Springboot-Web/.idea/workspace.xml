@@ -5,463 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b076f8a7-a2c0-4f25-b17f-7283861c7409" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../Note/Bean管理.md" beforeDir="false" afterPath="$PROJECT_DIR$/../Note/Bean管理.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../aliyun-oss-spring-boot-autoconfigure/src/main/java/com/aliyun/oss/AliOSSAutoConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../aliyun-oss-spring-boot-autoconfigure/src/main/java/com/aliyun/oss/AliOSSUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../aliyun-oss-spring-boot-autoconfigure/src/main/resources/META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Note/SpringBoot原理.md" beforeDir="false" afterPath="$PROJECT_DIR$/../Note/SpringBoot原理.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/SpringbootWebApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/SpringbootWebApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/pojo/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/pojo/Result.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/zhangjingqi/SpringbootWebApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/zhangjingqi/SpringbootWebApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zhangjingqi/SpringbootWebApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zhangjingqi/controller/DeptController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zhangjingqi/controller/EmpController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zhangjingqi/controller/LoginController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zhangjingqi/controller/SessionController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zhangjingqi/controller/UploadController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zhangjingqi/exception/GlobalExceptionHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zhangjingqi/filter/DemoFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zhangjingqi/filter/LoginCheckFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zhangjingqi/filter/XbcFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zhangjingqi/interceptor/LoginCheckInterceptor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zhangjingqi/interceptor/WebConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zhangjingqi/mapper/DeptLogMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zhangjingqi/mapper/DeptMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zhangjingqi/mapper/EmpMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zhangjingqi/mapper/EmpMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zhangjingqi/mapper/UserMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zhangjingqi/pojo/Dept.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zhangjingqi/pojo/DeptLog.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zhangjingqi/pojo/Emp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zhangjingqi/pojo/PageBean.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zhangjingqi/pojo/Result.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zhangjingqi/pojo/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zhangjingqi/service/DeptLogService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zhangjingqi/service/DeptService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zhangjingqi/service/EmpService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zhangjingqi/service/impl/DeptLogServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zhangjingqi/service/impl/DeptServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zhangjingqi/service/impl/EmpServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zhangjingqi/utils/AliOSSUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zhangjingqi/utils/JwtUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/upload.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/zhangjingqi/Demo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/zhangjingqi/SpringbootWebApplicationTests.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例.rar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/PPT/day10-SpringBootWeb案例.pptx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/代码/tlias-web-management.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/讲义/SpringBootWeb案例-1.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/讲义/assets/image-20220904103734643.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/讲义/assets/image-20220904104826854.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/讲义/assets/image-20220904125004138.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/讲义/assets/image-20220904130315247.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/讲义/assets/image-20220904132440220.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/讲义/assets/image-20220904150427982.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/讲义/assets/image-20221213205503102.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/讲义/assets/image-20221213205737307.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/讲义/assets/image-20221213221142985.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/讲义/assets/image-20221213221408420.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/讲义/assets/image-20221213222039985.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/讲义/assets/image-20221213224927868.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/讲义/assets/image-20221213230710821.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/讲义/assets/image-20221213230911102.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/讲义/assets/image-20221213231036103.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/讲义/assets/image-20221213231205971.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/讲义/assets/image-20221213231519551.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/讲义/assets/image-20221213234154699.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/讲义/assets/image-20221213235157345.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/讲义/assets/image-20221214000909044.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/讲义/assets/image-20221214100039074.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/讲义/assets/image-20221214100230484.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/讲义/assets/image-20221214100703404.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/讲义/assets/image-20221214100918557.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/讲义/assets/image-20221214101436198.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/讲义/assets/image-20221214101711107.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/讲义/assets/image-20221214102705490.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/讲义/assets/image-20221214112451600.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/讲义/assets/image-20221214113708369.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/讲义/assets/image-20221214113941657.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/讲义/assets/image-20221214115519648.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/讲义/assets/image-20221214153758708.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/讲义/assets/image-20221214154645746.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/讲义/assets/image-20221215105446189.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/讲义/assets/image-20221215110553435.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/讲义/assets/image-20221215111110219.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/讲义/assets/image-20221215111309042.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/讲义/assets/image-20221215141233541.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/讲义/assets/image-20221215142107329.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/讲义/assets/image-20221215152021068.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/讲义/assets/image-20221215153413290.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/讲义/assets/image-20221215154036047.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/讲义/assets/image-20221215162008339.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/讲义/assets/image-20221215164811566.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/讲义/assets/image-20221215170038833.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/讲义/assets/image-20221215174820377.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/讲义/assets/image-20221215175639974.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/讲义/assets/image-20221215180528415.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/讲义/assets/image-20221215182344380.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/讲义/assets/image-20221215182952789.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/讲义/assets/image-20221215183413504.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/讲义/assets/image-20221215183510458.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/讲义/assets/image-20221215183657413.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/讲义/assets/image-20221215184714815.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/讲义/assets/image-20221215190229696.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/讲义/assets/image-20221215190606676.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/讲义/assets/image-20221215190640539.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/讲义/assets/image-20221215190753313.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/讲义/assets/image-20221215190948723.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/data/document.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/data/styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/files/员工信息统计/data.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/files/员工信息统计/styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/files/员工管理/data.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/files/员工管理/styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/files/学员管理/data.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/files/学员管理/styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/files/数据统计/data.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/files/数据统计/styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/files/班级学员管理/data.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/files/班级学员管理/styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/files/班级管理/data.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/files/班级管理/styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/files/登录/data.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/files/登录/styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/files/系统信息管理/data.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/files/系统信息管理/styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/files/部门管理/data.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/files/部门管理/styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/files/首页/data.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/files/首页/styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/员工管理/u585.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/员工管理/u586.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/员工管理/u587.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/员工管理/u588.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/员工管理/u589.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/员工管理/u590.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/员工管理/u593.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/员工管理/u594.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/员工管理/u595.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/员工管理/u596.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/员工管理/u597.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/员工管理/u598.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/员工管理/u610.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/员工管理/u610_disabled.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/员工管理/u610_selected.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/员工管理/u611.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/员工管理/u639.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/员工管理/u639_disabled.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/员工管理/u639_selected.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/员工管理/u653.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/员工管理/u656_seg0.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/员工管理/u656_seg1.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/员工管理/u656_seg2.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/员工管理/u668.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/员工管理/u671_seg0.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/员工管理/u671_seg1.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/员工管理/u671_seg2.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/员工管理/u681.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/员工管理/u682.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/员工管理/u683.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/员工管理/u695.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/员工管理/u696.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/员工管理/u697.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/员工管理/u730.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/员工管理/u731.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/员工管理/u732.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/员工管理/u742_seg0.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/员工管理/u742_seg1.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/员工管理/u742_seg2.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/学员管理/u221.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/学员管理/u222.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/学员管理/u223.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/学员管理/u224.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/学员管理/u225.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/学员管理/u226.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/学员管理/u229.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/学员管理/u230.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/学员管理/u232.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/学员管理/u233.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/学员管理/u234.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/学员管理/u235.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/学员管理/u236.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/学员管理/u237.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/学员管理/u240.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/学员管理/u241.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/学员管理/u256.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/学员管理/u256_disabled.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/学员管理/u256_selected.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/学员管理/u310.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/学员管理/u312.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/学员管理/u313.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/学员管理/u314.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/学员管理/u315.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/学员管理/u316.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/学员管理/u372.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/学员管理/u372_disabled.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/学员管理/u372_selected.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/学员管理/u373.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/学员管理/u373_disabled.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/学员管理/u373_selected.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/学员管理/u375_seg0.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/学员管理/u375_seg1.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/学员管理/u375_seg2.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/学员管理/u376_seg0.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/学员管理/u376_seg1.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/学员管理/u376_seg2.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/学员管理/u385_seg0.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/学员管理/u385_seg1.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/学员管理/u385_seg2.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/学员管理/u385_seg3.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/学员管理/u385_seg4.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/学员管理/u393_seg0.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/学员管理/u393_seg1.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/学员管理/u393_seg2.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/学员管理/u393_seg3.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/学员管理/u393_seg4.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/班级管理/u118.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/班级管理/u120.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/班级管理/u139_seg0.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/班级管理/u139_seg1.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/班级管理/u139_seg2.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/班级管理/u140_seg0.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/班级管理/u140_seg1.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/班级管理/u140_seg2.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/班级管理/u142.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/班级管理/u144.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/班级管理/u145.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/班级管理/u146.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/班级管理/u147.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/班级管理/u148.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/班级管理/u149.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/班级管理/u151.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/班级管理/u152.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/班级管理/u153.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/班级管理/u154.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/班级管理/u155.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/班级管理/u177.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/班级管理/u179.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/班级管理/u180.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/班级管理/u181.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/班级管理/u182.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/班级管理/u183.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/班级管理/u191_seg0.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/班级管理/u191_seg1.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/班级管理/u191_seg2.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/班级管理/u50.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/班级管理/u51.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/班级管理/u52.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/班级管理/u53.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/班级管理/u54.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/班级管理/u55.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/班级管理/u56.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/班级管理/u57.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/班级管理/u58.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/班级管理/u59.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/班级管理/u60.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/班级管理/u61.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/班级管理/u62.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/班级管理/u63.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/班级管理/u76.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/班级管理/u88.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/班级管理/u88_mouseOver.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/班级管理/u88_selected.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/登录/u790.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/登录/u793.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/登录/u794.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/系统信息管理/u427.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/系统信息管理/u428.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/系统信息管理/u429.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/系统信息管理/u430.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/系统信息管理/u432.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/系统信息管理/u433.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/系统信息管理/u434.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/系统信息管理/u435.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/系统信息管理/u441.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/系统信息管理/u442.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/系统信息管理/u443.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/部门管理/u505.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/部门管理/u506.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/部门管理/u507.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/部门管理/u509.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/部门管理/u510.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/部门管理/u511.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/部门管理/u549_seg0.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/部门管理/u549_seg1.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/部门管理/u549_seg2.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/部门管理/u550_seg0.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/部门管理/u550_seg1.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/部门管理/u550_seg2.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/部门管理/u550_seg3.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/部门管理/u551_seg0.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/部门管理/u551_seg1.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/部门管理/u551_seg2.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/部门管理/u551_seg3.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/首页/u16.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/首页/u19.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/首页/u20.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/首页/u21.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/images/首页/u22.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/plugins/debug/debug.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/plugins/debug/styles/debug.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/plugins/debug/styles/images/console_panel_off.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/plugins/debug/styles/images/console_panel_on.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/plugins/page_notes/page_notes.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/plugins/page_notes/styles/images/notes_panel_off.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/plugins/page_notes/styles/images/notes_panel_on.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/plugins/page_notes/styles/page_notes.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/plugins/recordplay/recordplay.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/plugins/recordplay/styles/recordplay.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/plugins/sitemap/sitemap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/plugins/sitemap/styles/images/back_keys.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/plugins/sitemap/styles/images/closed_item.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/plugins/sitemap/styles/images/folder_closed_blue.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/plugins/sitemap/styles/images/forward_keys.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/plugins/sitemap/styles/images/left_arrow.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/plugins/sitemap/styles/images/open_item.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/plugins/sitemap/styles/images/page_lt_grey.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/plugins/sitemap/styles/images/right_arrow.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/plugins/sitemap/styles/images/search_off.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/plugins/sitemap/styles/images/search_on.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/plugins/sitemap/styles/images/sitemap_panel_off.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/plugins/sitemap/styles/images/sitemap_panel_on.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/plugins/sitemap/styles/sitemap.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/resources/Other.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/resources/chrome/allow-access.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/resources/chrome/axure-chrome-extension.crx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/resources/chrome/axure_logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/resources/chrome/chrome.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/resources/chrome/details.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/resources/chrome/extensions.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/resources/chrome/safari.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/resources/chrome/safari_advanced.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/resources/chrome/safari_restrictions.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/resources/chrome/splitter.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/resources/chrome/splitter.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/resources/css/axure_rp_page.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/resources/css/default.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/resources/css/images/images.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/resources/css/images/newwindow.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/resources/css/images/note.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/resources/css/images/touch.cur" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/resources/css/images/touch.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/resources/css/images/ui-bg_flat_0_aaaaaa_40x100.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/resources/css/images/ui-bg_glass_55_fbf9ee_1x400.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/resources/css/images/ui-bg_glass_65_ffffff_1x400.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/resources/css/images/ui-bg_glass_75_dadada_1x400.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/resources/css/images/ui-bg_glass_75_e6e6e6_1x400.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/resources/css/images/ui-bg_glass_75_ffffff_1x400.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/resources/css/images/ui-bg_highlight-soft_75_cccccc_1x100.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/resources/css/images/ui-bg_inset-soft_95_fef1ec_1x100.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/resources/css/images/ui-icons_222222_256x240.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/resources/css/images/ui-icons_2e83ff_256x240.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/resources/css/images/ui-icons_454545_256x240.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/resources/css/images/ui-icons_888888_256x240.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/resources/css/images/ui-icons_cd0a0a_256x240.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/resources/css/jquery-ui-themes.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/resources/css/previewfonts.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/resources/css/previewfonts/SourceSansPro-Regular.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/resources/css/previewfonts/SourceSansPro-Semibold.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/resources/css/reset.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/resources/expand.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/resources/images/axure9_logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/resources/images/axure_logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/resources/images/axure_logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/resources/images/caret_down.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/resources/images/caret_down_off.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/resources/images/close_x.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/resources/images/close_x_minimize.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/resources/images/divider.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/resources/images/divider.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/resources/images/exit.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/resources/images/favicon_play.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/resources/images/overflow-icon.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/resources/images/overflow_checkmark.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/resources/images/overflow_icon_off.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/resources/images/refresh.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/resources/images/resize.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/resources/images/return.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/resources/images/transparent.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/resources/images/views-icon.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/resources/reload.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/resources/scripts/axure/action.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/resources/scripts/axure/adaptive.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/resources/scripts/axure/annotation.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/resources/scripts/axure/axQuery.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/resources/scripts/axure/axQuery.std.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/resources/scripts/axure/doc.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/resources/scripts/axure/drag.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/resources/scripts/axure/events.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/resources/scripts/axure/expr.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/resources/scripts/axure/flyout.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/resources/scripts/axure/geometry.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/resources/scripts/axure/globals.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/resources/scripts/axure/ie.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/resources/scripts/axure/init.temp.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/resources/scripts/axure/ios.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/resources/scripts/axure/jquery.nicescroll.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/resources/scripts/axure/legacy.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/resources/scripts/axure/math.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/resources/scripts/axure/model.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/resources/scripts/axure/move.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/resources/scripts/axure/recording.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/resources/scripts/axure/repeater.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/resources/scripts/axure/sto.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/resources/scripts/axure/style.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/resources/scripts/axure/tree.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/resources/scripts/axure/utils.temp.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/resources/scripts/axure/variables.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/resources/scripts/axure/viewer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/resources/scripts/axure/visibility.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/resources/scripts/axutils.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/resources/scripts/echarts.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/resources/scripts/jquery-1.7.1.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/resources/scripts/jquery-3.2.1.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/resources/scripts/jquery-ui-1.8.10.custom.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/resources/scripts/messagecenter.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/resources/scripts/player/axplayer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/resources/scripts/player/init.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/resources/scripts/player/splitter.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/start.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/start_c_1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/start_with_pages.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/员工信息统计.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/员工管理.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/学员管理.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/数据统计.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/班级学员管理.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/班级管理.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/登录.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/系统信息管理.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/部门管理.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/01. 页面原型/tlias智能学习辅助系统/首页.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/02. 环境准备/1. SQL脚本/数据准备.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/02. 环境准备/2. 基础代码/Dept.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/02. 环境准备/2. 基础代码/Emp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/02. 环境准备/2. 基础代码/Result.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/02. 环境准备/2. 基础代码/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/02. 环境准备/3. 基础环境/tlias-web-management/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/02. 环境准备/3. 基础环境/tlias-web-management/src/main/java/com/itheima/TliasWebManagementApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/02. 环境准备/3. 基础环境/tlias-web-management/src/main/java/com/itheima/controller/DeptController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/02. 环境准备/3. 基础环境/tlias-web-management/src/main/java/com/itheima/controller/EmpController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/02. 环境准备/3. 基础环境/tlias-web-management/src/main/java/com/itheima/mapper/DeptMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/02. 环境准备/3. 基础环境/tlias-web-management/src/main/java/com/itheima/mapper/EmpMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/02. 环境准备/3. 基础环境/tlias-web-management/src/main/java/com/itheima/pojo/Dept.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/02. 环境准备/3. 基础环境/tlias-web-management/src/main/java/com/itheima/pojo/Emp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/02. 环境准备/3. 基础环境/tlias-web-management/src/main/java/com/itheima/service/DeptService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/02. 环境准备/3. 基础环境/tlias-web-management/src/main/java/com/itheima/service/EmpService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/02. 环境准备/3. 基础环境/tlias-web-management/src/main/java/com/itheima/service/impl/DeptServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/02. 环境准备/3. 基础环境/tlias-web-management/src/main/java/com/itheima/service/impl/EmpServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/02. 环境准备/3. 基础环境/tlias-web-management/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/02. 环境准备/3. 基础环境/tlias-web-management/src/test/java/com/itheima/TliasWebManagementApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/02. 环境准备/3. 基础环境/tlias-web-management/tlias-web-management.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/03. 接口文档/api接口文档.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/03. 接口文档/api接口文档.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/04. 前端环境/nginx-1.22.0-tlias.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day10-SpringBootWeb案例/day10-SpringBootWeb案例/资料/04. 前端环境/vue-admin-template-master.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../itheima-utils/src/main/java/com/example/HeaderConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../itheima-utils/src/main/java/com/example/HeaderConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../itheima-utils/target/classes/com/example/HeaderConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/../itheima-utils/target/classes/com/example/HeaderConfig.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -473,8 +30,8 @@
       <list>
         <option value="Interface" />
         <option value="FxmlFile" />
-        <option value="Class" />
         <option value="AnnotationType" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -517,14 +74,15 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/note/Note/SpringBootWeb/itheima-utils",
+    "jdk.selected.JAVA_MODULE": "1.8",
+    "last_opened_file_path": "D:/note/Note/SpringBootWeb/springboot-autoconfiguration-test",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
+    "project.structure.proportion": "0.17",
+    "project.structure.side.proportion": "0.3018868",
     "settings.editor.selected.configurable": "MavenSettings",
     "spring.configuration.checksum": "f846a348d19b9dffe5a67fff2c791d29",
     "vue.rearranger.settings.migration": "true"
@@ -535,8 +93,11 @@
       <recent name="E:\Note\SpringBootWeb\Springboot-Web\src\main\java\com\zhangjingqi\utils" />
       <recent name="E:\Note\SpringBootWeb\Springboot-Web\src\main\java\com\zhangjingqi\controller" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.aliyun.oss" />
+    </key>
   </component>
-  <component name="RunManager" selected="JUnit.SpringbootWebApplicationTests.testHeaderConfig">
+  <component name="RunManager" selected="Spring Boot.SpringbootAutoconfigurationTestApplication">
     <configuration name="SpringbootWebApplicationTests.testBean2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Springboot-Web" />
       <extension name="coverage">
@@ -617,6 +178,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="AliyunOssSpringBootAutoconfigureApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="aliyun-oss-spring-boot-autoconfigure" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.aliyun.oss.AliyunOssSpringBootAutoconfigureApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AliyunOssSpringBootStarterApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="aliyun-oss-spring-boot-starter" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.aliyun.oss.AliyunOssSpringBootStarterApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringbootAutoconfigurationTestApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="springboot-autoconfiguration-test" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.itheima.SpringbootAutoconfigurationTestApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SpringbootWebApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="Springboot-Web" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.zhangjingqi.SpringbootWebApplication" />
@@ -626,8 +208,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.SpringbootWebApplicationTests.testHeaderConfig" />
         <item itemvalue="JUnit.SpringbootWebApplicationTests.testHeaderParser" />
+        <item itemvalue="JUnit.SpringbootWebApplicationTests.testHeaderConfig" />
         <item itemvalue="JUnit.SpringbootWebApplicationTests.testTokenParse" />
         <item itemvalue="JUnit.SpringbootWebApplicationTests.testJson" />
         <item itemvalue="JUnit.SpringbootWebApplicationTests.testBean2" />
@@ -652,7 +234,7 @@
       <workItem from="1684296138173" duration="8688000" />
       <workItem from="1684542483717" duration="423000" />
       <workItem from="1684542918291" duration="13536000" />
-      <workItem from="1684570623973" duration="8315000" />
+      <workItem from="1684570623973" duration="14780000" />
     </task>
     <servers />
   </component>

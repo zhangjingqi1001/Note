@@ -1,3 +1,7 @@
+[TOC]
+
+
+
 # SpringBoot原理
 
 ​    如果基于Spring开发依赖和配置会比较繁琐，我们一般基于SpringBoot开发，简化了Spring配置。
@@ -638,11 +642,363 @@ spring.factories文件是早期Springboot自动加载的文件，在spring2.7.0�
 
    
 
+   比如之前遇到的
+
+   ```java
+     @Bean
+     @ConditionalOnMissingBean
+     public Gson gson(GsonBuilder gsonBuilder){
+         return gsonBuilder.create();
+     }
+   ```
+
    
 
 
 
 
 
+### 2.5.1 要使用的类
+
+```java
+@Retention(RetentionPolicy.RUNTIME)
+@Target(ElementType.TYPE)
+@Import(MyImportSelector.class)
+public @interface EnableHeaderConfig {
+}
+```
 
 
+
+```java
+public class MyImportSelector implements ImportSelector {
+    public String[] selectImports(AnnotationMetadata importingClassMetadata) {
+        return new String[]{"com.example.HeaderConfig"};
+    }
+}
+```
+
+
+
+```java
+@Configuration
+public class HeaderConfig {
+
+    @Bean
+    public HeaderParser headerParser(){
+        return new HeaderParser();
+    }
+
+    @Bean
+    public HeaderGenerator headerGenerator(){
+        return new HeaderGenerator();
+    }
+}
+```
+
+
+
+启动类
+
+```java
+@EnableHeaderConfig
+@SpringBootApplication
+public class SpringbootWebApplication {...}
+```
+
+
+
+### 2.5.2 **@ConditionalOnClass**
+
+为下面的方法添加ConditionalOnClass注解
+
+```java
+    @Bean
+//  方式一：name 指定全类名
+//  方式名：value 指定Class文件
+//  会判断是否存在io.jsonwebtoken.Jwts类，如果存在则会将Bean注入IOC容器
+    @ConditionalOnClass(name = "io.jsonwebtoken.Jwts")
+    public HeaderParser headerParser(){
+        return new HeaderParser();
+    }
+
+```
+
+
+
+前提是里面有下面的坐标才会运行成功
+
+```xml
+<dependency>
+    <groupId>io.jsonwebtoken</groupId>
+    <artifactId>jjwt</artifactId>
+    <version>0.9.0</version>
+</dependency>
+```
+
+
+
+
+
+### 2.5.3 @ConditionalMissingBean
+
+**应用场景**：设置一个默认的Bean对象
+
+
+
+**默认Bean对象**：如果用户引入我们的依赖后，他自己定义了这个依赖的Bean，那默认定义的Bean就不会生效；如果没有定义还想使用这个Bean，那就是使用默认Bean对象
+
+
+
+ **参数**
+
+*   指定类型 value属性
+*   指定名称 name属性
+
+```java
+// @ConditionalOnMissingBean若不指定参数代表 当前环境没有该类型（该类型在这里指的是HeaderParser）的Bean就创建一个
+@ConditionalOnMissingBean
+@Bean
+public HeaderParser headerParser(){
+    return new HeaderParser();
+}
+```
+
+
+
+
+
+### 2.5.4 @ConditionalOnProperty
+
+​    与配置文件中配置的属性有关
+
+```java
+//  name指定配置文件中配置项的名称，value指定配置项的值
+//  会判断配置文件中是否存在指定属性与值，如果都存在才会将Bean加载到IOC容器
+    @ConditionalOnProperty(name = "name",havingValue = "zhangjingqi")
+    @Bean
+    public HeaderParser headerParser(){
+        return new HeaderParser();
+    }
+```
+
+application.yaml文件中内容
+
+```yaml
+name: zhangjingqi
+```
+
+
+
+# 三、自定义Starter
+
+
+
+## 3.1 自定义Starter分析
+
+​    一些技术并没有提供与SpringBoot整合的起步依赖，所以我们要学会自定义
+
+​       **在研发当中经常会定义一些公共组件，提供给各个项目团队使用。在SpringBoot项目中，一般会将这些公共组件封装为Springboot的starter**
+
+
+
+**需求**：
+
+*  自定义aliyun-oss-spring-boot-starter，完成阿里云OSS操作工具类AliyunOSSUtils
+
+
+
+ **目标**：
+
+*  引入起步依赖后，要想使用阿里云OSS，注入AliyunOSSUtils直接使用即可
+
+
+
+**步骤**
+
+*  创建 aliyun-oss-spring-boot-starter 模块
+*  创建 aliyun-oss-spring-boot-autoconfigure 模块，在starter中引入该模块
+*  在 aliyun-oss-spring-boot-autoconfigure 模块(自动配置类)中定义自动配置功能，并定义自动配置文件META-INF/spring/xxxx.imports
+
+
+
+## 3.2 实现
+
+
+
+### 3.2.1 创建starter模块
+
+仅仅留下pom文件，但是如果有“.iml”结尾的文件不要删除，因为是IDEA中的配置文件
+
+![image-20230521093758651](https://picture-typora-zhangjingqi.oss-cn-beijing.aliyuncs.com/image-20230521093758651.png)
+
+
+
+
+
+**引入autoconfigure 模块坐标**
+
+```xml
+<dependency>
+    <groupId>com.aliyun.oss</groupId>
+    <artifactId>aliyun-oss-spring-boot-autoconfigure</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+</dependency>
+```
+
+
+
+
+
+### 3.2.2 创建autoconfigure 模块
+
+   不需要启动类，因为是第三方模块，其他方会依赖这个模块
+
+![image-20230521094650631](https://picture-typora-zhangjingqi.oss-cn-beijing.aliyuncs.com/image-20230521094650631.png)
+
+
+
+**引入阿里云坐标**
+
+ 下面这篇文章中有对阿里云OSS的详细介绍
+
+[ Mybatis 案例 —— 文件上传OSS_](https://blog.csdn.net/weixin_51351637/article/details/130686294)
+
+```xml
+<dependency>
+    <groupId>com.aliyun.oss</groupId>
+    <artifactId>aliyun-sdk-oss</artifactId>
+    <version>3.15.1</version>
+</dependency>
+```
+
+
+
+**访问OSS对象存储的代码**
+
+```java
+public class AliOSSUtils {
+
+    private String endpoint = "https://oss-cn-beijing.aliyuncs.com";
+    private String accessKeyId = "写你自己的";
+    private String accessKeySecret = "写你自己的";
+    private String bucketName = "picture-typora-zhangjingqi";
+
+    /**
+     * 实现上传图片到OSS
+     */
+    public String upload(MultipartFile file) throws IOException {
+        // 获取上传的文件的输入流
+        InputStream inputStream = file.getInputStream();
+
+        // 避免文件覆盖
+        String originalFilename = file.getOriginalFilename();
+        String fileName = UUID.randomUUID().toString() + originalFilename.substring(originalFilename.lastIndexOf("."));
+
+        //上传文件到 OSS
+        OSS ossClient = new OSSClientBuilder().build(endpoint, accessKeyId, accessKeySecret);
+        ossClient.putObject(bucketName, fileName, inputStream);
+
+        //文件访问路径  比如 https://picture-typora-zhangjingqi.oss-cn-beijing.aliyuncs.com/1.jpg
+//         相当于把bucketName拼接在http://后面，把文件名字拼接在aliyuncs.com/ 后面
+        String url = endpoint.split("//")[0] + "//" + bucketName + "." + endpoint.split("//")[1] + "/" + fileName;
+        // 关闭ossClient
+        ossClient.shutdown();
+        return url;// 把上传到oss的路径返回
+    }
+
+}
+```
+
+
+
+
+
+
+
+**创建自动配置类**
+
+```java
+//底层封装饿了@Import注解
+//@EnableConfigurationProperties(读取配置文件的类名.class,假设为AliOSSProperties.class ) //使用properties/yaml配置文件的形式读取配置信息可以直接这么创建
+// 自动配置类
+@Configuration
+public class AliOSSAutoConfiguration {
+    @Bean
+    public AliOSSUtils aliOSSUtils(){
+//      因为这里我没有使用properties/yaml配置文件的形式读取配置信息可以直接这么创建
+        return  new AliOSSUtils();
+
+    }
+
+//  因为使用了@EnableConfigurationProperties(AliOSSProperties.class )AliOSSProperties类已经成为IOC的Bean了
+
+//   下面方法的参数可以直接使用AliOSSProperties,因为它会自动根据类型进行装配
+
+//  使用配置文件注入的
+//    @Bean
+//    public AliOSSUtils aliOSSUtilsProperties(AliOSSProperties aliOSSProperties){
+//      如果使用了配置文件之后，也是不可以自动注入的，我们这里就要改成
+//     AliOSSUtils aliOSSUtils = new AliOSSUtils();
+//     aliOSSUtils.setAliOSSProperties(aliOSSProperties);
+//      return aliOSSUtils;
+//    }
+}
+```
+
+
+
+**创建文件**
+
+META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports
+
+![image-20230521101907880](https://picture-typora-zhangjingqi.oss-cn-beijing.aliyuncs.com/image-20230521101907880.png)
+
+
+
+将配置类的全类名复制到上面的文件夹中即可
+
+```
+com.aliyun.oss.AliOSSAutoConfiguration
+```
+
+
+
+
+
+### 3.2.3 测试
+
+**引入刚刚阿里云封装的起步依赖**
+
+```java
+<dependency>
+    <groupId>com.aliyun.oss</groupId>
+    <artifactId>aliyun-oss-spring-boot-starter</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+</dependency>
+```
+
+
+
+>  ​    如果是将阿里云的配置信息存放在yaml配置文件中时，我们现在只需要将配置信息存放在测试模块的yaml文件中即可， 在阿里云工具类模块中也是可以读取到的
+
+```java
+@RestController
+public class UploadController {
+
+    @Autowired
+    private AliOSSUtils aliOSSUtils;
+
+    @PostMapping("/upload")
+    public String upload(MultipartFile image) throws Exception {
+        //上传文件到阿里云 OSS
+        String url = aliOSSUtils.upload(image);
+        return url;
+    }
+
+}
+```
+
+
+
+![image-20230521103433898](https://picture-typora-zhangjingqi.oss-cn-beijing.aliyuncs.com/image-20230521103433898.png)
