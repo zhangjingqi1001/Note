@@ -5,20 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b076f8a7-a2c0-4f25-b17f-7283861c7409" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../aliyun-oss-spring-boot-autoconfigure/src/main/java/com/aliyun/oss/AliOSSAutoConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../aliyun-oss-spring-boot-autoconfigure/src/main/java/com/aliyun/oss/AliOSSUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../aliyun-oss-spring-boot-autoconfigure/src/main/resources/META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Note/SpringBoot原理.md" beforeDir="false" afterPath="$PROJECT_DIR$/../Note/SpringBoot原理.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../itheima-utils/src/main/java/com/example/HeaderConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../itheima-utils/src/main/java/com/example/HeaderConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../itheima-utils/target/classes/com/example/HeaderConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/../itheima-utils/target/classes/com/example/HeaderConfig.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -234,7 +221,7 @@
       <workItem from="1684296138173" duration="8688000" />
       <workItem from="1684542483717" duration="423000" />
       <workItem from="1684542918291" duration="13536000" />
-      <workItem from="1684570623973" duration="14780000" />
+      <workItem from="1684570623973" duration="15982000" />
     </task>
     <servers />
   </component>
