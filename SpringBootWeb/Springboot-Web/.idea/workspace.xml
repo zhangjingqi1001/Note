@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b076f8a7-a2c0-4f25-b17f-7283861c7409" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../mysql/Mysql基础.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../mysql/Mysql基础.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../mysql/MySQL基础 — 多表查询以及事务管理.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../mysql/MySQL基础 — 多表查询以及事务管理.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -222,7 +222,7 @@
       <workItem from="1684296138173" duration="8688000" />
       <workItem from="1684542483717" duration="423000" />
       <workItem from="1684542918291" duration="13536000" />
-      <workItem from="1684570623973" duration="15982000" />
+      <workItem from="1684570623973" duration="17220000" />
     </task>
     <servers />
   </component>
