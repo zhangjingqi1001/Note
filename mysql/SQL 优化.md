@@ -254,6 +254,8 @@ load data local infile 'D:\\tb_sku1.sql' into table tb_user2 fields terminated b
 >
 >  
 
+## 3.0 排序方式讲解
+
 
 
 **MySQL两种排序方式**
@@ -296,7 +298,9 @@ explain select id,age,phone from tb_user order by age, phone ;
 
 
 
-​       **在看一下倒序排序**
+**案例**
+
+*  **在看一下倒序排序**
 
 ```sql
 explain select id,age,phone from tb_user order by age desc , phone desc ;
@@ -310,10 +314,66 @@ explain select id,age,phone from tb_user order by age desc , phone desc ;
 
 
 
-​    **刚刚我们创建索引是先age，再phone,那我们**
+*  **刚刚我们创建索引是先age，再phone,那我们此时排序先按phone进行排序，再按age进行排序**
+
+ **Using filesort**： 出现这个字符的原因是违背最左前缀法则的，因为我们在创建索引的时候age是第一个字段，phone是第二个字段，但是我们排序的时候，phone是第一个字段，age是第二个字段，所以这个地方phone没有走索引，age走了索引
 
 ```sql
 explain select id,age,phone from tb_user order by  phone ,age ;
+```
+
+![image-20230525170902685](https://picture-typora-zhangjingqi.oss-cn-beijing.aliyuncs.com/image-20230525170902685.png)
+
+
+
+
+
+*  **age Asc ,phone Desc**
+
+​     我们创建age，phone联合索引的时候，并没有指定升序排列还是降序排列，那就默认升序
+
+​     但是这个地方我们的phone是倒序排列，所以就需要额外的排序，导致了Using filesort
+
+```sql
+explain select id,age,phone from tb_user order by age Asc ,phone Desc ;
+```
+
+![image-20230525171831956](https://picture-typora-zhangjingqi.oss-cn-beijing.aliyuncs.com/image-20230525171831956.png)
+
+
+
+   这个地方也是可以优化的，如下所示
+
+```sql
+create index idx_user_age_phone_ad on tb_user(age asc ,phone desc);
+```
+
+
+
+
+
+## 3.1 升序/降序联合索引结构图示
+
+**叶子结点**
+
+  如果排序符合下面的情况，直接返回就可以了，不需要再排，所以走索引的排序会比较快，效率比较高
+
+![image-20230525172940016](https://picture-typora-zhangjingqi.oss-cn-beijing.aliyuncs.com/image-20230525172940016.png)
+
+
+
+
+
+**所有的排序规则都有一个条件，就是使用了覆盖索引**
+
+[MySQL——存储引擎于索引应用](https://blog.csdn.net/weixin_51351637/article/details/130863622?spm=1001.2014.3001.5502)
+
+
+
+  比如下面的数据，id，age，phone在叶子结点中都存在，不需要回表查询
+
+```sql
+explain select id,age,phone from tb_user order by age Asc ,phone Desc ;
 ```
 
 
@@ -322,7 +382,34 @@ explain select id,age,phone from tb_user order by  phone ,age ;
 
 
 
+## 3.2 **总结**
 
+ 上面案例能够正常使用索引排序的情况
+
+  创建索引、联合索引的时候不指定升序排列还是降序排列，默认就是升序排列
+
+*  order by age
+*  order by age,phone
+*  order by age Desc, phone Desc
+
+
+
+一个升序，一个降序会出现filesort现象，但是也可以优化，如下所示
+
+```sql
+create index idx_user_age_phone_ad on tb_user(age asc ,phone desc);
+```
+
+
+
+
+
+**总结**
+
+*  根据排序字段建立合适的索引，多字段排序时，也遵循最左前缀法则。
+*  尽量使用覆盖索引。
+*   多字段排序, 一个升序一个降序，此时需要注意联合索引在创建时的规则（ASC/DESC）。
+*   如果不可避免的出现filesort，大数据量排序时，可以适当增大排序缓冲区大小sort_buffer_size(默认256k)。
 
 # 四、Group by优化
 
