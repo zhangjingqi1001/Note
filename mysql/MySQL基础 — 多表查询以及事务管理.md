@@ -394,11 +394,14 @@ left join emp b on a.managerid =b.id;
 
 
 
-     ```sql
+```sql
 SELECT 字段列表 FROM 表A ...
 UNION [ ALL ]
 SELECT 字段列表 FROM 表B ....;
-     ```
+```
+
+
+
 
 
 
