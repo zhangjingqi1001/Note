@@ -809,15 +809,112 @@ trx_id 代表当前undolog版本链对应事务ID。
 
 ## 4.5 MVCC原理分析
 
+MVCC的**实现原理**就是通过 InnoDB表的**隐藏字段**（只要依靠事务id与回滚指针）、**UndoLog 版本链**、**ReadView**来实现的。
+
+而**MVCC + 锁，则实现了事务的隔离性**。 
+
+而**一致性则是由redolog 与 undolog保证**。
+
+![image-20230530135025147](https://picture-typora-zhangjingqi.oss-cn-beijing.aliyuncs.com/image-20230530135025147.png)
+
+
+
 >   理解一下4.4 readView版本链数据的访问规则
 
-RC隔离级别下，在事务中每一次执行快照读时生成ReadView
+**RC隔离级别下，在事务中每一次执行快照读时生成ReadView**
+
+**RR隔离级别下，仅在事务中第一次执行快照读时生成ReadView，后续复用该ReadView**
 
 
 
 
 
+### 4.5.1 RC隔离级别提取原理
+
+**RC隔离级别下，在事务中每一次执行快照读时生成ReadView**
+
+我们可以分析一下刚刚事务5，在RC隔离级别下生成的ReadView
+
+![image-20230530123836380](https://picture-typora-zhangjingqi.oss-cn-beijing.aliyuncs.com/image-20230530123836380.png)
+
+**第一次查询**
+
+id为30的记录m_ids:{3,4,5}，因为事务2在此行处已经提交了。
+
+最小活动事务id 即min_trx_id是3
+
+预分配事务id 即max_trx_id是6（，当前最大事务**ID+1**）
+
+创建者事务id 即creator_trx_id是5
+
+
+
+**第二次查询**
+
+id为30的记录m_ids:{4,5}，因为事务2、3在此行处已经提交了。
+
+最小活动事务id 即min_trx_id是4
+
+预分配事务id 即max_trx_id是6（，当前最大事务**ID+1**）
+
+创建者事务id 即creator_trx_id是5
+
+![image-20230530123708881](https://picture-typora-zhangjingqi.oss-cn-beijing.aliyuncs.com/image-20230530123708881.png)
 
 
 
 
+
+**事务5第一次select读取的哪个版本？**
+
+拿着db_trx_id到右边的表进行比对，
+
+当trx_id = 4 时，四个不等式都不满足
+
+ 当trx_id = 3 时，四个不等式都不满足
+
+ 当trx_id = 2 时，满足第二个等式，所以可以访问此条记录
+
+![image-20230530124736059](https://picture-typora-zhangjingqi.oss-cn-beijing.aliyuncs.com/image-20230530124736059.png)
+
+最终返回快照读的结果就是下面这条数据，而这条数据正式事务二所提交的
+
+![image-20230530124946132](https://picture-typora-zhangjingqi.oss-cn-beijing.aliyuncs.com/image-20230530124946132.png)
+
+
+
+
+
+**事务5第二次select读取的哪个版本？**
+
+与上面的流程相同
+
+![image-20230530125149680](https://picture-typora-zhangjingqi.oss-cn-beijing.aliyuncs.com/image-20230530125149680.png)
+
+最终访问的是，事务3提交的
+
+![image-20230530125223239](https://picture-typora-zhangjingqi.oss-cn-beijing.aliyuncs.com/image-20230530125223239.png)
+
+
+
+
+
+### 4.5.2 RR隔离级别提取原理
+
+**RR隔离级别下，仅在事务中第一次执行快照读时生成ReadView，后续复用该ReadView**
+
+放我们执行**第一个select语句的时候会产生一个快照读ReadView**
+
+记录了
+
+id为30的记录m_ids:{3,4,5}，因为事务2在此行处已经提交了。
+
+最小活动事务id 即min_trx_id是3
+
+预分配事务id 即max_trx_id是6（，当前最大事务**ID+1**）
+
+创建者事务id 即creator_trx_id是5
+
+如果我们**再执行第二个Select语句，不会再创建一个readView，会复用第一个Select语句**了
+
+![image-20230530134456570](https://picture-typora-zhangjingqi.oss-cn-beijing.aliyuncs.com/image-20230530134456570.png)
