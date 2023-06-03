@@ -5,8 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b076f8a7-a2c0-4f25-b17f-7283861c7409" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../Spring/Spring_ioc_test01/.idea/aws.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Spring/Spring_ioc_test01/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Spring/Spring_ioc_test01/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Spring/Spring_ioc_test01/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Spring/Spring_ioc_test01/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Spring/Spring_ioc_test01/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Spring/Spring_ioc_test01/src/main/java/com/zhangjingqi/dao/UserDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Spring/Spring_ioc_test01/src/main/java/com/zhangjingqi/dao/impl/UserDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Spring/Spring_ioc_test01/src/main/java/com/zhangjingqi/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Spring/Spring_ioc_test01/src/main/java/com/zhangjingqi/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Spring/Spring_ioc_test01/src/main/java/com/zhangjingqi/test/ApplicationContextTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Spring/Spring_ioc_test01/src/main/java/com/zhangjingqi/test/BeanFactoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Spring/Spring_ioc_test01/src/main/resources/beans.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../aliyun-oss-spring-boot-autoconfigure/.idea/aws.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../aliyun-oss-spring-boot-autoconfigure/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../aliyun-oss-spring-boot-autoconfigure/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../aliyun-oss-spring-boot-autoconfigure/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../mysql/MySQL基础 — 多表查询以及事务管理.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../mysql/MySQL基础 — 多表查询以及事务管理.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/controller/DeptController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/controller/DeptController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../mysql/读写分离.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../mysql/读写分离.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +81,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "1.8",
-    "last_opened_file_path": "D:/note/Note/SpringBootWeb/springboot-autoconfiguration-test",
+    "last_opened_file_path": "D:/note/Note/SpringBootWeb/Springboot-Web",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -84,6 +102,13 @@
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.aliyun.oss" />
     </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
   </component>
   <component name="RunManager" selected="Spring Boot.SpringbootAutoconfigurationTestApplication">
     <configuration name="SpringbootWebApplicationTests.testBean2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
@@ -223,6 +248,8 @@
       <workItem from="1684542483717" duration="423000" />
       <workItem from="1684542918291" duration="13536000" />
       <workItem from="1684570623973" duration="17220000" />
+      <workItem from="1685710519475" duration="1837000" />
+      <workItem from="1685771549915" duration="645000" />
     </task>
     <servers />
   </component>

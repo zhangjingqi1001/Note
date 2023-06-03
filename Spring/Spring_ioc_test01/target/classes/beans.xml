@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--class 可以明确Bean在哪-->
+    <!--id 为Bean做一个唯一标识-->
+    <bean id="userService" class="com.zhangjingqi.service.impl.UserServiceImpl">
+        <!--name: 指定构造方法的参数名 value:指定参数值-->
+        <constructor-arg name="name" value="我叫zhangjingqi"></constructor-arg>
+        <constructor-arg name="age" value="22"></constructor-arg>
+
+        <!--name属性就是set方法的名称，并且把set去掉，首字母小写-->
+        <!--ref是引用，从容器中找具体需要哪个对象-->
+        <property name="userDao" ref="userDao"></property>
+
+    </bean>
+    <!--配置UserDao-->
+    <bean id="userDao" class="com.zhangjingqi.dao.impl.UserDaoImpl"></bean>
+
+
+    <!--创建与之前一个样子-->
+    <!--
+      正常情况下，在启动时Spring容器会按照全限定名com.zhangjingqi.factory.MyBeanFactory1从无参构造创建MyBeanFactory1对象，创建完对象放入到容器当中
+    id为userDao1，BeanName也是id为userDao1
+    -->
+    <!--
+      但是此时有 factory-method指定方法为userDao，
+    此时Spring在解析时就明白了，我们不是把com.zhangjingqi.factory.MyBeanFactory1创建为对象，
+    而是把MyBeanFactory1类中userDao的返回值作为对象，
+    再以我们指定的id作为BeanName存储到容器当中
+      也就是说userDao1指定是userDao方法返回值Bean的名字/id，而不是MyBeanFactory1对象的名字/id
+    -->
+<!--    <bean id="userDao1" factory-method="userDao"-->
+<!--          class="com.zhangjingqi.factory.MyBeanFactory1">-->
+<!--        <constructor-arg name="name" value="我叫zhangjingqi"></constructor-arg>-->
+<!--        <constructor-arg name="age" value="22"></constructor-arg>-->
+<!--    </bean>-->
+
+    <!--MyBeanFactory2对象-->
+    <bean id="myBeanFactory2" class="com.zhangjingqi.factory.MyBeanFactory2">
+    </bean>
+
+    <bean id="userDao2" factory-bean="myBeanFactory2" factory-method="userDao" >
+        <constructor-arg name="name" value="我叫zhangjingqi"></constructor-arg>
+        <constructor-arg name="age" value="22"></constructor-arg>
+    </bean>
+
+</beans>
