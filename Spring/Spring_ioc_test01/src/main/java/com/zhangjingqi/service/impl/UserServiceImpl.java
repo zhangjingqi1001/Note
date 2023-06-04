@@ -5,23 +5,85 @@ import com.zhangjingqi.dao.impl.UserDaoImpl;
 import com.zhangjingqi.service.UserService;
 import org.springframework.beans.factory.InitializingBean;
 
+import java.util.List;
+import java.util.Map;
+import java.util.Properties;
+import java.util.Set;
+
 public class UserServiceImpl implements UserService  {
 
     private UserDao userDao;
-    // BeanFactory去调用该方法，从容器中获得userDao设置到此处
     public void setUserDao(UserDao userDao) {
         this.userDao =userDao;
     }
 
-    public UserServiceImpl(){
-//        System.out.println("UserServiceImpl实例化 - 无参构造注入");
+    private Properties properties;
+
+    public void setProperties(Properties properties) {
+        this.properties = properties;
     }
 
-    public UserServiceImpl(String name){
-//        System.out.println("UserServiceImpl实例化 - 有参构造注入，name="+name);
-    }
-    public UserServiceImpl(String name,int age){
-//        System.out.println("UserServiceImpl实例化 - 有参构造注入，name="+name+",age="+age);
+    public Properties getProperties() {
+        return properties;
     }
 
+    private Map<String, UserDao> map;
+
+    public void setMap(Map<String, UserDao> map) {
+        this.map = map;
+    }
+
+    public Map<String, UserDao> getMap() {
+        return map;
+    }
+
+
+
+    //   注入List
+    private List<String> stringList;
+
+    public void setStringList(List<String> stringList) {
+        this.stringList = stringList;
+    }
+
+    public List<String> getStringList() {
+        return stringList;
+    }
+
+
+    private List<UserDao> userDaoList;
+
+    public void setUserDaoList(List<UserDao> userDaoList) {
+        this.userDaoList = userDaoList;
+    }
+
+    public List<UserDao> getUserDaoList() {
+        return userDaoList;
+    }
+
+
+    private Set<String> strSet;
+
+    public void setStrSet(Set<String> strSet) {
+        this.strSet = strSet;
+    }
+    private Set<UserDao> userDaoSet;
+
+    public void setUserDaoSet(Set<UserDao> userDaoSet) {
+        this.userDaoSet = userDaoSet;
+    }
+
+
+
+    public Set<String> getStrSet() {
+        return strSet;
+    }
+
+    public Set<UserDao> getUserDaoSet() {
+        return userDaoSet;
+    }
+
+    public UserDao getUserDao() {
+        return userDao;
+    }
 }

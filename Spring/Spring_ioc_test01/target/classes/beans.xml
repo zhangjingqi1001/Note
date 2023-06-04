@@ -1,22 +1,115 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context
+                           http://www.springframework.org/schema/context/spring-context.xsd">
+    <!--配置数据源信息-->
+    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
+        <!--配置必要属性-->
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+        <property name="url" value="jdbc://localhost:3306/mybatis"/>
+        <property name="username" value="root"/>
+        <property name="password" value="root"/>
+    </bean>
+
+
+    <!--    <bean id="userService"  class="com.zhangjingqi.service.impl.UserServiceImpl"/>-->
+
+    <!--    <bean id="userDao" class="com.zhangjingqi.dao.impl.UserDaoImpl"></bean>-->
+
+    <!--    <beans profile="dev">-->
+    <!--        <bean id="userServiceDev" class="com.zhangjingqi.service.impl.UserServiceImpl"></bean>-->
+    <!--    </beans>-->
+
+    <!--    <beans profile="test">-->
+    <!--        <bean id="userDaoTest" class="com.zhangjingqi.dao.impl.UserDaoImpl"></bean>-->
+    <!--    </beans>-->
+
+
+    <!--    <bean id="userService" class="com.zhangjingqi.service.impl.UserServiceImpl">-->
+    <!--       <property name="properties">-->
+    <!--           <props>-->
+    <!--               <prop key="p1">zhangjingqi</prop>-->
+    <!--               <prop key="p2">123</prop>-->
+    <!--               <prop key="p3">456</prop>-->
+    <!--           </props>-->
+    <!--       </property>-->
+
+    <!--        <property name="map">-->
+    <!--            <map>-->
+    <!--                &lt;!&ndash;第一种方式&ndash;&gt;-->
+    <!--                &lt;!&ndash;<entry key="1" value=""></entry>&ndash;&gt;-->
+    <!--                &lt;!&ndash;第二种方式&ndash;&gt;-->
+    <!--                &lt;!&ndash;<entry key-ref="" value-ref=""></entry>&ndash;&gt;-->
+    <!--                <entry key="1" value-ref="userDao1"></entry>-->
+    <!--                <entry key="2" value-ref="userDao2"></entry>-->
+    <!--                <entry key="3" value-ref="userDao3"></entry>-->
+    <!--            </map>-->
+    <!--        </property>-->
+
+
+    <!--        &lt;!&ndash;不靠ref了，因为是一个集合，要靠子标签&ndash;&gt;-->
+    <!--        <property name="stringList">-->
+    <!--            <list>-->
+    <!--                <value>aaaa</value>-->
+    <!--                <value>bbb</value>-->
+    <!--                <value>ccc</value>-->
+    <!--            </list>-->
+    <!--        </property>-->
+
+    <!--        <property name="userDaoList">-->
+    <!--            <list>-->
+    <!--                &lt;!&ndash;可以配置多个，每一个都代表一个userDao对象&ndash;&gt;-->
+    <!--                <bean class="com.zhangjingqi.dao.impl.UserDaoImpl"></bean>-->
+    <!--                <bean class="com.zhangjingqi.dao.impl.UserDaoImpl"></bean>-->
+    <!--                &lt;!&ndash;或者可以引用&ndash;&gt;-->
+    <!--                <ref bean="userDao1"></ref>-->
+    <!--                <ref bean="userDao2"></ref>-->
+    <!--                <ref bean="userDao3"></ref>-->
+    <!--            </list>-->
+    <!--        </property>-->
+
+    <!--        <property name="strSet">-->
+    <!--            <set>-->
+    <!--                <value>aaaaa</value>-->
+    <!--                <value>bbbbb</value>-->
+    <!--                <value>ccccc</value>-->
+    <!--            </set>-->
+    <!--        </property>-->
+    <!--        <property name="userDaoSet">-->
+    <!--            <set>-->
+    <!--                &lt;!&ndash; 第一种方式&ndash;&gt;-->
+    <!--                <bean class="com.zhangjingqi.dao.impl.UserDaoImpl"></bean>-->
+    <!--                &lt;!&ndash;  第二种方式&ndash;&gt;-->
+    <!--                <ref bean="userDao1"></ref>-->
+    <!--                <ref bean="userDao2"></ref>-->
+    <!--                <ref bean="userDao3"></ref>-->
+    <!--            </set>-->
+    <!--        </property>-->
+
+    <!--    </bean>-->
+    <!--    <bean id="userDao1" class="com.zhangjingqi.dao.impl.UserDaoImpl"></bean>-->
+    <!--    <bean id="userDao2" class="com.zhangjingqi.dao.impl.UserDaoImpl"></bean>-->
+    <!--    <bean id="userDao3" class="com.zhangjingqi.dao.impl.UserDaoImpl"></bean>-->
+
 
     <!--class 可以明确Bean在哪-->
     <!--id 为Bean做一个唯一标识-->
-    <bean id="userService" class="com.zhangjingqi.service.impl.UserServiceImpl">
-        <!--name: 指定构造方法的参数名 value:指定参数值-->
-        <constructor-arg name="name" value="我叫zhangjingqi"></constructor-arg>
-        <constructor-arg name="age" value="22"></constructor-arg>
+    <!--    <bean id="userService" class="com.zhangjingqi.service.impl.UserServiceImpl">-->
+    <!--&lt;!&ndash;        &lt;!&ndash;name: 指定构造方法的参数名 value:指定参数值&ndash;&gt;&ndash;&gt;-->
+    <!--&lt;!&ndash;        <constructor-arg name="name" value="我叫zhangjingqi"></constructor-arg>&ndash;&gt;-->
+    <!--&lt;!&ndash;        <constructor-arg name="age" value="22"></constructor-arg>&ndash;&gt;-->
 
-        <!--name属性就是set方法的名称，并且把set去掉，首字母小写-->
-        <!--ref是引用，从容器中找具体需要哪个对象-->
-        <property name="userDao" ref="userDao"></property>
+    <!--        &lt;!&ndash;name属性就是set方法的名称，并且把set去掉，首字母小写&ndash;&gt;-->
+    <!--        &lt;!&ndash;ref是引用，从容器中找具体需要哪个对象&ndash;&gt;-->
+    <!--        <property name="userDao" ref="userDao"></property>-->
 
-    </bean>
-    <!--配置UserDao-->
-    <bean id="userDao" class="com.zhangjingqi.dao.impl.UserDaoImpl"></bean>
+    <!--    </bean>-->
+    <!--    &lt;!&ndash;配置UserDao&ndash;&gt;-->
+    <!--    <bean id="userDao" class="com.zhangjingqi.dao.impl.UserDaoImpl"></bean>-->
 
 
     <!--创建与之前一个样子-->
@@ -31,19 +124,23 @@
     再以我们指定的id作为BeanName存储到容器当中
       也就是说userDao1指定是userDao方法返回值Bean的名字/id，而不是MyBeanFactory1对象的名字/id
     -->
-<!--    <bean id="userDao1" factory-method="userDao"-->
-<!--          class="com.zhangjingqi.factory.MyBeanFactory1">-->
-<!--        <constructor-arg name="name" value="我叫zhangjingqi"></constructor-arg>-->
-<!--        <constructor-arg name="age" value="22"></constructor-arg>-->
-<!--    </bean>-->
+    <!--    <bean id="userDao1" factory-method="userDao"-->
+    <!--          class="com.zhangjingqi.factory.MyBeanFactory1">-->
+    <!--        <constructor-arg name="name" value="我叫zhangjingqi"></constructor-arg>-->
+    <!--        <constructor-arg name="age" value="22"></constructor-arg>-->
+    <!--    </bean>-->
 
     <!--MyBeanFactory2对象-->
-    <bean id="myBeanFactory2" class="com.zhangjingqi.factory.MyBeanFactory2">
-    </bean>
+    <!--    <bean id="myBeanFactory2" class="com.zhangjingqi.factory.MyBeanFactory2">-->
+    <!--    </bean>-->
 
-    <bean id="userDao2" factory-bean="myBeanFactory2" factory-method="userDao" >
-        <constructor-arg name="name" value="我叫zhangjingqi"></constructor-arg>
-        <constructor-arg name="age" value="22"></constructor-arg>
-    </bean>
+    <!--    <bean id="userDao2" factory-bean="myBeanFactory2" factory-method="userDao" >-->
+    <!--        <constructor-arg name="name" value="我叫zhangjingqi"></constructor-arg>-->
+    <!--        <constructor-arg name="age" value="22"></constructor-arg>-->
+    <!--    </bean>-->
+
+
+    <!--    <bean id="userDao3" class="com.zhangjingqi.factory.MyBeanFactory3">-->
+    <!--    </bean>-->
 
 </beans>

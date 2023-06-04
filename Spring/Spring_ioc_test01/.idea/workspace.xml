@@ -5,33 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="552e4780-baf2-4889-be8d-05d3d5261668" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../1.BeanFactory与ApplicationContext.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../2.Spring Bean.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/aws.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Spring_ioc_test01.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/dao/UserDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/dao/impl/UserDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/factory/MyBeanFactory1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/factory/MyBeanFactory2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/test/ApplicationContextTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/test/BeanFactoryTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/test/Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/beans.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../SpringBootWeb/aliyun-oss-spring-boot-autoconfigure/.idea/aws.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../SpringBootWeb/aliyun-oss-spring-boot-autoconfigure/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../SpringBootWeb/aliyun-oss-spring-boot-autoconfigure/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../SpringBootWeb/aliyun-oss-spring-boot-autoconfigure/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../SpringBootWeb/Springboot-Web/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../SpringBootWeb/Springboot-Web/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../SpringBootWeb/Springboot-Web/src/main/java/com/zhangjingqi/controller/DeptController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../SpringBootWeb/Springboot-Web/src/main/java/com/zhangjingqi/controller/DeptController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../mysql/读写分离.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../mysql/读写分离.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../JavaSE/线程池.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/factory/MyBeanFactory3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2.Spring Bean.md" beforeDir="false" afterPath="$PROJECT_DIR$/../2.Spring Bean.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/test/ApplicationContextTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/test/ApplicationContextTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/test/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/test/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/beans.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/beans.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/beans.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/beans.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zhangjingqi/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zhangjingqi/service/impl/UserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zhangjingqi/test/ApplicationContextTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zhangjingqi/test/ApplicationContextTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zhangjingqi/test/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zhangjingqi/test/Test.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -183,6 +169,7 @@
       <pinned-members>
         <PinnedItemInfo parentTag="org.springframework.beans.factory.support.DefaultListableBeanFactory" memberName="aliasMap" />
         <PinnedItemInfo parentTag="org.springframework.beans.factory.support.DefaultListableBeanFactory" memberName="beanDefinitionMap" />
+        <PinnedItemInfo parentTag="org.springframework.beans.factory.support.DefaultListableBeanFactory" memberName="factoryBeanObjectCache" />
         <PinnedItemInfo parentTag="org.springframework.beans.factory.support.DefaultListableBeanFactory" memberName="singletonObjects" />
       </pinned-members>
     </pin-to-top-manager>
