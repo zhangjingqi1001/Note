@@ -8,8 +8,8 @@ import com.zhangjingqi.dao.impl.UserDaoImpl;
 //     Spring容器帮我们去调用MyBeanFactory1的静态方法userDao，最终将返回的对象存入到Spring容器之中
 public class MyBeanFactory1 {
 
-    public static UserDao userDao(String name,int age){
-        System.out.println("name:"+name+",age:"+age);
+    public static UserDao userDao(){
+//        System.out.println("name:"+name+",age:"+age);
         return new UserDaoImpl();
     }
 
