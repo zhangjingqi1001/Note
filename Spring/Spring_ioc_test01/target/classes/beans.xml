@@ -1,49 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:component-scan base-package="com.zhangjingqi"/>
+
+    <!--    <bean class="com.zhangjingqi.factory.MyBeanPostProcessor"-->
+    <!--    ></bean>-->
+    <!--    <bean id="userService" class="com.zhangjingqi.service.impl.UserServiceImpl">-->
+    <!--        <property name="userDao" ref="userDao"></property>-->
+    <!--    </bean>-->
+
+    <!--    <bean id="userDao" class="com.zhangjingqi.dao.impl.UserDaoImpl">-->
+    <!--    </bean>-->
 
 
-    <bean class="com.zhangjingqi.factory.MyBeanPostProcessor"
-    ></bean>
-<!--    <bean id="userService" class="com.zhangjingqi.service.impl.UserServiceImpl"/>-->
-
-    <bean id="userDao"  init-method="init"
-          class="com.zhangjingqi.dao.impl.UserDaoImpl"></bean>
-
-
-<!--    <bean class="com.zhangjingqi.processor.MyBeanFactoryPostProcessor"></bean>-->
-
-
+    <!--    <bean class="com.zhangjingqi.processor.MyBeanFactoryPostProcessor"></bean>-->
 
 
     <!--静态工厂方式产生Bean实例-->
-<!--    <bean id="inputStream" class="org.apache.ibatis.io.Resources" factory-method="getResourceAsStream">-->
-<!--        <constructor-arg name="resource" value="mybatis-config.xml"/>-->
-<!--    </bean>-->
+    <!--    <bean id="inputStream" class="org.apache.ibatis.io.Resources" factory-method="getResourceAsStream">-->
+    <!--        <constructor-arg name="resource" value="mybatis-config.xml"/>-->
+    <!--    </bean>-->
 
-<!--    &lt;!&ndash;无参构造方式产生Bean实例&ndash;&gt;-->
-<!--    <bean id="sqlSessionFactoryBuilder" class="org.apache.ibatis.session.SqlSessionFactoryBuilder"/>-->
+    <!--    &lt;!&ndash;无参构造方式产生Bean实例&ndash;&gt;-->
+    <!--    <bean id="sqlSessionFactoryBuilder" class="org.apache.ibatis.session.SqlSessionFactoryBuilder"/>-->
 
-<!--    &lt;!&ndash;实例工厂方式产生Bean实例&ndash;&gt;-->
-<!--    <bean id="sqlSessionFactory" factory-bean="sqlSessionFactoryBuilder" factory-method="build">-->
-<!--        <constructor-arg name="inputStream" ref="inputStream"/>-->
-<!--    </bean>-->
-
-
-
-<!--    <bean id="userDao1" factory-method="userDao" class="com.zhangjingqi.factory.MyBeanFactory1">-->
-<!--    </bean>-->
+    <!--    &lt;!&ndash;实例工厂方式产生Bean实例&ndash;&gt;-->
+    <!--    <bean id="sqlSessionFactory" factory-bean="sqlSessionFactoryBuilder" factory-method="build">-->
+    <!--        <constructor-arg name="inputStream" ref="inputStream"/>-->
+    <!--    </bean>-->
 
 
-<!--    &lt;!&ndash;配置工厂对象&ndash;&gt;-->
-<!--    <bean id="simpleDateFormat" class="java.text.SimpleDateFormat">-->
-<!--        <constructor-arg name="pattern" value="yyyy-MM-dd HH:mm:ss"></constructor-arg>-->
-<!--    </bean>-->
+    <!--    <bean id="userDao1" factory-method="userDao" class="com.zhangjingqi.factory.MyBeanFactory1">-->
+    <!--    </bean>-->
 
-<!--    <bean id="date" class="java.util.Date" factory-bean="simpleDateFormat" factory-method="parse">-->
-<!--        <constructor-arg name="source" value="2023-08-27 07:20:00"></constructor-arg>-->
-<!--    </bean>-->
+
+    <!--    &lt;!&ndash;配置工厂对象&ndash;&gt;-->
+    <!--    <bean id="simpleDateFormat" class="java.text.SimpleDateFormat">-->
+    <!--        <constructor-arg name="pattern" value="yyyy-MM-dd HH:mm:ss"></constructor-arg>-->
+    <!--    </bean>-->
+
+    <!--    <bean id="date" class="java.util.Date" factory-bean="simpleDateFormat" factory-method="parse">-->
+    <!--        <constructor-arg name="source" value="2023-08-27 07:20:00"></constructor-arg>-->
+    <!--    </bean>-->
 
     <!--相当于Class.forName("com.mysql.jdbc.Driver")-->
     <!--    <bean class="java.lang.Class" factory-method="forName">-->
@@ -66,7 +70,6 @@
     <!--        <property name="username" value="root"/>-->
     <!--        <property name="password" value="root"/>-->
     <!--    </bean>-->
-
 
 
     <!--    <beans profile="dev">-->
@@ -193,3 +196,5 @@
     <!--    </bean>-->
 
 </beans>
+
+

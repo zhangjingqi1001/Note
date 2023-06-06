@@ -1,18 +1,13 @@
 package com.zhangjingqi.dao.impl;
 
 import com.zhangjingqi.dao.UserDao;
+import com.zhangjingqi.service.impl.UserServiceImpl;
 import org.springframework.beans.factory.InitializingBean;
+import org.springframework.stereotype.Component;
 
-public class UserDaoImpl implements UserDao, InitializingBean {
-    public UserDaoImpl() {
-        System.out.println("userDao实例化");
-    }
+@Component
+public class UserDaoImpl implements UserDao {
 
-    public void init() {
-        System.out.println("init 初始化方法开始执行");
-    }
 
-    public void afterPropertiesSet() throws Exception {
-        System.out.println("afterPropertiesSet");
-    }
+
 }

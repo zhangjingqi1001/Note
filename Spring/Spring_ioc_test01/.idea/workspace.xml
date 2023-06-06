@@ -5,38 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="552e4780-baf2-4889-be8d-05d3d5261668" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../3.Bean的实例化流程及生命周期.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/OtherBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/anno/MyComponent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/dao/PersonDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/dao/impl/PersonDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/factory/MyBeanPostProcessor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/factory/MyComponentBeanFactoryPostProcessor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/factory/TimeLogBeanPostProcessor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/processor/MyBeanFactoryPostProcessor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/processor/MyBeanFactoryPostProcessor2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/util/BaseClassScanUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/zhangjingqi/OtherBean.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/zhangjingqi/anno/MyComponent.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/zhangjingqi/dao/PersonDao.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/zhangjingqi/dao/impl/PersonDaoImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/zhangjingqi/factory/MyBeanPostProcessor.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/zhangjingqi/factory/MyComponentBeanFactoryPostProcessor.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/zhangjingqi/processor/MyBeanFactoryPostProcessor.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/zhangjingqi/processor/MyBeanFactoryPostProcessor2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/zhangjingqi/util/BaseClassScanUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2.Spring Bean.md" beforeDir="false" afterPath="$PROJECT_DIR$/../2.Spring Bean.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../4. Spring的注解开发.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SpringBootWeb/Springboot-Web/src/main/java/com/zhangjingqi/WaitSleepCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../3.Bean的实例化流程及生命周期.md" beforeDir="false" afterPath="$PROJECT_DIR$/../3.Bean的实例化流程及生命周期.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/dao/impl/UserDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/dao/impl/UserDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/factory/MyBeanFactory1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/factory/MyBeanFactory1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/factory/TimeLogBeanPostProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/factory/TimeLogBeanPostProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/service/impl/UserServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/test/ApplicationContextTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/test/ApplicationContextTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/beans.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/beans.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/beans.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/beans.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/zhangjingqi/dao/impl/UserDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zhangjingqi/dao/impl/UserDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zhangjingqi/factory/MyBeanFactory1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zhangjingqi/factory/MyBeanFactory1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zhangjingqi/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zhangjingqi/service/impl/UserServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/zhangjingqi/test/ApplicationContextTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zhangjingqi/test/ApplicationContextTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringBootWeb/Springboot-Web/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../SpringBootWeb/Springboot-Web/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringBootWeb/Springboot-Web/target/classes/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../../SpringBootWeb/Springboot-Web/target/classes/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringBootWeb/Springboot-Web/target/classes/com/zhangjingqi/controller/DeptController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../SpringBootWeb/Springboot-Web/target/classes/com/zhangjingqi/controller/DeptController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +80,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/note/Note/Spring/Spring_ioc_test01/src/main/java/com/zhangjingqi/util",
+    "last_opened_file_path": "D:/note/Note/SpringBootWeb/Springboot-Web",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -150,6 +135,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="WaitSleepCase" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.zhangjingqi.factory.WaitSleepCase" />
+      <module name="Spring_ioc_test01" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zhangjingqi.factory.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="com.zhangjingqi.test.Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.zhangjingqi.test.Test" />
       <module name="Spring_ioc_test01" />
@@ -166,6 +164,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.ApplicationContextTest" />
+        <item itemvalue="Application.WaitSleepCase" />
         <item itemvalue="Application.com.zhangjingqi.test.Test" />
         <item itemvalue="Application.BeanFactoryTest" />
         <item itemvalue="Application.Test" />
@@ -182,7 +181,7 @@
       <updated>1685712929257</updated>
       <workItem from="1685712930374" duration="195000" />
       <workItem from="1685713135147" duration="40000" />
-      <workItem from="1685882947933" duration="17177000" />
+      <workItem from="1685882947933" duration="27886000" />
     </task>
     <servers />
   </component>
@@ -197,8 +196,10 @@
       <pinned-members>
         <PinnedItemInfo parentTag="org.springframework.beans.factory.support.DefaultListableBeanFactory" memberName="aliasMap" />
         <PinnedItemInfo parentTag="org.springframework.beans.factory.support.DefaultListableBeanFactory" memberName="beanDefinitionMap" />
+        <PinnedItemInfo parentTag="java.lang.String" memberName="value" />
         <PinnedItemInfo parentTag="org.springframework.beans.factory.support.DefaultListableBeanFactory" memberName="factoryBeanObjectCache" />
         <PinnedItemInfo parentTag="org.springframework.beans.factory.support.DefaultListableBeanFactory" memberName="singletonObjects" />
+        <PinnedItemInfo parentTag="org.springframework.beans.factory.support.GenericBeanDefinition" memberName="propertyValues" />
       </pinned-members>
     </pin-to-top-manager>
   </component>

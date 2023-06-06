@@ -14,7 +14,10 @@ import java.util.Date;
 public class ApplicationContextTest {
     public static void main(String[] args) {
         //参数是一个xml配置文件
+
         ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("beans.xml");
+        Object userService = applicationContext.getBean("userDaoImpl");
+        System.out.println(userService);
 
     }
 }

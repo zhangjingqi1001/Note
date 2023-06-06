@@ -5,26 +5,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b076f8a7-a2c0-4f25-b17f-7283861c7409" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../Spring/Spring_ioc_test01/.idea/aws.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Spring/Spring_ioc_test01/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Spring/Spring_ioc_test01/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Spring/Spring_ioc_test01/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Spring/Spring_ioc_test01/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Spring/Spring_ioc_test01/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Spring/Spring_ioc_test01/src/main/java/com/zhangjingqi/dao/UserDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Spring/Spring_ioc_test01/src/main/java/com/zhangjingqi/dao/impl/UserDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Spring/Spring_ioc_test01/src/main/java/com/zhangjingqi/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Spring/Spring_ioc_test01/src/main/java/com/zhangjingqi/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Spring/Spring_ioc_test01/src/main/java/com/zhangjingqi/test/ApplicationContextTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Spring/Spring_ioc_test01/src/main/java/com/zhangjingqi/test/BeanFactoryTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Spring/Spring_ioc_test01/src/main/resources/beans.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../aliyun-oss-spring-boot-autoconfigure/.idea/aws.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../aliyun-oss-spring-boot-autoconfigure/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../aliyun-oss-spring-boot-autoconfigure/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../aliyun-oss-spring-boot-autoconfigure/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Spring/4. Spring的注解开发.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Spring/Spring_ioc_test01/src/main/java/com/zhangjingqi/factory/WaitSleepCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Spring/3.Bean的实例化流程及生命周期.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../Spring/3.Bean的实例化流程及生命周期.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Spring/Spring_ioc_test01/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Spring/Spring_ioc_test01/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Spring/Spring_ioc_test01/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Spring/Spring_ioc_test01/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Spring/Spring_ioc_test01/src/main/java/com/zhangjingqi/dao/impl/UserDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Spring/Spring_ioc_test01/src/main/java/com/zhangjingqi/dao/impl/UserDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Spring/Spring_ioc_test01/src/main/java/com/zhangjingqi/factory/TimeLogBeanPostProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Spring/Spring_ioc_test01/src/main/java/com/zhangjingqi/factory/TimeLogBeanPostProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Spring/Spring_ioc_test01/src/main/java/com/zhangjingqi/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Spring/Spring_ioc_test01/src/main/java/com/zhangjingqi/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Spring/Spring_ioc_test01/src/main/java/com/zhangjingqi/test/ApplicationContextTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Spring/Spring_ioc_test01/src/main/java/com/zhangjingqi/test/ApplicationContextTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Spring/Spring_ioc_test01/src/main/resources/beans.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Spring/Spring_ioc_test01/src/main/resources/beans.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Spring/Spring_ioc_test01/target/classes/beans.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Spring/Spring_ioc_test01/target/classes/beans.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Spring/Spring_ioc_test01/target/classes/com/zhangjingqi/OtherBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Spring/Spring_ioc_test01/target/classes/com/zhangjingqi/anno/MyComponent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Spring/Spring_ioc_test01/target/classes/com/zhangjingqi/dao/PersonDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Spring/Spring_ioc_test01/target/classes/com/zhangjingqi/dao/UserDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Spring/Spring_ioc_test01/target/classes/com/zhangjingqi/dao/impl/PersonDaoImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Spring/Spring_ioc_test01/target/classes/com/zhangjingqi/dao/impl/UserDaoImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Spring/Spring_ioc_test01/target/classes/com/zhangjingqi/factory/MyBeanFactory1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Spring/Spring_ioc_test01/target/classes/com/zhangjingqi/factory/MyBeanFactory2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Spring/Spring_ioc_test01/target/classes/com/zhangjingqi/factory/MyBeanFactory3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Spring/Spring_ioc_test01/target/classes/com/zhangjingqi/factory/MyBeanPostProcessor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Spring/Spring_ioc_test01/target/classes/com/zhangjingqi/factory/MyComponentBeanFactoryPostProcessor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Spring/Spring_ioc_test01/target/classes/com/zhangjingqi/processor/MyBeanFactoryPostProcessor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Spring/Spring_ioc_test01/target/classes/com/zhangjingqi/processor/MyBeanFactoryPostProcessor2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Spring/Spring_ioc_test01/target/classes/com/zhangjingqi/service/UserService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Spring/Spring_ioc_test01/target/classes/com/zhangjingqi/service/impl/UserServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Spring/Spring_ioc_test01/target/classes/com/zhangjingqi/test/ApplicationContextTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Spring/Spring_ioc_test01/target/classes/com/zhangjingqi/test/BeanFactoryTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Spring/Spring_ioc_test01/target/classes/com/zhangjingqi/test/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Spring/Spring_ioc_test01/target/classes/com/zhangjingqi/util/BaseClassScanUtils.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/controller/DeptController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/controller/DeptController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../mysql/读写分离.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../mysql/读写分离.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,35 +82,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "1.8",
-    "last_opened_file_path": "D:/note/Note/SpringBootWeb/Springboot-Web",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.17",
-    "project.structure.side.proportion": "0.3018868",
-    "settings.editor.selected.configurable": "MavenSettings",
-    "spring.configuration.checksum": "f846a348d19b9dffe5a67fff2c791d29",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;1.8&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/note/Note/SpringBootWeb/Springboot-Web&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.17&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.3018868&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;f846a348d19b9dffe5a67fff2c791d29&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\Note\SpringBootWeb\Springboot-Web\src\main\java\com\zhangjingqi\utils" />
       <recent name="E:\Note\SpringBootWeb\Springboot-Web\src\main\java\com\zhangjingqi\controller" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.zhangjingqi" />
       <recent name="com.aliyun.oss" />
     </key>
   </component>
@@ -110,8 +122,9 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.SpringbootAutoconfigurationTestApplication">
-    <configuration name="SpringbootWebApplicationTests.testBean2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.WaitSleepCase">
+    <configuration name="WaitSleepCase" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.zhangjingqi.WaitSleepCase" />
       <module name="Springboot-Web" />
       <extension name="coverage">
         <pattern>
@@ -119,10 +132,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.zhangjingqi" />
-      <option name="MAIN_CLASS_NAME" value="com.zhangjingqi.SpringbootWebApplicationTests" />
-      <option name="METHOD_NAME" value="testBean2" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -221,11 +230,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.WaitSleepCase" />
         <item itemvalue="JUnit.SpringbootWebApplicationTests.testHeaderParser" />
         <item itemvalue="JUnit.SpringbootWebApplicationTests.testHeaderConfig" />
         <item itemvalue="JUnit.SpringbootWebApplicationTests.testTokenParse" />
         <item itemvalue="JUnit.SpringbootWebApplicationTests.testJson" />
-        <item itemvalue="JUnit.SpringbootWebApplicationTests.testBean2" />
       </list>
     </recent_temporary>
   </component>
@@ -250,6 +259,7 @@
       <workItem from="1684570623973" duration="17220000" />
       <workItem from="1685710519475" duration="1837000" />
       <workItem from="1685771549915" duration="645000" />
+      <workItem from="1686043394600" duration="3257000" />
     </task>
     <servers />
   </component>
