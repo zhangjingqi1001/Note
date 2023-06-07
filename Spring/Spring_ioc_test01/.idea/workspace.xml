@@ -5,23 +5,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="552e4780-baf2-4889-be8d-05d3d5261668" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../4. Spring的注解开发.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../SpringBootWeb/Springboot-Web/src/main/java/com/zhangjingqi/WaitSleepCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/config/DataSourceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/config/SpringConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/imports/MyImportBeanDefinitionRegistrar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/imports/MyImportSelector.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/imports/OtherBean2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../3.Bean的实例化流程及生命周期.md" beforeDir="false" afterPath="$PROJECT_DIR$/../3.Bean的实例化流程及生命周期.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../4. Spring的注解开发.md" beforeDir="false" afterPath="$PROJECT_DIR$/../4. Spring的注解开发.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/dao/impl/UserDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/dao/impl/UserDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/factory/TimeLogBeanPostProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/factory/TimeLogBeanPostProcessor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/service/impl/UserServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/test/ApplicationContextTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/test/ApplicationContextTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/beans.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/beans.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/beans.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/beans.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zhangjingqi/OtherBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zhangjingqi/OtherBean.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zhangjingqi/anno/MyComponent.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zhangjingqi/anno/MyComponent.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zhangjingqi/dao/PersonDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zhangjingqi/dao/PersonDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zhangjingqi/dao/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zhangjingqi/dao/UserDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zhangjingqi/dao/impl/PersonDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zhangjingqi/dao/impl/PersonDaoImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/zhangjingqi/dao/impl/UserDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zhangjingqi/dao/impl/UserDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zhangjingqi/factory/MyBeanFactory1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zhangjingqi/factory/MyBeanFactory1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zhangjingqi/factory/MyBeanFactory2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zhangjingqi/factory/MyBeanFactory2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zhangjingqi/factory/MyBeanFactory3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zhangjingqi/factory/MyBeanFactory3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zhangjingqi/factory/MyBeanPostProcessor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zhangjingqi/factory/MyBeanPostProcessor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zhangjingqi/factory/MyComponentBeanFactoryPostProcessor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zhangjingqi/factory/MyComponentBeanFactoryPostProcessor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zhangjingqi/processor/MyBeanFactoryPostProcessor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zhangjingqi/processor/MyBeanFactoryPostProcessor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zhangjingqi/processor/MyBeanFactoryPostProcessor2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zhangjingqi/processor/MyBeanFactoryPostProcessor2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zhangjingqi/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zhangjingqi/service/UserService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/zhangjingqi/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zhangjingqi/service/impl/UserServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/zhangjingqi/test/ApplicationContextTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zhangjingqi/test/ApplicationContextTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../SpringBootWeb/Springboot-Web/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../SpringBootWeb/Springboot-Web/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../SpringBootWeb/Springboot-Web/target/classes/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../../SpringBootWeb/Springboot-Web/target/classes/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../SpringBootWeb/Springboot-Web/target/classes/com/zhangjingqi/controller/DeptController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../SpringBootWeb/Springboot-Web/target/classes/com/zhangjingqi/controller/DeptController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zhangjingqi/test/BeanFactoryTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zhangjingqi/test/BeanFactoryTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zhangjingqi/test/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zhangjingqi/test/Test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zhangjingqi/util/BaseClassScanUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zhangjingqi/util/BaseClassScanUtils.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,27 +87,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/note/Note/SpringBootWeb/Springboot-Web",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.17",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.runner",
-    "spring.configuration.checksum": "e443202b6ca2918221dc63ef493b5b63",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/note/Note/SpringBootWeb/Springboot-Web&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.17&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.runner&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;e443202b6ca2918221dc63ef493b5b63&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\note\Note\Spring\Spring_ioc_test01\src\main\java\com\zhangjingqi\util" />
@@ -181,7 +196,8 @@
       <updated>1685712929257</updated>
       <workItem from="1685712930374" duration="195000" />
       <workItem from="1685713135147" duration="40000" />
-      <workItem from="1685882947933" duration="27886000" />
+      <workItem from="1685882947933" duration="40696000" />
+      <workItem from="1686140354802" duration="3572000" />
     </task>
     <servers />
   </component>
@@ -192,12 +208,47 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint type="java-line">
+          <url>jar://$PROJECT_DIR$/../../../../Sort/maven/repository/org/springframework/spring-context/5.3.7/spring-context-5.3.7.jar!/org/springframework/context/annotation/ConfigurationClassPostProcessor.class</url>
+          <line>202</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$PROJECT_DIR$/../../../../Sort/maven/repository/org/springframework/spring-context/5.3.7/spring-context-5.3.7.jar!/org/springframework/context/annotation/ConfigurationClassPostProcessor.class</url>
+          <line>208</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$PROJECT_DIR$/../../../../Sort/maven/repository/org/springframework/spring-context/5.3.7/spring-context-5.3.7.jar!/org/springframework/context/annotation/ConfigurationClassParser.class</url>
+          <line>115</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$PROJECT_DIR$/../../../../Sort/maven/repository/org/springframework/spring-context/5.3.7/spring-context-5.3.7.jar!/org/springframework/context/annotation/ConfigurationClassParser.class</url>
+          <line>178</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$PROJECT_DIR$/../../../../Sort/maven/repository/org/springframework/spring-context/5.3.7/spring-context-5.3.7.jar!/org/springframework/context/annotation/ConfigurationClassParser.class</url>
+          <line>209</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$PROJECT_DIR$/../../../../Sort/maven/repository/org/springframework/spring-context/5.3.7/spring-context-5.3.7.jar!/org/springframework/context/annotation/ComponentScanAnnotationParser.class</url>
+          <line>123</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="org.springframework.beans.factory.support.DefaultListableBeanFactory" memberName="aliasMap" />
         <PinnedItemInfo parentTag="org.springframework.beans.factory.support.DefaultListableBeanFactory" memberName="beanDefinitionMap" />
         <PinnedItemInfo parentTag="java.lang.String" memberName="value" />
         <PinnedItemInfo parentTag="org.springframework.beans.factory.support.DefaultListableBeanFactory" memberName="factoryBeanObjectCache" />
+        <PinnedItemInfo parentTag="org.springframework.context.annotation.AnnotationConfigApplicationContext" memberName="beanFactory" />
         <PinnedItemInfo parentTag="org.springframework.beans.factory.support.DefaultListableBeanFactory" memberName="singletonObjects" />
         <PinnedItemInfo parentTag="org.springframework.beans.factory.support.GenericBeanDefinition" memberName="propertyValues" />
       </pinned-members>

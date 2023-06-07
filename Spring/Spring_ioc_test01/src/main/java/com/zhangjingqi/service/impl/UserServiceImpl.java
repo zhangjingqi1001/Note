@@ -9,11 +9,12 @@ import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.BeanFactoryAware;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
+import org.springframework.stereotype.Service;
 import org.springframework.web.context.ServletContextAware;
 
 import javax.servlet.ServletContext;
 
-
+@Service
 public class UserServiceImpl implements UserService{
 
 }

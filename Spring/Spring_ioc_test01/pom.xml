@@ -26,7 +26,7 @@
         <dependency>
             <groupId>org.mybatis</groupId>
             <artifactId>mybatis</artifactId>
-            <version>3.5.5</version>
+            <version>3.4.6</version>
         </dependency>
         <!-- mysql驱动 -->
         <dependency>
@@ -48,7 +48,19 @@
             <version>5.3.7</version>
         </dependency>
     </dependencies>
-<!--    <build>-->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>8</source>
+                    <target>8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    <!--    <build>-->
 <!--        <plugins>-->
 <!--            <plugin>-->
 <!--                <groupId>org.apache.maven.plugins</groupId>-->
