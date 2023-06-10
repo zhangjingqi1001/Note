@@ -6,6 +6,19 @@
 
     <!--配置Listener-->
     <listener>
-        <listener-class>com.zhangjingqi.listener.ContextLoaderListener</listener-class>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
+    <context-param>
+        <param-name>contextClass</param-name>
+        <param-value>com.zhangjingqi.config.MyAnnotationConfigWebApplicationContext</param-value>
+    </context-param>
+
+    
+    <!--定义全局参数-->
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <!--classpath 代表类加载路径，也就是resource目录下的东西-->
+        <param-value>classpath:applicationContext.xml</param-value>
+    </context-param>
+
 </web-app>

@@ -9,29 +9,46 @@
        http://www.springframework.org/schema/aop/spring-aop.xsd
        http://www.springframework.org/schema/context
        http://www.springframework.org/schema/context/spring-context.xsd">
+
+
     <!--配置目标类-->
     <bean id="userService" class="com.zhangjingqi.service.impl.UserServiceImpl">
     </bean>
     <!--配置的通知类-->
-    <bean id="myAdvice" class="com.zhangjingqi.advice.MyAdvice">
+    <bean id="myAdvice3" class="com.zhangjingqi.advice.MyAdvice3">
     </bean>
-    <!--配置AOP-->
+
     <aop:config>
         <!--配置切入点表达式，目的就是指定哪些方法要被增强-->
-        <aop:pointcut id="myPointcut"
+        <aop:pointcut id="myPointcut3"
                       expression="execution(void com.zhangjingqi.service.impl.UserServiceImpl.show1())"/>
-<!--        <aop:pointcut id="myPointcut2"-->
-<!--                      expression="execution(void com.zhangjingqi.service.impl.UserServiceImpl.show2())"/>-->
-        <!--配置织入，目的是指定哪些切点与哪些通知进行结合的-->
-        <!--ref参数指定通知类是谁-->
-        <aop:aspect ref="myAdvice">
-            <!--aop:before是前置通知，method是前置增强的方法，pointcut-ref配置切点是哪个-->
-            <!--这个地方说白了就是myAdvice对象为UserServiceImpl类的show1方法提供一个前置通知（前置增强）beforeAdvice-->
-            <aop:before method="beforeAdvice" pointcut-ref="myPointcut"></aop:before>
-            <!--增强show2-->
-            <aop:before method="beforeAdvice" pointcut="execution(void com.zhangjingqi.service.impl.UserServiceImpl.show2())"></aop:before>
-        </aop:aspect>
+        <aop:advisor advice-ref="myAdvice3" pointcut-ref="myPointcut3"/>
+        <aop:advisor advice-ref="myAdvice3" pointcut-ref="myPointcut3"></aop:advisor>
     </aop:config>
+
+    <!--配置目标类-->
+    <!--    <bean id="userService" class="com.zhangjingqi.service.impl.UserServiceImpl">-->
+    <!--    </bean>-->
+    <!--    &lt;!&ndash;配置的通知类&ndash;&gt;-->
+    <!--    <bean id="myAdvice" class="com.zhangjingqi.advice.MyAdvice">-->
+    <!--    </bean>-->
+    <!--    &lt;!&ndash;配置AOP&ndash;&gt;-->
+    <!--    <aop:config>-->
+    <!--        &lt;!&ndash;配置切入点表达式，目的就是指定哪些方法要被增强&ndash;&gt;-->
+    <!--        <aop:pointcut id="myPointcut"-->
+    <!--                      expression="execution(void com.zhangjingqi.service.impl.UserServiceImpl.show1())"/>-->
+    <!--&lt;!&ndash;        <aop:pointcut id="myPointcut2"&ndash;&gt;-->
+    <!--&lt;!&ndash;                      expression="execution(void com.zhangjingqi.service.impl.UserServiceImpl.show2())"/>&ndash;&gt;-->
+    <!--        &lt;!&ndash;配置织入，目的是指定哪些切点与哪些通知进行结合的&ndash;&gt;-->
+    <!--        &lt;!&ndash;ref参数指定通知类是谁&ndash;&gt;-->
+    <!--        <aop:aspect ref="myAdvice">-->
+    <!--            &lt;!&ndash;aop:before是前置通知，method是前置增强的方法，pointcut-ref配置切点是哪个&ndash;&gt;-->
+    <!--            &lt;!&ndash;这个地方说白了就是myAdvice对象为UserServiceImpl类的show1方法提供一个前置通知（前置增强）beforeAdvice&ndash;&gt;-->
+    <!--            <aop:before method="beforeAdvice" pointcut-ref="myPointcut"></aop:before>-->
+    <!--            &lt;!&ndash;增强show2&ndash;&gt;-->
+    <!--            <aop:before method="beforeAdvice" pointcut="execution(void com.zhangjingqi.service.impl.UserServiceImpl.show2())"></aop:before>-->
+    <!--        </aop:aspect>-->
+    <!--    </aop:config>-->
 
 
     <!--    <bean class="com.zhangjingqi.processor.MockAopBeanPostProcessor"></bean>-->

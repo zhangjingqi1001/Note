@@ -37,25 +37,30 @@
     </bean>
 <!--**********************************************************-->
     <!--配置一个平台实物管理器-->
-    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
-        <!--内部需要注入一个DataSource-->
-        <property name="dataSource" ref="dataSource"></property>
-    </bean>
+<!--    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">-->
+<!--        &lt;!&ndash;内部需要注入一个DataSource&ndash;&gt;-->
+<!--        <property name="dataSource" ref="dataSource"></property>-->
+<!--    </bean>-->
     <!--配置Spring提供好的Advice,需要配置一个平台事务管理器transaction-manager-->
-    <tx:advice id="txAdvice" transaction-manager="transactionManager">
-        <tx:attributes>
-            <!--代表任意的方法都使用默认情况下的那些事务的属性-->
-            <tx:method name="*"/>
-        </tx:attributes>
-    </tx:advice>
+<!--    <tx:advice id="txAdvice" transaction-manager="transactionManager">-->
+<!--        <tx:attributes>-->
+<!--            &lt;!&ndash;代表任意的方法都使用默认情况下的那些事务的属性&ndash;&gt;-->
+<!--            <tx:method name="*"/>-->
+<!--        </tx:attributes>-->
+<!--    </tx:advice>-->
 
     <!--事务增强的AOP-->
-    <aop:config>
-        <!--配置切点表达式-->
-        <aop:pointcut id="txPointcut" expression="execution(* com.zhangjingqi.service.impl.*.*(..))"/>
-        <!-- 配置织入     advice-ref说明：通知/增强引用Spring提供好的-->
-        <aop:advisor advice-ref="txAdvice" pointcut-ref="txPointcut"></aop:advisor>
-    </aop:config>
+<!--    <aop:config>-->
+<!--        &lt;!&ndash;配置切点表达式&ndash;&gt;-->
+<!--        <aop:pointcut id="txPointcut" expression="execution(* com.zhangjingqi.service.impl.*.*(..))"/>-->
+<!--        &lt;!&ndash; 配置织入     advice-ref说明：通知/增强引用Spring提供好的&ndash;&gt;-->
+<!--        <aop:advisor advice-ref="txAdvice" pointcut-ref="txPointcut"></aop:advisor>-->
+<!--    </aop:config>-->
+    <!--配置事务的注解驱动-->
+    <tx:annotation-driven transaction-manager="transactionManager"/>
+    <bean id="transactionManager"  class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
 
 </beans>
 

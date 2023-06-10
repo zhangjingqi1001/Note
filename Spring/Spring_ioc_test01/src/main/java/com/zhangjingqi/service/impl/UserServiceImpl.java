@@ -14,7 +14,16 @@ import org.springframework.web.context.ServletContextAware;
 
 import javax.servlet.ServletContext;
 
-@Service
+@Service("userService")
 public class UserServiceImpl implements UserService{
 
+    @Override
+    public void show1() {
+        System.out.println("show1......");
+    }
+
+    @Override
+    public void show2() {
+        System.out.println("show2.......");
+    }
 }

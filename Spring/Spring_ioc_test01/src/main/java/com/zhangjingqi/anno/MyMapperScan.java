@@ -1,6 +1,6 @@
 package com.zhangjingqi.anno;
 
-import com.zhangjingqi.imports.MyImportBeanDefinitionRegistrar;
+//import com.zhangjingqi.imports.MyImportBeanDefinitionRegistrar;
 import org.springframework.context.annotation.Import;
 
 import java.lang.annotation.ElementType;
@@ -10,7 +10,7 @@ import java.lang.annotation.Target;
 
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.TYPE)
-@Import(MyImportBeanDefinitionRegistrar.class)
+//@Import(MyImportBeanDefinitionRegistrar.class)
 public @interface MyMapperScan {
 
 }

@@ -2,8 +2,8 @@ package com.zhangjingqi.config;
 
 import com.alibaba.druid.pool.DruidDataSource;
 import com.zhangjingqi.anno.MyMapperScan;
-import com.zhangjingqi.imports.MyImportBeanDefinitionRegistrar;
-import com.zhangjingqi.imports.MyImportSelector;
+//import com.zhangjingqi.imports.MyImportBeanDefinitionRegistrar;
+//import com.zhangjingqi.imports.MyImportSelector;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.springframework.context.annotation.*;
 
@@ -16,6 +16,7 @@ import javax.sql.DataSource;
 //@Import(MyImportBeanDefinitionRegistrar.class)
 //@Import(MyImportSelector.class)
 @MyMapperScan
+@EnableAspectJAutoProxy
 public class SpringConfig {
     @Bean
     public DataSource dataSource(){

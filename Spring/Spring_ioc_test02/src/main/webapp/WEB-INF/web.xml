@@ -8,12 +8,7 @@
     <listener>
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
-    <context-param>
-        <param-name>contextClass</param-name>
-        <param-value>com.zhangjingqi.config.MyAnnotationConfigWebApplicationContext</param-value>
-    </context-param>
 
-    
     <!--定义全局参数-->
     <context-param>
         <param-name>contextConfigLocation</param-name>

@@ -12,7 +12,7 @@ public class AccountServiceImpl implements AccountService {
     @Autowired
     private AccountMapper accountMapper;
 
-    @Override
+
     @Transactional
     public void transferMoney(String outAccount, String inAccount, Integer money) {
         accountMapper.decrMoney(outAccount,money);
