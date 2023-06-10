@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/aop
+       http://www.springframework.org/schema/aop/spring-aop.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd">
+    <!--配置目标类-->
+    <bean id="userService" class="com.zhangjingqi.service.impl.UserServiceImpl">
+    </bean>
+    <!--配置的通知类-->
+    <bean id="myAdvice" class="com.zhangjingqi.advice.MyAdvice">
+    </bean>
+    <!--配置AOP-->
+    <aop:config>
+        <!--配置切入点表达式，目的就是指定哪些方法要被增强-->
+        <aop:pointcut id="myPointcut"
+                      expression="execution(void com.zhangjingqi.service.impl.UserServiceImpl.show1())"/>
+<!--        <aop:pointcut id="myPointcut2"-->
+<!--                      expression="execution(void com.zhangjingqi.service.impl.UserServiceImpl.show2())"/>-->
+        <!--配置织入，目的是指定哪些切点与哪些通知进行结合的-->
+        <!--ref参数指定通知类是谁-->
+        <aop:aspect ref="myAdvice">
+            <!--aop:before是前置通知，method是前置增强的方法，pointcut-ref配置切点是哪个-->
+            <!--这个地方说白了就是myAdvice对象为UserServiceImpl类的show1方法提供一个前置通知（前置增强）beforeAdvice-->
+            <aop:before method="beforeAdvice" pointcut-ref="myPointcut"></aop:before>
+            <!--增强show2-->
+            <aop:before method="beforeAdvice" pointcut="execution(void com.zhangjingqi.service.impl.UserServiceImpl.show2())"></aop:before>
+        </aop:aspect>
+    </aop:config>
+
+
+    <!--    <bean class="com.zhangjingqi.processor.MockAopBeanPostProcessor"></bean>-->
+    <!--    <context:component-scan base-package="com.zhangjingqi"/>-->
+
+    <!--    <bean class="com.zhangjingqi.factory.MyBeanPostProcessor"-->
+    <!--    ></bean>-->
+    <!--    <bean id="userService" class="com.zhangjingqi.service.impl.UserServiceImpl">-->
+    <!--        <property name="userDao" ref="userDao"></property>-->
+    <!--    </bean>-->
+
+    <!--    <bean id="userDao" class="com.zhangjingqi.dao.impl.UserDaoImpl">-->
+    <!--    </bean>-->
+
+
+    <!--    <bean class="com.zhangjingqi.processor.MyBeanFactoryPostProcessor"></bean>-->
+
+
+    <!--静态工厂方式产生Bean实例-->
+    <!--    <bean id="inputStream" class="org.apache.ibatis.io.Resources" factory-method="getResourceAsStream">-->
+    <!--        <constructor-arg name="resource" value="mybatis-config.xml"/>-->
+    <!--    </bean>-->
+
+    <!--    &lt;!&ndash;无参构造方式产生Bean实例&ndash;&gt;-->
+    <!--    <bean id="sqlSessionFactoryBuilder" class="org.apache.ibatis.session.SqlSessionFactoryBuilder"/>-->
+
+    <!--    &lt;!&ndash;实例工厂方式产生Bean实例&ndash;&gt;-->
+    <!--    <bean id="sqlSessionFactory" factory-bean="sqlSessionFactoryBuilder" factory-method="build">-->
+    <!--        <constructor-arg name="inputStream" ref="inputStream"/>-->
+    <!--    </bean>-->
+
+
+    <!--    <bean id="userDao1" factory-method="userDao" class="com.zhangjingqi.factory.MyBeanFactory1">-->
+    <!--    </bean>-->
+
+
+    <!--    &lt;!&ndash;配置工厂对象&ndash;&gt;-->
+    <!--    <bean id="simpleDateFormat" class="java.text.SimpleDateFormat">-->
+    <!--        <constructor-arg name="pattern" value="yyyy-MM-dd HH:mm:ss"></constructor-arg>-->
+    <!--    </bean>-->
+
+    <!--    <bean id="date" class="java.util.Date" factory-bean="simpleDateFormat" factory-method="parse">-->
+    <!--        <constructor-arg name="source" value="2023-08-27 07:20:00"></constructor-arg>-->
+    <!--    </bean>-->
+
+    <!--相当于Class.forName("com.mysql.jdbc.Driver")-->
+    <!--    <bean class="java.lang.Class" factory-method="forName">-->
+    <!--        &lt;!&ndash;forName方法需要参数&ndash;&gt;-->
+    <!--        <constructor-arg name="className" value="com.mysql.cj.jdbc.Driver"/>-->
+    <!--    </bean>-->
+
+    <!--    <bean id="connection" class="java.sql.DriverManager" factory-method="getConnection" scope="prototype">-->
+    <!--        <constructor-arg name="url" value="jdbc:mysql:localhost:3306/mybatis"/>-->
+    <!--        <constructor-arg name="user" value="root"/>-->
+    <!--        <constructor-arg name="password" value="root"/>-->
+    <!--    </bean>-->
+
+
+    <!--配置数据源信息-->
+    <!--    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">-->
+    <!--        &lt;!&ndash;配置必要属性&ndash;&gt;-->
+    <!--        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>-->
+    <!--        <property name="url" value="jdbc://localhost:3306/mybatis"/>-->
+    <!--        <property name="username" value="root"/>-->
+    <!--        <property name="password" value="root"/>-->
+    <!--    </bean>-->
+
+
+    <!--    <beans profile="dev">-->
+    <!--        <bean id="userServiceDev" class="com.zhangjingqi.service.impl.UserServiceImpl"></bean>-->
+    <!--    </beans>-->
+
+    <!--    <beans profile="test">-->
+    <!--        <bean id="userDaoTest" class="com.zhangjingqi.dao.impl.UserDaoImpl"></bean>-->
+    <!--    </beans>-->
+
+
+    <!--    <bean id="userService" class="com.zhangjingqi.service.impl.UserServiceImpl">-->
+    <!--       <property name="properties">-->
+    <!--           <props>-->
+    <!--               <prop key="p1">zhangjingqi</prop>-->
+    <!--               <prop key="p2">123</prop>-->
+    <!--               <prop key="p3">456</prop>-->
+    <!--           </props>-->
+    <!--       </property>-->
+
+    <!--        <property name="map">-->
+    <!--            <map>-->
+    <!--                &lt;!&ndash;第一种方式&ndash;&gt;-->
+    <!--                &lt;!&ndash;<entry key="1" value=""></entry>&ndash;&gt;-->
+    <!--                &lt;!&ndash;第二种方式&ndash;&gt;-->
+    <!--                &lt;!&ndash;<entry key-ref="" value-ref=""></entry>&ndash;&gt;-->
+    <!--                <entry key="1" value-ref="userDao1"></entry>-->
+    <!--                <entry key="2" value-ref="userDao2"></entry>-->
+    <!--                <entry key="3" value-ref="userDao3"></entry>-->
+    <!--            </map>-->
+    <!--        </property>-->
+
+
+    <!--        &lt;!&ndash;不靠ref了，因为是一个集合，要靠子标签&ndash;&gt;-->
+    <!--        <property name="stringList">-->
+    <!--            <list>-->
+    <!--                <value>aaaa</value>-->
+    <!--                <value>bbb</value>-->
+    <!--                <value>ccc</value>-->
+    <!--            </list>-->
+    <!--        </property>-->
+
+    <!--        <property name="userDaoList">-->
+    <!--            <list>-->
+    <!--                &lt;!&ndash;可以配置多个，每一个都代表一个userDao对象&ndash;&gt;-->
+    <!--                <bean class="com.zhangjingqi.dao.impl.UserDaoImpl"></bean>-->
+    <!--                <bean class="com.zhangjingqi.dao.impl.UserDaoImpl"></bean>-->
+    <!--                &lt;!&ndash;或者可以引用&ndash;&gt;-->
+    <!--                <ref bean="userDao1"></ref>-->
+    <!--                <ref bean="userDao2"></ref>-->
+    <!--                <ref bean="userDao3"></ref>-->
+    <!--            </list>-->
+    <!--        </property>-->
+
+    <!--        <property name="strSet">-->
+    <!--            <set>-->
+    <!--                <value>aaaaa</value>-->
+    <!--                <value>bbbbb</value>-->
+    <!--                <value>ccccc</value>-->
+    <!--            </set>-->
+    <!--        </property>-->
+    <!--        <property name="userDaoSet">-->
+    <!--            <set>-->
+    <!--                &lt;!&ndash; 第一种方式&ndash;&gt;-->
+    <!--                <bean class="com.zhangjingqi.dao.impl.UserDaoImpl"></bean>-->
+    <!--                &lt;!&ndash;  第二种方式&ndash;&gt;-->
+    <!--                <ref bean="userDao1"></ref>-->
+    <!--                <ref bean="userDao2"></ref>-->
+    <!--                <ref bean="userDao3"></ref>-->
+    <!--            </set>-->
+    <!--        </property>-->
+
+    <!--    </bean>-->
+    <!--    <bean id="userDao1" class="com.zhangjingqi.dao.impl.UserDaoImpl"></bean>-->
+    <!--    <bean id="userDao2" class="com.zhangjingqi.dao.impl.UserDaoImpl"></bean>-->
+    <!--    <bean id="userDao3" class="com.zhangjingqi.dao.impl.UserDaoImpl"></bean>-->
+
+
+    <!--class 可以明确Bean在哪-->
+    <!--id 为Bean做一个唯一标识-->
+    <!--    <bean id="userService" class="com.zhangjingqi.service.impl.UserServiceImpl">-->
+    <!--&lt;!&ndash;        &lt;!&ndash;name: 指定构造方法的参数名 value:指定参数值&ndash;&gt;&ndash;&gt;-->
+    <!--&lt;!&ndash;        <constructor-arg name="name" value="我叫zhangjingqi"></constructor-arg>&ndash;&gt;-->
+    <!--&lt;!&ndash;        <constructor-arg name="age" value="22"></constructor-arg>&ndash;&gt;-->
+
+    <!--        &lt;!&ndash;name属性就是set方法的名称，并且把set去掉，首字母小写&ndash;&gt;-->
+    <!--        &lt;!&ndash;ref是引用，从容器中找具体需要哪个对象&ndash;&gt;-->
+    <!--        <property name="userDao" ref="userDao"></property>-->
+
+    <!--    </bean>-->
+    <!--    &lt;!&ndash;配置UserDao&ndash;&gt;-->
+    <!--    <bean id="userDao" class="com.zhangjingqi.dao.impl.UserDaoImpl"></bean>-->
+
+
+    <!--创建与之前一个样子-->
+    <!--
+      正常情况下，在启动时Spring容器会按照全限定名com.zhangjingqi.factory.MyBeanFactory1从无参构造创建MyBeanFactory1对象，创建完对象放入到容器当中
+    id为userDao1，BeanName也是id为userDao1
+    -->
+    <!--
+      但是此时有 factory-method指定方法为userDao，
+    此时Spring在解析时就明白了，我们不是把com.zhangjingqi.factory.MyBeanFactory1创建为对象，
+    而是把MyBeanFactory1类中userDao的返回值作为对象，
+    再以我们指定的id作为BeanName存储到容器当中
+      也就是说userDao1指定是userDao方法返回值Bean的名字/id，而不是MyBeanFactory1对象的名字/id
+    -->
+    <!--    <bean id="userDao1" factory-method="userDao"-->
+    <!--          class="com.zhangjingqi.factory.MyBeanFactory1">-->
+    <!--        <constructor-arg name="name" value="我叫zhangjingqi"></constructor-arg>-->
+    <!--        <constructor-arg name="age" value="22"></constructor-arg>-->
+    <!--    </bean>-->
+
+    <!--MyBeanFactory2对象-->
+    <!--    <bean id="myBeanFactory2" class="com.zhangjingqi.factory.MyBeanFactory2">-->
+    <!--    </bean>-->
+
+    <!--    <bean id="userDao2" factory-bean="myBeanFactory2" factory-method="userDao" >-->
+    <!--        <constructor-arg name="name" value="我叫zhangjingqi"></constructor-arg>-->
+    <!--        <constructor-arg name="age" value="22"></constructor-arg>-->
+    <!--    </bean>-->
+
+
+    <!--    <bean id="userDao3" class="com.zhangjingqi.factory.MyBeanFactory3">-->
+    <!--    </bean>-->
+
+</beans>
+
+
