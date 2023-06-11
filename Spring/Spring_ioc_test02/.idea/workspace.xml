@@ -10,73 +10,45 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e641ee1b-9423-4821-a0f4-85402409a66a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../7. Spring整合Web环境.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Spring_ioc_test01/.idea/artifacts/unnamed.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Spring_ioc_test01/src/main/java/com/zhangjingqi/advice/MyAdvice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Spring_ioc_test01/src/main/java/com/zhangjingqi/advice/MyAdvice2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Spring_ioc_test01/src/main/java/com/zhangjingqi/advice/MyAdvice3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Spring_ioc_test01/src/main/java/com/zhangjingqi/config/MyAnnotationConfigWebApplicationContext.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Spring_ioc_test01/src/main/java/com/zhangjingqi/listener/ContextLoaderListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Spring_ioc_test01/src/main/java/com/zhangjingqi/mapper/AccountMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Spring_ioc_test01/src/main/java/com/zhangjingqi/processor/MockAopBeanPostProcessor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Spring_ioc_test01/src/main/java/com/zhangjingqi/service/AccountService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Spring_ioc_test01/src/main/java/com/zhangjingqi/service/impl/AccountServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Spring_ioc_test01/src/main/java/com/zhangjingqi/test/AccountTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Spring_ioc_test01/src/main/java/com/zhangjingqi/web/AccountServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Spring_ioc_test01/src/main/resources/applicationContext.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Spring_ioc_test01/src/main/resources/applicationContext2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Spring_ioc_test01/src/main/resources/beans2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Spring_ioc_test01/src/main/resources/beans3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Spring_ioc_test01/src/main/resources/jdbc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Spring_ioc_test01/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/aws.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/mapper/AccountMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/service/AccountService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/service/impl/AccountServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/web/AccountServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jdbc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/applicationContext.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/zhangjingqi/mapper/AccountMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/zhangjingqi/service/AccountService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/zhangjingqi/service/impl/AccountServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/zhangjingqi/web/AccountServlet.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/jdbc.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../5.IOC与AOP  - 补充SpringBootWeb中没有的知识.md" beforeDir="false" afterPath="$PROJECT_DIR$/../5.IOC与AOP  - 补充SpringBootWeb中没有的知识.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring_ioc_test01/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring_ioc_test01/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring_ioc_test01/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring_ioc_test01/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring_ioc_test01/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring_ioc_test01/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring_ioc_test01/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring_ioc_test01/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring_ioc_test01/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring_ioc_test01/src/main/java/com/zhangjingqi/anno/MyMapperScan.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring_ioc_test01/src/main/java/com/zhangjingqi/anno/MyMapperScan.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring_ioc_test01/src/main/java/com/zhangjingqi/config/SpringConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring_ioc_test01/src/main/java/com/zhangjingqi/config/SpringConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring_ioc_test01/src/main/java/com/zhangjingqi/imports/MyImportBeanDefinitionRegistrar.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring_ioc_test01/src/main/java/com/zhangjingqi/imports/MyImportBeanDefinitionRegistrar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring_ioc_test01/src/main/java/com/zhangjingqi/imports/MyImportSelector.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring_ioc_test01/src/main/java/com/zhangjingqi/imports/MyImportSelector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring_ioc_test01/src/main/java/com/zhangjingqi/imports/OtherBean2.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring_ioc_test01/src/main/java/com/zhangjingqi/imports/OtherBean2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring_ioc_test01/src/main/java/com/zhangjingqi/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring_ioc_test01/src/main/java/com/zhangjingqi/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring_ioc_test01/src/main/java/com/zhangjingqi/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring_ioc_test01/src/main/java/com/zhangjingqi/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring_ioc_test01/src/main/java/com/zhangjingqi/test/ApplicationContextTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring_ioc_test01/src/main/java/com/zhangjingqi/test/ApplicationContextTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring_ioc_test01/src/main/resources/beans.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring_ioc_test01/src/main/resources/beans.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring_ioc_test01/target/classes/beans.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring_ioc_test01/target/classes/beans.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring_ioc_test01/target/classes/com/zhangjingqi/config/SpringConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring_ioc_test01/target/classes/com/zhangjingqi/config/SpringConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring_ioc_test01/target/classes/com/zhangjingqi/imports/MyImportBeanDefinitionRegistrar.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring_ioc_test01/target/classes/com/zhangjingqi/imports/MyImportSelector.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring_ioc_test01/target/classes/com/zhangjingqi/imports/OtherBean2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring_ioc_test01/target/classes/com/zhangjingqi/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring_ioc_test01/target/classes/com/zhangjingqi/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring_ioc_test01/target/classes/com/zhangjingqi/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring_ioc_test01/target/classes/com/zhangjingqi/service/impl/UserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring_ioc_test01/target/classes/com/zhangjingqi/test/ApplicationContextTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring_ioc_test01/target/classes/com/zhangjingqi/test/ApplicationContextTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/controller/ParamController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/controller/QuickController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/entity/Address.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/entity/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/service/impl/QuickServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/applicaitionContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/spring-mvc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/heima.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../7. Spring整合Web环境.md" beforeDir="false" afterPath="$PROJECT_DIR$/../7. Spring整合Web环境.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/mapper/AccountMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/service/AccountService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/service/impl/AccountServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/web/AccountServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/jdbc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/applicationContext.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zhangjingqi/mapper/AccountMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zhangjingqi/service/AccountService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zhangjingqi/service/impl/AccountServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zhangjingqi/web/AccountServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/jdbc.properties" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Tag Library Descriptor" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
@@ -118,7 +90,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/note/Note/Spring/Spring_ioc_test02/src/main/java/com/zhangjingqi",
+    "last_opened_file_path": "D:/note/Note/Spring/Spring_ioc_test02/src/main/webapp",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -127,15 +99,16 @@
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "reference.settings.project.maven.importing",
+    "spring.configuration.checksum": "3b36783484d6111ce4d742a971750e3b",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\note\Note\Spring\Spring_ioc_test02\src\main\java\com\zhangjingqi" />
-      <recent name="D:\note\Note\Spring\Spring_ioc_test02\src\main\java\com\zhangjingqi\service" />
       <recent name="D:\note\Note\Spring\Spring_ioc_test02\src\main\webapp" />
       <recent name="D:\note\Note\Spring\Spring_ioc_test02\src\main\resources" />
+      <recent name="D:\note\Note\Spring\Spring_ioc_test02\src\main\java\com\zhangjingqi" />
+      <recent name="D:\note\Note\Spring\Spring_ioc_test02\src\main\java\com\zhangjingqi\service" />
     </key>
   </component>
   <component name="RunManager">
@@ -145,7 +118,7 @@
       <deployment>
         <artifact name="Spring_ioc_test02:war exploded">
           <settings>
-            <option name="CONTEXT_PATH" value="/SpringMVC" />
+            <option name="CONTEXT_PATH" value="/Spring" />
           </settings>
         </artifact>
       </deployment>
@@ -232,36 +205,17 @@
         </option>
       </method>
     </configuration>
-    <configuration default="true" type="aws.lambda" factoryName="Local">
-      <option name="credentialProviderId" />
-      <option name="regionId" />
-      <option name="debugHost" value="localhost" />
-      <option name="architecture" />
-      <option name="environmentVariables">
-        <map />
-      </option>
-      <option name="handler" />
-      <option name="image" value="false" />
-      <option name="logicalFunctionName" />
-      <option name="memorySize" value="128" />
-      <option name="pathMappings">
-        <list />
-      </option>
-      <option name="platform" />
-      <option name="runtime" />
-      <option name="templateFile" />
-      <option name="timeout" value="300" />
-      <option name="useTemplate" value="false" />
-      <option name="input" />
-      <option name="inputIsFile" value="false" />
-      <sam>
-        <option name="additionalBuildArgs" />
-        <option name="additionalLocalArgs" />
-        <option name="buildInContainer" value="false" />
-        <option name="dockerNetwork" />
-        <option name="skipImagePull" value="false" />
-      </sam>
-      <method v="2" />
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
+      <deployment />
+      <server-settings />
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -273,11 +227,27 @@
       <option name="presentableId" value="Default" />
       <updated>1686401898032</updated>
       <workItem from="1686401899124" duration="75000" />
-      <workItem from="1686401992537" duration="1107000" />
+      <workItem from="1686401992537" duration="3047000" />
+      <workItem from="1686456918348" duration="10609000" />
+      <workItem from="1686472903634" duration="2378000" />
+      <workItem from="1686484519219" duration="590000" />
+      <workItem from="1686485120974" duration="225000" />
+      <workItem from="1686485360966" duration="5390000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
