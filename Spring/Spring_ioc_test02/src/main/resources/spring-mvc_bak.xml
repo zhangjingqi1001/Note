@@ -8,9 +8,22 @@
        http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
 ">
-    <!--1.组件扫描-->
+    <!--组件扫描-->
     <context:component-scan base-package="com.zhangjingqi"></context:component-scan>
-    <!--2.非自定义的Bean-->
+    <!--    &lt;!&ndash;配置HandlerMapping，  不配置的话有默认加载策略&ndash;&gt;-->
+    <!--    <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping"></bean>-->
+
+    <!--    &lt;!&ndash;配置消息转换器，内部需要进行一个JSON转换器&ndash;&gt;-->
+    <!--    <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">-->
+    <!--        <property name="messageConverters">-->
+    <!--            <list>-->
+    <!--                <bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter"/>-->
+    <!--            </list>-->
+    <!--        </property>-->
+    <!--    </bean>-->
+    <!--mvc注解驱动-->
+    <mvc:annotation-driven/>
+
     <!--配置文件上传解析器，注意：id的名字是固定写法-->
     <bean id="multipartResolver"
           class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
@@ -19,14 +32,8 @@
         <property name="maxUploadSize" value="3145728"/><!--上传文件的总大小-->
         <property name="maxInMemorySize" value="1048576"/><!--上传文件的缓存大小-->
     </bean>
-
-    <!--3.非Bean的配置-->
-    <!--mvc注解驱动-->
-    <mvc:annotation-driven/>
-
     <!--访问静态资源-->
     <mvc:default-servlet-handler/>
-
     <!--配置拦截器-->
     <mvc:interceptors>
         <mvc:interceptor>
@@ -34,6 +41,7 @@
             <mvc:mapping path="/**"/>
             <bean class="com.zhangjingqi.Interceptor.MyInterceptor01"></bean>
         </mvc:interceptor>
+
     </mvc:interceptors>
 
 
