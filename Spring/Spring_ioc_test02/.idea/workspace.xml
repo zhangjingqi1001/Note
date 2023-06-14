@@ -10,17 +10,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e641ee1b-9423-4821-a0f4-85402409a66a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/Interceptor/MyInterceptor01.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/config/MyAnnotationConfigWebApplicationContext.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/config/MyWebMvcConfigurer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/config/SpringMVCConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/controller/ResponseController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/controller/ResponseController2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/config/MyAnnotationConfigDispatcherServletInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/config/MyServletContainerInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/config/SpringConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/services/javax.servlet.ServletContainerInitializer" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../7. Spring整合Web环境.md" beforeDir="false" afterPath="$PROJECT_DIR$/../7. Spring整合Web环境.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/spring-mvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/spring-mvc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,24 +66,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/note/Note/Spring/Spring_ioc_test02/src/main/resources&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.importing&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;3b36783484d6111ce4d742a971750e3b&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/note/Note/Spring/Spring_ioc_test02/src/main/resources",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.17480469",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.importing",
+    "spring.configuration.checksum": "3b36783484d6111ce4d742a971750e3b",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\note\Note\Spring\Spring_ioc_test02\src\main\resources" />
@@ -240,7 +236,7 @@
       <workItem from="1686484519219" duration="590000" />
       <workItem from="1686485120974" duration="225000" />
       <workItem from="1686485360966" duration="22475000" />
-      <workItem from="1686572254671" duration="962000" />
+      <workItem from="1686572254671" duration="12463000" />
     </task>
     <servers />
   </component>
@@ -257,6 +253,47 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/../../../../Sort/maven/repository/org/springframework/spring-webmvc/5.3.10/spring-webmvc-5.3.10.jar!/org/springframework/web/servlet/FrameworkServlet.class</url>
+          <line>219</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/../../../../Sort/maven/repository/org/springframework/spring-webmvc/5.3.10/spring-webmvc-5.3.10.jar!/org/springframework/web/servlet/FrameworkServlet.class</url>
+          <line>238</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/../../../../Sort/maven/repository/org/springframework/spring-webmvc/5.3.10/spring-webmvc-5.3.10.jar!/org/springframework/web/servlet/FrameworkServlet.class</url>
+          <line>259</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/../../../../Sort/maven/repository/org/springframework/spring-webmvc/5.3.10/spring-webmvc-5.3.10.jar!/org/springframework/web/servlet/FrameworkServlet.class</url>
+          <line>246</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/../../../../Sort/maven/repository/org/springframework/spring-webmvc/5.3.10/spring-webmvc-5.3.10.jar!/org/springframework/web/servlet/FrameworkServlet.class</url>
+          <line>249</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/../../../../Sort/maven/repository/org/springframework/spring-webmvc/5.3.10/spring-webmvc-5.3.10.jar!/org/springframework/web/servlet/FrameworkServlet.class</url>
+          <line>329</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/../../../../Sort/maven/repository/org/springframework/spring-webmvc/5.3.10/spring-webmvc-5.3.10.jar!/org/springframework/web/servlet/DispatcherServlet.class</url>
+          <line>207</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Spring_ioc_test02$Tomcat_9_0_75.ic" NAME="Tomcat 9.0.75 Coverage Results" MODIFIED="1686572023766" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
