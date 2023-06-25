@@ -2240,7 +2240,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 前后端分离项目，前端项目和后端项目一般都不是同源的，所以肯定会存在跨域请求问题。
 
-
+> 之前解决是使用代理服务器
+>
+> [Vue实战——使用代理服务器解决跨域问题——No‘Access-Control-Allow-Origin‘ header is present on the requested resource_vue代理跨域_我爱布朗熊的博客-CSDN博客](https://blog.csdn.net/weixin_51351637/article/details/127210935)
 
 ## 5.1  SpringBoot 配置
 
@@ -2266,7 +2268,35 @@ public class CorsConfig implements WebMvcConfigurer {
 }
 ```
 
+或者参照下面一段代码
 
+```java
+import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
+import org.springframework.web.filter.CorsFilter;
+
+@Configuration
+public class MvcConfig implements WebMvcConfigurer {
+
+ @Bean
+    public CorsFilter corsFilter(){
+        CorsConfiguration configuration = new CorsConfiguration();
+        configuration.setAllowCredentials(true); //是否允许携带cookie
+        configuration.addAllowedOrigin("*"); //设置访问路径
+        configuration.addAllowedHeader("*"); //设置访问源请求头
+        configuration.addAllowedMethod("*"); //设置访问源请求方法
+        configuration.setMaxAge(1800L);      //有效期1800秒
+
+        //添加映射路径，拦截一切请求
+        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+        source.registerCorsConfiguration("/**",configuration);
+
+        //返回新的CorsFilter
+        return new CorsFilter(source);
+
+    }
+}
+
+```
 
 
 
