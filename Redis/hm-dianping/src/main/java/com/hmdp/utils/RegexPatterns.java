@@ -1,4 +1,4 @@
-package com.hmdp.entity.utils;
+package com.hmdp.utils;
 
 /**
  * @author 虎哥

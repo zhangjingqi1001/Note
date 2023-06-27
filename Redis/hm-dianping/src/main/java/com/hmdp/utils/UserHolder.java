@@ -1,4 +1,4 @@
-package com.hmdp.entity.utils;
+package com.hmdp.utils;
 
 import com.hmdp.dto.UserDTO;
 import com.hmdp.entity.User;

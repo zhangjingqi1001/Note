@@ -1,17 +1,12 @@
 package com.hmdp.config;
 
-import com.hmdp.entity.utils.LoginInterceptor;
+import com.hmdp.utils.LoginInterceptor;
 
-import com.hmdp.entity.utils.RefreshTokenInterceptor;
-import org.springframework.context.annotation.Bean;
+import com.hmdp.utils.RefreshTokenInterceptor;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.core.StringRedisTemplate;
-import org.springframework.web.cors.CorsConfiguration;
 
 //import org.springframework.web.cors.reactive.UrlBasedCorsConfigurationSource;
-import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
-import org.springframework.web.filter.CorsFilter;
-import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
