@@ -2876,3 +2876,27 @@
 2023/06/28 19:39:29 [error] 500#11928: *18 CreateFile() "E:\Note\Note\Redis\nginx-1.18.0/html/hmdp/js/axios.min.map" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /js/axios.min.map HTTP/1.1", host: "localhost:8080"
 2023/06/28 19:39:32 [error] 500#11928: *21 CreateFile() "E:\Note\Note\Redis\nginx-1.18.0/html/hmdp/js/axios.min.map" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /js/axios.min.map HTTP/1.1", host: "localhost:8080"
 2023/06/28 19:39:36 [error] 500#11928: *17 CreateFile() "E:\Note\Note\Redis\nginx-1.18.0/html/hmdp/js/axios.min.map" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /js/axios.min.map HTTP/1.1", host: "localhost:8080"
+2023/06/29 19:59:37 [notice] 16100#6424: signal process started
+2023/06/29 19:59:37 [error] 16100#6424: OpenEvent("Global\ngx_reload_14012") failed (2: The system cannot find the file specified)
+2023/06/29 20:00:07 [notice] 18756#9476: signal process started
+2023/06/29 20:00:07 [error] 18756#9476: OpenEvent("Global\ngx_reload_14012") failed (2: The system cannot find the file specified)
+2023/06/29 20:02:47 [error] 14608#20592: *9 CreateFile() "E:\Note\Note\Redis\nginx-1.18.0/html/hmdp/js/axios.min.map" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /js/axios.min.map HTTP/1.1", host: "localhost:8080"
+2023/06/29 20:03:36 [error] 14608#20592: *10 CreateFile() "E:\Note\Note\Redis\nginx-1.18.0/html/hmdp/js/axios.min.map" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /js/axios.min.map HTTP/1.1", host: "localhost:8080"
+2023/06/29 20:08:29 [error] 20928#17772: *1 CreateFile() "E:\Note\Note\Redis\nginx-1.18.0/html/hmdp/js/axios.min.map" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /js/axios.min.map HTTP/1.1", host: "localhost:8080"
+2023/06/29 20:13:29 [notice] 18996#19984: signal process started
+2023/06/29 20:13:29 [error] 18996#19984: OpenEvent("Global\ngx_reload_19344") failed (2: The system cannot find the file specified)
+2023/06/29 20:14:13 [error] 404#20580: *1 CreateFile() "E:\Note\Note\Redis\nginx-1.18.0/html/hmdp/js/axios.min.map" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /js/axios.min.map HTTP/1.1", host: "localhost:8080"
+2023/06/29 20:15:33 [notice] 7952#20172: signal process started
+2023/06/29 20:31:50 [error] 13808#16640: *1 connect() failed (10061: No connection could be made because the target machine actively refused it) while connecting to upstream, client: 127.0.0.1, server: localhost, request: "GET /api/shop/0 HTTP/1.1", upstream: "http://127.0.0.1:8081/shop/0", host: "localhost:8080"
+2023/06/29 20:31:52 [error] 13808#16640: *1 connect() failed (10061: No connection could be made because the target machine actively refused it) while connecting to upstream, client: 127.0.0.1, server: localhost, request: "GET /api/shop/0 HTTP/1.1", upstream: "http://127.0.0.1:8082/shop/0", host: "localhost:8080"
+2023/06/29 20:32:14 [error] 13808#16640: *1 connect() failed (10061: No connection could be made because the target machine actively refused it) while connecting to upstream, client: 127.0.0.1, server: localhost, request: "GET /api/voucher/list/1 HTTP/1.1", upstream: "http://127.0.0.1:8082/voucher/list/1", host: "localhost:8080"
+2023/06/29 20:32:16 [error] 13808#16640: *1 connect() failed (10061: No connection could be made because the target machine actively refused it) while connecting to upstream, client: 127.0.0.1, server: localhost, request: "GET /api/voucher/list/1 HTTP/1.1", upstream: "http://127.0.0.1:8081/voucher/list/1", host: "localhost:8080"
+2023/06/29 20:37:48 [notice] 6988#17224: signal process started
+2023/06/29 20:38:46 [notice] 2956#9784: signal process started
+2023/06/29 20:38:46 [error] 2956#9784: CreateFile() "E:\Note\Note\Redis\nginx-1.18.0/logs/nginx.pid" failed (2: The system cannot find the file specified)
+2023/06/29 20:39:29 [notice] 1932#11392: signal process started
+2023/06/29 20:39:29 [error] 1932#11392: CreateFile() "E:\Note\Note\Redis\nginx-1.18.0/logs/nginx.pid" failed (2: The system cannot find the file specified)
+2023/06/29 21:04:01 [error] 15736#1904: *35 CreateFile() "E:\Note\Note\Redis\nginx-1.18.0/html/hmdp/js/axios.min.map" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /js/axios.min.map HTTP/1.1", host: "localhost:8080"
+2023/06/29 21:04:26 [error] 15736#1904: *36 CreateFile() "E:\Note\Note\Redis\nginx-1.18.0/html/hmdp/js/axios.min.map" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /js/axios.min.map HTTP/1.1", host: "localhost:8080"
+2023/06/29 21:04:44 [error] 15736#1904: *38 CreateFile() "E:\Note\Note\Redis\nginx-1.18.0/html/hmdp/js/axios.min.map" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /js/axios.min.map HTTP/1.1", host: "localhost:8080"
+2023/06/29 21:04:56 [error] 15736#1904: *38 CreateFile() "E:\Note\Note\Redis\nginx-1.18.0/html/hmdp/js/axios.min.map" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /js/axios.min.map HTTP/1.1", host: "localhost:8080"
