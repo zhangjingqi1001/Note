@@ -59,7 +59,6 @@ public class SimpleRedisLock implements ILock {
                 Collections.singletonList(KEY_PREFIX + name),
                 ID_PREFIX + Thread.currentThread().getId()
         );
-//      不要执行结果的返回值了，成功就是成功，不成功就是被删掉了
     }
 
 

@@ -11,6 +11,8 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.hmdp.utils.RedisIdWorker;
 import com.hmdp.utils.SimpleRedisLock;
 import com.hmdp.utils.UserHolder;
+import org.redisson.api.RLock;
+import org.redisson.api.RedissonClient;
 import org.springframework.aop.framework.AopContext;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
@@ -38,6 +40,9 @@ public class VoucherOrderServiceImpl extends ServiceImpl<VoucherOrderMapper, Vou
     @Resource
     private StringRedisTemplate stringRedisTemplate;
 
+    @Resource
+    private RedissonClient redissonClient;
+
     @Override
     public Result seckillVoucher(Long voucherId) {
 //      1.查询优惠券
@@ -55,26 +60,28 @@ public class VoucherOrderServiceImpl extends ServiceImpl<VoucherOrderMapper, Vou
             return Result.fail("库存不足");
         }
         UserDTO user = UserHolder.getUser();
-//      TODO 创建锁对象
+//      创建锁对象
 //      锁定的范围与之前一样。切记不能把order锁住，范围太大了，以后有关order的都被锁住了
-        SimpleRedisLock lock = new SimpleRedisLock("order:" + user.getId(), stringRedisTemplate);
-//      TODO 获取锁
-//      订单大概是500ms，我们这里可以设定为5秒
-        boolean isLock = lock.tryLock(5);
-//      TODO  判断是否获取锁成功
+//      之前的方式：SimpleRedisLock lock = new SimpleRedisLock("order:" + user.getId(), stringRedisTemplate);
+//      TODO 使用Redisson客户端获取锁对象
+        RLock lock = redissonClient.getLock("lock:order:" + user.getId());
+//      获取锁
+//      订单大概是500ms，我们这里可以设定为秒
+        boolean isLock = lock.tryLock();
+//      判断是否获取锁成功
         if (!isLock) {
-//      TODO  不成功
+//      不成功
 //      我们要避免一个用户重复下单,既然获取锁失败，说明在并发执行，我们要避免并发执行
             return Result.fail("不允许重复下单");
         }
-//      TODO 成功
+//      成功
 //      createVoucherOrder方法执行过程中可能会有异常，我们放到try...catch中
         try {
 //          获取当前对象的代理对象 强转
             VoucherOrderServiceImpl proxy = (VoucherOrderServiceImpl) AopContext.currentProxy();
             return proxy.createVoucherOrder(voucherId);
         }finally {
-//          TODO 出现异常做锁的释放
+//          出现异常做锁的释放
             lock.unlock();
         }
 
