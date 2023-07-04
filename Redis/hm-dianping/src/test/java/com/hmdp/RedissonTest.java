@@ -13,17 +13,25 @@ import java.util.concurrent.TimeUnit;
 @Slf4j
 @SpringBootTest
 class RedissonTest {
-
     @Resource
     private RedissonClient redissonClient;
+//    @Resource
+//    private RedissonClient redissonClient2;
+//    @Resource
+//    private RedissonClient redissonClient3;
 
     private RLock lock;
 
     @BeforeEach
     void setUp() {
         lock = redissonClient.getLock("order");
+//        RLock  lock1 = redissonClient.getLock("order");
+//        RLock  lock2 = redissonClient2.getLock("order");
+//        RLock  lock3 = redissonClient3.getLock("order");
+//      TODO 创建联锁,用哪个客户端调用没有区别
+//        lock = redissonClient.getMultiLock(lock1,lock2,lock3);
     }
-
+//  TODO 使用方式和之前没有区别，代码不用动
     @Test
     void method1() throws InterruptedException {
         // 尝试获取锁

@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class RedisConfig {
+public class RedissonConfig {
     @Bean
     public RedissonClient redissonClient(){
 //      TODO 配置类
@@ -18,4 +18,18 @@ public class RedisConfig {
 //      TODO 创建客户端
         return Redisson.create(config);
     }
+
+//    @Bean
+//    public RedissonClient redissonClient2(){
+//        Config config = new Config();
+//        config.useSingleServer().setAddress("redis://127.0.0.1:6380");
+//        return Redisson.create(config);
+//    }
+//
+//    @Bean
+//    public RedissonClient redissonClient3(){
+//        Config config = new Config();
+//        config.useSingleServer().setAddress("redis://127.0.0.1:6381");
+//        return Redisson.create(config);
+//    }
 }
