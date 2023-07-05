@@ -6,6 +6,8 @@ local voucherId = ARGV[1]
 -- 1.2 用户id
 --   需要知道用户id，才能判断用户之前是否下过单
 local userId = ARGV[2]
+-- TODO 1.3 订单id
+local orderId = ARGV[3]
 
 -- 2.数据相关key
 -- 2.1 库存key, lua中是用 .. 拼接字符串
@@ -31,6 +33,7 @@ end
 redis.call('incrby',stockKey,-1)
 -- 3.5 下单，保存用户 sadd orderKey userId
 redis.call('sadd',orderKey,userId)
-
+-- TODO 3.6 发送消息到队列当中，XADD stream.orders * k1 v1 k2 v2.....
+redis.call("xadd","stream.orders","*","userId",userId,"voucherId",voucherId,"id",orderId)
 return 0
 
