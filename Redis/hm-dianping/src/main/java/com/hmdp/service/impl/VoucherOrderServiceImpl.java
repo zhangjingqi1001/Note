@@ -130,7 +130,7 @@ public class VoucherOrderServiceImpl extends ServiceImpl<VoucherOrderMapper, Vou
         private void handlePendingList() {
             while (true) {
                 try {
-//                  TODO 1.获取pending-list中的订单信息,XREADGROUP GROUP g1 c1 COUNT 1  STREAMS stream.orders 0
+//                  TODO 1.获取pending-list中的订单信息,XREADGROUP GROUP g1 c1 COUNT 1  STREAMS stream.orders+ 0
 //                  为什么返回一个List？因为count不是1的话，可能会有多条消息
                     List<MapRecord<String, Object, Object>> list = stringRedisTemplate.opsForStream().read(
 //                          组是属于消费者的一部分信息，在这里统一叫做Consumer(一定是Spring包下的)
