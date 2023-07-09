@@ -12,12 +12,18 @@ import com.hmdp.entity.User;
 import com.hmdp.mapper.UserMapper;
 import com.hmdp.service.IUserService;
 import com.hmdp.utils.RegexUtils;
+import com.hmdp.utils.UserHolder;
+import org.springframework.cglib.core.Local;
+import org.springframework.data.redis.connection.BitFieldSubCommands;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
@@ -128,5 +134,78 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
 
         return user;
     }
+
+    //  用户签到功能
+    @Override
+    public Result sign() {
+//      TODO 1.获取当前登录用户
+        Long userId = UserHolder.getUser().getId();
+
+//      TODO 2.获取日期
+        LocalDateTime now = LocalDateTime.now();
+
+//      TODO 3.拼接key
+        String keySuffix = now.format(DateTimeFormatter.ofPattern(":yyyyMM"));
+        String key = "sign:" + userId + keySuffix;
+//      TODO 4.今天是本月第几天，就向那个bit位存值
+        int dayOfMonth = now.getDayOfMonth();
+//      TODO 5.写入Redis SETBIT key offset 0/1
+        stringRedisTemplate.opsForValue().setBit(key, dayOfMonth - 1, true);
+        return Result.ok();
+    }
+
+    //  获取连续签到天数
+    @Override
+    public Result signCount() {
+
+//      1.获取当前登录用户
+        Long userId = UserHolder.getUser().getId();
+//      2.获取日期
+        LocalDateTime now = LocalDateTime.now();
+//      3.拼接key
+        String keySuffix = now.format(DateTimeFormatter.ofPattern(":yyyyMM"));
+        String key = "sign:" + userId + keySuffix;
+//      4.今天是本月第几天，就向那个bit位存值
+        int dayOfMonth = now.getDayOfMonth();
+//      TODO 5.获取本月截止今天为止的所有签到记录(返回的是一个十进制的数字)
+//      因为可以同时执行查询、修改、自增功能，那这样的话返回值也会有多个，所以最终是一个list集合
+        List<Long> result = stringRedisTemplate.opsForValue().bitField(key,
+//              BitFieldSubCommands.create() 创建子命令
+                BitFieldSubCommands.create()
+//                      unsigned无符号， dayOfMonth表示截取多少bit位
+                        .get(BitFieldSubCommands.BitFieldType.unsigned(dayOfMonth))
+//                       表示从0开始查
+                        .valueAt(0)
+        );
+        if (result == null || result.isEmpty()) {
+            return Result.ok(0);
+        }
+//      我们这只执行了查询，所以集合中只有一个元素
+        Long num = result.get(0);
+        if (num == null || num == 0) {
+            return Result.ok(0);
+        }
+//      TODO 6.循环遍历
+        int count =0;
+        while (true) {
+//          TODO 6.1 数字与1做与运算，得到数字的最后一个bit位
+//          TODO 6.2 判断这个bit位是否为0
+            if ((num & 1) == 0) {
+//              TODO 6.3如果为0，说明未签到，结束
+                break;
+            } else {
+//             TODO 6.4如果不为0，说明已签到，计数器+1
+               count++;
+            }
+
+//          TODO 6.5把数字右移动一位，抛弃最后一个bit位，继续下一个bit位
+//          先右移一位，在赋值给num
+            num >>>=1;
+        }
+
+        return Result.ok(count);
+    }
+
+
 }
 
