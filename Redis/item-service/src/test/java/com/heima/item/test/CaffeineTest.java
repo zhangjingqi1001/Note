@@ -24,6 +24,8 @@ public class CaffeineTest {
         System.out.println("gf = " + gf);
 
         // 取数据，不存在则去数据库查询
+        // 后面的参数是一个Function，如果未命中就执行这个函数。
+        // Function的作用就是根据一个key，去找缓存的值。然后将Function的返回值返回
         String defaultGF = cache.get("defaultGF", key -> {
             // 这里可以去数据库根据 key查询value
             return "柳岩";
@@ -46,7 +48,7 @@ public class CaffeineTest {
         cache.put("gf2", "范冰冰");
         cache.put("gf3", "迪丽热巴");
         // 延迟10ms，给清理线程一点时间
-        Thread.sleep(10L);
+//        Thread.sleep(10L);
         // 获取数据
         System.out.println("gf1: " + cache.getIfPresent("gf1"));
         System.out.println("gf2: " + cache.getIfPresent("gf2"));

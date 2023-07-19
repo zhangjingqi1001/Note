@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f08f5c3-6f5a-440c-857c-3cae6a79de22" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../nginx-1.18.0/logs/access.log" beforeDir="false" afterPath="$PROJECT_DIR$/../nginx-1.18.0/logs/access.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../nginx-1.18.0/logs/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/../nginx-1.18.0/logs/error.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../nginx-1.18.0/logs/nginx.pid" beforeDir="false" afterPath="$PROJECT_DIR$/../nginx-1.18.0/logs/nginx.pid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../item-service/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../item-service/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,6 +64,7 @@
       <updated>1689069665771</updated>
       <workItem from="1689069667446" duration="2185000" />
       <workItem from="1689433979907" duration="30000" />
+      <workItem from="1689773795388" duration="1271000" />
     </task>
     <servers />
   </component>
