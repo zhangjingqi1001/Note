@@ -5,13 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="095762db-2f5b-42d1-af55-fd808f641778" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../9.多级缓存.md" beforeDir="false" afterPath="$PROJECT_DIR$/../9.多级缓存.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/heima/item/web/ItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/heima/item/web/ItemController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/heima/item/test/CaffeineTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/heima/item/test/CaffeineTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/heima/item/web/ItemController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/heima/item/web/ItemController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/heima/item/test/CaffeineTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/heima/item/test/CaffeineTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../redis-demo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../redis-demo/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,6 +115,8 @@
       <workItem from="1689478454292" duration="683000" />
       <workItem from="1689726922903" duration="70000" />
       <workItem from="1689775094167" duration="3755000" />
+      <workItem from="1689813101148" duration="11000" />
+      <workItem from="1689858941081" duration="1287000" />
     </task>
     <servers />
   </component>
