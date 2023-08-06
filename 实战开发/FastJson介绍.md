@@ -218,3 +218,87 @@ JSON.parseArray(json格式字符串, 传递转换后的集合的泛型);
 
 ![image-20230403175356986](https://picture-typora-zhangjingqi.oss-cn-beijing.aliyuncs.com/image-20230403175356986.png)
 
+
+
+
+
+# 四、JSONObject对象
+
+## 4.1 JSON字符串转换成JSONObject
+
+```java
+JSONObject jsonObject = JSON.parseObject("JSON 字符串");
+```
+
+
+
+## 4.2 从JSONObject中得到某一个封装数据
+
+```json
+{
+    "body":{
+        "createBy":0,
+        "aaa0":"sssss",
+        "updateBy":0,
+        "userId":10086,
+        "userCode":"10088888"
+    }
+}
+```
+
+```java
+// 将字符串转换成JSONObject
+JSONObject responseObj = JSON.parseObject("{"body":{"createBy":0,"aaa0":"sssss","updateBy":0,"userId":10086,"userCode":"10088888"}}");
+
+//获取body对象
+JSONObject body = responseObj.getJSONObject("body");
+
+//获取body里面的某个数据
+String userCode = body.getString("userCode");
+```
+
+
+
+## 4.3 将JSONObject对象中的key按照ASCII排序
+
+```java
+//   按照ASCII码排序字段
+public String sortByASCII(String jsonStr) {
+    //创建JSONObject
+    JSONObject jsonObject = JSON.parseObject(jsonStr);
+
+    // 将JSONObject转换为Map对象
+    Map<String, Object> innerMap = jsonObject.getInnerMap();
+
+    // 创建一个新的TreeMap并将元素复制到其中
+    TreeMap<String, Object> treeMap = new TreeMap<>(innerMap);
+
+    // 创建一个新的JSONObject并使用TreeMap更新它
+    JSONObject sortedJsonObject = new JSONObject(treeMap);
+
+    return sortedJsonObject.toString();
+}
+```
+
+
+
+# 五、关于将JSONObject之前返回前端的问题
+
+ 今天我将一个String类型的数据转换成JSONObject类型数据并且直接返回给了前端，发现前端怎么也调不通，我日志中的JSON数据也并没有什么问题，下面来探析一下
+
+不用探析了，一个很傻逼的问题
+
+Controller层封装了一下结果集，然后Service层又封装了一下结果集导致的
+
+
+
+
+
+
+
+
+
+
+
+
+
