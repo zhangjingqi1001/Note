@@ -294,11 +294,182 @@ Controller层封装了一下结果集，然后Service层又封装了一下结果
 
 
 
+# 六、常用注解
+
+@JsonProperty 注解和 @JSONField 注解
+
+## 6.1 @JSONField
+
+### 6.1.1  指定字段在生成的JSON中的名称
+
+ 使用场景：某一个字段是大写，但是我们转成JSON后变成小写，如下所示
+
+```java
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class GetIdentityIdDto implements Serializable {
+    private static final long serialVersionUID = 3293035228265414449L;
+
+    @NotBlank
+    private String identityCard;
+
+    @NotBlank
+    private String Sex;
+
+}
+```
+
+将上面的dto转成JSON
+
+```java
+GetIdentityIdDto dto = new GetIdentityIdDto("111","222");
+
+String toJSONString = JSONObject.toJSONString(dto);
+
+System.out.println(toJSONString);
+```
+
+输出结果,可以看出来“Sex”字段首字母变成小写了
+
+```json
+{
+    "identityCard":"111",
+    "sex":"222"
+}
+```
 
 
 
+**解决方案**：通过@JSONField的name属性指定字段在生成的JSON中的名称
+
+```java
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class GetIdentityIdDto implements Serializable {
+    private static final long serialVersionUID = 3293035228265414449L;
+
+    @NotBlank
+    private String identityCard;
+
+    @NotBlank
+    @JSONField(name = "Sex")
+    private String Sex;
+
+}
+```
+
+效果
+
+```json
+{
+    "Sex":"222",
+    "identityCard":"111"
+}
+```
 
 
 
+### 6.1.2 ordinal属性指定字段的序列化顺序
+
+```java
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class GetIdentityIdTestDto implements Serializable {
+    private static final long serialVersionUID = 3293035228265414449L;
+
+    @NotBlank
+    @JSONField(name = "identityCard",ordinal = 2)
+    private String identityCard;
+
+    @NotBlank
+    @JSONField(name = "Sex",ordinal = 1)
+    private String Sex;
+
+}
+```
+
+输出的JSON串数据
+
+```java
+GetIdentityIdTestDto dto = new GetIdentityIdTestDto("111","222");
+
+String toJSONString = JSONObject.toJSONString(dto);
+
+System.out.println(toJSONString);
+```
+
+确实是"Sex"字段在前
+
+```json
+{"Sex":"222","identityCard":"111"}
+```
 
 
+
+那我们改一下dto的顺序
+
+```java
+    @NotBlank
+    @JSONField(name = "identityCard",ordinal = 1)
+    private String identityCard;
+
+    @NotBlank
+    @JSONField(name = "Sex",ordinal = 2)
+    private String Sex;
+```
+
+输出顺序
+
+```json
+{"identityCard":"111","Sex":"222"}
+```
+
+
+
+### 6.1.3 format属性
+
+```java
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class GetIdentityIdTestDto implements Serializable {
+    private static final long serialVersionUID = 3293035228265414449L;
+
+    @NotBlank
+    @JSONField(name = "identityCard",ordinal = 1)
+    private String identityCard;
+
+    @NotBlank
+    @JSONField(name = "Sex",ordinal = 2)
+    private String Sex;
+
+    @JSONField(format="yyyy-MM-dd HH:mm:ss")
+    private Date date;
+
+}
+```
+
+输出一下
+
+```java
+GetIdentityIdTestDto dto = new GetIdentityIdTestDto("111","222",new Date());
+System.out.println(new Date());
+String toJSONString = JSONObject.toJSONString(dto);
+
+System.out.println(toJSONString);
+
+System.out.println(dto.getDate());
+```
+
+format属性只是在转JSON的时候进行format，我们如果获取此字段对应的属性的话，还是原来的值
+
+![image-20230831083401980](https://picture-typora-zhangjingqi.oss-cn-beijing.aliyuncs.com/image-20230831083401980.png)
+
+
+
+> **@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")与@JSONField(format="yyyy-MM-dd HH:mm:ss")的区别**
+>
+> ![image-20230831084949131](https://picture-typora-zhangjingqi.oss-cn-beijing.aliyuncs.com/image-20230831084949131.png)
