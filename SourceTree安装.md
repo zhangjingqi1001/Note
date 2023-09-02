@@ -91,3 +91,9 @@
 
 
 5. 打开SourceTree软件
+
+如果有Git的话，选择本地的Git即可
+
+![image-20230902220042708](https://picture-typora-zhangjingqi.oss-cn-beijing.aliyuncs.com/image-20230902220042708.png)
+
+其他的缺少什么环境安装即可
