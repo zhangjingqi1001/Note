@@ -97,3 +97,7 @@
 ![image-20230902220042708](https://picture-typora-zhangjingqi.oss-cn-beijing.aliyuncs.com/image-20230902220042708.png)
 
 其他的缺少什么环境安装即可
+
+为了方便可以添加一个SSH
+
+![image-20230902220305925](https://picture-typora-zhangjingqi.oss-cn-beijing.aliyuncs.com/image-20230902220305925.png)
