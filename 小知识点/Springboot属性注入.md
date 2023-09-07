@@ -1,8 +1,10 @@
 # 前言
 
+
+
 [推荐基于Lombok的Spring注入方式（基于构造器注入）及快速获取Spring容器中管理的对象 (ngui.cc)](https://www.ngui.cc/el/3665897.html?action=onClick)
 
-# 一、Springboot中的字段注入是什么意思?
+# 一、字段注入
 
 在Spring Boot中，字段注入是一种依赖注入的方式，它通过**直接注入依赖到类的字段上**来实现。
 
@@ -30,11 +32,20 @@ public class MyService {
 
 因此**，最好在需要注入的类中使用构造方法注入或者通过setter方法进行注入**，这样更加明确和可控。
 
+> 相关@Autowired注解在下面文章https://blog.csdn.net/weixin_51351637/article/details/131096709
+>
+> @Autowired注解：使用在使用在字段或方法上，用于根据类型（byType）注入引用数据
+>
+> 
+>
+> @Resource注解是Java EE规范提供的，它在JDK中的javax.annotation.Resource包中定义。
+>
+> @Resource注解既可以根据类型注入，也可以根据名称注入，详细可以查看上面的文章
+>
 
 
 
-
-# 二、Springboot中构造方法/setter方法注入
+# 二、构造方法/setter方法注入
 
 **SpringBootBean的注入方式**
 
@@ -96,7 +107,54 @@ public class SomeDependency {
 
 
 
+**下面这个例子就是完整版构造方法注入**
 
+```java
+@RestController
+@RequestMapping("/api/users")
+public class UserController {
+    private final IUserService userService;
+    private final IDeptService deptService;
+    private final IRoleService roleService;
+    private final UserCacheClean userCacheClean;
+    
+    public UserController(IUserService userService, IDeptService deptService,IRoleService roleService, UserCacheClean userCacheClean) {
+        this.userService = userService;
+        this.deptService = deptService;
+        this.roleService = roleService;
+        this.userCacheClean = userCacheClean;
+    }
+}
+```
+
+
+
+> **@NoArgsConstructor**后会 生成无参的构造方法
+>
+> **@AllArgsConstructor** 生成一个包含过所有字段的构造方法。
+>
+> **@RequiredArgsConstructor**会将类的每一个final字段或者non-null字段生成一个构造方法
+
+
+
+所以上面的代码我们可以利用注解完成
+
+```java
+@AllArgsConstructor //这里使用@RequiredArgsConstructor也可以
+@RestController
+@RequestMapping("/api/users")
+public class UserController {
+    private final IUserService userService;
+    private final IDeptService deptService;
+    private final IRoleService roleService;
+    private final UserCacheClean userCacheClean;
+    }
+}
+```
+
+> 在这里@AllArgsConstructor注解 和@RequiredArgsConstructor注解都可以用来替换@Autowired写法
+>
+> 区别在@RequiredArgsConstructor必须要有final修饰。
 
 ## 2.2 setter方法注入
 
@@ -138,7 +196,7 @@ public class SomeDependency {
 
 # 三、借助Lombok注入
 
-Lombok在spring中的**特殊注解@RequiredArgsConstructor**，用在类上面，可以方便的注入对象，而不必每个DI都要@Autowired
+Lombok在spring中的**特殊注解@RequiredArgsConstructor和@AllArgsConstructor**，用在类上面，可以方便的注入对象，而不必每个字段都要@Autowired
 
 
 
@@ -152,7 +210,11 @@ Lombok在spring中的**特殊注解@RequiredArgsConstructor**，用在类上面�
 
 
 
-`@RequiredArgsConstructor`为每个需要特殊处理的字段生成一个带有1个参数的构造函数。所有未初始化的final字段都将获得一个参数，以及任何标记为@NonNull且未在声明位置初始化的字段。
+
+
+## 3.1 @RequiredArgsConstructor
+
+**@RequiredArgsConstructor**为每个需要特殊处理的字段生成一个带有1个参数的构造函数
 
 对于那些用@NonNull标记的字段，还将生成显式null检查。如果用于标记为@NonNull的字段的任何参数包含null，则构造函数将抛出NullPointerException。参数的顺序与字段在类中出现的顺序相匹配
 
@@ -169,6 +231,86 @@ public class UserController {
 }
 
 ```
+
+> @RequiredArgsConstructor只会处理final字段以及任何标记为@NonNull且未在声明位置初始化的字段，并且不会包含继承自父类的字段。
+>
+> 如果需要在构造方法中包含继承的字段，可以使用其他相关的Lombok注解，如@NoArgsConstructor、@AllArgsConstructor等
+
+
+
+看一看一下下面的例子
+
+使用@RequiredArgsConstructor注解，它自动生成了一个构造方法`public MyClass(String name, int age)`
+
+```java
+import lombok.RequiredArgsConstructor;
+
+@RequiredArgsConstructor
+public class MyClass {
+    private final String name;
+    private final int age;
+    private String address; // 不是final字段，不会生成构造方法参数
+
+    public static void main(String[] args) {
+        MyClass myClass = new MyClass("John", 25);
+    }
+}
+
+```
+
+
+
+
+
+## 3.2 @AllArgsConstructor
+
+
+
+同时使用@AllArgsConstructor+@Value注解会报错
+
+如下所示
+
+![image-20230907110036104](https://picture-typora-zhangjingqi.oss-cn-beijing.aliyuncs.com/image-20230907110036104.png)
+
+
+
+**解决方式**
+
+**将@AllArgsConstructor注解替换成@RequiredArgsConstructor注解**
+
+
+
+**原因**
+
+**@AllArgsConstructor**是Lombok库提供的注解，它会自动生成一个包含所有字段的构造方法。
+
+**@Value**注解也是Lombok库提供的注解，它会生成不可变（immutable）类的方法，包括私有字段、构造方法和访问方法。
+
+这两个注解的生成结果存在冲突。
+
+**@Value("${属性名}") 注解是通过对象的set 方法赋值的，构造方法的执行在set方法之前，所以在构造方法中使用变量会发现变量为 null**
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
