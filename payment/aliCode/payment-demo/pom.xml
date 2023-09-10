@@ -13,6 +13,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <spring-boot.version>2.3.7.RELEASE</spring-boot.version>
+<!--                <spring-boot.version>2.7.12</spring-boot.version>-->
     </properties>
 
     <dependencies>
@@ -52,6 +53,7 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.27</version>
         </dependency>
 
         <!--MyBatis-Plus：是MyBatis的增强-->
@@ -112,7 +114,6 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-
     <build>
         <!-- 项目打包时会将java目录中的*.xml文件也进行打包 -->
         <resources>

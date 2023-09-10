@@ -1,14 +1,11 @@
 server:
   port: 8090 #服务端口
-
 spring:
   application:
     name: payment-demo #应用的名字
-
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
     time-zone: GMT+8
-
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/payment_demo?serverTimezone=GMT%2B8&characterEncoding=utf-8
@@ -22,4 +19,10 @@ mybatis-plus:
 
 logging:
   level:
-    root: info
+    root: debug
+  file:
+    max-size: 2KB
+    name: server.log
+    path: "E:/logging/"
+  pattern:
+    rolling-file-name: server.%d{yyyy-MM-dd}.%i.log

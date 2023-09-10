@@ -1,0 +1,629 @@
+2023-09-10 12:04:36.760  INFO 19056 --- [main] c.a.paymentdemo.PaymentDemoApplication   : Starting PaymentDemoApplication on zhangjingqi-PC with PID 19056 (E:\Note\Note\payment\aliCode\payment-demo\target\classes started by jd in E:\Note\Note\payment\aliCode\payment-demo)
+2023-09-10 12:04:36.764  INFO 19056 --- [main] c.a.paymentdemo.PaymentDemoApplication   : No active profile set, falling back to default profiles: default
+2023-09-10 12:04:38.326  INFO 19056 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2023-09-10 12:04:38.339  INFO 19056 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-10 12:04:38.339  INFO 19056 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2023-09-10 12:04:38.504  INFO 19056 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-10 12:04:38.505  INFO 19056 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1679 ms
+2023-09-10 12:04:43.133  INFO 19056 --- [main] c.a.paymentdemo.config.WxPayConfig       : 获取签名验证器
+2023-09-10 12:04:46.215  INFO 19056 --- [main] c.a.paymentdemo.config.WxPayConfig       : 获取httpClient
+2023-09-10 12:04:46.214  INFO 19056 --- [scheduled_update_cert_thread] c.w.p.c.a.h.cert.CertManagerSingleton    : Begin update Certificate.Date:2023-09-10T04:04:46.214Z
+2023-09-10 12:04:46.237  INFO 19056 --- [main] c.a.paymentdemo.config.WxPayConfig       : == getWxPayNoSignClient END ==
+2023-09-10 12:04:46.593  INFO 19056 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-09-10 12:04:46.597  INFO 19056 --- [scheduled_update_cert_thread] c.w.p.c.a.h.cert.CertManagerSingleton    : Finish update Certificate.Date:2023-09-10T04:04:46.597Z
+2023-09-10 12:04:46.671  INFO 19056 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-09-10 12:04:46.864  INFO 19056 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2023-09-10 12:04:46.928  INFO 19056 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path ''
+2023-09-10 12:04:46.929  INFO 19056 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-09-10 12:04:46.945  INFO 19056 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-09-10 12:04:46.982  INFO 19056 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-09-10 12:04:47.194  INFO 19056 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listUsingGET_1
+2023-09-10 12:04:47.262  INFO 19056 --- [main] c.a.paymentdemo.PaymentDemoApplication   : Started PaymentDemoApplication in 11.05 seconds (JVM running for 14.168)
+2023-09-10 12:05:00.016  INFO 19056 --- [scheduling-1] com.atguigu.paymentdemo.task.WxPayTask   : refundConfirm 被执行......
+2023-09-10 12:05:00.103  INFO 19056 --- [scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-09-10 12:05:03.643 ERROR 19056 --- [scheduling-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Exception during pool initialization.
+
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:828) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:448) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-3.4.5.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:358) ~[HikariCP-3.4.5.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206) ~[HikariCP-3.4.5.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:477) [HikariCP-3.4.5.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:560) [HikariCP-3.4.5.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) [HikariCP-3.4.5.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) [HikariCP-3.4.5.jar:na]
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:158) [spring-jdbc-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:116) [spring-jdbc-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:79) [spring-jdbc-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:80) [mybatis-spring-2.0.3.jar:2.0.3]
+	at org.mybatis.spring.transaction.SpringManagedTransaction.getConnection(SpringManagedTransaction.java:67) [mybatis-spring-2.0.3.jar:2.0.3]
+	at org.apache.ibatis.executor.BaseExecutor.getConnection(BaseExecutor.java:336) [mybatis-3.5.3.jar:3.5.3]
+	at com.baomidou.mybatisplus.core.executor.MybatisSimpleExecutor.prepareStatement(MybatisSimpleExecutor.java:91) [mybatis-plus-core-3.3.1.jar:3.3.1]
+	at com.baomidou.mybatisplus.core.executor.MybatisSimpleExecutor.doQuery(MybatisSimpleExecutor.java:66) [mybatis-plus-core-3.3.1.jar:3.3.1]
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:324) [mybatis-3.5.3.jar:3.5.3]
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156) [mybatis-3.5.3.jar:3.5.3]
+	at com.baomidou.mybatisplus.core.executor.MybatisCachingExecutor.query(MybatisCachingExecutor.java:163) [mybatis-plus-core-3.3.1.jar:3.3.1]
+	at com.baomidou.mybatisplus.core.executor.MybatisCachingExecutor.query(MybatisCachingExecutor.java:90) [mybatis-plus-core-3.3.1.jar:3.3.1]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147) [mybatis-3.5.3.jar:3.5.3]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140) [mybatis-3.5.3.jar:3.5.3]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_291]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_291]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_291]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_291]
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426) [mybatis-spring-2.0.3.jar:2.0.3]
+	at com.sun.proxy.$Proxy69.selectList(Unknown Source) [na:na]
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:223) [mybatis-spring-2.0.3.jar:2.0.3]
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.executeForMany(MybatisMapperMethod.java:177) [mybatis-plus-core-3.3.1.jar:3.3.1]
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.execute(MybatisMapperMethod.java:78) [mybatis-plus-core-3.3.1.jar:3.3.1]
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:96) [mybatis-plus-core-3.3.1.jar:3.3.1]
+	at com.sun.proxy.$Proxy80.selectList(Unknown Source) [na:na]
+	at com.atguigu.paymentdemo.service.impl.RefundInfoServiceImpl.getNoRefundOrderByDuration(RefundInfoServiceImpl.java:102) [classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_291]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_291]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_291]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_291]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344) [spring-aop-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:205) [spring-aop-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at com.sun.proxy.$Proxy81.getNoRefundOrderByDuration(Unknown Source) [na:na]
+	at com.atguigu.paymentdemo.task.WxPayTask.refundConfirm(WxPayTask.java:70) [classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_291]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_291]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_291]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_291]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84) [spring-context-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) [spring-context-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:93) [spring-context-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_291]
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266) [na:1.8.0_291]
+	at java.util.concurrent.FutureTask.run(FutureTask.java) [na:1.8.0_291]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_291]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [na:1.8.0_291]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_291]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_291]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_291]
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_291]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_291]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_291]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_291]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.protocol.a.NativeProtocol.negotiateSSLConnection(NativeProtocol.java:317) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.protocol.a.NativeAuthenticationProvider.connect(NativeAuthenticationProvider.java:203) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.protocol.a.NativeProtocol.connect(NativeProtocol.java:1369) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:133) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:948) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:818) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	... 59 common frames omitted
+Caused by: javax.net.ssl.SSLException: java.net.SocketException: Connection reset
+	at sun.security.ssl.Alert.createSSLException(Alert.java:127) ~[na:1.8.0_291]
+	at sun.security.ssl.TransportContext.fatal(TransportContext.java:370) ~[na:1.8.0_291]
+	at sun.security.ssl.TransportContext.fatal(TransportContext.java:313) ~[na:1.8.0_291]
+	at sun.security.ssl.TransportContext.fatal(TransportContext.java:308) ~[na:1.8.0_291]
+	at sun.security.ssl.SSLTransport.decode(SSLTransport.java:141) ~[na:1.8.0_291]
+	at sun.security.ssl.SSLSocketImpl.decode(SSLSocketImpl.java:1290) ~[na:1.8.0_291]
+	at sun.security.ssl.SSLSocketImpl.readHandshakeRecord(SSLSocketImpl.java:1199) ~[na:1.8.0_291]
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:401) ~[na:1.8.0_291]
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:373) ~[na:1.8.0_291]
+	at com.mysql.cj.protocol.ExportControlled.performTlsHandshake(ExportControlled.java:335) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.protocol.StandardSocketFactory.performTlsHandshake(StandardSocketFactory.java:194) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.protocol.a.NativeSocketConnection.performTlsHandshake(NativeSocketConnection.java:101) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.protocol.a.NativeProtocol.negotiateSSLConnection(NativeProtocol.java:308) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	... 64 common frames omitted
+	Suppressed: java.net.SocketException: Connection reset by peer: socket write error
+		at java.net.SocketOutputStream.socketWrite0(Native Method) ~[na:1.8.0_291]
+		at java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111) ~[na:1.8.0_291]
+		at java.net.SocketOutputStream.write(SocketOutputStream.java:155) ~[na:1.8.0_291]
+		at sun.security.ssl.SSLSocketOutputRecord.encodeAlert(SSLSocketOutputRecord.java:83) ~[na:1.8.0_291]
+		at sun.security.ssl.TransportContext.fatal(TransportContext.java:401) ~[na:1.8.0_291]
+		... 75 common frames omitted
+Caused by: java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:210) ~[na:1.8.0_291]
+	at java.net.SocketInputStream.read(SocketInputStream.java:141) ~[na:1.8.0_291]
+	at sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:475) ~[na:1.8.0_291]
+	at sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:469) ~[na:1.8.0_291]
+	at sun.security.ssl.SSLSocketInputRecord.decode(SSLSocketInputRecord.java:159) ~[na:1.8.0_291]
+	at sun.security.ssl.SSLTransport.decode(SSLTransport.java:110) ~[na:1.8.0_291]
+	... 72 common frames omitted
+
+2023-09-10 12:05:03.654 ERROR 19056 --- [scheduling-1] o.s.s.s.TaskUtils$LoggingErrorHandler    : Unexpected error occurred in scheduled task
+
+org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+### The error may exist in com/atguigu/paymentdemo/mapper/RefundInfoMapper.java (best guess)
+### The error may involve com.atguigu.paymentdemo.mapper.RefundInfoMapper.selectList
+### The error occurred while executing a query
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:92) ~[mybatis-spring-2.0.3.jar:2.0.3]
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:440) ~[mybatis-spring-2.0.3.jar:2.0.3]
+	at com.sun.proxy.$Proxy69.selectList(Unknown Source) ~[na:na]
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:223) ~[mybatis-spring-2.0.3.jar:2.0.3]
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.executeForMany(MybatisMapperMethod.java:177) ~[mybatis-plus-core-3.3.1.jar:3.3.1]
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.execute(MybatisMapperMethod.java:78) ~[mybatis-plus-core-3.3.1.jar:3.3.1]
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:96) ~[mybatis-plus-core-3.3.1.jar:3.3.1]
+	at com.sun.proxy.$Proxy80.selectList(Unknown Source) ~[na:na]
+	at com.atguigu.paymentdemo.service.impl.RefundInfoServiceImpl.getNoRefundOrderByDuration(RefundInfoServiceImpl.java:102) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_291]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_291]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_291]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_291]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344) ~[spring-aop-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:205) ~[spring-aop-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at com.sun.proxy.$Proxy81.getNoRefundOrderByDuration(Unknown Source) ~[na:na]
+	at com.atguigu.paymentdemo.task.WxPayTask.refundConfirm(WxPayTask.java:70) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_291]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_291]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_291]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_291]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84) ~[spring-context-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:93) [spring-context-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_291]
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266) [na:1.8.0_291]
+	at java.util.concurrent.FutureTask.run(FutureTask.java) [na:1.8.0_291]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_291]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [na:1.8.0_291]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_291]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_291]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_291]
+Caused by: org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+### The error may exist in com/atguigu/paymentdemo/mapper/RefundInfoMapper.java (best guess)
+### The error may involve com.atguigu.paymentdemo.mapper.RefundInfoMapper.selectList
+### The error occurred while executing a query
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30) ~[mybatis-3.5.3.jar:3.5.3]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:149) ~[mybatis-3.5.3.jar:3.5.3]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140) ~[mybatis-3.5.3.jar:3.5.3]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_291]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_291]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_291]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_291]
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426) ~[mybatis-spring-2.0.3.jar:2.0.3]
+	... 30 common frames omitted
+Caused by: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:82) ~[spring-jdbc-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:80) ~[mybatis-spring-2.0.3.jar:2.0.3]
+	at org.mybatis.spring.transaction.SpringManagedTransaction.getConnection(SpringManagedTransaction.java:67) ~[mybatis-spring-2.0.3.jar:2.0.3]
+	at org.apache.ibatis.executor.BaseExecutor.getConnection(BaseExecutor.java:336) ~[mybatis-3.5.3.jar:3.5.3]
+	at com.baomidou.mybatisplus.core.executor.MybatisSimpleExecutor.prepareStatement(MybatisSimpleExecutor.java:91) ~[mybatis-plus-core-3.3.1.jar:3.3.1]
+	at com.baomidou.mybatisplus.core.executor.MybatisSimpleExecutor.doQuery(MybatisSimpleExecutor.java:66) ~[mybatis-plus-core-3.3.1.jar:3.3.1]
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:324) ~[mybatis-3.5.3.jar:3.5.3]
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156) ~[mybatis-3.5.3.jar:3.5.3]
+	at com.baomidou.mybatisplus.core.executor.MybatisCachingExecutor.query(MybatisCachingExecutor.java:163) ~[mybatis-plus-core-3.3.1.jar:3.3.1]
+	at com.baomidou.mybatisplus.core.executor.MybatisCachingExecutor.query(MybatisCachingExecutor.java:90) ~[mybatis-plus-core-3.3.1.jar:3.3.1]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147) ~[mybatis-3.5.3.jar:3.5.3]
+	... 36 common frames omitted
+Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:828) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:448) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-3.4.5.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:358) ~[HikariCP-3.4.5.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206) ~[HikariCP-3.4.5.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:477) ~[HikariCP-3.4.5.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:560) ~[HikariCP-3.4.5.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) ~[HikariCP-3.4.5.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) ~[HikariCP-3.4.5.jar:na]
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:158) ~[spring-jdbc-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:116) ~[spring-jdbc-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:79) ~[spring-jdbc-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	... 46 common frames omitted
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_291]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_291]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_291]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_291]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.protocol.a.NativeProtocol.negotiateSSLConnection(NativeProtocol.java:317) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.protocol.a.NativeAuthenticationProvider.connect(NativeAuthenticationProvider.java:203) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.protocol.a.NativeProtocol.connect(NativeProtocol.java:1369) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:133) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:948) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:818) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	... 59 common frames omitted
+Caused by: javax.net.ssl.SSLException: java.net.SocketException: Connection reset
+	at sun.security.ssl.Alert.createSSLException(Alert.java:127) ~[na:1.8.0_291]
+	at sun.security.ssl.TransportContext.fatal(TransportContext.java:370) ~[na:1.8.0_291]
+	at sun.security.ssl.TransportContext.fatal(TransportContext.java:313) ~[na:1.8.0_291]
+	at sun.security.ssl.TransportContext.fatal(TransportContext.java:308) ~[na:1.8.0_291]
+	at sun.security.ssl.SSLTransport.decode(SSLTransport.java:141) ~[na:1.8.0_291]
+	at sun.security.ssl.SSLSocketImpl.decode(SSLSocketImpl.java:1290) ~[na:1.8.0_291]
+	at sun.security.ssl.SSLSocketImpl.readHandshakeRecord(SSLSocketImpl.java:1199) ~[na:1.8.0_291]
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:401) ~[na:1.8.0_291]
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:373) ~[na:1.8.0_291]
+	at com.mysql.cj.protocol.ExportControlled.performTlsHandshake(ExportControlled.java:335) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.protocol.StandardSocketFactory.performTlsHandshake(StandardSocketFactory.java:194) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.protocol.a.NativeSocketConnection.performTlsHandshake(NativeSocketConnection.java:101) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.protocol.a.NativeProtocol.negotiateSSLConnection(NativeProtocol.java:308) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	... 64 common frames omitted
+	Suppressed: java.net.SocketException: Connection reset by peer: socket write error
+		at java.net.SocketOutputStream.socketWrite0(Native Method) ~[na:1.8.0_291]
+		at java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111) ~[na:1.8.0_291]
+		at java.net.SocketOutputStream.write(SocketOutputStream.java:155) ~[na:1.8.0_291]
+		at sun.security.ssl.SSLSocketOutputRecord.encodeAlert(SSLSocketOutputRecord.java:83) ~[na:1.8.0_291]
+		at sun.security.ssl.TransportContext.fatal(TransportContext.java:401) ~[na:1.8.0_291]
+		... 75 common frames omitted
+Caused by: java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:210) ~[na:1.8.0_291]
+	at java.net.SocketInputStream.read(SocketInputStream.java:141) ~[na:1.8.0_291]
+	at sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:475) ~[na:1.8.0_291]
+	at sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:469) ~[na:1.8.0_291]
+	at sun.security.ssl.SSLSocketInputRecord.decode(SSLSocketInputRecord.java:159) ~[na:1.8.0_291]
+	at sun.security.ssl.SSLTransport.decode(SSLTransport.java:110) ~[na:1.8.0_291]
+	... 72 common frames omitted
+
+2023-09-10 12:05:03.656  INFO 19056 --- [scheduling-1] com.atguigu.paymentdemo.task.WxPayTask   : orderConfirm 被执行......
+2023-09-10 12:05:03.659  INFO 19056 --- [scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-09-10 12:05:08.743 ERROR 19056 --- [scheduling-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Exception during pool initialization.
+
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:828) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:448) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-3.4.5.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:358) ~[HikariCP-3.4.5.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206) ~[HikariCP-3.4.5.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:477) [HikariCP-3.4.5.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:560) [HikariCP-3.4.5.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) [HikariCP-3.4.5.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) [HikariCP-3.4.5.jar:na]
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:158) [spring-jdbc-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:116) [spring-jdbc-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:79) [spring-jdbc-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:80) [mybatis-spring-2.0.3.jar:2.0.3]
+	at org.mybatis.spring.transaction.SpringManagedTransaction.getConnection(SpringManagedTransaction.java:67) [mybatis-spring-2.0.3.jar:2.0.3]
+	at org.apache.ibatis.executor.BaseExecutor.getConnection(BaseExecutor.java:336) [mybatis-3.5.3.jar:3.5.3]
+	at com.baomidou.mybatisplus.core.executor.MybatisSimpleExecutor.prepareStatement(MybatisSimpleExecutor.java:91) [mybatis-plus-core-3.3.1.jar:3.3.1]
+	at com.baomidou.mybatisplus.core.executor.MybatisSimpleExecutor.doQuery(MybatisSimpleExecutor.java:66) [mybatis-plus-core-3.3.1.jar:3.3.1]
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:324) [mybatis-3.5.3.jar:3.5.3]
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156) [mybatis-3.5.3.jar:3.5.3]
+	at com.baomidou.mybatisplus.core.executor.MybatisCachingExecutor.query(MybatisCachingExecutor.java:163) [mybatis-plus-core-3.3.1.jar:3.3.1]
+	at com.baomidou.mybatisplus.core.executor.MybatisCachingExecutor.query(MybatisCachingExecutor.java:90) [mybatis-plus-core-3.3.1.jar:3.3.1]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147) [mybatis-3.5.3.jar:3.5.3]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140) [mybatis-3.5.3.jar:3.5.3]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_291]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_291]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_291]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_291]
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426) [mybatis-spring-2.0.3.jar:2.0.3]
+	at com.sun.proxy.$Proxy69.selectList(Unknown Source) [na:na]
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:223) [mybatis-spring-2.0.3.jar:2.0.3]
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.executeForMany(MybatisMapperMethod.java:177) [mybatis-plus-core-3.3.1.jar:3.3.1]
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.execute(MybatisMapperMethod.java:78) [mybatis-plus-core-3.3.1.jar:3.3.1]
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:96) [mybatis-plus-core-3.3.1.jar:3.3.1]
+	at com.sun.proxy.$Proxy71.selectList(Unknown Source) [na:na]
+	at com.atguigu.paymentdemo.service.impl.OrderInfoServiceImpl.getNoPayOrderByDuration(OrderInfoServiceImpl.java:132) [classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_291]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_291]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_291]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_291]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344) [spring-aop-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:205) [spring-aop-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at com.sun.proxy.$Proxy73.getNoPayOrderByDuration(Unknown Source) [na:na]
+	at com.atguigu.paymentdemo.task.WxPayTask.orderConfirm(WxPayTask.java:50) [classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_291]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_291]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_291]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_291]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84) [spring-context-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) [spring-context-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:93) [spring-context-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_291]
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266) [na:1.8.0_291]
+	at java.util.concurrent.FutureTask.run(FutureTask.java) [na:1.8.0_291]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_291]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [na:1.8.0_291]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_291]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_291]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_291]
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_291]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_291]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_291]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_291]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:89) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:120) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:948) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:818) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	... 59 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_291]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:81) ~[na:1.8.0_291]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476) ~[na:1.8.0_291]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218) ~[na:1.8.0_291]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200) ~[na:1.8.0_291]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162) ~[na:1.8.0_291]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394) ~[na:1.8.0_291]
+	at java.net.Socket.connect(Socket.java:606) ~[na:1.8.0_291]
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:156) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:63) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	... 62 common frames omitted
+
+2023-09-10 12:05:08.746 ERROR 19056 --- [scheduling-1] o.s.s.s.TaskUtils$LoggingErrorHandler    : Unexpected error occurred in scheduled task
+
+org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+### The error may exist in com/atguigu/paymentdemo/mapper/OrderInfoMapper.java (best guess)
+### The error may involve com.atguigu.paymentdemo.mapper.OrderInfoMapper.selectList
+### The error occurred while executing a query
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:92) ~[mybatis-spring-2.0.3.jar:2.0.3]
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:440) ~[mybatis-spring-2.0.3.jar:2.0.3]
+	at com.sun.proxy.$Proxy69.selectList(Unknown Source) ~[na:na]
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:223) ~[mybatis-spring-2.0.3.jar:2.0.3]
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.executeForMany(MybatisMapperMethod.java:177) ~[mybatis-plus-core-3.3.1.jar:3.3.1]
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.execute(MybatisMapperMethod.java:78) ~[mybatis-plus-core-3.3.1.jar:3.3.1]
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:96) ~[mybatis-plus-core-3.3.1.jar:3.3.1]
+	at com.sun.proxy.$Proxy71.selectList(Unknown Source) ~[na:na]
+	at com.atguigu.paymentdemo.service.impl.OrderInfoServiceImpl.getNoPayOrderByDuration(OrderInfoServiceImpl.java:132) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_291]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_291]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_291]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_291]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344) ~[spring-aop-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:205) ~[spring-aop-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at com.sun.proxy.$Proxy73.getNoPayOrderByDuration(Unknown Source) ~[na:na]
+	at com.atguigu.paymentdemo.task.WxPayTask.orderConfirm(WxPayTask.java:50) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_291]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_291]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_291]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_291]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84) ~[spring-context-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:93) [spring-context-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_291]
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266) [na:1.8.0_291]
+	at java.util.concurrent.FutureTask.run(FutureTask.java) [na:1.8.0_291]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_291]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [na:1.8.0_291]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_291]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_291]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_291]
+Caused by: org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+### The error may exist in com/atguigu/paymentdemo/mapper/OrderInfoMapper.java (best guess)
+### The error may involve com.atguigu.paymentdemo.mapper.OrderInfoMapper.selectList
+### The error occurred while executing a query
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30) ~[mybatis-3.5.3.jar:3.5.3]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:149) ~[mybatis-3.5.3.jar:3.5.3]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140) ~[mybatis-3.5.3.jar:3.5.3]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_291]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_291]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_291]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_291]
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426) ~[mybatis-spring-2.0.3.jar:2.0.3]
+	... 30 common frames omitted
+Caused by: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:82) ~[spring-jdbc-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:80) ~[mybatis-spring-2.0.3.jar:2.0.3]
+	at org.mybatis.spring.transaction.SpringManagedTransaction.getConnection(SpringManagedTransaction.java:67) ~[mybatis-spring-2.0.3.jar:2.0.3]
+	at org.apache.ibatis.executor.BaseExecutor.getConnection(BaseExecutor.java:336) ~[mybatis-3.5.3.jar:3.5.3]
+	at com.baomidou.mybatisplus.core.executor.MybatisSimpleExecutor.prepareStatement(MybatisSimpleExecutor.java:91) ~[mybatis-plus-core-3.3.1.jar:3.3.1]
+	at com.baomidou.mybatisplus.core.executor.MybatisSimpleExecutor.doQuery(MybatisSimpleExecutor.java:66) ~[mybatis-plus-core-3.3.1.jar:3.3.1]
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:324) ~[mybatis-3.5.3.jar:3.5.3]
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156) ~[mybatis-3.5.3.jar:3.5.3]
+	at com.baomidou.mybatisplus.core.executor.MybatisCachingExecutor.query(MybatisCachingExecutor.java:163) ~[mybatis-plus-core-3.3.1.jar:3.3.1]
+	at com.baomidou.mybatisplus.core.executor.MybatisCachingExecutor.query(MybatisCachingExecutor.java:90) ~[mybatis-plus-core-3.3.1.jar:3.3.1]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147) ~[mybatis-3.5.3.jar:3.5.3]
+	... 36 common frames omitted
+Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:828) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:448) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-3.4.5.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:358) ~[HikariCP-3.4.5.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206) ~[HikariCP-3.4.5.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:477) ~[HikariCP-3.4.5.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:560) ~[HikariCP-3.4.5.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) ~[HikariCP-3.4.5.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) ~[HikariCP-3.4.5.jar:na]
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:158) ~[spring-jdbc-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:116) ~[spring-jdbc-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:79) ~[spring-jdbc-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	... 46 common frames omitted
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_291]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_291]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_291]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_291]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:89) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:120) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:948) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:818) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	... 59 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_291]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:81) ~[na:1.8.0_291]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476) ~[na:1.8.0_291]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218) ~[na:1.8.0_291]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200) ~[na:1.8.0_291]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162) ~[na:1.8.0_291]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394) ~[na:1.8.0_291]
+	at java.net.Socket.connect(Socket.java:606) ~[na:1.8.0_291]
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:156) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:63) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	... 62 common frames omitted
+
+2023-09-10 12:05:28.693  INFO 19056 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2023-09-10 12:05:28.696  INFO 19056 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-09-10 12:06:01.675  INFO 14668 --- [main] c.a.paymentdemo.PaymentDemoApplication   : Starting PaymentDemoApplication on zhangjingqi-PC with PID 14668 (E:\Note\Note\payment\aliCode\payment-demo\target\classes started by jd in E:\Note\Note\payment\aliCode\payment-demo)
+2023-09-10 12:06:01.685  INFO 14668 --- [main] c.a.paymentdemo.PaymentDemoApplication   : No active profile set, falling back to default profiles: default
+2023-09-10 12:06:04.983  INFO 14668 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2023-09-10 12:06:05.000  INFO 14668 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-10 12:06:05.001  INFO 14668 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2023-09-10 12:06:05.238  INFO 14668 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-10 12:06:05.239  INFO 14668 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3404 ms
+2023-09-10 12:06:13.014  INFO 14668 --- [main] c.a.paymentdemo.config.WxPayConfig       : 获取签名验证器
+2023-09-10 12:06:17.730  INFO 14668 --- [main] c.a.paymentdemo.config.WxPayConfig       : 获取httpClient
+2023-09-10 12:06:17.729  INFO 14668 --- [scheduled_update_cert_thread] c.w.p.c.a.h.cert.CertManagerSingleton    : Begin update Certificate.Date:2023-09-10T04:06:17.729Z
+2023-09-10 12:06:17.758  INFO 14668 --- [main] c.a.paymentdemo.config.WxPayConfig       : == getWxPayNoSignClient END ==
+2023-09-10 12:06:18.183  INFO 14668 --- [scheduled_update_cert_thread] c.w.p.c.a.h.cert.CertManagerSingleton    : Finish update Certificate.Date:2023-09-10T04:06:18.183Z
+2023-09-10 12:06:18.283  INFO 14668 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-09-10 12:06:18.461  INFO 14668 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-09-10 12:06:18.724  INFO 14668 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2023-09-10 12:06:18.819  INFO 14668 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path ''
+2023-09-10 12:06:18.822  INFO 14668 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-09-10 12:06:18.854  INFO 14668 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-09-10 12:06:18.926  INFO 14668 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-09-10 12:06:19.280  INFO 14668 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listUsingGET_1
+2023-09-10 12:06:19.383  INFO 14668 --- [main] c.a.paymentdemo.PaymentDemoApplication   : Started PaymentDemoApplication in 18.705 seconds (JVM running for 25.416)
+2023-09-10 12:06:30.011  INFO 14668 --- [scheduling-1] com.atguigu.paymentdemo.task.WxPayTask   : orderConfirm 被执行......
+2023-09-10 12:06:30.205  INFO 14668 --- [scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-09-10 12:06:30.695  INFO 14668 --- [scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-09-10 12:06:30.885  INFO 14668 --- [scheduling-1] com.atguigu.paymentdemo.task.WxPayTask   : refundConfirm 被执行......
+2023-09-10 12:07:00.001  INFO 14668 --- [scheduling-1] com.atguigu.paymentdemo.task.WxPayTask   : refundConfirm 被执行......
+2023-09-10 12:07:00.008  INFO 14668 --- [scheduling-1] com.atguigu.paymentdemo.task.WxPayTask   : orderConfirm 被执行......
+2023-09-10 12:07:30.011  INFO 14668 --- [scheduling-1] com.atguigu.paymentdemo.task.WxPayTask   : refundConfirm 被执行......
+2023-09-10 12:07:30.015  INFO 14668 --- [scheduling-1] com.atguigu.paymentdemo.task.WxPayTask   : orderConfirm 被执行......
+2023-09-10 12:07:34.974  INFO 14668 --- [http-nio-8090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-10 12:07:34.974  INFO 14668 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-09-10 12:07:34.982  INFO 14668 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2023-09-10 12:07:35.017  INFO 14668 --- [http-nio-8090-exec-1] c.a.p.controller.BookController          : info ...
+2023-09-10 12:07:35.017  WARN 14668 --- [http-nio-8090-exec-1] c.a.p.controller.BookController          : warn ...
+2023-09-10 12:07:35.017 ERROR 14668 --- [http-nio-8090-exec-1] c.a.p.controller.BookController          : error ...
+2023-09-10 12:07:36.653  INFO 14668 --- [http-nio-8090-exec-4] c.a.p.controller.BookController          : info ...
+2023-09-10 12:07:36.654  WARN 14668 --- [http-nio-8090-exec-4] c.a.p.controller.BookController          : warn ...
+2023-09-10 12:07:36.654 ERROR 14668 --- [http-nio-8090-exec-4] c.a.p.controller.BookController          : error ...
+2023-09-10 12:07:37.121  INFO 14668 --- [http-nio-8090-exec-3] c.a.p.controller.BookController          : info ...
+2023-09-10 12:07:37.121  WARN 14668 --- [http-nio-8090-exec-3] c.a.p.controller.BookController          : warn ...
+2023-09-10 12:07:37.121 ERROR 14668 --- [http-nio-8090-exec-3] c.a.p.controller.BookController          : error ...
+2023-09-10 12:07:37.363  INFO 14668 --- [http-nio-8090-exec-5] c.a.p.controller.BookController          : info ...
+2023-09-10 12:07:37.363  WARN 14668 --- [http-nio-8090-exec-5] c.a.p.controller.BookController          : warn ...
+2023-09-10 12:07:37.363 ERROR 14668 --- [http-nio-8090-exec-5] c.a.p.controller.BookController          : error ...
+2023-09-10 12:07:37.540  INFO 14668 --- [http-nio-8090-exec-6] c.a.p.controller.BookController          : info ...
+2023-09-10 12:07:37.541  WARN 14668 --- [http-nio-8090-exec-6] c.a.p.controller.BookController          : warn ...
+2023-09-10 12:07:37.541 ERROR 14668 --- [http-nio-8090-exec-6] c.a.p.controller.BookController          : error ...
+2023-09-10 12:07:37.678  INFO 14668 --- [http-nio-8090-exec-7] c.a.p.controller.BookController          : info ...
+2023-09-10 12:07:37.679  WARN 14668 --- [http-nio-8090-exec-7] c.a.p.controller.BookController          : warn ...
+2023-09-10 12:07:37.679 ERROR 14668 --- [http-nio-8090-exec-7] c.a.p.controller.BookController          : error ...
+2023-09-10 12:07:37.815  INFO 14668 --- [http-nio-8090-exec-8] c.a.p.controller.BookController          : info ...
+2023-09-10 12:07:37.815  WARN 14668 --- [http-nio-8090-exec-8] c.a.p.controller.BookController          : warn ...
+2023-09-10 12:07:37.816 ERROR 14668 --- [http-nio-8090-exec-8] c.a.p.controller.BookController          : error ...
+2023-09-10 12:07:37.945  INFO 14668 --- [http-nio-8090-exec-9] c.a.p.controller.BookController          : info ...
+2023-09-10 12:07:37.945  WARN 14668 --- [http-nio-8090-exec-9] c.a.p.controller.BookController          : warn ...
+2023-09-10 12:07:37.946 ERROR 14668 --- [http-nio-8090-exec-9] c.a.p.controller.BookController          : error ...
+2023-09-10 12:07:38.074  INFO 14668 --- [http-nio-8090-exec-10] c.a.p.controller.BookController          : info ...
+2023-09-10 12:07:38.074  WARN 14668 --- [http-nio-8090-exec-10] c.a.p.controller.BookController          : warn ...
+2023-09-10 12:07:38.075 ERROR 14668 --- [http-nio-8090-exec-10] c.a.p.controller.BookController          : error ...
+2023-09-10 12:07:38.191  INFO 14668 --- [http-nio-8090-exec-1] c.a.p.controller.BookController          : info ...
+2023-09-10 12:07:38.191  WARN 14668 --- [http-nio-8090-exec-1] c.a.p.controller.BookController          : warn ...
+2023-09-10 12:07:38.191 ERROR 14668 --- [http-nio-8090-exec-1] c.a.p.controller.BookController          : error ...
+2023-09-10 12:07:38.311  INFO 14668 --- [http-nio-8090-exec-2] c.a.p.controller.BookController          : info ...
+2023-09-10 12:07:38.311  WARN 14668 --- [http-nio-8090-exec-2] c.a.p.controller.BookController          : warn ...
+2023-09-10 12:07:38.311 ERROR 14668 --- [http-nio-8090-exec-2] c.a.p.controller.BookController          : error ...
+2023-09-10 12:07:38.453  INFO 14668 --- [http-nio-8090-exec-4] c.a.p.controller.BookController          : info ...
+2023-09-10 12:07:38.453  WARN 14668 --- [http-nio-8090-exec-4] c.a.p.controller.BookController          : warn ...
+2023-09-10 12:07:38.453 ERROR 14668 --- [http-nio-8090-exec-4] c.a.p.controller.BookController          : error ...
+2023-09-10 12:07:38.563  INFO 14668 --- [http-nio-8090-exec-3] c.a.p.controller.BookController          : info ...
+2023-09-10 12:07:38.563  WARN 14668 --- [http-nio-8090-exec-3] c.a.p.controller.BookController          : warn ...
+2023-09-10 12:07:38.564 ERROR 14668 --- [http-nio-8090-exec-3] c.a.p.controller.BookController          : error ...
+2023-09-10 12:07:38.775  INFO 14668 --- [http-nio-8090-exec-5] c.a.p.controller.BookController          : info ...
+2023-09-10 12:07:38.775  WARN 14668 --- [http-nio-8090-exec-5] c.a.p.controller.BookController          : warn ...
+2023-09-10 12:07:38.775 ERROR 14668 --- [http-nio-8090-exec-5] c.a.p.controller.BookController          : error ...
+2023-09-10 12:07:38.946  INFO 14668 --- [http-nio-8090-exec-6] c.a.p.controller.BookController          : info ...
+2023-09-10 12:07:38.946  WARN 14668 --- [http-nio-8090-exec-6] c.a.p.controller.BookController          : warn ...
+2023-09-10 12:07:38.946 ERROR 14668 --- [http-nio-8090-exec-6] c.a.p.controller.BookController          : error ...
+2023-09-10 12:07:39.067  INFO 14668 --- [http-nio-8090-exec-7] c.a.p.controller.BookController          : info ...
+2023-09-10 12:07:39.068  WARN 14668 --- [http-nio-8090-exec-7] c.a.p.controller.BookController          : warn ...
+2023-09-10 12:07:39.068 ERROR 14668 --- [http-nio-8090-exec-7] c.a.p.controller.BookController          : error ...
+2023-09-10 12:07:39.199  INFO 14668 --- [http-nio-8090-exec-8] c.a.p.controller.BookController          : info ...
+2023-09-10 12:07:39.199  WARN 14668 --- [http-nio-8090-exec-8] c.a.p.controller.BookController          : warn ...
+2023-09-10 12:07:39.199 ERROR 14668 --- [http-nio-8090-exec-8] c.a.p.controller.BookController          : error ...
+2023-09-10 12:07:39.885  INFO 14668 --- [http-nio-8090-exec-9] c.a.p.controller.BookController          : info ...
+2023-09-10 12:07:39.886  WARN 14668 --- [http-nio-8090-exec-9] c.a.p.controller.BookController          : warn ...
+2023-09-10 12:07:39.886 ERROR 14668 --- [http-nio-8090-exec-9] c.a.p.controller.BookController          : error ...
+2023-09-10 12:08:00.005  INFO 14668 --- [scheduling-1] com.atguigu.paymentdemo.task.WxPayTask   : orderConfirm 被执行......
+2023-09-10 12:08:00.014  INFO 14668 --- [scheduling-1] com.atguigu.paymentdemo.task.WxPayTask   : refundConfirm 被执行......
+2023-09-10 12:08:30.004  INFO 14668 --- [scheduling-1] com.atguigu.paymentdemo.task.WxPayTask   : refundConfirm 被执行......
+2023-09-10 12:08:30.008  INFO 14668 --- [scheduling-1] com.atguigu.paymentdemo.task.WxPayTask   : orderConfirm 被执行......
+2023-09-10 12:09:00.015  INFO 14668 --- [scheduling-1] com.atguigu.paymentdemo.task.WxPayTask   : orderConfirm 被执行......
+2023-09-10 12:09:00.024  INFO 14668 --- [scheduling-1] com.atguigu.paymentdemo.task.WxPayTask   : refundConfirm 被执行......
+2023-09-10 12:09:30.015  INFO 14668 --- [scheduling-1] com.atguigu.paymentdemo.task.WxPayTask   : orderConfirm 被执行......
+2023-09-10 12:09:30.019  INFO 14668 --- [scheduling-1] com.atguigu.paymentdemo.task.WxPayTask   : refundConfirm 被执行......
+2023-09-10 12:10:00.001  INFO 14668 --- [scheduling-1] com.atguigu.paymentdemo.task.WxPayTask   : orderConfirm 被执行......
+2023-09-10 12:10:00.009  INFO 14668 --- [scheduling-1] com.atguigu.paymentdemo.task.WxPayTask   : refundConfirm 被执行......
+2023-09-10 12:10:30.006  INFO 14668 --- [scheduling-1] com.atguigu.paymentdemo.task.WxPayTask   : orderConfirm 被执行......
+2023-09-10 12:10:30.010  INFO 14668 --- [scheduling-1] com.atguigu.paymentdemo.task.WxPayTask   : refundConfirm 被执行......
+2023-09-10 12:11:00.005  INFO 14668 --- [scheduling-1] com.atguigu.paymentdemo.task.WxPayTask   : orderConfirm 被执行......
+2023-09-10 12:11:00.011  INFO 14668 --- [scheduling-1] com.atguigu.paymentdemo.task.WxPayTask   : refundConfirm 被执行......
+2023-09-10 12:11:30.000  INFO 14668 --- [scheduling-1] com.atguigu.paymentdemo.task.WxPayTask   : orderConfirm 被执行......
+2023-09-10 12:11:30.004  INFO 14668 --- [scheduling-1] com.atguigu.paymentdemo.task.WxPayTask   : refundConfirm 被执行......
+2023-09-10 12:12:00.014  INFO 14668 --- [scheduling-1] com.atguigu.paymentdemo.task.WxPayTask   : refundConfirm 被执行......
+2023-09-10 12:12:00.020  INFO 14668 --- [scheduling-1] com.atguigu.paymentdemo.task.WxPayTask   : orderConfirm 被执行......
+2023-09-10 12:12:30.008  INFO 14668 --- [scheduling-1] com.atguigu.paymentdemo.task.WxPayTask   : orderConfirm 被执行......
+2023-09-10 12:12:30.014  INFO 14668 --- [scheduling-1] com.atguigu.paymentdemo.task.WxPayTask   : refundConfirm 被执行......
+2023-09-10 12:13:00.010  INFO 14668 --- [scheduling-1] com.atguigu.paymentdemo.task.WxPayTask   : refundConfirm 被执行......
+2023-09-10 12:13:00.020  INFO 14668 --- [scheduling-1] com.atguigu.paymentdemo.task.WxPayTask   : orderConfirm 被执行......
+2023-09-10 12:13:30.016  INFO 14668 --- [scheduling-1] com.atguigu.paymentdemo.task.WxPayTask   : refundConfirm 被执行......
+2023-09-10 12:13:30.022  INFO 14668 --- [scheduling-1] com.atguigu.paymentdemo.task.WxPayTask   : orderConfirm 被执行......
+2023-09-10 12:14:00.012  INFO 14668 --- [scheduling-1] com.atguigu.paymentdemo.task.WxPayTask   : orderConfirm 被执行......
+2023-09-10 12:14:00.020  INFO 14668 --- [scheduling-1] com.atguigu.paymentdemo.task.WxPayTask   : refundConfirm 被执行......
+2023-09-10 12:14:19.805  INFO 14668 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2023-09-10 12:14:19.806  INFO 14668 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-09-10 12:14:19.809  INFO 14668 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-09-10 12:14:19.821  INFO 14668 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
