@@ -17,12 +17,12 @@ mybatis-plus:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
   mapper-locations: classpath:com/atguigu/paymentdemo/mapper/xml/*.xml
 
-logging:
-  level:
-    root: debug
-  file:
-    max-size: 2KB
-    name: server.log
-    path: "E:/logging/"
-  pattern:
-    rolling-file-name: server.%d{yyyy-MM-dd}.%i.log
+#logging:
+#  level:
+#    root: debug
+#  file:
+#    max-size: 2KB
+#    name: server.log
+#    path: "E:/logging/"
+#  pattern:
+#    rolling-file-name: server.%d{yyyy-MM-dd}.%i.log
