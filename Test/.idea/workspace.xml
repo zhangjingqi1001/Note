@@ -5,14 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ad7b3eeb-c528-4215-9b09-9f900c26bf3a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../payment/aliCode/payment-demo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../payment/aliCode/payment-demo/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../payment/aliCode/payment-demo/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../payment/aliCode/payment-demo/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../小知识点/10.Springboot日志操作.md" beforeDir="false" afterPath="$PROJECT_DIR$/../小知识点/10.Springboot日志操作.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Redis/10、Redis的最佳实践.md" beforeDir="false" afterPath="$PROJECT_DIR$/../Redis/10、Redis的最佳实践.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Redis/9.多级缓存.md" beforeDir="false" afterPath="$PROJECT_DIR$/../Redis/9.多级缓存.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -45,7 +52,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Test01">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Test" />
@@ -53,8 +60,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Test01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Test01" />
+      <module name="Test" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Test01" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -69,6 +84,9 @@
       <updated>1694354253932</updated>
       <workItem from="1694354255469" duration="4022000" />
       <workItem from="1694418268285" duration="15000" />
+      <workItem from="1694583692705" duration="4473000" />
+      <workItem from="1694606037102" duration="1199000" />
+      <workItem from="1694653205105" duration="315000" />
     </task>
     <servers />
   </component>
