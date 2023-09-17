@@ -40,7 +40,7 @@ public class AliPayServiceImpl implements AliPayService {
 //          请求的支付宝开放平台的接口名alipay.trade.page.pay，所以对象叫做AlipayTradePagePayRequest
             AlipayTradePagePayRequest request = new AlipayTradePagePayRequest();
 //          异步接收地址，仅支持http/https，公网可访问
-//          request.setNotifyUrl("");
+            request.setNotifyUrl(config.getProperty("alipay.notify-url"));
 //          同步跳转地址，仅支持http/https
             request.setReturnUrl(config.getProperty("alipay.return-url"));//http://localhost:8080/#/success
 
