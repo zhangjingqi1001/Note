@@ -7,4 +7,8 @@ public interface AliPayService {
     String tradeCreate(Long productId);
 
     void processOrder(Map<String, String> params);
+
+    void cancelOrder(String orderNo);
+
+    String queryOrder(String orderNo);
 }

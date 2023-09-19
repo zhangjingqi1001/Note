@@ -55,7 +55,7 @@ public class AliPayController {
         log.info("通知参数 - " + params);
         String result = "failure";
 
-//      TODO 1.异步通知的验签
+//      1.异步通知的验签
         boolean signVerified = AlipaySignature.rsaCheckV1(params,
 //              支付宝公钥
                 config.getProperty("alipay.alipay-public-key"),
@@ -71,7 +71,7 @@ public class AliPayController {
         log.info("支付成功 - 异步验签通知成功");
 //      验签成功后，按照支付结果异步通知中的描述，对支付结果中的业务内容进行二次校验，校验成功后在response中返回success并继续商户自身业务处理，校验失败返回failure
 
-//      TODO 2.业务内容二次校验
+//      2.业务内容二次校验
 //      2.1 商家需要验证该通知数据中的 out_trade_no 是否为商家系统中创建的订单号。
 //      将此订单去数据库中查询，如果查询到是存在的，那就是我们商户系统中的订单；如果查询不到的话，说明不是我们商户系统中的订单
         String outTradeNo = params.get("out_trade_no");
@@ -113,13 +113,37 @@ public class AliPayController {
             return result;//failure
         }
 
-//      TODO 3.处理业务、修改订单状态、记录支付日志
+//      3.处理业务、修改订单状态、记录支付日志
 //      校验成功后在response中返回success并继续商户自身业务处理，校验失败返回failure
         aliPayService.processOrder(params);//将所有的回调参数传入
 
 
-//      TODO 向支付宝返回的成功的结果（通知结果）
+//      向支付宝返回的成功的结果（通知结果）
         return result;
+    }
+
+
+    /***
+     * 用户取消订单
+     */
+    @ApiOperation("用户取消订单")
+    @PostMapping("/trade/close/{orderNo}")
+    public R cancel(@PathVariable String orderNo) {
+        log.info("用户取消订单");
+        aliPayService.cancelOrder(orderNo);
+        return R.ok().setMessage("订单已取消");
+    }
+
+    /**
+     * @param orderNo
+     * @return
+     */
+    @ApiOperation("查询订单")
+    @GetMapping("/trade/query/{orderNo}")
+    public R queryOrder(@PathVariable String orderNo) {
+        log.info("查询订单");
+        String result =  aliPayService.queryOrder(orderNo);
+        return R.ok().setMessage("查询成功").data("result",result);
     }
 
 }
