@@ -1,6 +1,8 @@
 package com.atguigu.paymentdemo.service.impl;
 
+import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
+import com.alibaba.fastjson.TypeReference;
 import com.alipay.api.AlipayApiException;
 import com.alipay.api.AlipayClient;
 import com.alipay.api.request.AlipayTradeCloseRequest;
@@ -12,6 +14,7 @@ import com.alipay.api.response.AlipayTradeQueryResponse;
 import com.atguigu.paymentdemo.entity.OrderInfo;
 import com.atguigu.paymentdemo.enums.OrderStatus;
 import com.atguigu.paymentdemo.enums.PayType;
+import com.atguigu.paymentdemo.enums.alipay.AliPayTradeState;
 import com.atguigu.paymentdemo.service.AliPayService;
 import com.atguigu.paymentdemo.service.OrderInfoService;
 import com.atguigu.paymentdemo.service.PaymentInfoService;
@@ -181,6 +184,7 @@ public class AliPayServiceImpl implements AliPayService {
 
     /**
      * 查询订单
+     *
      * @param orderNo 商户订单号
      */
     @Override
@@ -213,6 +217,59 @@ public class AliPayServiceImpl implements AliPayService {
         }
 
 
+    }
+
+    /**
+     * 根据商户订单号查询支付宝查单接口，核实订单状态
+     *
+     * 1.如果订单未创建，则直接更新商户端的订单状态即可
+     * 2.如果订单未支付，则调用关单接口关闭订单，并更新商户端订单状态
+     * 3.如果已经支付，则更新商户端订单状态，并记录支付日志
+     *
+     * @param orderNo 商户订单号
+     */
+    @Override
+    public void checkOrderStatus(String orderNo) {
+        log.info("根据订单号核实订单状态 ===》{}", orderNo);
+        String result = this.queryOrder(orderNo);//如果返回的是null，表示支付宝端不存在此订单
+
+        if (result == null) {
+//          TODO 如果订单未创建，则直接更新商户端的订单状态即可
+            log.info("核实订单未创建 ===》{}", orderNo);
+//          更新本地订单状态,将订单关闭
+            orderInfoService.updateStatusByOrderNo(orderNo, OrderStatus.CLOSED);
+            return;
+        }
+
+        JSONObject resultJson = JSONObject.parseObject(result);
+        log.info("resultJson - " + resultJson);
+        String tradeStatus = resultJson.getJSONObject("alipay_trade_query_response").getString("trade_status");
+        log.info("tradeStatus - " + tradeStatus);
+
+//      TODO 如果订单未支付，则调用关单接口关闭订单，并更新商户端订单状态
+        if (AliPayTradeState.NOTPAY.getType().equals(tradeStatus)) {
+            log.info("核实订单未支付 ===》{}", orderNo);
+//          调用关单接口关闭订单(统一收单交易关闭接口)
+            this.closeOrder(orderNo);
+//          并更新商户端订单状态(超时关闭)
+            orderInfoService.updateStatusByOrderNo(orderNo, OrderStatus.CLOSED);
+            return;
+        }
+
+//      TODO 如果已经支付，则更新商户端订单状态，并记录支付日志
+//      正常情况下，用户付款后，商户系统会收到支付宝发送的一个异步通知，在这个通知中我们会接收到支付宝处理的结果，然后我们去修改订单的状态
+//      但是在定时查单的过程中发现，明明已经支付的订单但是在商户系统中显示没有支付，这是怎么发生的呢？
+//      原因是商户系统由于某些原因没有接收到异步通知 或者说 支付宝发送异步通知失败
+//      所以这个时候我们可以主动调用支付宝端的查单接口来向支付宝确认支付结果
+        if (AliPayTradeState.SUCCESS.getType().equals(tradeStatus)){
+            log.info("核实订单已支付 ===》{}", orderNo);
+//          修改订单的状态
+            orderInfoService.updateStatusByOrderNo(orderNo, OrderStatus.SUCCESS);
+            Map<String, String> params = JSON.parseObject(resultJson.getJSONObject("alipay_trade_query_response").toJSONString(), new TypeReference<Map<String, String>>() {
+            });
+//          记录支付日志
+            paymentInfoService.createPaymentInfoForAliPay(params);
+        }
     }
 
 }

@@ -28,11 +28,11 @@ public class OrderInfoServiceImpl extends ServiceImpl<OrderInfoMapper, OrderInfo
     private OrderInfoMapper orderInfoMapper;*/
 
     @Override
-    public OrderInfo createOrderByProductId(Long productId,String paymentType) {
+    public OrderInfo createOrderByProductId(Long productId, String paymentType) {
 
         //查找已存在但未支付的订单
-        OrderInfo orderInfo = this.getNoPayOrderByProductId(productId,paymentType);
-        if( orderInfo != null){
+        OrderInfo orderInfo = this.getNoPayOrderByProductId(productId, paymentType);
+        if (orderInfo != null) {
             return orderInfo;
         }
 
@@ -54,6 +54,7 @@ public class OrderInfoServiceImpl extends ServiceImpl<OrderInfoMapper, OrderInfo
 
     /**
      * 存储订单二维码
+     *
      * @param orderNo
      * @param codeUrl
      */
@@ -71,6 +72,7 @@ public class OrderInfoServiceImpl extends ServiceImpl<OrderInfoMapper, OrderInfo
 
     /**
      * 查询订单列表，并倒序查询
+     *
      * @return
      */
     @Override
@@ -82,6 +84,7 @@ public class OrderInfoServiceImpl extends ServiceImpl<OrderInfoMapper, OrderInfo
 
     /**
      * 根据订单号更新订单状态
+     *
      * @param orderNo
      * @param orderStatus
      */
@@ -101,6 +104,7 @@ public class OrderInfoServiceImpl extends ServiceImpl<OrderInfoMapper, OrderInfo
 
     /**
      * 根据订单号获取订单状态
+     *
      * @param orderNo
      * @return
      */
@@ -110,7 +114,7 @@ public class OrderInfoServiceImpl extends ServiceImpl<OrderInfoMapper, OrderInfo
         QueryWrapper<OrderInfo> queryWrapper = new QueryWrapper<>();
         queryWrapper.eq("order_no", orderNo);
         OrderInfo orderInfo = baseMapper.selectOne(queryWrapper);
-        if(orderInfo == null){
+        if (orderInfo == null) {
             return null;
         }
         return orderInfo.getOrderStatus();
@@ -118,17 +122,23 @@ public class OrderInfoServiceImpl extends ServiceImpl<OrderInfoMapper, OrderInfo
 
     /**
      * 查询创建超过minutes分钟并且未支付的订单
+     *
      * @param minutes
      * @return
      */
     @Override
-    public List<OrderInfo> getNoPayOrderByDuration(int minutes) {
+    public List<OrderInfo> getNoPayOrderByDuration(int minutes,String paymentType) {
 
+//      当前时间之前的minutes分钟;minus(Duration.ofMinutes(minutes)) 是对当前时间进行减法操作,以计算指定分钟数之前的时刻
+//      Duration.ofMinutes(minutes) 创建了一个Duration对象，表示了指定分钟数的时间量
         Instant instant = Instant.now().minus(Duration.ofMinutes(minutes));
-
+        log.info("instant - "+instant);
         QueryWrapper<OrderInfo> queryWrapper = new QueryWrapper<>();
+//      未支付的订单
         queryWrapper.eq("order_status", OrderStatus.NOTPAY.getType());
+//      小于等于instant时刻的，肯定是超过或等于minutes时间了
         queryWrapper.le("create_time", instant);
+        queryWrapper.eq("payment_type",paymentType);
 
         List<OrderInfo> orderInfoList = baseMapper.selectList(queryWrapper);
 
@@ -137,6 +147,7 @@ public class OrderInfoServiceImpl extends ServiceImpl<OrderInfoMapper, OrderInfo
 
     /**
      * 根据订单号获取订单
+     *
      * @param orderNo
      * @return
      */
@@ -154,10 +165,11 @@ public class OrderInfoServiceImpl extends ServiceImpl<OrderInfoMapper, OrderInfo
     /**
      * 根据商品id查询未支付订单
      * 防止重复创建订单对象
+     *
      * @param productId
      * @return
      */
-    private OrderInfo getNoPayOrderByProductId(Long productId,String paymentType) {
+    private OrderInfo getNoPayOrderByProductId(Long productId, String paymentType) {
 
         QueryWrapper<OrderInfo> queryWrapper = new QueryWrapper<>();
         queryWrapper.eq("product_id", productId);

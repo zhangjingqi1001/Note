@@ -2,6 +2,7 @@ package com.atguigu.paymentdemo.task;
 
 import com.atguigu.paymentdemo.entity.OrderInfo;
 import com.atguigu.paymentdemo.entity.RefundInfo;
+import com.atguigu.paymentdemo.enums.PayType;
 import com.atguigu.paymentdemo.service.OrderInfoService;
 import com.atguigu.paymentdemo.service.RefundInfoService;
 import com.atguigu.paymentdemo.service.WxPayService;
@@ -47,7 +48,7 @@ public class WxPayTask {
     public void orderConfirm() throws Exception {
         log.info("orderConfirm 被执行......");
 
-        List<OrderInfo> orderInfoList = orderInfoService.getNoPayOrderByDuration(1);
+        List<OrderInfo> orderInfoList = orderInfoService.getNoPayOrderByDuration(1, PayType.WXPAY.getType());
 
         for (OrderInfo orderInfo : orderInfoList) {
             String orderNo = orderInfo.getOrderNo();
