@@ -146,6 +146,54 @@ public class AliPayController {
         return R.ok().setMessage("查询成功").data("result",result);
     }
 
+
+    /**
+     * 用户申请退款
+     * @param orderNo  商户订单号
+     * @param reason   退款原因
+     * @return
+     */
+    @ApiOperation("申请退款")
+    @PostMapping("/trade/refund/{orderNo}/{reason}")
+    public R refunds(@PathVariable String orderNo,@PathVariable String reason){
+        log.info("申请退款");
+
+        aliPayService.refund(orderNo,reason);
+
+        return R.ok();
+    }
+
+    /**
+     * 查询退款
+     * @param orderNo
+     * @return
+     * @throws Exception
+     */
+    @ApiOperation("查询退款：测试用")
+    @GetMapping("/trade/fastpay/refund/{orderNo}")
+    public R queryRefund(@PathVariable String orderNo) throws Exception {
+
+        log.info("查询退款");
+
+        String result = aliPayService.queryRefund(orderNo);
+        return R.ok().setMessage("查询成功").data("result", result);
+    }
+
+
+    /**
+     * 获取账单
+     * @param billDate 账单的日期
+     * @param type 账单的类型
+     * @return
+     */
+    @ApiOperation("获取账单url")
+    @GetMapping("/bill/downloadurl/query/{billDate}/{type}")
+    public R queryTradeBill(@PathVariable String billDate,@PathVariable String type){
+        log.info("获取账单url");
+        String downloadUrl = aliPayService.queryBill(billDate,type);
+
+        return R.ok().setMessage("获取账单url成功").data("downloadUrl", downloadUrl);
+    }
 }
 
 

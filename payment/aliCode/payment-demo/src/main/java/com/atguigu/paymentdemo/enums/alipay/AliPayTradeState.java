@@ -25,7 +25,18 @@ public enum AliPayTradeState {
     /**
      * 转入退款
      */
-    REFUND("REFUND");
+    REFUND("REFUND"),
+
+    /**
+     * 退款成功
+     */
+    REFUND_SUCCESS("REFUND_SUCCESS"),
+
+    /**
+     * 退款失败
+     */
+    REFUND_ERROR("REFUND_ERROR");
+
 
     /**
      * 类型
