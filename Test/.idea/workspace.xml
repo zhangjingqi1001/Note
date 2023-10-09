@@ -5,9 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ad7b3eeb-c528-4215-9b09-9f900c26bf3a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../Redis/10、Redis的最佳实践.md" beforeDir="false" afterPath="$PROJECT_DIR$/../Redis/10、Redis的最佳实践.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Redis/9.多级缓存.md" beforeDir="false" afterPath="$PROJECT_DIR$/../Redis/9.多级缓存.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SourceTree安装.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringSecurity/Note/SpringSecurity.md" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringSecurity/Note/SpringSecurity.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringSecurity/Note/SpringSecurity（6）.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Test01.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Test01.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Test01.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Test01.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../实施/2.自动开机、自动关机、开机自启动脚本.md" beforeDir="false" afterPath="$PROJECT_DIR$/../实施/2.自动开机、自动关机、开机自启动脚本.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../小知识点/10.Springboot日志操作.md" beforeDir="false" afterPath="$PROJECT_DIR$/../小知识点/10.Springboot日志操作.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../小知识点/9.读取配置文件内容.md" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,15 +50,21 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Inspur/test" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Note\Note\Test\src\main\resources" />
+    </key>
   </component>
   <component name="RunManager" selected="Application.Test01">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -87,6 +101,11 @@
       <workItem from="1694583692705" duration="4473000" />
       <workItem from="1694606037102" duration="1199000" />
       <workItem from="1694653205105" duration="315000" />
+      <workItem from="1695865262207" duration="6728000" />
+      <workItem from="1695955740804" duration="1198000" />
+      <workItem from="1696472119036" duration="604000" />
+      <workItem from="1696639481195" duration="2413000" />
+      <workItem from="1696644029973" duration="597000" />
     </task>
     <servers />
   </component>

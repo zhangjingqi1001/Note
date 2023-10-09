@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <!--输出流对象，默认 System.out 改为 System.err-->
+        <target>System.out</target>
+        <encode>
+            <!--格式化输出：%d表示日期，%-5level表示级别从左显示5个字符宽度，%thread表示线程名
+            %msg表示日志消息，%n表示换行符-->
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.sSS} [%-5level] %c [%thread] : %msg%n</pattern>
+        </encode>
+    </appender>
+
+
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+
+        <target>System.out</target>
+        <encode>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.sSS} [%-5level] %c [%thread] : %msg%n</pattern>
+            <charset>utf-8</charset>
+        </encode>
+    </appender>
+
+
+</configuration>

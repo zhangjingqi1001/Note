@@ -1,5 +1,7 @@
 # SpringSecurity
 
+[TOC]
+
 
 
 # 一、 简介
@@ -1110,7 +1112,7 @@ public class LoginUser implements UserDetails {
 
 
 
-注意：我们需要预先在数据库中添加数据。如果想让用户密码是铭文存储，则需要再密码前加{noop}
+注意：我们需要预先在数据库中添加数据。如果想让用户密码是明文存储，则需要再密码前加{noop}
 
 
 
@@ -1118,7 +1120,7 @@ public class LoginUser implements UserDetails {
 
 实际项目中我们不会把密码明文存储在数据库中。
 
-​      默认使用的PasswordEncoder要求数据库中的密码格式为: {id}password ，它会根据id去判断密码的加密方式。但是我们一般不会采用这种方式。所以就需要***替换PasswordEncoder**。
+​      默认使用的PasswordEncoder要求数据库中的密码格式为: {id}password ，它会根据id去判断密码的加密方式。但是我们一般不会采用这种方式。所以就需要**替换PasswordEncoder**。
 
 ​      我们一般**使用SpringSecurity为我们提供的BCryptPasswordEncoder**。
 
@@ -1163,12 +1165,6 @@ System.out.println(encode);   //$2a$10$2z2HZ5ewLSyV9DqoyyHXB.4U8DVlPsfVQqgi61683
 ```
 
   **matches：**进行密码校验的。传入一个想校验的密码（比如用户登录时输入的密码），再传入一个加密的密码(数据库存储的密码密文)。
-
-
-
-   
-
-
 
 ![image-20230427180310562](https://picture-typora-zhangjingqi.oss-cn-beijing.aliyuncs.com/image-20230427180310562.png)
 
