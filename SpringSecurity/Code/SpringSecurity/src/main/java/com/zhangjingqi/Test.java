@@ -1,7 +1,20 @@
 package com.zhangjingqi;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
 public class Test {
+
     public static void main(String[] args) {
+        System.out.println(LocalDateTime.now().plusMinutes(6));//2023-10-11T18:03:57.550
+
+        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyyMMddHHmmss");
+        String data = dateTimeFormatter.format(LocalDateTime.now());
+        System.out.println(data);//20231011180358
+    }
+
+
+    public static void main1(String[] args) {
         int a = 0b00000110;
         System.out.println(a);
         System.out.println(a>>>=1);
