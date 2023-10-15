@@ -5,18 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0601862-89e8-4288-8fa4-508ea26f5b8a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/config/MySecurityUserConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/controller/CurrentLoginUserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../SpringBootWeb/Note/事物管理.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../../SpringBootWeb/Note/事物管理.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/config/WebSecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/controller/StudentController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/controller/TeacherController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/controller/TestController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/zhangjingqi/SpringSecurityApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/zhangjingqi/SpringSecurityApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zhangjingqi/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zhangjingqi/Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zhangjingqi/controller/TestController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/zhangjingqi/SpringSecurityApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/zhangjingqi/SpringSecurityApplicationTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/config/MySecurityUserConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/config/MySecurityUserConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zhangjingqi/config/MySecurityUserConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zhangjingqi/config/MySecurityUserConfig.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Note/1.SpringSecurity简介.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../Note/1.SpringSecurity简介.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -82,6 +76,9 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\Note\Note\SpringSecurity\Code\SpringSecurity\src\main\resources" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.zhangjingqi.controller" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.SpringSecurityApplication">
@@ -155,7 +152,8 @@
       <workItem from="1696834499327" duration="2558000" />
       <workItem from="1696897863932" duration="2386000" />
       <workItem from="1697017605221" duration="2149000" />
-      <workItem from="1697279516141" duration="8928000" />
+      <workItem from="1697279516141" duration="9389000" />
+      <workItem from="1697353392101" duration="5572000" />
     </task>
     <servers />
   </component>
