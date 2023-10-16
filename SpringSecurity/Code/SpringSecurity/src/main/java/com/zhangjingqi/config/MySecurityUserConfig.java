@@ -26,7 +26,7 @@ public class MySecurityUserConfig {
      * <p>
      * UserDetails存储的是用户的用户名、密码、去权限信息
      */
-    @Bean
+//    @Bean
     public UserDetailsService userDetailsService() {
 //      用户细节信息,创建两个用户
 //      此User是SpringSecurity框架中的public class User implements UserDetails, CredentialsContainer
@@ -34,24 +34,28 @@ public class MySecurityUserConfig {
                 .username("zhangjingqi-1")
                 .password(passwordEncoder().encode("123456"))
 //               配置用户角色
-                .roles("student", "manager") //角色到系统中会变成权限的，比如这里会变成ROLE_student,ROLE_manager
-//               配置用户权限. student:delete权限处理学生的删除，student:add权限处理学生的添加
-                .authorities("student:delete", "student:add")
+                .roles("student") //角色到系统中会变成权限的，比如这里会变成ROLE_student,ROLE_manager
                 .build();
 
         UserDetails user2 = User.builder()
                 .username("zhangjingqi-2")
                 .password(passwordEncoder().encode("123456"))
 //              配置权限
-                .authorities("teacher:delete", "teacher:add")
-//              配置角色
-                .roles("teacher")
+                .authorities("teacher:query")
+                .build();
+
+        UserDetails user3 = User.builder()
+                .username("admin")
+                .password(passwordEncoder().encode("123456"))
+//              配置权限
+                .authorities("teacher:query","teacher:add","teacher:update","teacher:delete")
                 .build();
 
 //      InMemoryUserDetailsManager implements UserDetailsManager, UserDetailsPasswordService,其中UserDetailsManager继承UserDetailsService
         InMemoryUserDetailsManager userDetailsManager = new InMemoryUserDetailsManager();
         userDetailsManager.createUser(user1);
         userDetailsManager.createUser(user2);
+        userDetailsManager.createUser(user3);
         return userDetailsManager;
     }
 

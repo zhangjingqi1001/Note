@@ -4,7 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d0601862-89e8-4288-8fa4-508ea26f5b8a" name="Changes" comment="" />
+    <list default="true" id="d0601862-89e8-4288-8fa4-508ea26f5b8a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/config/AppAccessDenyHandle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/config/AppAuthenticationFailHandle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/config/AppAuthenticationSuccessHandle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/config/AppLogoutSuccessHandle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/service/Impl/TeacherServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/service/Impl/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/service/TeacherService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/utils/HttpResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/utils/SecurityUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/config/MySecurityUserConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/config/MySecurityUserConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/config/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/controller/TeacherController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/controller/TeacherController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zhangjingqi/config/MySecurityUserConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zhangjingqi/config/MySecurityUserConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zhangjingqi/config/WebSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zhangjingqi/config/WebSecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zhangjingqi/controller/TeacherController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zhangjingqi/controller/TeacherController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Note/1.SpringSecurity简介.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../Note/1.SpringSecurity简介.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,7 +58,9 @@
     </option>
   </component>
   <component name="ProjectId" id="2VqlqDASZUTBIU08TqnIU9Zmy0l" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -63,7 +83,7 @@
     <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.20754717" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -146,6 +166,9 @@
       <workItem from="1697017605221" duration="2149000" />
       <workItem from="1697279516141" duration="9389000" />
       <workItem from="1697353392101" duration="6061000" />
+      <workItem from="1697380488781" duration="594000" />
+      <workItem from="1697441527937" duration="782000" />
+      <workItem from="1697447689690" duration="12615000" />
     </task>
     <servers />
   </component>
