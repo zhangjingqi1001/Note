@@ -5,23 +5,155 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0601862-89e8-4288-8fa4-508ea26f5b8a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/config/AppAccessDenyHandle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/config/AppAuthenticationFailHandle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/config/AppAuthenticationSuccessHandle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/config/AppLogoutSuccessHandle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/service/Impl/TeacherServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/service/Impl/UserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/service/TeacherService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/utils/HttpResult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/utils/SecurityUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/.idea/libraries/Maven__ch_qos_logback_logback_core_1_2_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/.idea/libraries/Maven__com_alibaba_druid_1_2_15.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/.idea/libraries/Maven__com_alibaba_druid_spring_boot_starter_1_2_15.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_13_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_13_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_13_4_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_13_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_13_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_parameter_names_2_13_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/.idea/libraries/Maven__com_jayway_jsonpath_json_path_2_6_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/.idea/libraries/Maven__com_mysql_mysql_connector_j_8_0_31.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/.idea/libraries/Maven__com_vaadin_external_google_android_json_0_0_20131108_vaadin1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/.idea/libraries/Maven__com_zaxxer_HikariCP_4_0_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/.idea/libraries/Maven__jakarta_activation_jakarta_activation_api_1_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/.idea/libraries/Maven__jakarta_annotation_jakarta_annotation_api_1_3_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/.idea/libraries/Maven__jakarta_xml_bind_jakarta_xml_bind_api_2_3_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_11_22.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_11_22.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/.idea/libraries/Maven__net_minidev_accessors_smart_2_4_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/.idea/libraries/Maven__net_minidev_json_smart_2_4_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_17_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/.idea/libraries/Maven__org_apache_logging_log4j_log4j_to_slf4j_2_17_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_9_0_68.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_9_0_68.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_9_0_68.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/.idea/libraries/Maven__org_assertj_assertj_core_3_21_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/.idea/libraries/Maven__org_hamcrest_hamcrest_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_8_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_8_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_8_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_8_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_8_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_8_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/.idea/libraries/Maven__org_mockito_mockito_core_4_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/.idea/libraries/Maven__org_mockito_mockito_junit_jupiter_4_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/.idea/libraries/Maven__org_mybatis_mybatis_3_5_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/.idea/libraries/Maven__org_mybatis_mybatis_spring_2_0_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_autoconfigure_2_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_starter_2_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/.idea/libraries/Maven__org_objenesis_objenesis_3_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/.idea/libraries/Maven__org_ow2_asm_asm_9_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/.idea/libraries/Maven__org_projectlombok_lombok_1_18_26.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/.idea/libraries/Maven__org_skyscreamer_jsonassert_1_5_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_36.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_36.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/.idea/libraries/Maven__org_springframework_boot_spring_boot_2_6_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_6_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_2_6_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_2_6_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_json_2_6_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_2_6_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_security_2_4_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_2_6_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_2_6_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_2_6_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_2_6_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_2_6_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/.idea/libraries/Maven__org_springframework_security_spring_security_config_5_6_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/.idea/libraries/Maven__org_springframework_security_spring_security_core_5_6_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/.idea/libraries/Maven__org_springframework_security_spring_security_crypto_5_6_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/.idea/libraries/Maven__org_springframework_security_spring_security_web_5_6_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/.idea/libraries/Maven__org_springframework_spring_aop_5_3_23.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/.idea/libraries/Maven__org_springframework_spring_beans_5_3_23.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/.idea/libraries/Maven__org_springframework_spring_context_5_3_23.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/.idea/libraries/Maven__org_springframework_spring_core_5_3_23.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/.idea/libraries/Maven__org_springframework_spring_expression_5_3_23.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/.idea/libraries/Maven__org_springframework_spring_jcl_5_3_23.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/.idea/libraries/Maven__org_springframework_spring_jdbc_5_3_23.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/.idea/libraries/Maven__org_springframework_spring_test_5_3_23.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/.idea/libraries/Maven__org_springframework_spring_tx_5_3_23.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/.idea/libraries/Maven__org_springframework_spring_web_5_3_23.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/.idea/libraries/Maven__org_springframework_spring_webmvc_5_3_23.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/.idea/libraries/Maven__org_xmlunit_xmlunit_core_2_8_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/.idea/libraries/Maven__org_yaml_snakeyaml_1_29.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/src/main/java/com/zhangjingqi/SpringSecurityApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/src/main/java/com/zhangjingqi/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/src/main/java/com/zhangjingqi/config/WebSecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/src/main/java/com/zhangjingqi/controller/CurrentLoginUserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/src/main/java/com/zhangjingqi/controller/HelloController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/src/main/java/com/zhangjingqi/controller/StudentController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/src/main/java/com/zhangjingqi/controller/TeacherController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/src/main/java/com/zhangjingqi/dto/SysMenuDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/src/main/java/com/zhangjingqi/dto/SysUserDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/src/main/java/com/zhangjingqi/entity/SysMenu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/src/main/java/com/zhangjingqi/entity/SysUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/src/main/java/com/zhangjingqi/service/Impl/SecurityUserDetailsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/src/main/java/com/zhangjingqi/service/Impl/SysMenuServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/src/main/java/com/zhangjingqi/service/Impl/SysUserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/src/main/java/com/zhangjingqi/service/SysMenuService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/src/main/java/com/zhangjingqi/service/SysUserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/src/main/java/com/zhangjingqi/utils/HttpResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/src/main/java/com/zhangjingqi/vo/SecurityUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/src/main/resources/mapper/SysMenuDao.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/src/main/resources/mapper/SysUserDao.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity-database-authentication/src/test/java/com/zhangjingqi/SpringSecurityApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_druid_1_2_15.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_druid_spring_boot_starter_1_2_15.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_fastjson2_fastjson2_2_0_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_fastjson2_fastjson2_extension_2_0_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_fastjson_2_0_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_mysql_mysql_connector_j_8_0_31.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_zaxxer_HikariCP_4_0_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_5_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_2_0_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_autoconfigure_2_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_starter_2_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_2_6_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_5_3_23.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_3_23.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/config/MySecurityUserConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/config/MySecurityUserConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/config/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/controller/TeacherController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/controller/TeacherController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zhangjingqi/config/MySecurityUserConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zhangjingqi/config/MySecurityUserConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zhangjingqi/config/WebSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zhangjingqi/config/WebSecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zhangjingqi/controller/TeacherController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zhangjingqi/controller/TeacherController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Note/1.SpringSecurity简介.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../Note/1.SpringSecurity简介.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zhangjingqi/SpringSecurityApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zhangjingqi/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zhangjingqi/config/AppAccessDenyHandle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zhangjingqi/config/AppAuthenticationFailHandle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zhangjingqi/config/AppAuthenticationSuccessHandle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zhangjingqi/config/AppLogoutSuccessHandle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zhangjingqi/config/MySecurityUserConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zhangjingqi/config/WebSecurityConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zhangjingqi/controller/CurrentLoginUserController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zhangjingqi/controller/HelloController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zhangjingqi/controller/StudentController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zhangjingqi/controller/TeacherController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zhangjingqi/service/Impl/TeacherServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zhangjingqi/service/TeacherService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zhangjingqi/utils/HttpResult$HttpResultBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zhangjingqi/utils/HttpResult.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/zhangjingqi/SpringSecurityApplicationTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Note/3.SpringSecurity基于数据库的认证与授权.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../Note/3.SpringSecurity基于数据库的认证与授权.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +163,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="FxmlFile" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -53,6 +187,7 @@
     <option name="generalSettings">
       <MavenGeneralSettings>
         <option name="mavenHome" value="$PROJECT_DIR$/../../../../../Soft/Maven/apache-maven-3.6.1-bin/apache-maven-3.6.1" />
+        <option name="useMavenConfig" value="true" />
         <option name="userSettingsFile" value="E:\Soft\Maven\apache-maven-3.6.1-bin\apache-maven-3.6.1\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
@@ -75,28 +210,38 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../SpringSecurity-database-authentication/src/main/resources/mapper" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="project.structure.last.edited" value="Problems" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.20754717" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Note\Note\SpringSecurity\Code\SpringSecurity-database-authentication\src\main\resources\mapper" />
+      <recent name="E:\Note\Note\SpringSecurity\Code\SpringSecurity-database-authentication\src\main\java\com\zhangjingqi\controller" />
+      <recent name="E:\Note\Note\SpringSecurity\Code" />
       <recent name="E:\Note\Note\SpringSecurity\Code\SpringSecurity\src\main\resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.zhangjingqi.controller" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.SpringSecurityApplication">
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.SpringSecurityApplication (1)">
     <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.zhangjingqi.Test" />
-      <module name="SpringSecurity" />
+      <module name="SpringSecurity-database-authentication" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.zhangjingqi.*" />
@@ -107,8 +252,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SpringSecurityApplicationTests.testBcrypt" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="SpringSecurity" />
+    <configuration name="SpringSecurityApplicationTests.test03" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SpringSecurity-database-authentication" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.zhangjingqi.*" />
@@ -117,8 +262,37 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.zhangjingqi" />
       <option name="MAIN_CLASS_NAME" value="com.zhangjingqi.SpringSecurityApplicationTests" />
-      <option name="METHOD_NAME" value="testBcrypt" />
+      <option name="METHOD_NAME" value="test03" />
       <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringSecurityApplicationTests.test2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SpringSecurity-database-authentication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zhangjingqi.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.zhangjingqi" />
+      <option name="MAIN_CLASS_NAME" value="com.zhangjingqi.SpringSecurityApplicationTests" />
+      <option name="METHOD_NAME" value="test2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringSecurityApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="SpringSecurity-database-authentication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zhangjingqi.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.zhangjingqi.SpringSecurityApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -138,9 +312,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.SpringSecurityApplication" />
-        <item itemvalue="JUnit.SpringSecurityApplicationTests.testBcrypt" />
+        <item itemvalue="Spring Boot.SpringSecurityApplication (1)" />
+        <item itemvalue="JUnit.SpringSecurityApplicationTests.test03" />
         <item itemvalue="Application.Test" />
+        <item itemvalue="JUnit.SpringSecurityApplicationTests.test2" />
+        <item itemvalue="Spring Boot.SpringSecurityApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -168,7 +344,12 @@
       <workItem from="1697353392101" duration="6061000" />
       <workItem from="1697380488781" duration="594000" />
       <workItem from="1697441527937" duration="782000" />
-      <workItem from="1697447689690" duration="12615000" />
+      <workItem from="1697447689690" duration="12941000" />
+      <workItem from="1697503759334" duration="822000" />
+      <workItem from="1697721302801" duration="1303000" />
+      <workItem from="1697763359973" duration="10982000" />
+      <workItem from="1697782592953" duration="1539000" />
+      <workItem from="1697864011548" duration="9265000" />
     </task>
     <servers />
   </component>

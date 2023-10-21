@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/SpringSecurity.iml" filepath="$PROJECT_DIR$/SpringSecurity.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../SpringSecurity-database-authentication/SpringSecurity-database-authentication.iml" filepath="$PROJECT_DIR$/../SpringSecurity-database-authentication/SpringSecurity-database-authentication.iml" />
     </modules>
   </component>
 </project>

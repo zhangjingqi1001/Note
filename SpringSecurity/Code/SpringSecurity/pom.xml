@@ -17,6 +17,8 @@
         <spring-boot.version>2.6.13</spring-boot.version>
         <spring.security.version>2.4.2</spring.security.version>
         <lombok.version>1.18.26</lombok.version>
+        <druid.spring.boot.starter>1.2.15</druid.spring.boot.starter>
+        <mybatis.spring.boot.starter>2.1.1</mybatis.spring.boot.starter>
     </properties>
 
     <dependencyManagement>
@@ -29,6 +31,7 @@
                 <scope>import</scope>
             </dependency>
 
+            <!--SpringSecurity依赖-->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-security</artifactId>
@@ -39,8 +42,18 @@
                 <artifactId>lombok</artifactId>
                 <version>${lombok.version}</version>
             </dependency>
-        </dependencies>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid-spring-boot-starter</artifactId>
+                <version>${druid.spring.boot.starter}</version>
+            </dependency>
 
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>${mybatis.spring.boot.starter}</version>
+            </dependency>
+        </dependencies>
 
     </dependencyManagement>
 
@@ -71,6 +84,22 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid-spring-boot-starter</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+        </dependency>
+
     </dependencies>
 
 

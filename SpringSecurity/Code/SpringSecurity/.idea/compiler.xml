@@ -7,11 +7,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="SpringSecurity-database-authentication" />
         <module name="SpringSecurity" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="SpringSecurity" target="1.8" />
+      <module name="SpringSecurity-database-authentication" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
