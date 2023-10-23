@@ -133,7 +133,7 @@ SpringSecurity的原理其实就是一个过滤器链，内部包含了提供各
 
   
 
-- **ExceptionTranslationFilter: **
+- **ExceptionTranslationFilter**: 
 
     处理认证和授权中**出现的所有异常，做统一的处理。**
 
@@ -141,11 +141,21 @@ SpringSecurity的原理其实就是一个过滤器链，内部包含了提供各
 
 
 
-- **FilterSecuritylnterceptor:**
+- **FilterSecuritylnterceptor**:
 
   **负责授权、负责权限校验的过滤器**。并且判断当前访问的资源需要什么权限，访问的具有什么权限，是否能够访问。
 
 
+
+* **DefaultLoginPageGeneratingFilter**：
+
+  SpringSecurity默认的登录页面，如果不想加默认登录页，此过滤器不加即可
+
+
+
+* **DefaultLogoutPageGeneratingFilter**：
+
+  默认注销页面
 
 
 
@@ -159,25 +169,37 @@ SpringSecurity的原理其实就是一个过滤器链，内部包含了提供各
 
  **概念速查:**
 
-- Authentication接口: 它的实现类，表示当前访问系统的用户，封装了用户相关信息。
+- **Authentication接口**: 它的实现类，表示当前访问系统的用户，封装了用户相关信息。
 
   
 
-- AuthenticationManager接口: 定义了认证Authentication的方法
+- **AuthenticationManager接口**: 定义了认证Authentication的方法。内部会调用DaoAuthenticationProvider的authenticate方法进行认证
 
   
 
-- UserDetailsService接口: 加载用户特定数据的核心接口。里面定义了一个根据用户名查询用户信息的方法。
+- **AbstractUserDetailsAuthenticationProvider接口**：有一个实现类DaoAuthenticationProvider，并且有一个authenticate方法可以认证用户。
+
+  在这个地方此类会调用UserDetailsService接口中的loadUserByUsername方法验证用户
 
   
 
-- UserDetails接口: 提供核心用户信息，通过UserDetailsservice根据用户名获取处理的用户信息要封装成
+- **UserDetailsService接口**: 加载用户特定数据的核心接口。里面定义了一个根据用户名查询用户信息的方法。需要将用户信息封装成UserDetails类
 
   
 
-- UserDetails对象返回。然后将这些信息封装到Authentication对象中。
+- **UserDetails接口**: 提供核心用户信息，通过UserDetailsservice根据用户名获取处理的用户信息要封装成
+
+  
+
+- **UserDetails对象返回**。然后将这些信息封装到Authentication对象中。
 
 
+
+**分析**
+
+我们看粉色图，如果我们想响应token，此时UsernamePasswordAuthenticationFilter是有问题的。当我们认证通过了，最终还会回到UsernamePasswordAuthenticationFilter这个过滤器的我们没有办法在这个过滤器中响应token，所以我们要**自己写一个登录的controller接口，到时候用户名和密码都提交到这个controller当中**，之后再controller中**调用ProviderManager的authenticate方法进行认证**，之后ProviderManager会调用DaoAuthenticationProvider，在之后就和粉色图一模一样了
+
+最终形成的图就是绿色橙色图
 
 **分析后的最终结果：**
 
@@ -191,9 +213,11 @@ SpringSecurity的原理其实就是一个过滤器链，内部包含了提供各
 
 
 
-
-
 ### 3.1.4  校验
+
+**登录完之后，怎么判断是否登录了呢**？
+
+对于校验，我们需要自己生成一个过滤器了
 
  我们要对某些请求进行校验，看看是否会有请求的权限。
 
@@ -227,11 +251,11 @@ SpringSecurity的原理其实就是一个过滤器链，内部包含了提供各
 
 -  **登录：**
 
-​        ① 自定义登录接口 
+​        ① **自定义登录接口** 
 
 ​                调用ProviderManager的方法进行认证，如果认证通过生成就 jwt，并把信息存入Redis中
 
-​        ② 自定义UserDetailsService 
+​        ② **自定义UserDetailsService** 
 
 ​                在这个实现列中去查询数据库 
 
@@ -1031,7 +1055,6 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 //      TODO 查询对应的权限信息（讲到授权后在补全这个地方）
 
 //      TODO 封装成UserDetails将其返回
-
 //      LoginUser是我们自己封装的一个UserDetails接口的实现类
         return new LoginUser(user);
     }
@@ -1112,7 +1135,9 @@ public class LoginUser implements UserDetails {
 
 
 
-注意：我们需要预先在数据库中添加数据。如果想让用户密码是明文存储，则需要再密码前加{noop}
+注意：我们需要预先在数据库中添加数据。**如果想让用户密码是明文存储，则需要再密码前加{noop}**
+
+> 比如数据库中password字段的值为{noop}1234
 
 
 
@@ -1145,7 +1170,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 }
 ```
 
-
+![image-20231021221012679](https://picture-typora-zhangjingqi.oss-cn-beijing.aliyuncs.com/image-20231021221012679.png)
 
 其中**PasswordEncoder**如下所示：
 
@@ -1195,7 +1220,7 @@ protected void configure(HttpSecurity http) throws Exception {
 }
 ```
 
-在接口中我们通过AuthenticationManager的authenticate方法来进行用户认证，所以需要在SecurityConfig中配置把AuthenticationManager注入容器。如下面的第二个方法
+在接口中我们**通过AuthenticationManager的authenticate方法来进行用户认证**，所以需要在SecurityConfig中配置把AuthenticationManager注入容器。如下面的第二个方法
 
 ```java
 @Configuration
@@ -1242,6 +1267,8 @@ public class LoginServiceImpl implements LoginService {
 //       TODO 通过AuthenticationManager的authenticate方法来进行用户认证
 //          需要Authentication类型(接口)的参数,我们可以使用Authentication的实现类UsernamePasswordAuthenticationToken
         UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(user.getUserName(), user.getPassword());
+        
+//      把用户的用户名和密码封装成Authentication类型   
         Authentication authenticate = authenticationManager.authenticate(authenticationToken);
 
 //      TODO  如果认证没通过，给出对应的提示
@@ -1408,6 +1435,8 @@ public class JwtUtil {
 /**
  * 之前我们选择的是实现Filter接口，但是这个过滤器接口存在一点问题，有可能发一次请求经过好几次过滤器
  * OncePerRequestFilter  是过滤器的实现类，一次请求只经过一个过滤器
+ 
+ OncePerRequestFilter，它确保该过滤器在一次HTTP请求中只执行一次，以避免多次执行相同操作的问题。这对于处理请求一次性操作非常有用，例如身份验证、日志记录、请求/响应修改等。
  */
 @Component
 public class JwtAuthenticationTokenFilter extends OncePerRequestFilter {
@@ -1448,9 +1477,12 @@ public class JwtAuthenticationTokenFilter extends OncePerRequestFilter {
 
 
 //      TODO 将用户信息存入到SecurityContextHolder中
-//      三个参数：在构造方法中会有一个super.setAuthenticated(true)，表示已认证的情况
+//      因为在SpringSecurity中，会使用默认的FilterSecurityInterceptor来进行权限校验。在FilterSecurityInterceptor中会从SecurityContextHolder获取其中的Authentication，然后获取其中的权限信息。当前用户是否拥有访问当前资源所需的权限。
+             
+//      这个地方我们要用翻个参数的构造方法  三个参数：在构造方法中会有一个super.setAuthenticated(true)，表示已认证的情况，如果后续发现这个用户是已验证的，就不需要再验证了
 //      第一个参数：用户信息，第二个参数：null,第三个参数：Collection集合，有关权限的信息，但是现在还没有权限信息，先写null
         UsernamePasswordAuthenticationToken usernamePasswordAuthenticationToken = new UsernamePasswordAuthenticationToken(loginUser,null,null);
+        
         SecurityContextHolder.getContext().setAuthentication(usernamePasswordAuthenticationToken);
 
 //      TODO: 放行
@@ -1461,7 +1493,23 @@ public class JwtAuthenticationTokenFilter extends OncePerRequestFilter {
 
 
 
+> 在 Spring Security 中，`UsernamePasswordAuthenticationToken` 是用于表示用户名密码认证的令牌对象。它的构造方法接受三个参数，分别表示用户名、密码和权限列表
+>
+> 1. **用户名（Principal）：** 这是认证中的主体，通常是用户的用户名或标识符。它是一个对象，通常是字符串，表示被认证的用户。在你提供的代码中，这个参数是 `loginUser`，即登录用户的标识。
+> 2. **密码（Credentials）：** 这是与主体相关联的凭证，通常是用户的密码。在你提供的代码中，这个参数是 `null`，表示密码为 `null`，通常在认证时，密码会在后续的步骤中被验证。
+> 3. **权限列表（Authorities）：** 这是与主体关联的权限列表，通常是用户被授权执行的操作或访问的资源。在你提供的代码中，这个参数也是 `null`，表示没有指定任何权限，权限的管理通常在认证成功后进行。
+>
+> `UsernamePasswordAuthenticationToken` 是一个常用的认证令牌，用于传递用户的身份信息和凭证给 Spring Security 进行认证。在实际应用中，通常会在认证过程中验证用户名和密码，然后根据用户的身份信息构建 `UsernamePasswordAuthenticationToken`，并将其传递给 Spring Security 进行认证和授权操作
+
+
+
 **虽然我们把这个过滤器链写好了，但是此过滤器并不会在SpringSecurity当中，并且要指定过滤器在过滤器链中的位置，我们需要自己进行配置**
+
+如果我们将jwtAuthenticationTokenFilter过滤器配置的太过靠后，在FilterSecurityInterceptor之后，那我们jwtAuthenticationTokenFilter过滤器就失去了存在的意义了（jwtAuthenticationTokenFilter过滤器存在的意义就是完成认证和校验功能）。
+
+因为在SpringSecurity中，会使用默认的FilterSecurityInterceptor来进行权限校验。在FilterSecurityInterceptor中会从SecurityContextHolder获取其中的Authentication，然后获取其中的权限信息。当前用户是否拥有访问当前资源所需的权限
+
+所以我们将jwtAuthenticationTokenFilter过滤器放在了UsernamePasswordAuthenticationFilter前面
 
 ```java
     @Autowired
@@ -1481,6 +1529,7 @@ public class JwtAuthenticationTokenFilter extends OncePerRequestFilter {
                 // 除上面外的所有请求全部需要鉴权认证
                 .anyRequest().authenticated();
 //      添加过滤器
+//      向Spring Security的过滤器链中添加一个自定义过滤器 jwtAuthenticationTokenFilter，并指定了它要在 UsernamePasswordAuthenticationFilter 之前执行        
         http.addFilterBefore(jwtAuthenticationTokenFilter, UsernamePasswordAuthenticationFilter.class);
     }
 ```
@@ -1514,7 +1563,7 @@ public class JwtAuthenticationTokenFilter extends OncePerRequestFilter {
 
 ##  3.2 授权
 
-   微信来举例子，微信登录成功后用户即可使用微信的功能，比如，发红包、!发朋友圈、添加好友等，没有绑定银行卡的用户是无法发送红包的，绑定银行卡的用户才可以发红包，发红包功能、发朋友圈功能都是微信的资源即功能资源，用户拥有发红包功能的权限才可以正常使用发送红包功能，拥有发朋友圈功能的权限才可以使用发朋友圈功能，这个根据用户的权限来控制用户使用资源的过程就是授权。
+   微信来举例子，微信登录成功后用户即可使用微信的功能，比如，发红包、发朋友圈、添加好友等，没有绑定银行卡的用户是无法发送红包的，绑定银行卡的用户才可以发红包，发红包功能、发朋友圈功能都是微信的资源即功能资源，用户拥有发红包功能的权限才可以正常使用发送红包功能，拥有发朋友圈功能的权限才可以使用发朋友圈功能，这个根据用户的权限来控制用户使用资源的过程就是授权。
 
 
 
@@ -1527,7 +1576,7 @@ public class JwtAuthenticationTokenFilter extends OncePerRequestFilter {
 
 ### 3.2.1 权限系统的作用
 
-   	例如一个学校图书馆的管理系统，如果是普通学生登录就能看到借书还书相关的功能，不可能让他看到并且去使用添加书籍信息，删除书籍信息等功能。但是如果是一个图书馆管理员的账号登录了，应该就能看到并使用添加书籍信息，删除书籍信息等功能。
+> 例如一个学校图书馆的管理系统，如果是普通学生登录就能看到借书还书相关的功能，不可能让他看到并且去使用添加书籍信息，删除书籍信息等功能。但是如果是一个图书馆管理员的账号登录了，应该就能看到并使用添加书籍信息，删除书籍信息等功能。
 
 ​	总结起来就是**不同的用户可以使用不同的功能**。这就是权限系统要去实现的效果。
 
@@ -1556,7 +1605,7 @@ public class JwtAuthenticationTokenFilter extends OncePerRequestFilter {
 我们选择基于注解对权限控制的方式：开启相关配置
 
 ```java
-@Configuration
+//@Configuration 下面的注解会带着此注解
 @EnableGlobalMethodSecurity(prePostEnabled = true)  //开启注解的功能
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
     ..................
@@ -1906,6 +1955,7 @@ CREATE TABLE `sys_user_role` (
 
 
 
+```sql
 SELECT 
 	DISTINCT m.`perms`
 FROM
@@ -1917,12 +1967,7 @@ WHERE
 	user_id = 2
 	AND r.`status` = 0
 	AND m.`status` = 0
-
-
-
-
-
-
+```
 
 
 
@@ -2324,7 +2369,7 @@ public class MvcConfig implements WebMvcConfigurer {
                 .authenticationEntryPoint( AuthenticationEntryPoint)
 //              授权失败处理器
                 .accessDeniedHandler(AccessDeniedHandler);
-//      TODO 允许跨域
+//      TODO 开启SpringSecurity跨域访问
         http.cors();
     }
 ```
@@ -2343,7 +2388,7 @@ public class MvcConfig implements WebMvcConfigurer {
 
 
 
-​	我们前面都是使用@PreAuthorize注解，然后在在其中使用的是hasAuthority方法进行校验。SpringSecurity还为我们提供了其它方法例如：hasAnyAuthority，hasRole，hasAnyRole等。
+​	我们前面都是使用@PreAuthorize注解，然后在其中使用的是hasAuthority方法进行校验。SpringSecurity还为我们提供了其它方法例如：hasAnyAuthority，hasRole，hasAnyRole等。
 
 ​    
 
