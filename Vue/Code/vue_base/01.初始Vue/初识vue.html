@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF8" />
+    <title>初始vue</title>
+
+    <!--引入开发版vue.js-->
+    <!--引入后多了一个全局Vue对象/函数  （这个Vue可以被当做对象，也可以被当做函数）-->
+    <script type="text/javascript" src="../js/vue.js"></script>
+
+</head>
+
+<body>
+
+    <!-- 准备一个容器,在这个容器中呈现我们的页面-->
+    <div id="root">
+        <!--{{name}}是插值语法-->
+        <h1>Hello,{{name}} 你很棒！！</h1>
+    </div>
+
+    <script type="text/javascript">
+        //关闭开发环境时的生产提示
+        Vue.config.productionTip = false
+
+        //在整体调整productionTip后再写代码
+
+        //当我们引入vue.js文件后，我们全局就多了一个Vue函数
+        //创建Vue实例，并且参数只传一个配置对象。配置对象的value值、数据类型是不能随便更改的
+        //   比如axios中 axios({ url: "xxxx"})  这个“url”是不能随便更改的，如果改成“ura”就不会实现对应的功能
+        const x = new Vue({
+            el: '#root', //用于指定当前Vue实例为哪个容器服务，值通常为CSS选择器字符串，比如这个地方是div标签的选择器
+            // el: document.getElementById('root'),我们之前是这么获取的
+
+            // data用于存储数据，数据供el所指定的容器去使用，此data先暂时写成一个对象
+            data: {
+                name: "张靖奇"
+            }
+
+        })
+        //el是element元素的简称，el: '#root'是一个id选择器，找到了id为root的标签
+        //假如说没有el: '#root'配置，容器和vue实例是关联不到一起的，互相不知道对方的存在。
+        //当写上el: '#root'配置后，容器和vue实例关联到了一起。vue实例就知道了要把页面成果展示到root所对应的标签中
+    
+   
+    </script>
+
+
+</body>
+
+</html>
