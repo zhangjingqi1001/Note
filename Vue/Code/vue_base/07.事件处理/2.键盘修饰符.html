@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF8" />
+    <title>初始vue</title>
+
+    <!-- 引入Vue -->
+    <script type="text/javascript" src="../js/vue.js"></script>
+
+
+    <style>
+        .list {
+            width: 200px;
+            height: 200px;
+            background-color: peru;
+            overflow: auto;
+        }
+
+        li {
+            height: 100px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!--准备好一个容器-->
+    <div id="root">
+        <a href="http://www.baidu.com" @click.prevent="showInfo">点我提示信息</a>
+
+        <div class="demo1" @click="showInfo1">
+            <button @click.stop="showInfo2">点我提示信息</button>
+        </div>
+
+        <div class="box1" @click.capture="showMsg(1)">
+            div1
+            <div class="box2" @click="showMsg(2)">
+                div2
+            </div>
+        </div>
+
+        <div class="demo1" @click.self="showInfo">
+            <button @click="showInfo">点我提示信息</button>
+        </div>
+
+        <ul @scroll="demo" class="list">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+        </ul>
+    </div>
+
+
+
+    <script type="text/javascript">
+        //关闭开发环境时的生产提示
+        Vue.config.productionTip = false
+
+        new Vue({
+            el: "#root",
+            data: {
+
+            },
+            methods: {
+                showInfo(event) {
+                    console.log(event.target)
+                },
+                showInfo1(event) {
+                    alert("同学您好111")
+                    event.preventDefault();
+                },
+                showInfo2(event) {
+                    alert("同学您好222")
+                    event.preventDefault();
+                },
+                showMsg(number) {
+                    console.log(number)
+                },
+                demo() {
+                    console.log("滚动")
+                }
+            },
+
+        })
+    </script>
+
+</body>
+
+</html>

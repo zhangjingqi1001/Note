@@ -14,6 +14,7 @@
 <body>
     <!--准备好一个容器-->
     <div id="root">
+        <input type="text" placeholder="按下回车提示输入" @keyup="showInfo">
 
     </div>
 
@@ -22,10 +23,15 @@
         Vue.config.productionTip = false
 
         new Vue({
-            el:"#root",
-            data:{
+            el: "#root",
+            data: {
 
-            }
+            },
+            methods: {
+                showInfo(event){
+                    console.log(event.target.value)
+                }
+            },
         })
     </script>
 
