@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> 初识vue</title>
+        <!--引入vue    引入之后，全局就多了一个vue这个构造函数-->
+        <script type="text/javascript" src="../js/vue.js"></script> 
+    </head>
+    <body>
+        <div id="root">
+            <h2>今天天气：{{info}}</h2>
+            <button @click="changeWeather">切换天气</button>
+        </div>
+ 
+        <script type="text/javascript">
+            //阻止vue在启动时生成生产提示
+            Vue.config.productionTip=false
+            
+            new Vue({
+                el:'#root',
+                data:{
+                    isHot:true
+                },
+            computed:{
+                info(){
+                    return this.isHot ? '炎热':'凉爽'
+                }
+            },
+            methods: {
+                changeWeather(){
+                    this.isHot = !this.isHot
+                }
+            },
+            })
+ 
+        </script>   
+    </body>
+</html>

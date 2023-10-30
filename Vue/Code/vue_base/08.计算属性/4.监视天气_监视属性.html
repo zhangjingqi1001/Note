@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title> 初识vue</title>
+    <!--引入vue    引入之后，全局就多了一个vue这个构造函数-->
+    <script type="text/javascript" src="../js/vue.js"></script>
+</head>
+
+<body>
+    <div id="root">
+        <h2>今天天气：{{info}}</h2>
+        <button @click="changeWeather">切换天气</button>
+    </div>
+
+    <script type="text/javascript">
+        //阻止vue在启动时生成生产提示
+        Vue.config.productionTip = false
+
+        new Vue({
+            el: '#root',
+            data: {
+                isHot: true
+            },
+            computed: {
+                info() {
+                    return this.isHot ? '炎热' : '凉爽'
+                }
+            },
+            methods: {
+                changeWeather() {
+                    this.isHot = !this.isHot
+                }
+            },
+            watch: {
+                // 监视谁我们就写谁的名字
+                isHot: {
+                    // 初始化时让handler函数调用一下
+                    immediate: true,
+
+                    // 此函数什么时候被调用？当我们被监视的isHot改变时
+                    // 此函数有两个参数，一个参数是新值，另一个参数是老值（之前的值
+                    handler(newValue, oldValue) {
+                        console.log('isHot被修改了')
+                    }
+                }
+            }
+        })
+
+    </script>
+</body>
+
+</html>

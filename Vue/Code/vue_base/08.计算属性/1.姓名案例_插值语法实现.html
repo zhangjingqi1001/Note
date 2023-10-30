@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> 初识vue</title>
+        <!--引入vue    引入之后，全局就多了一个vue这个构造函数-->
+        <script type="text/javascript" src="../js/vue.js"></script> 
+    </head>
+    <body>
+        <div id="root">
+           <!-- 容器 -->
+           姓：<input type="text" v-model="firstName"><br/><br/>
+           名：<input type="text" v-model="lastName"><br/><br/>
+           全名：<span> {{fullName()}}</span>
+        </div>
+ 
+        <script type="text/javascript">
+            //阻止vue在启动时生成生产提示
+            Vue.config.productionTip=false
+            
+            new Vue({
+                el:'#root',
+                data:{
+                    firstName:'张',
+                    lastName:'三'
+                },
+                methods:{
+                    fullName(){
+                        return this.firstName+'-'+this.lastName
+                    }
+                }
+            })
+ 
+        </script>   
+    </body>
+</html>
