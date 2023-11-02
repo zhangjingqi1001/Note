@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF8" />
+    <title>初始vue</title>
+
+    <!-- 引入Vue -->
+    <script type="text/javascript" src="../js/vue.js"></script>
+
+</head>
+
+<body>
+    <!--准备好一个容器-->
+    <div id="root">
+
+        <button @click="add">添加一个老刘</button>
+
+        <ul>
+            <!-- key标签属性非常重要 -->
+            <!-- p代表着persons中的一个对象 -->
+            <li v-for="(p,index) in persons" :key="index">
+                {{p.name}}-{{p.age}}-{{index}}
+                <input type="text">
+            </li>
+        </ul>
+
+    </div>
+
+    <script type="text/javascript">
+        //关闭开发环境时的生产提示
+        Vue.config.productionTip = false
+
+        new Vue({
+            el: "#root",
+            data: {
+                persons: [
+                    { id: '001', name: '张三', age: 18 },
+                    { id: '002', name: '李四', age: 18 },
+                    { id: '003', name: '王五', age: 20 }
+                ]
+            },
+            methods:{
+                 add(){
+                    const p ={ id: '004', name: '老刘', age: 18 }
+                    this.persons.unshift(p)
+                 }
+            }
+        })
+    </script>
+
+</body>
+
+</html>
