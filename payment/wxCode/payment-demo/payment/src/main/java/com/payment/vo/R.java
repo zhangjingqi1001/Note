@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Data
-@Accessors(chain = true)
+@Accessors(chain = true)//可以链式操作
 public class R {
 
     private Integer code; //响应码
