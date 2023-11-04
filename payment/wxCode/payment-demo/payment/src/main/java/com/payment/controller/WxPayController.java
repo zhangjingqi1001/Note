@@ -1,4 +1,4 @@
-package com.payment;
+package com.payment.controller;
 
 import com.payment.service.WxPayService;
 import com.payment.vo.R;

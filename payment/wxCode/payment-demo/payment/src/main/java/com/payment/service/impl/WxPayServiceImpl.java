@@ -1,6 +1,7 @@
 package com.payment.service.impl;
 
 import com.alibaba.fastjson2.JSONObject;
+import com.mysql.cj.util.StringUtils;
 import com.payment.config.WxPayConfig;
 import com.payment.entity.OrderInfo;
 import com.payment.enums.OrderStatus;
@@ -36,24 +37,22 @@ public class WxPayServiceImpl implements WxPayService {
 
     /**
      * 创建订单，调用Native支付接口
+     *
      * @param productId 商品ID
      * @return 支付二维码url
      */
     @Override
     public Map<String, Object> nativePay(Long productId) throws Exception {
 //      TODO 生成订单
-        OrderInfo orderInfo = new OrderInfo();
-        orderInfo.setTitle("test");
-        orderInfo.setProductId(productId);
-//      订单金额（单位是分）
-        orderInfo.setTotalFee(1);
-//      调用工具类生成订单号
-        orderInfo.setOrderNo(OrderNoUtils.getOrderNo());
-//      订单金额
-        orderInfo.setOrderStatus(OrderStatus.NOTPAY.getType());
+        OrderInfo orderInfo = orderInfoService.createOrderByProductId(productId);
 
-//      TODO 将订单信息存入数据库
-
+        if (orderInfo != null && !StringUtils.isNullOrEmpty(orderInfo.getCodeUrl())) {
+            log.info("二维码订单已经存在-"+orderInfo.getCodeUrl());
+//          之后再支付这个商品的时候，直接通过url生成二维码扫描即可
+            HashMap<String, Object> returnMap = new HashMap<>();
+            returnMap.put("codeUrl", orderInfo.getCodeUrl());
+            return returnMap;
+        }
 
 //      TODO 调用统一下单API
         //请求URL
@@ -82,7 +81,7 @@ public class WxPayServiceImpl implements WxPayService {
 
         paramsMap.put("amount", amountMap);
 
-        log.info("Native统一支付下单请求数据 - " + JSONObject.toJSONString(paramsMap));
+        log.info("Native统一支付下单请求数据 - " + JSONObject.toJSONString(paramsMap));//{"amount":{"total":1,"currency":"CNY"},"mchid":"1558950191","out_trade_no":"ORDER_20231105014402447","appid":"wx74862e0dfcf69954","description":"test","notify_url":"https://06ca-240e-444-10-1f3f-513c-1cc6-c851-ccba.ngrok-free.app/api/wx-pay/native/notify"}
 
         //请求体
         StringEntity entity = new StringEntity(JSONObject.toJSONString(paramsMap), "utf-8");
@@ -118,7 +117,10 @@ public class WxPayServiceImpl implements WxPayService {
         JSONObject responseJson = JSONObject.parseObject(EntityUtils.toString(response.getEntity()));
 
         HashMap<String, Object> returnMap = new HashMap<>();
-        returnMap.put("codeUrl",responseJson.get("code_url"));
+        returnMap.put("codeUrl", responseJson.get("code_url"));
+//      将二维码的地址存储起来，因为有效期为两个小时，两个小时如果没下单还是可以扫的
+        orderInfoService.saveCodeUrl(orderInfo.getOrderNo(), responseJson.get("code_url").toString());
+
         return returnMap;
     }
 }
