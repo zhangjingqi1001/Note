@@ -10,11 +10,13 @@ import com.payment.mapper.OrderInfoMapper;
 import com.payment.mapper.ProductMapper;
 import com.payment.service.OrderInfoService;
 import com.payment.util.OrderNoUtils;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Slf4j
 @Service
 public class OrderInfoServiceImpl extends ServiceImpl<OrderInfoMapper, OrderInfo> implements OrderInfoService {
 
@@ -80,7 +82,6 @@ public class OrderInfoServiceImpl extends ServiceImpl<OrderInfoMapper, OrderInfo
     }
 
 
-
     /**
      * 查询订单列表，并倒序查询
      *
@@ -95,6 +96,28 @@ public class OrderInfoServiceImpl extends ServiceImpl<OrderInfoMapper, OrderInfo
 
     @Override
     public String getOrderStatus(String orderNo) {
-        return null;
+        QueryWrapper<OrderInfo> queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq("order_no", orderNo);
+        OrderInfo orderInfo = baseMapper.selectOne(queryWrapper);
+        if (orderInfo == null) {
+            return null;
+        }
+        return orderInfo.getOrderStatus();
+    }
+
+    /**
+     * 根据订单号更新订单状态
+     */
+    @Override
+    public void updateStatusByOrderNo(String outTradeNo, OrderStatus orderStatus) {
+        log.info("更新订单状态 ===> {}", orderStatus.getType());
+
+        QueryWrapper<OrderInfo> queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq("order_no", outTradeNo);
+
+        OrderInfo orderInfo = new OrderInfo();
+        orderInfo.setOrderStatus(orderStatus.getType());
+
+        baseMapper.update(orderInfo, queryWrapper);
     }
 }

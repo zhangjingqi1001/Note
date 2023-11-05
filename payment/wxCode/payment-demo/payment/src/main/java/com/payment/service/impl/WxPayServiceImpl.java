@@ -7,8 +7,10 @@ import com.payment.entity.OrderInfo;
 import com.payment.enums.OrderStatus;
 import com.payment.enums.wxpay.WxNotifyType;
 import com.payment.service.OrderInfoService;
+import com.payment.service.PaymentInfoService;
 import com.payment.service.WxPayService;
 import com.payment.util.OrderNoUtils;
+import com.wechat.pay.contrib.apache.httpclient.util.AesUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpPost;
@@ -19,8 +21,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
+import java.security.GeneralSecurityException;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.locks.ReentrantLock;
 
 @Slf4j
 @Service
@@ -35,6 +39,9 @@ public class WxPayServiceImpl implements WxPayService {
     @Autowired
     private CloseableHttpClient httpClient;
 
+    @Autowired
+    private PaymentInfoService paymentInfoService;
+
     /**
      * 创建订单，调用Native支付接口
      *
@@ -47,7 +54,7 @@ public class WxPayServiceImpl implements WxPayService {
         OrderInfo orderInfo = orderInfoService.createOrderByProductId(productId);
 
         if (orderInfo != null && !StringUtils.isNullOrEmpty(orderInfo.getCodeUrl())) {
-            log.info("二维码订单已经存在-"+orderInfo.getCodeUrl());
+            log.info("二维码订单已经存在-" + orderInfo.getCodeUrl());
 //          之后再支付这个商品的时候，直接通过url生成二维码扫描即可
             HashMap<String, Object> returnMap = new HashMap<>();
             returnMap.put("codeUrl", orderInfo.getCodeUrl());
@@ -57,6 +64,7 @@ public class WxPayServiceImpl implements WxPayService {
 //      TODO 调用统一下单API
         //请求URL
         HttpPost httpPost = new HttpPost("https://api.mch.weixin.qq.com/v3/pay/transactions/native");
+//        HttpPost httpPost = new HttpPost("https://api.mch.weixin.qq.com/v3/pay/transactions/jsapi");
 
         // 请求body参数(这个地方封装成一个对象再转JSON也是没问题的)
         //Gson gson = new Gson();
@@ -122,5 +130,69 @@ public class WxPayServiceImpl implements WxPayService {
         orderInfoService.saveCodeUrl(orderInfo.getOrderNo(), responseJson.get("code_url").toString());
 
         return returnMap;
+    }
+
+
+    //  可重入锁
+    private final ReentrantLock lock = new ReentrantLock();
+
+    @Override
+    public void processOrder(JSONObject bodyJson) throws GeneralSecurityException {
+        log.info("处理订单");
+
+        //解密数据,得到明文
+        String plainText = decryptFromResource(bodyJson);
+
+        //将明文转换成map,下面这个JSON数据其实就是bodyJson中的resource
+        JSONObject plainTextJSON = JSONObject.parseObject(plainText);
+        String outTradeNo = plainTextJSON.getString("out_trade_no");
+
+        //在对业务数据进行状态检查和处理之前，要采用数据锁进行并发控制，以避免函数重入造成的数据混乱
+        //尝试获取锁，立即获取到锁就是true，获取失败则立即返回false，不会一直等待锁的释放
+        //这个锁与synchronized的区别就是synchronized获取不到锁会一直等待，ReentrantLock获取不到锁就返回false
+        if (lock.tryLock()) {
+            try {
+                //处理重复通知
+                String orderStatus = orderInfoService.getOrderStatus(outTradeNo);
+                if (!OrderStatus.NOTPAY.getType().equals(orderStatus)) {
+                    //说明是已支付，我们直接返回订单状态即可
+                    return;
+                }
+                //更新订单状态
+                orderInfoService.updateStatusByOrderNo(outTradeNo, OrderStatus.SUCCESS);
+                //记录支付日志
+                paymentInfoService.createPaymentInfo(plainText);
+            } finally {
+                //主动释放锁
+                lock.unlock();
+            }
+        }
+
+
+    }
+
+    /**
+     * 对称解密
+     */
+    private String decryptFromResource(JSONObject bodyJson) throws GeneralSecurityException {
+        log.info("密文解密");
+
+        JSONObject resource = bodyJson.getJSONObject("resource");
+//      额外数据
+        String associatedData = resource.getString("associated_data");
+//      密文
+        String ciphertext = resource.getString("ciphertext");
+        log.info("密文 - " + ciphertext);
+//      随机串
+        String nonce = resource.getString("nonce");
+
+//      参数需要一个byte形式的对称加密的密钥
+//      wxpay.api-v3-key=UDuLFDcmy5Eb6o0nTNZdu6ek4DDh4K8B
+        AesUtil aesUtil = new AesUtil(wxPayConfig.getApiV3Key().getBytes());
+//      第一个参数：associated_data附加数据，第二个参数：随机串，第三个参数：密文
+//      得到明文
+        String plainText = aesUtil.decryptToString(associatedData.getBytes(), nonce.getBytes(), ciphertext);
+        log.info("明文：plainText - " + plainText);
+        return plainText;
     }
 }

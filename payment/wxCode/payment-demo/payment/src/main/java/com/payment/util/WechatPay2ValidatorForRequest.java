@@ -56,8 +56,8 @@ public class WechatPay2ValidatorForRequest {
             //构造验签名串
             String message = buildMessage(request);
 
-            String serial = request.getHeader(WECHAT_PAY_SERIAL);
-            String signature = request.getHeader(WECHAT_PAY_SIGNATURE);
+            String serial = request.getHeader(WECHAT_PAY_SERIAL); //WECHAT_PAY_SERIAL:Wechatpay-Serial
+            String signature = request.getHeader(WECHAT_PAY_SIGNATURE);//WECHAT_PAY_SIGNATURE:Wechatpay-Signature
 
             //验签
             if (!verifier.verify(serial, message.getBytes(StandardCharsets.UTF_8), signature)) {
@@ -99,8 +99,8 @@ public class WechatPay2ValidatorForRequest {
     }
 
     protected final String buildMessage(HttpServletRequest request) throws IOException {
-        String timestamp = request.getHeader(WECHAT_PAY_TIMESTAMP);
-        String nonce = request.getHeader(WECHAT_PAY_NONCE);
+        String timestamp = request.getHeader(WECHAT_PAY_TIMESTAMP);//WECHAT_PAY_TIMESTAMP:Wechatpay-Timestamp
+        String nonce = request.getHeader(WECHAT_PAY_NONCE);//WECHAT_PAY_NONCE:Wechatpay-Nonce
         return timestamp + "\n"
                 + nonce + "\n"
                 + body + "\n";
