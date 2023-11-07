@@ -118,7 +118,7 @@ public class WxPayServiceImpl implements WxPayService {
         } finally {
             //关闭
             response.close();
-            httpClient.close();
+//            httpClient.close();
         }
 
         //将相应结果转换成JSON
@@ -126,6 +126,8 @@ public class WxPayServiceImpl implements WxPayService {
 
         HashMap<String, Object> returnMap = new HashMap<>();
         returnMap.put("codeUrl", responseJson.get("code_url"));
+        //也要返回订单号，前端之后会向后端传输此参数，判断用户是否下单
+        returnMap.put("orderNo", orderInfo.getOrderNo());
 //      将二维码的地址存储起来，因为有效期为两个小时，两个小时如果没下单还是可以扫的
         orderInfoService.saveCodeUrl(orderInfo.getOrderNo(), responseJson.get("code_url").toString());
 
@@ -195,4 +197,61 @@ public class WxPayServiceImpl implements WxPayService {
         log.info("明文：plainText - " + plainText);
         return plainText;
     }
+
+
+    /**
+     * 用户取消订单
+     *
+     * @param orderNo 订单号
+     */
+    @Override
+    public void cancelOrder(String orderNo) throws IOException {
+        //调用微信支付的关单接口
+        this.closeOrder(orderNo);
+        //更新商户端的订单状态
+        orderInfoService.updateStatusByOrderNo(orderNo, OrderStatus.CANCEL);// CANCEL("用户已取消")
+    }
+
+    private void closeOrder(String orderNo) throws IOException {
+        log.info("关单接口的调用 - 订单号 - " + orderNo);
+        String httpPostUrl = String.format("https://api.mch.weixin.qq.com/v3/pay/transactions/out-trade-no/%s/close", orderNo);
+        log.info("请求地址-" + httpPostUrl);
+        //TODO 创建HttpPost对象
+        HttpPost httpPost = new HttpPost(httpPostUrl);
+
+        //TODO 请求body参数(这个地方封装成一个对象再转JSON也是没问题的)
+        Map<String,String> paramsMap = new HashMap<>();
+        paramsMap.put("mchid", wxPayConfig.getMchId());
+        paramsMap.put("out_trade_no", orderNo);
+
+        //TODO 将请求参数设置到请求对象中
+        StringEntity entity = new StringEntity(JSONObject.toJSONString(paramsMap), "utf-8");
+        //JSON类型的请求数据
+        entity.setContentType("application/json");
+        //说明请求的请求体
+        httpPost.setEntity(entity);
+        //设置请求头Accept，意思是希望接收的请求数据也是JSON
+        httpPost.setHeader("Accept", "application/json");
+
+        //TODO 完成签名并执行请求
+        CloseableHttpResponse response = httpClient.execute(httpPost);
+
+        try {
+            int statusCode = response.getStatusLine().getStatusCode();
+            if (statusCode == 200) {//处理成功
+                log.info("200 - success,return body = " + EntityUtils.toString(response.getEntity()));//{"code_url":"weixin://wxpay/bizpayurl?pr=IcXgoEAzz"}
+            } else if (statusCode == 204) {//处理成功，但是没有返回值
+                log.info("204 - success");
+            } else {
+                log.info("Native取消订单失败 响应码：" + statusCode + ",响应体 = " + EntityUtils.toString(response.getEntity()));
+                throw new IOException("request failed");
+            }
+        } finally {
+            //关闭
+            response.close();
+        }
+        //因为没有响应数据，所以不需要处理响应数据
+    }
+
+
 }

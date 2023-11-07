@@ -75,7 +75,7 @@ public class WxPayController {
         log.info("通知验签成功");
         //TODO 处理订单
         // bodyJson是微信平台给我们的参数
-         wxPayService.processOrder(bodyJson);
+        wxPayService.processOrder(bodyJson);
 
 
         //TODO 向微信支付平台应答
@@ -90,5 +90,17 @@ public class WxPayController {
         return null;
     }
 
+    /**
+     * 用户取消订单
+     * @param orderNo 要取消的订单的订单号
+     * @return
+     */
+    @PostMapping("/cancel/{orderNo}")
+    public R cancel(@PathVariable String orderNo) throws IOException {
+           log.info("取消订单");
+           wxPayService.cancelOrder(orderNo);
+
+           return R.ok();
+    }
 
 }
