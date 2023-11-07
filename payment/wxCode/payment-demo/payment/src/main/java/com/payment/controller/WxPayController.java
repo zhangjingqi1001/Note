@@ -92,15 +92,27 @@ public class WxPayController {
 
     /**
      * 用户取消订单
+     *
      * @param orderNo 要取消的订单的订单号
      * @return
      */
     @PostMapping("/cancel/{orderNo}")
     public R cancel(@PathVariable String orderNo) throws IOException {
-           log.info("取消订单");
-           wxPayService.cancelOrder(orderNo);
+        log.info("取消订单");
+        wxPayService.cancelOrder(orderNo);
 
-           return R.ok();
+        return R.ok();
+    }
+
+
+    /**
+     * 测试微信查单功能
+     */
+    @GetMapping("/query/{orderNo}")
+    public R queryOrder(@PathVariable String orderNo) throws IOException {
+        log.info("查询订单");
+        String result = wxPayService.queryOrder(orderNo);
+        return R.ok().setMessage("查询成功").data("result",result);
     }
 
 }

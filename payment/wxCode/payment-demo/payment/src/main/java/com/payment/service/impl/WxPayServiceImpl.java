@@ -6,6 +6,7 @@ import com.payment.config.WxPayConfig;
 import com.payment.entity.OrderInfo;
 import com.payment.enums.OrderStatus;
 import com.payment.enums.wxpay.WxNotifyType;
+import com.payment.enums.wxpay.WxTradeState;
 import com.payment.service.OrderInfoService;
 import com.payment.service.PaymentInfoService;
 import com.payment.service.WxPayService;
@@ -13,6 +14,7 @@ import com.payment.util.OrderNoUtils;
 import com.wechat.pay.contrib.apache.httpclient.util.AesUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.http.client.methods.CloseableHttpResponse;
+import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.CloseableHttpClient;
@@ -212,6 +214,7 @@ public class WxPayServiceImpl implements WxPayService {
         orderInfoService.updateStatusByOrderNo(orderNo, OrderStatus.CANCEL);// CANCEL("用户已取消")
     }
 
+
     private void closeOrder(String orderNo) throws IOException {
         log.info("关单接口的调用 - 订单号 - " + orderNo);
         String httpPostUrl = String.format("https://api.mch.weixin.qq.com/v3/pay/transactions/out-trade-no/%s/close", orderNo);
@@ -220,9 +223,9 @@ public class WxPayServiceImpl implements WxPayService {
         HttpPost httpPost = new HttpPost(httpPostUrl);
 
         //TODO 请求body参数(这个地方封装成一个对象再转JSON也是没问题的)
-        Map<String,String> paramsMap = new HashMap<>();
+        Map<String, String> paramsMap = new HashMap<>();
         paramsMap.put("mchid", wxPayConfig.getMchId());
-        paramsMap.put("out_trade_no", orderNo);
+//        paramsMap.put("out_trade_no", orderNo);
 
         //TODO 将请求参数设置到请求对象中
         StringEntity entity = new StringEntity(JSONObject.toJSONString(paramsMap), "utf-8");
@@ -253,5 +256,81 @@ public class WxPayServiceImpl implements WxPayService {
         //因为没有响应数据，所以不需要处理响应数据
     }
 
+    /**
+     * 根据商户订单号向微信支付平台发送请求查询订单
+     */
+    @Override
+    public String queryOrder(String orderNo) throws IOException {
+        //拼接url
+        String httpGetUrl = String.format("https://api.mch.weixin.qq.com/v3/pay/transactions/out-trade-no/%s", orderNo);
+        //拼接参数
+        String httpGetUrlParam = httpGetUrl.concat("?mchid=").concat(wxPayConfig.getMchId());
+        log.info("请求地址-" + httpGetUrlParam);
 
+        //TODO 创建HttpGet对象
+        HttpGet httpGet = new HttpGet(httpGetUrlParam);
+        httpGet.setHeader("Accept", "application/json");
+
+        //TODO 完成签名并执行请求
+        CloseableHttpResponse response = httpClient.execute(httpGet);
+
+        try {
+            int statusCode = response.getStatusLine().getStatusCode();
+            if (statusCode == 200) {//处理成功
+                log.info("success,return body = " + EntityUtils.toString(response.getEntity()));//{"amount":{"currency":"CNY","payer_currency":"CNY","payer_total":1,"total":1},"appid":"wx74862e0dfcf69954","attach":"","bank_type":"OTHERS","mchid":"1558950191","out_trade_no":"ORDER_20231106165639372","payer":{"openid":"oHwsHuOAS1JWiRAnLKwq5qTg4UkQ"},"promotion_detail":[],"success_time":"2023-11-06T16:56:51+08:00","trade_state":"SUCCESS","trade_state_desc":"支付成功","trade_type":"NATIVE","transaction_id":"4200002050202311069075905809"}
+            } else if (statusCode == 204) {
+                log.info("success");
+            } else {
+                log.info("Native根据商户号查询订单失败 响应码：" + statusCode + ",响应体 = " + EntityUtils.toString(response.getEntity()));
+                throw new IOException("request failed");
+            }
+        } finally {
+            //关闭
+            response.close();
+//            httpClient.close();
+        }
+
+        //将相应结果转换成JSON
+        JSONObject responseJson = JSONObject.parseObject(EntityUtils.toString(response.getEntity()));
+
+
+        return responseJson.toString();
+    }
+
+    /**
+     * 根据订单号查询微信支付查单接口，核实订单状态
+     * 如果订单已支付，则更新商户端订单状态为已支付
+     * 如果订单未支付，则调用关单接口关闭订单，并封信商户端订单状态
+     *
+     * @param orderNo 商户订单号
+     */
+    @Override
+    public void checkOrderStatus(String orderNo) throws IOException {
+        log.info("根据订单号查询微信支付查单接口，核实订单状态 - " + orderNo);
+
+        //向微信平台发起查单接口
+        String result = this.queryOrder(orderNo);
+        JSONObject resultJSON = JSONObject.parseObject(result);
+
+        //获取微信支付端的订单状态
+        String tradeState = resultJSON.getString("trade_state");
+        log.info("订单状态 - " + tradeState);
+
+        //判断订单状态
+        if (WxTradeState.SUCCESS.getType().equals(tradeState)) {
+            log.info("核实订单已支付 - " + orderNo);
+            //更新本地订单状态
+            orderInfoService.updateStatusByOrderNo(orderNo, OrderStatus.SUCCESS);
+            //记录支付日志
+            paymentInfoService.createPaymentInfo(result);
+        } else if (WxTradeState.NOTPAY.getType().equals(tradeState)) {
+            log.info("核实订单未支付 - " + orderNo);
+            //调用微信关单接口
+            this.closeOrder(orderNo);
+            //更新本地订单状态,超时已关闭
+            orderInfoService.updateStatusByOrderNo(orderNo, OrderStatus.CLOSED);
+        }
+
+
+    }
 }
