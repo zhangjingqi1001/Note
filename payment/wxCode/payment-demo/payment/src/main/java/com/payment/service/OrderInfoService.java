@@ -19,4 +19,6 @@ public interface OrderInfoService extends IService<OrderInfo> {
     void updateStatusByOrderNo(String outTradeNo, OrderStatus orderStatus);
 
     List<OrderInfo> getNoPayOrderByDuration(int minutes);
+
+    OrderInfo getOrderByOrderNo(String orderNo);
 }

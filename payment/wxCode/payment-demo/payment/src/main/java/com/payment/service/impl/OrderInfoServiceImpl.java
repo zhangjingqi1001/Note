@@ -137,4 +137,39 @@ public class OrderInfoServiceImpl extends ServiceImpl<OrderInfoMapper, OrderInfo
 
         return baseMapper.selectList(queryWrapper);
     }
+    /**
+     * 根据订单号获取订单
+     *
+     * @param orderNo
+     * @return
+     */
+    @Override
+    public OrderInfo getOrderByOrderNo(String orderNo) {
+
+        QueryWrapper<OrderInfo> queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq("order_no", orderNo);
+        OrderInfo orderInfo = baseMapper.selectOne(queryWrapper);
+
+        return orderInfo;
+    }
+
+
+    /**
+     * 根据商品id查询未支付订单
+     * 防止重复创建订单对象
+     *
+     * @param productId
+     * @return
+     */
+    private OrderInfo getNoPayOrderByProductId(Long productId, String paymentType) {
+
+        QueryWrapper<OrderInfo> queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq("product_id", productId);
+        queryWrapper.eq("order_status", OrderStatus.NOTPAY.getType());
+        queryWrapper.eq("payment_type", paymentType);
+//        queryWrapper.eq("user_id", userId);
+        OrderInfo orderInfo = baseMapper.selectOne(queryWrapper);
+        return orderInfo;
+    }
+
 }
