@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF8" />
+    <title>初始vue</title>
+
+    <!-- 引入Vue -->
+    <script type="text/javascript" src="../js/vue.js"></script>
+
+</head>
+
+<body>
+    <!--准备好一个容器-->
+    <div id="root">
+        <h2>学校名称：{{name}}</h2>
+        <h2>学校地址：{{address}}</h2>
+        <hr />
+        <h2>学生姓名：{{student.name}}</h2>
+        <h2>学生年龄：真实{{student.age.rAge}}</h2>
+        <h2>学生年龄：对外{{student.age.sAge}}</h2>
+
+        <ul>
+            <li v-for=" (f,index) in student.friends" ::key="index">
+                {{f.name}} ---{{f.age}}
+            </li>
+        </ul>
+    </div>
+
+
+
+    <script type="text/javascript">
+        //关闭开发环境时的生产提示
+        Vue.config.productionTip = false
+
+        new Vue({
+            el: "#root",
+            data: {
+                name: "尚硅谷",
+                address: "北京",
+                student: {
+                    name: 'tom',
+                    age: {
+                        rAge: 40,
+                        sAge: 29
+                    },
+                    friends: [
+                        { name: 'jerry', age: 35 },
+                        { name: 'Tony', age: 36 }
+                    ]
+                }
+
+            }
+        })
+    </script>
+
+</body>
+
+</html>

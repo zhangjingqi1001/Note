@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> 初识vue</title>
+        <!--引入vue    引入之后，全局就多了一个vue这个构造函数-->
+        <script type="text/javascript" src="../js/vue.js"></script> 
+    </head>
+    <body>
+       
+      
+        <div id="root">
+           <h2>当前的n值是：<span v-text="n"></span></h2>
+           <h2>放大10倍后的n值是：<span v-big="n"></span></h2>
+           <button @click="n++">点我n+1</button>
+        </div>
+ 
+ 
+    </body>
+    <script type="text/javascript">
+        //阻止vue在启动时生成生产提示
+        Vue.config.productionTip=false
+        
+        new Vue({
+            el:'#root',
+            data:{
+               n:1,
+            },
+            directives:{
+                // big函数何时会被调用？
+                // 指令与元素成功绑定时（一开始）
+                //指令所在的模板被重新解析时（data里面的内容，就算不是修改的n，也会调用 
+ 
+                // 自定义指令的时候，不用写v-
+                // 第一个参数是DOM元素（我们可以随意更改了）
+                // 第二个参数是我们绑定的数据，比如说我们这个时候绑定的就是n
+                big(element,binding){
+                    // binding.value 就是指令绑定的n的数值
+                  element.innerText =binding.value*10
+                  console.log(element,binding.value)
+                }
+ 
+            }
+ 
+        })
+ 
+    </script>   
+</html>

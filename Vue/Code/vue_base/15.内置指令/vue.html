@@ -5,21 +5,16 @@
 <head>
     <meta charset="UTF8" />
     <title>初始vue</title>
-
-    <!-- 引入Vue -->
-    <script type="text/javascript" src="../js/vue.js"></script>
-
 </head>
 
 <body>
     <!--准备好一个容器-->
     <div id="root">
-
+        <h2>{{name}}</h2>
     </div>
-
-
-
+    <script type="text/javascript" src="http://localhost:8080/resource/5s/vue.js"></script>
 </body>
+
 <script type="text/javascript">
     //关闭开发环境时的生产提示
     Vue.config.productionTip = false
@@ -27,9 +22,10 @@
     new Vue({
         el: "#root",
         data: {
-
+            name: "你好"
         }
     })
 </script>
+
 
 </html>

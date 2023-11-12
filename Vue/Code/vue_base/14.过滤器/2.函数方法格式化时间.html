@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title> 初识vue</title>
+    <!--引入vue    引入之后，全局就多了一个vue这个构造函数-->
+    <script type="text/javascript" src="../js/vue.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/dayjs/1.11.9/dayjs.min.js"></script>
+</head>
+
+<body>
+    <div id="root">
+        <h2>显示格式化后的时间</h2>
+
+        <!-- methods实现 -->
+        <h3>现在是:{{getFmtTime()}}</h3>
+    </div>
+
+    <script type="text/javascript">
+        //阻止vue在启动时生成生产提示
+        Vue.config.productionTip = false
+
+        new Vue({
+            el: '#root',
+            data: {
+                time: 1621561377603
+            },
+
+            methods: {
+                getFmtTime() {
+                    return dayjs(this.time).format('YYYY-MM-DD HH:mm:ss')
+                }
+            },
+        })
+
+    </script>
+</body>
+
+</html>

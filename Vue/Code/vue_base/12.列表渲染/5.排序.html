@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> 初识vue</title>
+        <!--引入vue    引入之后，全局就多了一个vue这个构造函数-->
+        <script type="text/javascript" src="../js/vue.js"></script> 
+    </head>
+    <body>
+        <div id="root">
+            <h2>人员列表</h2>
+            <!-- 双向绑定一下 -->
+            <input type="text" placeholder="请输入名字"  v-model="keyWords">
+            <button @click="sortType=2" >年龄升序</button>
+            <button @click="sortType=1" >年龄降序</button>
+            <button @click="sortType=0" >原顺序</button>
+ 
+            <ul>
+                <li v-for="(p,index) in  filPersons" :key="p.id" >
+                    {{p.name}}-{{p.age}}-{{p.sex}}
+                </li>
+            </ul>
+ 
+        </div>
+ 
+        <script type="text/javascript">
+            //阻止vue在启动时生成生产提示
+            Vue.config.productionTip=false
+            
+          const vm=  new Vue({
+                el:'#root',
+                data:{
+                  keyWords:'',
+                //   0原顺序 1降序 2升序
+                  sortType:0,  
+                  persons:[
+                    {id:'001',name:'马冬梅',age:19,sex:'女'},
+                    {id:'002',name:'周冬雨',age:20,sex:'女'},
+                    {id:'003',name:'周杰伦',age:21,sex:'男'},
+                    {id:'004',name:'温兆伦',age:22,sex:'男'}
+                  ],
+                 
+                },
+ 
+                computed:{
+                    // 这个形式是缩写，当getter函数使用
+                    // 初次读取的时候会调用一下，当依赖的数据发生变化时也会调用一下
+                    filPersons(){
+                        // 我们把这个地方的return取消，不着急return
+                       const arr= this.persons.filter((p)=>{
+                            // 这个return是filter规定的
+                            
+                            return p.name.indexOf(this.keyWords) !==-1
+                        })
+ 
+                        if(this.sortType){
+                            // 运行到这里说明不是0
+                            arr.sort( (p1,p2)=>{
+                                // 三目运算  sortType等于1 年龄降序 sortType等于2 年龄升序
+                                return this.sortType === 1 ? p2.age-p1.age : p1.age-p2.age
+                            })
+                        }
+                        //当 this.sortType===0时，会直接跳过if来到这里（原始数据不会改变，所以就是原顺序
+                        return arr
+                    }
+                }
+            })
+ 
+        </script>   
+    </body>
+</html>
