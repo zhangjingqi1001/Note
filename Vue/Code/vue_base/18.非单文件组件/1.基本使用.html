@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF8" />
+    <title>初始vue</title>
+
+    <!-- 引入Vue -->
+    <script type="text/javascript" src="../js/vue.js"></script>
+
+</head>
+
+<body>
+    <div id="root">
+        <!--第三步：编写组件标签  -->
+        <school></school>
+        <br><br>
+        <student></student>
+    </div>
+</body>
+<script type="text/javascript">
+    //关闭开发环境时的生产提示
+    Vue.config.productionTip = false
+
+
+    //创建school组件
+    //Vue.extent扩展，创建组件的API
+    const school = Vue.extend({
+        // 用div包裹，但是这个div最终不会出现在页面上
+        template: `<div>
+                   <h2>学校名称：{{schoolName}}</h2>
+                   <h2>学校地址：{{address}}</h2>
+                   <button @click="showName">点我提示学校名称</button>
+                     </div> `
+        ,
+        //el:'#root',   如果存在此语句的话，也会报错
+
+        // 如果data写成这种形式会报错，只能写成函数的形式
+        // data:{
+        //   schoolName:'qiludongyedaxue',
+        //   address:'济南',
+        // },
+
+        data() {
+
+            return {
+                schoolName: 'qiludongyedaxue',
+                address: '济南',
+            }
+        },
+        methods: {
+            showName() {
+                alert(this.schoolName)
+            }
+        },
+    })
+
+
+    // 创建student组件
+    const student = Vue.extend({
+        name:'zhangjignqi',
+        template: `<div>
+                         <h2>学生姓名：{{studentName}}</h2>
+                         <h2>学生年龄：{{age}}</h2>
+                      </div> `
+        ,
+        data() {
+            return {
+                studentName: '张三',
+                age: 18
+            }
+        }
+    })
+
+
+
+
+
+    new Vue({
+        el: "#root",
+        data: {
+
+            // schoolName:'qilugongyedaxue',
+            // address:'济南',
+            // studentName:'zhangjingqi',
+            // age:18
+            // school: {
+            //     name:'qilugongyedaxue',
+            //     address:'j济南'
+            // },
+            // student:{
+            //     name:'zhangjingqi',
+            //     age:'22'
+            // }
+        },
+        components: {
+            // 这个地方是key：value的形式,key是组件的名字 value就是我们上面定义的const，我们上面创建的const不是组件名，是我们中转的变量，下面的key才是组件名
+            // school:school,
+            // student:student
+            // 下面是简写
+            school,
+            student
+        }
+    })
+</script>
+
+</html>

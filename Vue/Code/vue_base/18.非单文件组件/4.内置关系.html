@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF8" />
+    <title>初始vue</title>
+
+    <!-- 引入Vue -->
+    <script type="text/javascript" src="../js/vue.js"></script>
+
+</head>
+
+<body>
+    <!--准备好一个容器-->
+    <div id="root">
+
+    </div>
+
+
+
+</body>
+<script type="text/javascript">
+    //关闭开发环境时的生产提示
+    Vue.config.productionTip = false
+
+
+    //定义组件VueComponent
+    const school = Vue.extend({
+        // 用div包裹，但是这个div最终不会出现在页面上
+        // 嵌套了student组件
+        template: `<div>
+                   <h2>学校名称：{{schoolName}}</h2>
+                   <h2>学校地址：{{address}}</h2>
+                     </div> `
+        ,
+        data() {
+
+            return {
+                schoolName: 'qilugongyedaxue',
+                address: '济南',
+            }
+        }
+    })
+
+    console.log(school.prototype.__proto__ === Vue.prototype)//true
+
+    new Vue({
+        el: "#root",
+        data: {
+            msg: '你好'
+        }
+    })
+</script>
+
+</html>

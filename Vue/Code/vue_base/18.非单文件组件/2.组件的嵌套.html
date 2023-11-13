@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> 初识vue</title>
+        <!--引入vue    引入之后，全局就多了一个vue这个构造函数-->
+        <script type="text/javascript" src="../js/vue.js"></script> 
+    </head>
+    <body>
+        <div id="root">
+             <app></app>
+        </div>
+ 
+    </body>
+    
+    <script type="text/javascript">
+        //阻止vue在启动时生成生产提示
+        Vue.config.productionTip=false
+ 
+        // 创建student组件
+        const student = Vue.extend({
+            template:`<div>
+                         <h2>学生姓名：{{studentName}}</h2>
+                         <h2>学生年龄：{{age}}</h2>
+                      </div> `
+            ,
+            data(){
+              return{
+                studentName:'张三',
+                age:18
+              }
+            }
+        })
+ 
+        // 创建school组件
+        const school = Vue.extend({
+            // 用div包裹，但是这个div最终不会出现在页面上
+            // 嵌套了student组件
+            template:`<div>
+                   <h2>学校名称：{{schoolName}}</h2>
+                   <h2>学校地址：{{address}}</h2>
+                   <student></student>
+                     </div> `
+            ,
+            data(){
+                
+                return{
+                 schoolName:'qilugongyedaxue',
+                 address:'济南',
+                }
+            },
+            components:{
+                // 注意！这里嵌套的时候有一个先后关系，一定要先创建student组件
+                student
+            }
+        })
+ 
+        // 创建hello组件
+        const hello =Vue.extend({
+            template:`<h1>{{msg}}</h1>`,
+            data(){
+                return {
+                    msg:'欢迎来到qilugongyedaxue学习'
+                }
+            }
+        })
+ 
+        // 创建app组件  其他的组件都在这个地方
+        // 一人之下，万人之上（在vm下）
+        const app = Vue.extend({
+            template:  `
+                        <div>
+                             <hello></hello>
+                             <school></school>
+                         </div>    `
+            ,
+            components:{
+                //school组件中嵌套了student组件
+                school,
+                hello,
+            }
+        })
+ 
+ 
+        new Vue({
+            el:'#root',
+            //注册组件
+            components:{
+               app
+            }
+ 
+        })
+ 
+    </script>   
+</html>

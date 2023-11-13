@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF8" />
+    <title>初始vue</title>
+
+    <!-- 引入Vue -->
+    <script type="text/javascript" src="../js/vue.js"></script>
+
+</head>
+
+<body>
+    <!--准备好一个容器-->
+    <div id="root">
+
+    </div>
+
+
+
+</body>
+<script type="text/javascript">
+    //关闭开发环境时的生产提示
+    Vue.config.productionTip = false
+
+    //定义一个构造函数
+    function Demo() {
+        this.a = 1
+        this.b = 2
+    }
+
+    // 创建一个Demo实例对象
+    const d = new Demo()
+
+    //Demo.prototype显示原型属性
+    // 我们通过Demo.prototype已经拿到原型对象了
+    console.log(Demo.prototype)
+
+    Demo.prototype.x = 99
+
+    //此构造函数所缔造出来的实例对象有一个__proto__属性（前后两个下划线）
+    //隐式原型属性
+    console.log(d.__proto__)
+
+    console.log(d)
+    console.log(Demo)
+
+
+    console.log(d.x)
+    //两种方式都可以 
+    console.log(d.__proto__.x)
+
+    new Vue({
+        el: "#root",
+        data: {
+
+        }
+    })
+</script>
+
+</html>

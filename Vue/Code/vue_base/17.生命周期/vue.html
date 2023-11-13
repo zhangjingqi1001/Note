@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> 初识vue</title>
+        <!--引入vue    引入之后，全局就多了一个vue这个构造函数-->
+        <script type="text/javascript" src="../js/vue.js"></script> 
+    </head>
+    <body>
+        <div id="root">
+            <!-- opacity与data中opacity重名，我们就可以直接这么写（ opacity也是样式里面的一个属性 -->
+           <h2 :style="{opacity}">欢迎</h2>
+           <button @click="stop">停止变换</button>
+        </div>
+ 
+    </body>
+    
+    <script type="text/javascript">
+        //阻止vue在启动时生成生产提示
+        Vue.config.productionTip=false
+        
+        const vm= new Vue({
+            el:'#root',
+            data:{
+                // 从1到0，透明度逐渐升高,设置初始值为不透明
+              opacity:1,
+            },
+            methods: {
+                stop(){
+                //   clearInterval(this.timer)  这样太温柔，我们还可以在页面root中修改值来更改透明度
+ 
+                // 我们如果光单纯的调用这个，定时器还是会不断的启动
+                // 为了让定时器不再启动，我们再调用beforeDestroy钩子函数，关闭定时器
+                // 这个地方是将vm自杀
+                this.$destroy()
+ 
+                }
+            },
+            // Vue完成模板的解析并把初始的真实DOM元素放入到页面后（挂载完毕后）调用mounted
+            // 这个地方只会调用一次
+            mounted(){
+              // 开启一个定时器
+            // 这个地方为什么写this.id?
+            // 因为我们要在stop关闭这个定时器，这里的this是vm，我们往vm中存了一个timer，这样我们就能在stop函数中调用了
+            // 这里命名的话，尽量避免选择id、key这种特殊的属性
+             this.timer = setInterval(()=>{
+ 
+              this.opacity -=0.01
+ 
+              if( this.opacity<=0)
+                  vm.opacity=1
+ 
+               },16)
+            },
+ 
+            // 在销毁vm之前调用
+            // 为什么不把定时器销毁写在stop函数中？
+            // 刚刚我们再stop函数中是相当于将vm自杀，点击按钮后销毁
+            // 但是在以后的开发中，基本不会出现这种情况，更不会调用类似stop函数
+            // 所以我们使用beforeDestroy钩子函数，不论是自杀还是他杀，都会在杀之前调用
+            beforeDestroy() {
+                clearInterval(this.timer) 
+            },
+        
+        })
+ 
+ 
+ 
+    </script>   
+</html>
