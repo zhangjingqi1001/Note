@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="683e15b0-31af-409b-8e33-b5ef84b63a87" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../Vue/Code/vue_test/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Vue/Code/vue_test/babel.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Vue/Code/vue_test/jsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Vue/Code/vue_test/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Vue/Code/vue_test/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Vue/Code/vue_test/public/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Vue/Code/vue_test/public/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Vue/Code/vue_test/src/App.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Vue/Code/vue_test/src/assets/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Vue/Code/vue_test/src/components/School.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Vue/Code/vue_test/src/components/Student.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Vue/Code/vue_test/src/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Vue/Code/vue_test/vue.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Vue/Node/12.Vue脚手架.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../小知识点/12.Springboot借助Hutool工具类发送WebService请求.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../1.网络编程.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/api/APITest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/socket/SocketTCP01Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/socket/SocketTCP01Server.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/socket/SocketTCP02Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/socket/SocketTCP02Server.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/socket/SocketTCP03Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/socket/SocketTCP03Server.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/udp/UDPReceiverA.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/udp/UDPSenderB.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/upload/StreamUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/upload/TCPFileUploadClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/upload/TCPFileUploadServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/qie2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/zhangjingqi/api/APITest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/zhangjingqi/socket/SocketTCP01Client.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/zhangjingqi/socket/SocketTCP01Server.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/zhangjingqi/socket/SocketTCP02Client.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/zhangjingqi/socket/SocketTCP02Server.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/zhangjingqi/socket/SocketTCP03Client.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/zhangjingqi/socket/SocketTCP03Server.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/zhangjingqi/upload/StreamUtils.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/zhangjingqi/upload/TCPFileUploadClient.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/zhangjingqi/upload/TCPFileUploadServer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../问题记录/1.XML转JSON时数组属性转换成Java对象属性的解决方案.md" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$PROJECT_DIR$/../../../../../Soft/Maven/apache-maven-3.6.1-bin/apache-maven-3.6.1" />
+        <option name="userSettingsFile" value="E:\Soft\Maven\apache-maven-3.6.1-bin\apache-maven-3.6.1\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="jdkForImporter" value="1.8" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2YZnj4RnWOqDyu4GO5qMq5JWbLY" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../Inspur/test" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.importing" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.zhangjingqi.socket" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.UDPSenderB">
+    <configuration name="SocketTCP03Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.zhangjingqi.socket.SocketTCP03Client" />
+      <module name="chapter21" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zhangjingqi.socket.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TCPFileUploadClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.zhangjingqi.upload.TCPFileUploadClient" />
+      <module name="chapter21" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zhangjingqi.upload.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TCPFileUploadServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.zhangjingqi.upload.TCPFileUploadServer" />
+      <module name="chapter21" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zhangjingqi.upload.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UDPReceiverA" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.zhangjingqi.udp.UDPReceiverA" />
+      <module name="chapter21" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zhangjingqi.udp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UDPSenderB" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.zhangjingqi.udp.UDPSenderB" />
+      <module name="chapter21" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zhangjingqi.udp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.UDPSenderB" />
+        <item itemvalue="Application.UDPReceiverA" />
+        <item itemvalue="Application.TCPFileUploadClient" />
+        <item itemvalue="Application.TCPFileUploadServer" />
+        <item itemvalue="Application.SocketTCP03Client" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="683e15b0-31af-409b-8e33-b5ef84b63a87" name="Changes" comment="" />
+      <created>1700742105756</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1700742105756</updated>
+      <workItem from="1700742107452" duration="8436000" />
+      <workItem from="1700807896300" duration="5942000" />
+      <workItem from="1701088784633" duration="596000" />
+      <workItem from="1701180452169" duration="10654000" />
+      <workItem from="1701263561688" duration="4628000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

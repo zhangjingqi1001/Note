@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!--针对IE浏览器的一个特殊配置，让IE浏览器以最高的渲染级别渲染页面-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--开启移动端的理想视口-->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--图标。BASE_URL指的是public所在的位置,所以直接在BASE_URL文件夹里找图标即可-->
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+
+    <title>
+        <!--配置网页标题-->
+        <!--下面这一串代码的意思就是去package.json文件夹中找到"name": "vue_test",并将vue_test作为网站标题-->
+        <%= htmlWebpackPlugin.options.title %>
+    </title>
+</head>
+
+<body>
+
+    <!--容器 -->
+    <div id="app">
+        <!-- 容器里面的模板 -->
+        <App></App>
+    </div>
+
+</body>
+
+</html>
