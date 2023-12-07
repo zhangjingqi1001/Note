@@ -5,47 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="683e15b0-31af-409b-8e33-b5ef84b63a87" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../2.网络编程-多用户通信系统(推消息、私聊、发文件).md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../QQSClient/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../QQSClient/src/main/java/com/zhangjingqi/common/Message.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../QQSClient/src/main/java/com/zhangjingqi/common/MessageType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../QQSClient/src/main/java/com/zhangjingqi/common/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../QQSClient/src/main/java/com/zhangjingqi/service/ClientConnectServerThread.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../QQSClient/src/main/java/com/zhangjingqi/service/ManagerClientConnectServerThread.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../QQSClient/src/main/java/com/zhangjingqi/service/UserClientService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../QQSClient/src/main/java/com/zhangjingqi/utils/Utility.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../QQSClient/src/main/java/com/zhangjingqi/view/QQView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../QQSClient/target/classes/com/zhangjingqi/common/CodeBiEnum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../QQSClient/target/classes/com/zhangjingqi/common/Message.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../QQSClient/target/classes/com/zhangjingqi/common/MessageType.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../QQSClient/target/classes/com/zhangjingqi/common/User.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../QQSClient/target/classes/com/zhangjingqi/service/ClientConnectServerThread.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../QQSClient/target/classes/com/zhangjingqi/service/ManagerClientConnectServerThread.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../QQSClient/target/classes/com/zhangjingqi/service/UserClientService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../QQSClient/target/classes/com/zhangjingqi/utils/Utility.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../QQSClient/target/classes/com/zhangjingqi/view/QQView.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../QQServer/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../QQServer/src/main/java/com/zhangjingqi/common/Message.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../QQServer/src/main/java/com/zhangjingqi/common/MessageType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../QQServer/src/main/java/com/zhangjingqi/common/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../QQServer/src/main/java/com/zhangjingqi/qqframe/QQFrame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../QQServer/src/main/java/com/zhangjingqi/qqserver/service/ManagerServerConnectServerThread.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../QQServer/src/main/java/com/zhangjingqi/qqserver/service/QQServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../QQServer/src/main/java/com/zhangjingqi/qqserver/service/ServerConnectClientThread.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../QQServer/src/main/java/com/zhangjingqi/qqserver/service/test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../QQServer/target/classes/com/zhangjingqi/common/Message.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../QQServer/target/classes/com/zhangjingqi/common/MessageType.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../QQServer/target/classes/com/zhangjingqi/common/User.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../QQServer/target/classes/com/zhangjingqi/qqframe/QQFrame.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../QQServer/target/classes/com/zhangjingqi/qqserver/service/ManagerServerConnectServerThread.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../QQServer/target/classes/com/zhangjingqi/qqserver/service/QQServer.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../QQServer/target/classes/com/zhangjingqi/qqserver/service/ServerConnectClientThread.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../QQServer/target/classes/com/zhangjingqi/qqserver/service/test.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../1.网络编程.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../1.网络编程.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../2.网络编程-多用户通信系统(推消息、私聊、发文件).md" beforeDir="false" afterPath="$PROJECT_DIR$/../../2.网络编程-多用户通信系统(推消息、私聊、发文件).md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../QQSClient/src/main/java/com/zhangjingqi/common/MessageType.java" beforeDir="false" afterPath="$PROJECT_DIR$/../QQSClient/src/main/java/com/zhangjingqi/common/MessageType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../QQSClient/src/main/java/com/zhangjingqi/service/ClientConnectServerThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/../QQSClient/src/main/java/com/zhangjingqi/service/ClientConnectServerThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../QQSClient/src/main/java/com/zhangjingqi/service/UserClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../QQSClient/src/main/java/com/zhangjingqi/service/UserClientService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../QQSClient/src/main/java/com/zhangjingqi/view/QQView.java" beforeDir="false" afterPath="$PROJECT_DIR$/../QQSClient/src/main/java/com/zhangjingqi/view/QQView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../QQServer/src/main/java/com/zhangjingqi/common/MessageType.java" beforeDir="false" afterPath="$PROJECT_DIR$/../QQServer/src/main/java/com/zhangjingqi/common/MessageType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../QQServer/src/main/java/com/zhangjingqi/qqserver/service/ManagerServerConnectServerThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/../QQServer/src/main/java/com/zhangjingqi/qqserver/service/ManagerServerConnectServerThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../QQServer/src/main/java/com/zhangjingqi/qqserver/service/ServerConnectClientThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/../QQServer/src/main/java/com/zhangjingqi/qqserver/service/ServerConnectClientThread.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -121,7 +88,7 @@
       <recent name="com.zhangjingqi.socket" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.QQView">
+  <component name="RunManager" selected="Application.QQView2">
     <configuration name="QQFrame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.zhangjingqi.qqframe.QQFrame" />
       <module name="QQServer" />
@@ -161,6 +128,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="QQView2" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="com.zhangjingqi.view.QQView" />
+      <module name="QQSClient" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="UDPSenderB" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.zhangjingqi.udp.UDPSenderB" />
       <module name="chapter21" />
@@ -187,10 +163,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.QQView2" />
+      <item itemvalue="Application.QQFrame" />
+      <item itemvalue="Application.QQServer" />
+      <item itemvalue="Application.QQView" />
+      <item itemvalue="Application.test" />
+      <item itemvalue="Application.UDPSenderB" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.QQView" />
         <item itemvalue="Application.QQFrame" />
+        <item itemvalue="Application.QQView" />
         <item itemvalue="Application.QQServer" />
         <item itemvalue="Application.test" />
         <item itemvalue="Application.UDPSenderB" />
@@ -215,7 +199,9 @@
       <workItem from="1701674793349" duration="2000" />
       <workItem from="1701764858467" duration="6489000" />
       <workItem from="1701827493764" duration="17178000" />
-      <workItem from="1701875631833" duration="1057000" />
+      <workItem from="1701875631833" duration="1513000" />
+      <workItem from="1701932497414" duration="2539000" />
+      <workItem from="1701955147011" duration="9323000" />
     </task>
     <servers />
   </component>

@@ -22,7 +22,9 @@ public class UserClientService {
 
     private Socket socket = null;
 
-    //根据userId和pwd到服务器验证该用户是否合法
+    /**
+     *根据userId和pwd到服务器验证该用户是否合法
+     */
     public boolean checkUser(String userId, String pwd) {
         //临时变量b，用户是否合法的标志
         boolean b = false;
@@ -70,5 +72,48 @@ public class UserClientService {
         }
 
         return b;
+    }
+
+    /**
+     * 向服务器端请求在线用户列表
+     */
+    public void onlineFriendList(){
+        //发送一个message，并且消息的类型是MESSAGE_GET_ONLINE_FRIEND
+        Message message = new Message();
+        message.setMesType(MessageType.MESSAGE_GET_ONLINE_FRIEND.getCode());
+        message.setSender(user.getUserId());
+        //发送给服务器
+        //得到当前线程的Socket对应的ObjectOutputStream
+        //clientConnectServerThread线程一直在运行过程中，监听从服务器传输过来的消息
+        ClientConnectServerThread clientConnectServerThread = ManagerClientConnectServerThread.getClientConnectServerThread(user.getUserId());
+        try {
+
+            ObjectOutputStream oos = new ObjectOutputStream(clientConnectServerThread.getSocket().getOutputStream());
+            oos.writeObject(message);
+            oos.flush();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    /**
+     * 编写方法退出客户端，并给服务端发送一个退出系统的Message对象
+     */
+    public void logout(){
+        Message message = new Message();
+        message.setMesType(MessageType.MESSAGE_CLIENT_EXIT.getCode());
+        // 要退出这个用户
+        message.setSender(user.getUserId());
+        ClientConnectServerThread clientConnectServerThread = ManagerClientConnectServerThread.getClientConnectServerThread(user.getUserId());
+        try {
+
+            ObjectOutputStream oos = new ObjectOutputStream(clientConnectServerThread.getSocket().getOutputStream());
+            oos.writeObject(message);
+            oos.flush();
+           System.exit(0);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

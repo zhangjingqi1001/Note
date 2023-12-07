@@ -1,6 +1,7 @@
 package com.zhangjingqi.qqserver.service;
 
 import com.zhangjingqi.common.Message;
+import com.zhangjingqi.common.MessageType;
 import com.zhangjingqi.common.User;
 import jdk.jfr.DataAmount;
 import lombok.AllArgsConstructor;
@@ -10,6 +11,7 @@ import lombok.NoArgsConstructor;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.net.Socket;
 
 /**
@@ -19,7 +21,7 @@ import java.net.Socket;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class ServerConnectClientThread extends Thread{
+public class ServerConnectClientThread extends Thread {
 
     /**
      * 可以区分此socket是和哪个用户进行关联的
@@ -34,15 +36,42 @@ public class ServerConnectClientThread extends Thread{
     @Override
     public void run() {
         //不断的从socket中读数据和写数据
-        while(true){
-            System.out.println("服务端和客户端保持通信，读取数据.... userId:"+userId);
+        while (true) {
+            System.out.println("服务端和客户端保持通信，读取数据.... userId:" + userId);
             ObjectInputStream ois = null;
             try {
                 ois = new ObjectInputStream(socket.getInputStream());
                 //读取数据
                 Message message = (Message) ois.readObject();
 
-                //后面会使用Message
+                //根据Message的类型，判断客户端想要执行什么操作
+                if (MessageType.MESSAGE_GET_ONLINE_FRIEND.getCode().equals(message.getMesType())) {
+                    System.out.println("用户" + userId + "获取在线用户");
+                    //拉取在线用户（客户端要拉取在线用户列表）
+                    Socket socket = ManagerServerConnectServerThread.getClientThread(userId).getSocket();
+
+                    ObjectOutputStream oos = new ObjectOutputStream(socket.getOutputStream());
+                    //构建Message发送给服务端
+                    Message returnMessage = new Message();
+                    returnMessage.setMesType(MessageType.MESSAGE_RETTURN_ONLINE_FRIEND.getCode());
+                    returnMessage.setContent(ManagerServerConnectServerThread.getOnlineUser());
+                    //说明要发送给谁
+                    returnMessage.setGetter(message.getSender());
+                    //返回给客户端
+                    oos.writeObject(returnMessage);
+                    oos.flush();
+                } else if (MessageType.MESSAGE_CLIENT_EXIT.getCode().equals(message.getMesType())) {
+                    //说明客户端想要退出，服务端要将socket关闭并退出线程就可以了
+                    //将客户端对应的线程从集合中删除
+                    ManagerServerConnectServerThread.remove(userId);
+                    //关闭socket
+                    socket.close();
+                    System.out.println("用户"+userId+"退出系统");
+                    //退出循环
+                    return;
+                } else {
+                    System.out.println("其他类型暂时不处理");
+                }
 
             } catch (IOException | ClassNotFoundException e) {
                 e.printStackTrace();

@@ -64,6 +64,8 @@ public class QQView {
                             key = Utility.readString(1);
                             switch (key) {
                                 case "1":
+                                    //获取在线用户列表
+                                    userClientService.onlineFriendList();
                                     break;
                                 case "2":
                                     break;
@@ -73,7 +75,9 @@ public class QQView {
                                     break;
                                 case "9":
                                     loop = false;
+                                    //调用方法，给服务器发送一个退出系统的Message
                                     System.out.println("退出系统");
+                                    userClientService.logout();
                                     break;
                             }
                         }

@@ -1,6 +1,7 @@
 package com.zhangjingqi.service;
 
 import com.zhangjingqi.common.Message;
+import com.zhangjingqi.common.MessageType;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -34,6 +35,17 @@ public class ClientConnectServerThread extends Thread {
                 //这就是一个堵塞式网络编程，效率是相对比较低的
                 Message message = (Message)ois.readObject();
 
+                //判断message的类型，然后做响应的业务处理
+                if (message.getMesType().equals(MessageType.MESSAGE_RETTURN_ONLINE_FRIEND.getCode())){
+                    //获取在线用户，取出在线列表信息并显示
+                    String[] onlineUsers = message.getContent().split(" ");
+                    System.out.println("当前在线用户列表如下");
+                    for (int i=0;i<onlineUsers.length;i++){
+                        System.out.println("用户："+onlineUsers[i]);
+                    }
+                }else{
+                    System.out.println("其他类型的message，暂时不处理");
+                }
             } catch (IOException | ClassNotFoundException e) {
                 e.printStackTrace();
             }
