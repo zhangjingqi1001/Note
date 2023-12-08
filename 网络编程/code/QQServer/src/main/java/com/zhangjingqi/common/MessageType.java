@@ -37,6 +37,10 @@ public enum MessageType {
      * 客户端请求退出
      */
     MESSAGE_CLIENT_EXIT("6"),
+    /**
+     * 群发消息
+     */
+    MESSAGE_TO_ALL_EXIT("7"),
     ;
 
     private final String code;

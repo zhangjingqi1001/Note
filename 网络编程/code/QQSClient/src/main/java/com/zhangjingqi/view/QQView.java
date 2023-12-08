@@ -1,5 +1,7 @@
 package com.zhangjingqi.view;
 
+import com.sun.corba.se.impl.javax.rmi.CORBA.Util;
+import com.zhangjingqi.service.MessageClientService;
 import com.zhangjingqi.service.UserClientService;
 import com.zhangjingqi.utils.Utility;
 
@@ -21,6 +23,8 @@ public class QQView {
      * 完成用户登录验证和用户注册等功能
      */
     public UserClientService userClientService = new UserClientService();
+
+    public MessageClientService messageClientService = new MessageClientService();
 
 
     public static void main(String[] args) {
@@ -66,10 +70,22 @@ public class QQView {
                                 case "1":
                                     //获取在线用户列表
                                     userClientService.onlineFriendList();
+
                                     break;
                                 case "2":
+                                    //群发消息
+                                    System.out.print("请输入想说的话:");
+                                    String content = Utility.readString(100);
+                                    messageClientService.sendMessageToOnlineUser(userId,content);
                                     break;
                                 case "3":
+                                    //私发消息
+                                    System.out.print("请输入想聊天的在线用户号:");
+                                    //用户号最长为50
+                                    String getterId = Utility.readString(50);
+                                    System.out.print("请输入想说的话:");
+                                    String contentToAll = Utility.readString(100);
+                                    messageClientService.sendMessageToOne(contentToAll,userId,getterId);
                                     break;
                                 case "4":
                                     break;

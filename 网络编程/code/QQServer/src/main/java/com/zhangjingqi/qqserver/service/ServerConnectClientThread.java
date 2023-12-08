@@ -13,6 +13,9 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Set;
 
 /**
  * 该类对应的对象和某个客户端保持通信
@@ -66,9 +69,35 @@ public class ServerConnectClientThread extends Thread {
                     ManagerServerConnectServerThread.remove(userId);
                     //关闭socket
                     socket.close();
-                    System.out.println("用户"+userId+"退出系统");
+                    System.out.println("用户" + userId + "退出系统");
                     //退出循环
                     return;
+                } else if (MessageType.MESSAGE_COMM_MES.getCode().equals(message.getMesType())) {
+                    //转发给指定客户端，假如说客户不在线的话，可以保存到数据库，这样就可以实现离线留言
+                    Socket socket = ManagerServerConnectServerThread.getClientThread(message.getGetter()).getSocket();
+                    ObjectOutputStream oos = new ObjectOutputStream(socket.getOutputStream());
+
+                    oos.writeObject(message);
+                    oos.flush();
+
+                } else if (MessageType.MESSAGE_TO_ALL_EXIT.getCode().equals(message.getMesType())) {
+                    //群发消息
+                    //遍历线程集合取出所有线程对应的socket发送消息即可
+                    HashMap<String, ServerConnectClientThread> hm = ManagerServerConnectServerThread.getHm();
+                    Iterator<String> iterator = hm.keySet().iterator();
+                    while (iterator.hasNext()) {
+                        //取出在线人的id
+                        String onlineId = iterator.next();
+                        if (!onlineId.equals(message.getSender())) {
+                            ObjectOutputStream oos = new ObjectOutputStream(
+                                    hm.get(onlineId).getSocket().getOutputStream()
+                            );
+                            oos.writeObject(message);
+                            oos.flush();
+                        }
+
+                    }
+
                 } else {
                     System.out.println("其他类型暂时不处理");
                 }

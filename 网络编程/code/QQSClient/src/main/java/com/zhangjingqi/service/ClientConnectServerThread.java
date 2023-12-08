@@ -9,7 +9,10 @@ import lombok.NoArgsConstructor;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.net.Socket;
+import java.util.HashMap;
+import java.util.Iterator;
 
 @EqualsAndHashCode(callSuper = true)
 @Data
@@ -43,6 +46,13 @@ public class ClientConnectServerThread extends Thread {
                     for (int i=0;i<onlineUsers.length;i++){
                         System.out.println("用户："+onlineUsers[i]);
                     }
+                }else if (MessageType.MESSAGE_COMM_MES.getCode().equals(message.getMesType())) {
+                    //转发给指定客户端，假如说客户不在线的话，可以保存到数据库，这样就可以实现离线留言
+                    System.out.println("\n用户"+message.getGetter()+"收到来自用户"+message.getSender()+"的消息:"+message.getContent());
+                } else if (MessageType.MESSAGE_TO_ALL_EXIT.getCode().equals(message.getMesType())) {
+                    //群发消息
+                    System.out.println("\n用户收到来自用户"+message.getSender()+"的群发消息:"+message.getContent());
+
                 }else{
                     System.out.println("其他类型的message，暂时不处理");
                 }

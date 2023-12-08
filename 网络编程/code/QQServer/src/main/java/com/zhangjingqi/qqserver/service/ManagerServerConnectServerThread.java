@@ -12,6 +12,11 @@ import java.util.Iterator;
 public class ManagerServerConnectServerThread {
     private static HashMap<String, ServerConnectClientThread> hm = new HashMap<>();
 
+
+    public static HashMap<String, ServerConnectClientThread> getHm() {
+        return hm;
+    }
+
     /**
      * 添加线程对象到hm集合
      */
@@ -46,4 +51,5 @@ public class ManagerServerConnectServerThread {
     public static void remove(String userId) {
        hm.remove(userId);
     }
+
 }

@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="683e15b0-31af-409b-8e33-b5ef84b63a87" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../2.网络编程-多用户通信系统(推消息、私聊、发文件).md" beforeDir="false" afterPath="$PROJECT_DIR$/../../2.网络编程-多用户通信系统(推消息、私聊、发文件).md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../QQSClient/src/main/java/com/zhangjingqi/service/MessageClientService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../2.网络编程-多用户通信系统(推消息、私聊、发文件).md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../QQSClient/src/main/java/com/zhangjingqi/common/MessageType.java" beforeDir="false" afterPath="$PROJECT_DIR$/../QQSClient/src/main/java/com/zhangjingqi/common/MessageType.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../QQSClient/src/main/java/com/zhangjingqi/service/ClientConnectServerThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/../QQSClient/src/main/java/com/zhangjingqi/service/ClientConnectServerThread.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../QQSClient/src/main/java/com/zhangjingqi/service/UserClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../QQSClient/src/main/java/com/zhangjingqi/service/UserClientService.java" afterDir="false" />
@@ -88,7 +89,7 @@
       <recent name="com.zhangjingqi.socket" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.QQView2">
+  <component name="RunManager" selected="Application.QQFrame">
     <configuration name="QQFrame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.zhangjingqi.qqframe.QQFrame" />
       <module name="QQServer" />
@@ -173,8 +174,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.QQFrame" />
         <item itemvalue="Application.QQView" />
+        <item itemvalue="Application.QQFrame" />
         <item itemvalue="Application.QQServer" />
         <item itemvalue="Application.test" />
         <item itemvalue="Application.UDPSenderB" />
@@ -201,7 +202,8 @@
       <workItem from="1701827493764" duration="17178000" />
       <workItem from="1701875631833" duration="1513000" />
       <workItem from="1701932497414" duration="2539000" />
-      <workItem from="1701955147011" duration="9323000" />
+      <workItem from="1701955147011" duration="9393000" />
+      <workItem from="1702042876779" duration="7726000" />
     </task>
     <servers />
   </component>
