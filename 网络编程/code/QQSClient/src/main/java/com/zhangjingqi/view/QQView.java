@@ -1,6 +1,7 @@
 package com.zhangjingqi.view;
 
 import com.sun.corba.se.impl.javax.rmi.CORBA.Util;
+import com.zhangjingqi.service.FileClientService;
 import com.zhangjingqi.service.MessageClientService;
 import com.zhangjingqi.service.UserClientService;
 import com.zhangjingqi.utils.Utility;
@@ -26,6 +27,7 @@ public class QQView {
 
     public MessageClientService messageClientService = new MessageClientService();
 
+    private FileClientService fileClientService = new FileClientService();
 
     public static void main(String[] args) {
         QQView qqView = new QQView();
@@ -70,7 +72,6 @@ public class QQView {
                                 case "1":
                                     //获取在线用户列表
                                     userClientService.onlineFriendList();
-
                                     break;
                                 case "2":
                                     //群发消息
@@ -88,6 +89,14 @@ public class QQView {
                                     messageClientService.sendMessageToOne(contentToAll,userId,getterId);
                                     break;
                                 case "4":
+                                    System.out.println("正在发送文件....");
+                                    System.out.print("请输入文件接收者：");
+                                    String getter = Utility.readString(50);
+                                    System.out.print("\n请输入想要发送文件的路径：");
+                                    String src = Utility.readString(50);
+                                    System.out.print("\n请输入想要将文件存储在对方哪里：");
+                                    String dest = Utility.readString(50);
+                                    fileClientService.sendFileToOne(src,dest,userId,getter);
                                     break;
                                 case "9":
                                     loop = false;

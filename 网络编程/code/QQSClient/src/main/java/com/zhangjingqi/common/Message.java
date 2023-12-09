@@ -39,4 +39,18 @@ public class Message implements Serializable {
      */
     private String sendTime;
 
+    /**
+     * 扩展好文件香菇那的成员变量
+     */
+    //字节数组存储文件字节
+    private byte[] fileBytes;
+
+    //文件大小的长度初始化为0
+    private int fileLen = 0;
+
+    //文件的目的地是哪个位置
+    private String dest;
+
+    //传输的是哪个文件(原文件路径)
+    private String src;
 }

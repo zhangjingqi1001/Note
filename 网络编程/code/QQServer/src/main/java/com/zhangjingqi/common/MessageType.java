@@ -41,6 +41,10 @@ public enum MessageType {
      * 群发消息
      */
     MESSAGE_TO_ALL_EXIT("7"),
+    /**
+     * 发送文件
+     */
+    MESSAGE_FILE_MES("8"),
     ;
 
     private final String code;

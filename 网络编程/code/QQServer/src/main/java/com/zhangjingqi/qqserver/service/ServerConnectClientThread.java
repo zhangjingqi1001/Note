@@ -98,7 +98,15 @@ public class ServerConnectClientThread extends Thread {
 
                     }
 
-                } else {
+                }else if (MessageType.MESSAGE_FILE_MES.getCode().equals(message.getMesType())){
+                    System.out.println("用户" + message.getSender() + "向用户" + message.getGetter() + "发送文件" + message.getSrc() + "并存储到对方电脑目录" + message.getDest());
+                    //发送文件
+                    Socket socket = ManagerServerConnectServerThread.getClientThread(message.getGetter()).getSocket();
+                    ObjectOutputStream oos = new ObjectOutputStream(socket.getOutputStream());
+
+                    oos.writeObject(message);
+                    oos.flush();
+                }else {
                     System.out.println("其他类型暂时不处理");
                 }
 
