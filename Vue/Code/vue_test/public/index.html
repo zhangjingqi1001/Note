@@ -1,31 +1,25 @@
 <!DOCTYPE html>
 <html lang="">
-
-<head>
-    <meta charset="UTF-8">
-
-    <!--针对IE浏览器的一个特殊配置，让IE浏览器以最高的渲染级别渲染页面-->
+  <head>
+    <meta charset="utf-8">
+		<!-- 针对IE浏览器的一个特殊配置，含义是让IE浏览器以最高的渲染级别渲染页面 -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!--开启移动端的理想视口-->
+		<!-- 开启移动端的理想视口 -->
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <!--图标。BASE_URL指的是public所在的位置,所以直接在BASE_URL文件夹里找图标即可-->
+		<!-- 配置页签图标 -->
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-
-    <title>
-        <!--配置网页标题-->
-        <!--下面这一串代码的意思就是去package.json文件夹中找到"name": "vue_test",并将vue_test作为网站标题-->
-        <%= htmlWebpackPlugin.options.title %>
-    </title>
-</head>
-
-<body>
-
-    <!--容器 -->
-    <div id="app">
-        <!-- 容器里面的模板 -->
-        <App></App>
-    </div>
-
-</body>
-
+		<!-- 引入第三方样式 -->
+		<!-- <link rel="stylesheet" href="<%= BASE_URL %>css/bootstrap.css"> -->
+		<!-- 配置网页标题 -->
+    <title>硅谷系统</title>
+  </head>
+  <body>
+		<!-- 当浏览器不支持js时noscript中的元素就会被渲染 -->
+    <noscript>
+      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+		<!-- 容器 -->
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
 </html>

@@ -1,22 +1,22 @@
 <template>
   <div>
-    <Student></Student>
-    <hr>
     <School></School>
+    <Student></Student>
   </div>
 </template>
 
 <script>
 //引入组件
-import Student from "./components/Student.vue";
 import School from "./components/School.vue";
+import Student from "./components/Student.vue";
 
 export default {
   name: "App",
 
   components: {
-    Student,School
-  },
+    School,
+    Student,
+  }
 };
 </script>
 

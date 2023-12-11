@@ -1,11 +1,12 @@
 <template>
-  <div class="test">
-    <h2>学生姓名：{{ name }}</h2>
+  <div>
+    <h2 >学生姓名：{{ name }}</h2>
     <h2>学生性别：{{ sex }}</h2>
   </div>
 </template>
 
 <script>
+
 export default {
   //组件名称
   name: "Student",
@@ -19,7 +20,4 @@ export default {
 </script>
 
 <style scoped>
-.test {
-  background: orange;
-}
 </style>

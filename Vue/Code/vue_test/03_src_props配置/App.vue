@@ -1,21 +1,22 @@
 <template>
   <div>
+    <Student name="李四" sex="女" age="18"></Student>
+    <hr>
     <Student></Student>
     <hr>
-    <School></School>
+    <Student></Student>
   </div>
 </template>
 
 <script>
 //引入组件
 import Student from "./components/Student.vue";
-import School from "./components/School.vue";
 
 export default {
   name: "App",
 
   components: {
-    Student,School
+    Student,
   },
 };
 </script>
