@@ -8,18 +8,10 @@
         <MyHeader :receive="receive"></MyHeader>
 
         <!-- List -->
-        <MyList
-          :todos="todos"
-          :checkTodo="checkTodo"
-          :deleteItem="deleteItem"
-        ></MyList>
-
+        <!-- <MyList :todos="todos" :checkTodo="checkTodo"></MyList> -->
+        <MyList :todos="todos"></MyList>
         <!-- 底部 -->
-        <MyFooter
-          :todos="todos"
-          :checkAllTodo="checkAllTodo"
-          :clearAllTodo="clearAllTodo"
-        ></MyFooter>
+        <MyFooter></MyFooter>
       </div>
     </div>
   </div>
@@ -64,27 +56,6 @@ export default {
         if (todo.id === id) {
           todo.done = !todo.done;
         }
-      });
-    },
-    //删除某个item
-    deleteItem(id) {
-      console.log("app组件删除item的id:" + id);
-      this.todos = this.todos.filter((todo) => {
-        return todo.id !== id;
-      });
-    },
-
-    // 全选或者全不选
-    checkAllTodo(done) {
-      this.todos.forEach((todo) => {
-        todo.done = done;
-      });
-    },
-
-    // 清除所有已经完成的todo
-    clearAllTodo() {
-      this.todos = this.todos.filter((todo) => {
-        return !todo.done;
       });
     },
   },
