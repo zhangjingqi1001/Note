@@ -1,82 +1,78 @@
 <template>
-  <li>
-    <label>
-      <input
-        type="checkbox"
-        :checked="todo.done"
-        @click="handleCheck(todo.id)"
-      />
-      <span>{{ todo.title }}</span>
-    </label>
-    <button class="btn btn-danger" @click="toDeleteItem(todo.id)">删除</button>
-  </li>
+	<li>
+		<label>
+			<input type="checkbox" :checked="todo.done" @change="handleCheck(todo.id)"/>
+			<!-- 如下代码也能实现功能，但是不太推荐，因为有点违反原则，因为修改了props -->
+			<!-- <input type="checkbox" v-model="todo.done"/> -->
+			<span>{{todo.title}}</span>
+		</label>
+		<button class="btn btn-danger" @click="handleDelete(todo.id)">删除</button>
+	</li>
 </template>
 
 <script>
-export default {
-  name: "MyItem",
-  props: ["todo", "checkTodo", "deleteItem"],
-  methods: {
-    //响应勾选的函数
-    handleCheck(id) {
-      console.log("复选框id:" + id);
-      // 通知App组将将对应的todo对象的done值取反
-      this.checkTodo(id);
-    },
-    // 删除item
-    toDeleteItem(id) {
-      if (confirm("确定删除吗？")) {
-        console.log("复选框id:" + id);
-        this.deleteItem(id);
-      }
-    },
-  },
-};
+	export default {
+		name:'MyItem',
+		//声明接收todo、checkTodo、deleteTodo
+		props:['todo','checkTodo','deleteTodo'],
+		methods: {
+			//勾选or取消勾选
+			handleCheck(id){
+				//通知App组件将对应的todo对象的done值取反
+				this.checkTodo(id)
+			},
+			//删除
+			handleDelete(id){
+				if(confirm('确定删除吗？')){
+					//通知App组件将对应的todo对象删除
+					this.deleteTodo(id)
+				}
+			}
+		},
+	}
 </script>
 
 <style scoped>
-/* 鼠标悬浮时会有一个背景色 */
-li:hover {
-  background: #ddd;
-}
-/* 当鼠标悬浮在哪个item时，哪个item的悬浮按钮就会出现 */
-li:hover button {
-  float: right;
-  display: block;
-  margin-top: 3px;
-}
-li button {
-  float: right;
-  display: none;
-  margin-top: 3px;
-}
+	/*item*/
+	li {
+		list-style: none;
+		height: 36px;
+		line-height: 36px;
+		padding: 0 5px;
+		border-bottom: 1px solid #ddd;
+	}
 
-/*item*/
-li {
-  list-style: none;
-  height: 36px;
-  line-height: 36px;
-  padding: 0 5px;
-  border-bottom: 1px solid #ddd;
-}
+	li label {
+		float: left;
+		cursor: pointer;
+	}
 
-li label {
-  float: left;
-  cursor: pointer;
-}
+	li label li input {
+		vertical-align: middle;
+		margin-right: 6px;
+		position: relative;
+		top: -1px;
+	}
 
-li label li input {
-  vertical-align: middle;
-  margin-right: 6px;
-  position: relative;
-  top: -1px;
-}
+	li button {
+		float: right;
+		display: none;
+		margin-top: 3px;
+	}
 
-li:before {
-  content: initial;
-}
+	li:before {
+		content: initial;
+	}
 
-li:last-child {
-  border-bottom: none;
-}
+	li:last-child {
+		border-bottom: none;
+	}
+
+	li:hover{
+		background-color: #ddd;
+	}
+	
+	li:hover button{
+		display: block;
+	}
 </style>

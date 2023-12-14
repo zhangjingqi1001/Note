@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>localStorage</title>
+</head>
+
+<body>
+    <h2>localStorage</h2>
+    <button onclick="saveData()">点我保存数据</button>
+    <button onclick="readData()">点我读取数据</button>
+    <button onclick="deleteData()">点我删除数据</button>
+    <button onclick="deleteAllData()">点我清空数据</button>
+
+
+
+    <script type="text/javascript">
+        let p = { name: '张三', age: 18 }
+
+        function saveData() {
+            // setItem键值对的方式，而且是字符串，
+            window.localStorage.setItem('msg', 'hello!')
+
+            // 对象千万别让他调用tostring，调完之后不认识了
+            // window.localStorage.setItem('person',p)
+            // 如果这么存储的话在浏览器中显示的是[object Object]，也就是对象调用tostring时才会出现这种情况
+
+            // JSON.stringify 把一个对象变成字符串的模样，并且能体现出来里面的内容
+            // 并且如果对象中属性的值是数字的话，仍然会保持数字的形式，不会变成字符串
+            window.localStorage.setItem('person', JSON.stringify(p))
+        }
+        function readData() {
+            console.log(localStorage.getItem('msg'))
+            console.log(localStorage.getItem('person'))
+
+            const result = localStorage.getItem('person')
+
+            // JSON.parse将数据转化成js对象形式
+            console.log(JSON.parse(result))
+        }
+        function deleteData() {
+            localStorage.removeItem('msg')
+        }
+
+        function deleteAllData() {
+            localStorage.clear()
+        }
+    </script>
+</body>
+
+
+</html>
