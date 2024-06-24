@@ -1,0 +1,15 @@
+#我们不用再自己写编码了，直接配置就好了
+spring:
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    #   database: 0   #默认就是0号库
+    #   password: 有密码的就可以设置 我这里没有设置密码
+    lettuce:
+      pool:
+        max-active: 8 #最大连接
+        max-idle: 8   #最大控线连接
+        min-idle: 0   #最小空闲连接
+        max-wait: 100 #连接等待时间
+
+

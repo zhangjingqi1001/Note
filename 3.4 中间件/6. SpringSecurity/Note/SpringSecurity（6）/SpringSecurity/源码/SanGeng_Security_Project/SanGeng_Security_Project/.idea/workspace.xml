@@ -1,0 +1,1373 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="8f5e0ef8-2963-44bb-8473-f9935e967a38" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../../../../Code/SpringSecurity-database-authentication/src/main/java/com/zhangjingqi/Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../Code/SpringSecurity-database-authentication/target/classes/com/zhangjingqi/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../Code/SpringSecurity-database-authentication/target/classes/com/zhangjingqi/Test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../Code/SpringSecurity-database-authentication/target/classes/com/zhangjingqi/vo/SecurityUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../Code/SpringSecurity-database-authentication/target/classes/com/zhangjingqi/vo/SecurityUser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../Code/SpringSecurity/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../Code/SpringSecurity/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../Code/SpringSecurity/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../Code/SpringSecurity/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../Code/SpringSecurity/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_11.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../Code/SpringSecurity/.idea/libraries/Maven__ch_qos_logback_logback_core_1_2_11.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../Code/SpringSecurity/.idea/libraries/Maven__com_alibaba_druid_1_2_15.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../Code/SpringSecurity/.idea/libraries/Maven__com_alibaba_druid_spring_boot_starter_1_2_15.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../Code/SpringSecurity/.idea/libraries/Maven__com_alibaba_fastjson2_fastjson2_2_0_12.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../Code/SpringSecurity/.idea/libraries/Maven__com_alibaba_fastjson2_fastjson2_extension_2_0_12.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../Code/SpringSecurity/.idea/libraries/Maven__com_alibaba_fastjson_2_0_12.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../Code/SpringSecurity/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_13_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../Code/SpringSecurity/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_13_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../Code/SpringSecurity/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_13_4_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../Code/SpringSecurity/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_13_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../Code/SpringSecurity/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_13_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../Code/SpringSecurity/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_parameter_names_2_13_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../Code/SpringSecurity/.idea/libraries/Maven__com_jayway_jsonpath_json_path_2_6_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../Code/SpringSecurity/.idea/libraries/Maven__com_mysql_mysql_connector_j_8_0_31.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../Code/SpringSecurity/.idea/libraries/Maven__com_vaadin_external_google_android_json_0_0_20131108_vaadin1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../Code/SpringSecurity/.idea/libraries/Maven__com_zaxxer_HikariCP_4_0_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../Code/SpringSecurity/.idea/libraries/Maven__jakarta_activation_jakarta_activation_api_1_2_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../Code/SpringSecurity/.idea/libraries/Maven__jakarta_annotation_jakarta_annotation_api_1_3_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../Code/SpringSecurity/.idea/libraries/Maven__jakarta_xml_bind_jakarta_xml_bind_api_2_3_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../Code/SpringSecurity/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_11_22.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../Code/SpringSecurity/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_11_22.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../Code/SpringSecurity/.idea/libraries/Maven__net_minidev_accessors_smart_2_4_8.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../Code/SpringSecurity/.idea/libraries/Maven__net_minidev_json_smart_2_4_8.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../Code/SpringSecurity/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_17_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../Code/SpringSecurity/.idea/libraries/Maven__org_apache_logging_log4j_log4j_to_slf4j_2_17_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../Code/SpringSecurity/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_9_0_68.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../Code/SpringSecurity/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_9_0_68.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../Code/SpringSecurity/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_9_0_68.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../Code/SpringSecurity/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../Code/SpringSecurity/.idea/libraries/Maven__org_assertj_assertj_core_3_21_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../Code/SpringSecurity/.idea/libraries/Maven__org_hamcrest_hamcrest_2_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../Code/SpringSecurity/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_8_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../Code/SpringSecurity/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_8_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../Code/SpringSecurity/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_8_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../Code/SpringSecurity/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_8_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../Code/SpringSecurity/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_8_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../Code/SpringSecurity/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_8_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../Code/SpringSecurity/.idea/libraries/Maven__org_mockito_mockito_core_4_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../Code/SpringSecurity/.idea/libraries/Maven__org_mockito_mockito_junit_jupiter_4_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../Code/SpringSecurity/.idea/libraries/Maven__org_mybatis_mybatis_3_5_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../Code/SpringSecurity/.idea/libraries/Maven__org_mybatis_mybatis_spring_2_0_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../Code/SpringSecurity/.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_autoconfigure_2_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../Code/SpringSecurity/.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_starter_2_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../Code/SpringSecurity/.idea/libraries/Maven__org_objenesis_objenesis_3_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../Code/SpringSecurity/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../Code/SpringSecurity/.idea/libraries/Maven__org_ow2_asm_asm_9_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../Code/SpringSecurity/.idea/libraries/Maven__org_projectlombok_lombok_1_18_26.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../Code/SpringSecurity/.idea/libraries/Maven__org_skyscreamer_jsonassert_1_5_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../Code/SpringSecurity/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_36.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../Code/SpringSecurity/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_36.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../Code/SpringSecurity/.idea/libraries/Maven__org_springframework_boot_spring_boot_2_6_13.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../Code/SpringSecurity/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_6_13.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../Code/SpringSecurity/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_2_6_13.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../Code/SpringSecurity/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_2_6_13.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../Code/SpringSecurity/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_json_2_6_13.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../Code/SpringSecurity/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_2_6_13.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../Code/SpringSecurity/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_security_2_4_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../Code/SpringSecurity/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_2_6_13.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../Code/SpringSecurity/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_2_6_13.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../Code/SpringSecurity/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_2_6_13.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../Code/SpringSecurity/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_2_6_13.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../Code/SpringSecurity/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_2_6_13.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../Code/SpringSecurity/.idea/libraries/Maven__org_springframework_security_spring_security_config_5_6_8.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../Code/SpringSecurity/.idea/libraries/Maven__org_springframework_security_spring_security_core_5_6_8.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../Code/SpringSecurity/.idea/libraries/Maven__org_springframework_security_spring_security_crypto_5_6_8.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../Code/SpringSecurity/.idea/libraries/Maven__org_springframework_security_spring_security_web_5_6_8.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../Code/SpringSecurity/.idea/libraries/Maven__org_springframework_spring_aop_5_3_23.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../Code/SpringSecurity/.idea/libraries/Maven__org_springframework_spring_beans_5_3_23.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../Code/SpringSecurity/.idea/libraries/Maven__org_springframework_spring_context_5_3_23.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../Code/SpringSecurity/.idea/libraries/Maven__org_springframework_spring_core_5_3_23.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../Code/SpringSecurity/.idea/libraries/Maven__org_springframework_spring_expression_5_3_23.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../Code/SpringSecurity/.idea/libraries/Maven__org_springframework_spring_jcl_5_3_23.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../Code/SpringSecurity/.idea/libraries/Maven__org_springframework_spring_jdbc_5_3_23.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../Code/SpringSecurity/.idea/libraries/Maven__org_springframework_spring_test_5_3_23.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../Code/SpringSecurity/.idea/libraries/Maven__org_springframework_spring_tx_5_3_23.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../Code/SpringSecurity/.idea/libraries/Maven__org_springframework_spring_web_5_3_23.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../Code/SpringSecurity/.idea/libraries/Maven__org_springframework_spring_webmvc_5_3_23.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../Code/SpringSecurity/.idea/libraries/Maven__org_xmlunit_xmlunit_core_2_8_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../Code/SpringSecurity/.idea/libraries/Maven__org_yaml_snakeyaml_1_29.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../Code/SpringSecurity/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../Code/SpringSecurity/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../Code/SpringSecurity/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../Code/SpringSecurity/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../Code/SpringSecurity/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../SpringSecurity.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../SpringSecurity.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_2_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_fastjson_1_2_33.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_3_4_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_annotation_3_4_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_boot_starter_3_4_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_core_3_4_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_extension_3_4_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_12_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_12_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_12_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_12_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_12_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_parameter_names_2_12_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_jsqlparser_jsqlparser_4_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_jayway_jsonpath_json_path_2_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_external_google_android_json_0_0_20131108_vaadin1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_zaxxer_HikariCP_4_0_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_jsonwebtoken_jjwt_0_9_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_lettuce_lettuce_core_6_1_2_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_buffer_4_1_65_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_4_1_65_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_common_4_1_65_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_handler_4_1_65_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_resolver_4_1_65_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_4_1_65_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_projectreactor_reactor_core_3_4_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_activation_jakarta_activation_api_1_2_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_annotation_jakarta_annotation_api_1_3_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_xml_bind_jakarta_xml_bind_api_2_3_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_25.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_10_22.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_10_22.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_accessors_smart_2_4_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_json_smart_2_4_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_14_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_to_slf4j_2_14_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_9_0_46.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_9_0_46.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_9_0_46.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_assertj_assertj_core_3_19_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_2_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_annotations_13_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_kotlin_kotlin_stdlib_1_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_kotlin_kotlin_stdlib_common_1_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_kotlin_kotlin_stdlib_jdk7_1_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_kotlin_kotlin_stdlib_jdk8_1_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_7_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_7_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_7_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_7_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_7_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_7_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_3_9_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_junit_jupiter_3_9_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_5_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_2_0_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_3_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_9_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_18_20.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_reactivestreams_reactive_streams_1_0_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_skyscreamer_jsonassert_1_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_30.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_30.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_2_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_2_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_redis_2_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_2_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_json_2_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_2_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_security_2_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_2_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_2_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_2_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_2_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_2_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_2_5_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_keyvalue_2_5_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_redis_2_5_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_config_5_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_core_5_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_web_5_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_3_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_3_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_3_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_5_3_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_3_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_3_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_3_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_5_3_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_oxm_5_3_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_5_3_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_3_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_3_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_3_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_xmlunit_xmlunit_core_2_8_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_28.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/SanGeng_Security_Project$MapperTest_testEncoder.ic" NAME="MapperTest.testEncoder Coverage Results" MODIFIED="1639917150719" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.sangeng.*</FILTER>
+    </SUITE>
+  </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="209" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SanGengSecurityQuickStart/src/main/java/com/sangeng/controller/HelloController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="10" column="23" lean-forward="true" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
+              <folding>
+                <element signature="e#263#264#0" expanded="true" />
+                <element signature="e#293#294#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SanGengSecurityQuickStart/src/main/java/com/sangeng/handler/SGSuccessHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="299">
+              <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/SanGengSecurityQuickStart/src/main/java/com/sangeng/config/SecurityConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="16">
+              <caret line="10" selection-start-line="10" selection-end-line="36" selection-end-column="1" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://D:/Develop/maven_repository2/org/springframework/security/spring-security-config/5.5.0/spring-security-config-5.5.0-sources.jar!/org/springframework/security/config/annotation/web/configurers/LogoutConfigurer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="166">
+              <caret line="209" column="72" selection-start-line="209" selection-start-column="52" selection-end-line="209" selection-end-column="72" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SanGengSecurityQuickStart/src/main/java/com/sangeng/handler/SGLogoutSuccessHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="174">
+              <caret line="10" selection-start-line="10" selection-end-line="17" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SanGengSecurityQuickStart/src/main/java/com/sangeng/SecurityApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="11" column="32" lean-forward="true" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://D:/Develop/maven_repository2/org/springframework/security/spring-security-web/5.5.0/spring-security-web-5.5.0-sources.jar!/org/springframework/security/web/authentication/logout/LogoutFilter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="128">
+              <caret line="91" column="38" lean-forward="true" selection-start-line="91" selection-start-column="38" selection-end-line="91" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://D:/Develop/maven_repository2/org/springframework/security/spring-security-web/5.5.0/spring-security-web-5.5.0-sources.jar!/org/springframework/security/web/authentication/UsernamePasswordAuthenticationFilter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="275">
+              <caret line="47" column="83" selection-start-line="47" selection-start-column="83" selection-end-line="47" selection-end-column="83" />
+              <folding>
+                <element signature="e#4840#4841#0" expanded="true" />
+                <element signature="e#4898#4899#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://D:/Develop/maven_repository2/org/springframework/security/spring-security-web/5.5.0/spring-security-web-5.5.0-sources.jar!/org/springframework/security/web/authentication/AbstractAuthenticationProcessingFilter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="133" column="40" selection-start-line="133" selection-start-column="12" selection-end-line="133" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SanGengSecurityQuickStart/src/main/java/com/sangeng/handler/SGFailureHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="213">
+              <caret line="11" selection-start-line="11" selection-end-line="17" selection-end-column="1" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Mybatis Mapper" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>401</find>
+      <find>succ</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../../../../.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/SanGengSecurityQuickStart/src/main/java/com/sangeng/controller/HelloController.java" />
+        <option value="$PROJECT_DIR$/SanGengSecurityQuickStart/pom.xml" />
+        <option value="$PROJECT_DIR$/SanGengSecurityQuickStart/src/main/java/com/sangeng/SecurityApplication.java" />
+        <option value="$PROJECT_DIR$/SanGengTokenDemo/src/main/java/com/sangeng/utils/FastJsonRedisSerializer.java" />
+        <option value="$PROJECT_DIR$/SanGengTokenDemo/src/main/java/com/sangeng/config/RedisConfig.java" />
+        <option value="$PROJECT_DIR$/SanGengTokenDemo/src/main/java/com/sangeng/domain/ResponseResult.java" />
+        <option value="$PROJECT_DIR$/SanGengTokenDemo/src/main/java/com/sangeng/utils/RedisCache.java" />
+        <option value="$PROJECT_DIR$/SanGengTokenDemo/src/main/java/com/sangeng/utils/WebUtils.java" />
+        <option value="$PROJECT_DIR$/SanGengTokenDemo/pom.xml" />
+        <option value="$PROJECT_DIR$/SanGengTokenDemo/src/main/java/com/sangeng/mapper/UserMapper.java" />
+        <option value="$PROJECT_DIR$/SanGengTokenDemo/src/main/java/com/sangeng/domain/User.java" />
+        <option value="$PROJECT_DIR$/SanGengTokenDemo/src/main/java/com/sangeng/TokenApplication.java" />
+        <option value="$PROJECT_DIR$/SanGengTokenDemo/src/main/java/com/sangeng/service/UserDetailsServiceImpl.java" />
+        <option value="$PROJECT_DIR$/SanGengTokenDemo/src/main/java/com/sangeng/utils/JwtUtil.java" />
+        <option value="$PROJECT_DIR$/SanGengTokenDemo/src/main/java/com/sangeng/controller/LoginController.java" />
+        <option value="$PROJECT_DIR$/SanGengTokenDemo/src/main/java/com/sangeng/service/LoginServcie.java" />
+        <option value="$PROJECT_DIR$/SanGengTokenDemo/src/main/java/com/sangeng/service/impl/LoginServiceImpl.java" />
+        <option value="$PROJECT_DIR$/SanGengTokenDemo/src/main/java/com/sangeng/domain/LoginUser.java" />
+        <option value="$PROJECT_DIR$/SanGengTokenDemo/src/main/java/com/sangeng/domain/Menu.java" />
+        <option value="$PROJECT_DIR$/SanGengTokenDemo/src/main/java/com/sangeng/mapper/MenuMapper.java" />
+        <option value="$PROJECT_DIR$/SanGengTokenDemo/src/main/resources/mapper/MenuMapper.xml" />
+        <option value="$PROJECT_DIR$/SanGengTokenDemo/src/test/java/com/sangeng/MapperTest.java" />
+        <option value="$PROJECT_DIR$/SanGengTokenDemo/src/main/java/com/sangeng/service/impl/UserDetailsServiceImpl.java" />
+        <option value="$PROJECT_DIR$/SanGengTokenDemo/src/main/java/com/sangeng/filter/JwtAuthenticationTokenFilter.java" />
+        <option value="$PROJECT_DIR$/SanGengTokenDemo/src/main/java/com/sangeng/handler/AuthenticationEntryPointImpl.java" />
+        <option value="$PROJECT_DIR$/SanGengTokenDemo/src/main/java/com/sangeng/handler/AccessDeniedHandlerImpl.java" />
+        <option value="$PROJECT_DIR$/SanGengTokenDemo/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/SanGengTokenDemo/src/main/java/com/sangeng/config/CorsConfig.java" />
+        <option value="$PROJECT_DIR$/SanGengTokenDemo/src/main/java/com/sangeng/expression/SGExpressionRoot.java" />
+        <option value="$PROJECT_DIR$/SanGengTokenDemo/src/main/java/com/sangeng/controller/HelloController.java" />
+        <option value="$PROJECT_DIR$/SanGengTokenDemo/src/main/java/com/sangeng/config/SecurityConfig.java" />
+        <option value="$PROJECT_DIR$/SanGengSecurityQuickStart/src/main/java/com/sangeng/handler/SGSuccessHandler.java" />
+        <option value="$PROJECT_DIR$/SanGengSecurityQuickStart/src/main/java/com/sangeng/handler/SGFailureHandler.java" />
+        <option value="$PROJECT_DIR$/SanGengSecurityQuickStart/src/main/java/com/sangeng/handler/SGLogoutSuccessHandler.java" />
+        <option value="$PROJECT_DIR$/SanGengSecurityQuickStart/src/main/java/com/sangeng/config/SecurityConfig.java" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="E:\Soft\Maven\repository" />
+        <option name="mavenHome" value="$PROJECT_DIR$/../../../../../../../../../Soft/Maven/apache-maven-3.6.1-bin/apache-maven-3.6.1" />
+        <option name="userSettingsFile" value="D:\Develop\apache-maven-3.5.2\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="jdkForImporter" value="1.8" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="SanGengSecurityQuickStart" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="SanGengSecurityQuickStart" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="width" value="960" />
+    <option name="height" value="1030" />
+  </component>
+  <component name="ProjectId" id="2X4JWLld96UvnhBZlS5cq8sfaD8" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="AndroidView" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="SanGeng_Security_Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SanGengSecurityQuickStart" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SanGeng_Security_Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SanGengSecurityQuickStart" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SanGeng_Security_Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SanGengSecurityQuickStart" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SanGeng_Security_Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SanGengSecurityQuickStart" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SanGeng_Security_Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SanGengSecurityQuickStart" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SanGeng_Security_Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SanGengSecurityQuickStart" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="sangeng" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SanGeng_Security_Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SanGengSecurityQuickStart" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="sangeng" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SanGeng_Security_Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SanGengSecurityQuickStart" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="sangeng" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SanGeng_Security_Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SanGengSecurityQuickStart" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="sangeng" type="462c0819:PsiDirectoryNode" />
+              <item name="handler" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SanGeng_Security_Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SanGengTokenDemo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SanGeng_Security_Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SanGengTokenDemo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SanGeng_Security_Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SanGengTokenDemo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SanGeng_Security_Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SanGengTokenDemo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SanGeng_Security_Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SanGengTokenDemo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SanGeng_Security_Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SanGengTokenDemo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="sangeng" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SanGeng_Security_Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SanGengTokenDemo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="sangeng" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/Note/Note/SpringSecurity/Note/SpringSecurity（6）/SpringSecurity/源码/SanGeng_Security_Project/SanGeng_Security_Project&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.importing&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;33a4fe52aba81b57c517c012ffa29189&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.sangeng.controller" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.SecurityApplication">
+    <configuration name="JwtUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sangeng.utils.JwtUtil" />
+      <module name="SanGengTokenDemo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sangeng.utils.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MapperTest.TestBCryptPasswordEncoder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SanGengTokenDemo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sangeng.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.sangeng" />
+      <option name="MAIN_CLASS_NAME" value="com.sangeng.MapperTest" />
+      <option name="METHOD_NAME" value="TestBCryptPasswordEncoder" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MapperTest.testSelectPermsByUserId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SanGengTokenDemo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sangeng.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.sangeng" />
+      <option name="MAIN_CLASS_NAME" value="com.sangeng.MapperTest" />
+      <option name="METHOD_NAME" value="testSelectPermsByUserId" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SecurityApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="SanGengSecurityQuickStart" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.sangeng.SecurityApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sangeng.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TokenApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="SanGengTokenDemo" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.sangeng.TokenApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sangeng.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.JwtUtil" />
+      <item itemvalue="JUnit.MapperTest.TestBCryptPasswordEncoder" />
+      <item itemvalue="JUnit.MapperTest.testSelectPermsByUserId" />
+      <item itemvalue="Spring Boot.TokenApplication" />
+      <item itemvalue="Spring Boot.SecurityApplication" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.SecurityApplication" />
+        <item itemvalue="Spring Boot.TokenApplication" />
+        <item itemvalue="JUnit.MapperTest.testSelectPermsByUserId" />
+        <item itemvalue="Application.JwtUtil" />
+        <item itemvalue="JUnit.MapperTest.TestBCryptPasswordEncoder" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8f5e0ef8-2963-44bb-8473-f9935e967a38" name="Default Changelist" comment="" />
+      <created>1639897466895</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1639897466895</updated>
+      <workItem from="1639897470825" duration="3122000" />
+      <workItem from="1639915421566" duration="14536000" />
+      <workItem from="1640137507256" duration="8436000" />
+      <workItem from="1640500492851" duration="7214000" />
+      <workItem from="1697882450538" duration="159000" />
+      <workItem from="1697882644789" duration="2422000" />
+      <workItem from="1697945782099" duration="1285000" />
+      <workItem from="1698024191651" duration="13000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="MapperTest_testEncoder - 2021.12.19 at 20h 32m 03s.xml">
+      <configuration name="MapperTest.testEncoder" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MapperTest_testEncoder - 2021.12.19 at 20h 32m 33s.xml">
+      <configuration name="MapperTest.testEncoder" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MapperTest_TestBCryptPasswordEncoder - 2021.12.19 at 20h 45m 41s.xml">
+      <configuration name="MapperTest.TestBCryptPasswordEncoder" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MapperTest_TestBCryptPasswordEncoder - 2021.12.19 at 20h 47m 34s.xml">
+      <configuration name="MapperTest.TestBCryptPasswordEncoder" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MapperTest_TestBCryptPasswordEncoder - 2021.12.19 at 20h 47m 49s.xml">
+      <configuration name="MapperTest.TestBCryptPasswordEncoder" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MapperTest_TestBCryptPasswordEncoder - 2021.12.19 at 20h 48m 58s.xml">
+      <configuration name="MapperTest.TestBCryptPasswordEncoder" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MapperTest_TestBCryptPasswordEncoder - 2021.12.19 at 20h 51m 22s.xml">
+      <configuration name="MapperTest.TestBCryptPasswordEncoder" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MapperTest_testSelectPermsByUserId - 2021.12.22 at 16h 12m 02s.xml">
+      <configuration name="MapperTest.testSelectPermsByUserId" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="33308000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26089874" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2659123" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.33097595" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32956153" />
+      <window_info anchor="bottom" id="Spring" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="10" />
+      <window_info anchor="bottom" id="Java Enterprise" order="11" />
+      <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="13" show_stripe_button="false" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Codota" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Word Book" order="6" side_tool="true" />
+      <window_info anchor="right" id="SourceRemark" order="7" side_tool="true" />
+      <window_info anchor="right" id="Maven Projects" order="8" weight="0.3297587" />
+      <window_info anchor="right" id="Database" order="9" />
+      <window_info anchor="right" id="Palette&#9;" order="10" />
+      <window_info anchor="right" id="Theme Preview" order="11" />
+      <window_info anchor="right" id="Coverage" order="12" side_tool="true" weight="0.32997987" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://D:/Develop/maven_repository2/org/springframework/security/spring-security-core/5.5.0/spring-security-core-5.5.0-sources.jar!/org/springframework/security/access/expression/SecurityExpressionRoot.java</url>
+          <line>87</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://D:/Develop/maven_repository2/org/springframework/security/spring-security-core/5.5.0/spring-security-core-5.5.0-sources.jar!/org/springframework/security/access/expression/SecurityExpressionRoot.java</url>
+          <line>101</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/SanGengTokenDemo/src/main/java/com/sangeng/expression/SGExpressionRoot.java</url>
+          <line>14</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://D:/Develop/maven_repository2/org/springframework/security/spring-security-config/5.5.0/spring-security-config-5.5.0-sources.jar!/org/springframework/security/config/annotation/web/configurers/ExpressionUrlAuthorizationConfigurer.java</url>
+          <line>340</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>run.getBean(DefaultSecurityFilterChain.class)</expression-string>
+        <language-id>JAVA</language-id>
+        <custom-info>org.springframework.security.web.DefaultSecurityFilterChain</custom-info>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>run</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/SanGengTokenDemo/src/main/java/com/sangeng/service/LoginServcie.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Develop/maven_repository2/org/springframework/security/spring-security-config/5.5.0/spring-security-config-5.5.0-sources.jar!/org/springframework/security/config/annotation/method/configuration/EnableGlobalMethodSecurity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="59" column="26" selection-start-line="59" selection-start-column="12" selection-end-line="59" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Develop/maven_repository2/org/springframework/security/spring-security-core/5.5.0/spring-security-core-5.5.0-sources.jar!/org/springframework/security/core/authority/SimpleGrantedAuthority.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="31" column="41" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Develop/maven_repository2/org/springframework/security/spring-security-core/5.5.0/spring-security-core-5.5.0-sources.jar!/org/springframework/security/core/GrantedAuthority.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="31" column="26" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Develop/maven_repository2/org/springframework/security/spring-security-core/5.5.0/spring-security-core-5.5.0-sources.jar!/org/springframework/security/authentication/dao/DaoAuthenticationProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="92" selection-start-line="92" selection-end-line="92" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SanGengTokenDemo/src/main/java/com/sangeng/domain/Menu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1250">
+          <caret line="58" column="4" lean-forward="true" selection-start-line="58" selection-start-column="4" selection-end-line="58" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SanGengTokenDemo/src/main/java/com/sangeng/domain/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Develop/maven_repository2/com/baomidou/mybatis-plus-boot-starter/3.4.3/mybatis-plus-boot-starter-3.4.3.jar!/com/baomidou/mybatisplus/autoconfigure/MybatisPlusProperties.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="31" column="80" lean-forward="true" selection-start-line="31" selection-start-column="53" selection-end-line="31" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SanGengTokenDemo/src/test/java/com/sangeng/MapperTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="45" column="31" selection-start-line="45" selection-start-column="31" selection-end-line="45" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SanGengTokenDemo/src/main/java/com/sangeng/mapper/MenuMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="9" column="36" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SanGengTokenDemo/src/main/resources/mapper/MenuMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="9" column="28" lean-forward="true" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SanGengTokenDemo/src/main/java/com/sangeng/domain/ResponseResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="331">
+          <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SanGengTokenDemo/src/main/java/com/sangeng/utils/WebUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="20" column="45" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Develop/maven_repository2/org/springframework/spring-web/5.3.7/spring-web-5.3.7-sources.jar!/org/springframework/http/HttpStatus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="185" column="13" selection-start-line="185" selection-start-column="4" selection-end-line="185" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SanGengTokenDemo/src/main/java/com/sangeng/handler/AccessDeniedHandlerImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="15" selection-start-line="15" selection-end-line="24" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SanGengTokenDemo/src/main/java/com/sangeng/config/CorsConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SanGengTokenDemo/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="9" column="12" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SanGengTokenDemo/src/main/java/com/sangeng/controller/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="17" column="31" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#781#782#0" expanded="true" />
+            <element signature="e#825#826#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SanGengTokenDemo/src/main/java/com/sangeng/handler/AuthenticationEntryPointImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="19" column="95" selection-start-line="19" selection-start-column="84" selection-end-line="19" selection-end-column="95" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SanGengTokenDemo/src/main/java/com/sangeng/utils/FastJsonRedisSerializer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="21" column="45" selection-start-line="21" selection-start-column="45" selection-end-line="21" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SanGengTokenDemo/src/main/java/com/sangeng/TokenApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#324#325#0" expanded="true" />
+            <element signature="e#390#391#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SanGengTokenDemo/src/main/java/com/sangeng/config/RedisConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="19" column="22" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Develop/maven_repository2/org/springframework/security/spring-security-core/5.5.0/spring-security-core-5.5.0-sources.jar!/org/springframework/security/access/prepost/PreAuthorize.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="39" column="33" selection-start-line="39" selection-start-column="33" selection-end-line="39" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SanGengTokenDemo/src/main/java/com/sangeng/service/impl/LoginServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SanGengTokenDemo/src/main/java/com/sangeng/service/impl/UserDetailsServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Program Files/Java/jdk1.8.0_172/jre/lib/rt.jar!/sun/reflect/NativeMethodAccessorImpl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Program Files/Java/jdk1.8.0_172/src.zip!/java/lang/reflect/Method.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="497" selection-start-line="497" selection-end-line="497" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Program Files/Java/jdk1.8.0_172/jre/lib/rt.jar!/sun/reflect/DelegatingMethodAccessorImpl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SanGengTokenDemo/src/main/java/com/sangeng/domain/LoginUser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="30" column="21" selection-start-line="30" selection-start-column="11" selection-end-line="30" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Develop/maven_repository2/org/springframework/security/spring-security-core/5.5.0/spring-security-core-5.5.0-sources.jar!/org/springframework/security/access/expression/SecurityExpressionRoot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="71" selection-start-line="71" selection-end-line="71" />
+          <folding>
+            <element signature="e#2413#2414#0" expanded="true" />
+            <element signature="e#2453#2454#0" expanded="true" />
+            <element signature="e#2528#2529#0" expanded="true" />
+            <element signature="e#2580#2581#0" expanded="true" />
+            <element signature="e#2637#2638#0" expanded="true" />
+            <element signature="e#2667#2668#0" expanded="true" />
+            <element signature="e#2731#2732#0" expanded="true" />
+            <element signature="e#2795#2796#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SanGengTokenDemo/src/main/java/com/sangeng/filter/JwtAuthenticationTokenFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="46" selection-start-line="46" selection-end-line="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SanGengTokenDemo/src/main/java/com/sangeng/expression/SGExpressionRoot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="9" selection-start-line="9" selection-end-line="20" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SanGengTokenDemo/src/main/java/com/sangeng/controller/HelloController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="11" column="53" lean-forward="true" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="53" />
+          <folding>
+            <element signature="e#428#429#0" expanded="true" />
+            <element signature="e#458#459#0" expanded="true" />
+            <element signature="e#530#531#0" expanded="true" />
+            <element signature="e#587#588#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Develop/maven_repository2/org/springframework/security/spring-security-config/5.5.0/spring-security-config-5.5.0-sources.jar!/org/springframework/security/config/annotation/web/configurers/ExpressionUrlAuthorizationConfigurer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="339" column="46" selection-start-line="339" selection-start-column="46" selection-end-line="339" selection-end-column="46" />
+          <folding>
+            <element signature="e#14397#14398#0" expanded="true" />
+            <element signature="e#14430#14431#0" expanded="true" />
+            <element signature="e#14645#14646#0" expanded="true" />
+            <element signature="e#14678#14679#0" expanded="true" />
+            <element signature="e#15183#15184#0" expanded="true" />
+            <element signature="e#15214#15215#0" expanded="true" />
+            <element signature="e#15440#15441#0" expanded="true" />
+            <element signature="e#15477#15478#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Develop/maven_repository2/org/springframework/security/spring-security-web/5.5.0/spring-security-web-5.5.0-sources.jar!/org/springframework/security/web/server/ui/LoginPageGeneratingWebFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="172" column="26" selection-start-line="172" selection-start-column="26" selection-end-line="172" selection-end-column="26" />
+          <folding>
+            <element signature="e#2100#2101#0" expanded="true" />
+            <element signature="e#2138#2139#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SanGengSecurityQuickStart/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="26" selection-start-line="26" selection-end-line="30" selection-end-column="21" />
+        </state>
+      </provider>
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SanGengTokenDemo/src/main/java/com/sangeng/config/SecurityConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="20" column="65" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="65" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Develop/maven_repository2/org/springframework/security/spring-security-config/5.5.0/spring-security-config-5.5.0-sources.jar!/org/springframework/security/config/annotation/web/configurers/FormLoginConfigurer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="77" column="11" selection-start-line="77" selection-start-column="11" selection-end-line="77" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Develop/maven_repository2/org/springframework/security/spring-security-config/5.5.0/spring-security-config-5.5.0-sources.jar!/org/springframework/security/config/annotation/web/builders/HttpSecurity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="1880" column="36" selection-start-line="1880" selection-start-column="36" selection-end-line="1880" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Develop/maven_repository2/org/springframework/security/spring-security-web/5.5.0/spring-security-web-5.5.0-sources.jar!/org/springframework/security/web/authentication/AuthenticationSuccessHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="40" column="17" selection-start-line="40" selection-start-column="17" selection-end-line="40" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Develop/maven_repository2/org/springframework/security/spring-security-config/5.5.0/spring-security-config-5.5.0-sources.jar!/org/springframework/security/config/annotation/web/configuration/WebSecurityConfigurerAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="355" column="25" lean-forward="true" selection-start-line="355" selection-start-column="25" selection-end-line="355" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SanGengSecurityQuickStart/src/main/java/com/sangeng/controller/HelloController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="10" column="23" lean-forward="true" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
+          <folding>
+            <element signature="e#263#264#0" expanded="true" />
+            <element signature="e#293#294#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SanGengSecurityQuickStart/src/main/java/com/sangeng/SecurityApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="11" column="32" lean-forward="true" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Develop/maven_repository2/org/springframework/security/spring-security-web/5.5.0/spring-security-web-5.5.0-sources.jar!/org/springframework/security/web/authentication/logout/LogoutFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="91" column="38" lean-forward="true" selection-start-line="91" selection-start-column="38" selection-end-line="91" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Develop/maven_repository2/org/springframework/security/spring-security-web/5.5.0/spring-security-web-5.5.0-sources.jar!/org/springframework/security/web/authentication/UsernamePasswordAuthenticationFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="47" column="83" selection-start-line="47" selection-start-column="83" selection-end-line="47" selection-end-column="83" />
+          <folding>
+            <element signature="e#4840#4841#0" expanded="true" />
+            <element signature="e#4898#4899#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Develop/maven_repository2/org/springframework/security/spring-security-web/5.5.0/spring-security-web-5.5.0-sources.jar!/org/springframework/security/web/authentication/AbstractAuthenticationProcessingFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="133" column="40" selection-start-line="133" selection-start-column="12" selection-end-line="133" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SanGengSecurityQuickStart/src/main/java/com/sangeng/handler/SGFailureHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="11" selection-start-line="11" selection-end-line="17" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Develop/maven_repository2/org/springframework/security/spring-security-config/5.5.0/spring-security-config-5.5.0-sources.jar!/org/springframework/security/config/annotation/web/configurers/LogoutConfigurer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="209" column="72" selection-start-line="209" selection-start-column="52" selection-end-line="209" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SanGengSecurityQuickStart/src/main/java/com/sangeng/handler/SGSuccessHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SanGengSecurityQuickStart/src/main/java/com/sangeng/handler/SGLogoutSuccessHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="10" selection-start-line="10" selection-end-line="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SanGengSecurityQuickStart/src/main/java/com/sangeng/config/SecurityConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="10" selection-start-line="10" selection-end-line="36" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Spring</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>SanGengTokenDemo</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: ch.qos.logback:logback-classic:1.2.3</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

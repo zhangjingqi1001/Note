@@ -1,0 +1,14 @@
+logging:
+  pattern:
+    dateformat: MM-dd HH:mm:ss:SSS
+spring:
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    virtual-host: /testhost
+    username: testall
+    password: guest
+    #开启publisher confirm机制并设置confirm类型
+    publisher-confirm-type: correlated
+    #开启publisher returns机制
+    publisher-returns: true

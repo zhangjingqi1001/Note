@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ed3a2dc4-0767-4434-a7b9-084fb649ada6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/config/RedisConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhangjingqi/pojo/User.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$PROJECT_DIR$/../../../../Soft/Maven/apache-maven-3.6.1-bin/apache-maven-3.6.1" />
+        <option name="userSettingsFile" value="E:\Soft\Maven\apache-maven-3.6.1-bin\apache-maven-3.6.1\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2RSjxrgBteTfdeJSMbWwkhG0312" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../hm-dianping" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
+  <component name="RunManager" selected="JUnit.RedisContextApplicationTests.testStringTemplate">
+    <configuration name="RedisContextApplicationTests.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Redis_context" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zhangjingqi.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.zhangjingqi" />
+      <option name="MAIN_CLASS_NAME" value="com.zhangjingqi.RedisContextApplicationTests" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RedisContextApplicationTests.testHash" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Redis_context" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zhangjingqi.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.zhangjingqi" />
+      <option name="MAIN_CLASS_NAME" value="com.zhangjingqi.RedisContextApplicationTests" />
+      <option name="METHOD_NAME" value="testHash" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RedisContextApplicationTests.testSaveUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Redis_context" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zhangjingqi.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.zhangjingqi" />
+      <option name="MAIN_CLASS_NAME" value="com.zhangjingqi.RedisContextApplicationTests" />
+      <option name="METHOD_NAME" value="testSaveUser" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RedisContextApplicationTests.testString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Redis_context" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zhangjingqi.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.zhangjingqi" />
+      <option name="MAIN_CLASS_NAME" value="com.zhangjingqi.RedisContextApplicationTests" />
+      <option name="METHOD_NAME" value="testString" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RedisContextApplicationTests.testStringTemplate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Redis_context" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zhangjingqi.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.zhangjingqi" />
+      <option name="MAIN_CLASS_NAME" value="com.zhangjingqi.RedisContextApplicationTests" />
+      <option name="METHOD_NAME" value="testStringTemplate" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RedisContextApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="Redis_context" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.zhangjingqi.RedisContextApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.RedisContextApplicationTests.testStringTemplate" />
+        <item itemvalue="JUnit.RedisContextApplicationTests.testSaveUser" />
+        <item itemvalue="JUnit.RedisContextApplicationTests.test" />
+        <item itemvalue="JUnit.RedisContextApplicationTests.testHash" />
+        <item itemvalue="JUnit.RedisContextApplicationTests.testString" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ed3a2dc4-0767-4434-a7b9-084fb649ada6" name="Changes" comment="" />
+      <created>1687250640315</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1687250640315</updated>
+      <workItem from="1687250642175" duration="9880000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
