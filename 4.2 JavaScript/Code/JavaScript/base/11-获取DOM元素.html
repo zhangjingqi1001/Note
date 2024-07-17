@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+  <title>Title</title>
+
+  <style>
+      .box {
+          width: 200px;
+          height: 200px;
+      }
+  </style>
+</head>
+<body>
+<div class="box">123</div>
+<div class="box">456</div>
+<ul>
+  <li>测试</li>
+  <li>测试</li>
+  <li>测试</li>
+  <li>测试</li>
+</ul>
+<!--JS可以借助CSS选择器获取DOM元素-->
+<script>
+  //1.获取匹配的第一个元素
+  // 获取第一个小ul li 中间有一个空格，和CSS是一样的
+  const li = document.querySelector('ul li:first-child')
+  console.log(li)
+
+  const liList = document.querySelectorAll('ul li')
+  console.log(liList)
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+      div {
+          width: 200px;
+          height: 200px;
+          background-color: pink;
+      }
+  </style>
+</head>
+<body>
+<div class="box"></div>
+<script>
+  //1.获取元素
+  const div = document.querySelector('.box')
+  //2.修改样式属性
+  div.style.width = '300px'
+  // css 属性的 - 连接符与 JavaScript 的 减运算符
+  // 冲突，所以要改成驼峰法
+  div.style.backgroundColor = 'red'
+  //添加边框
+  div.style.border = '2px solid blue'
+</script>
+</body>
+</html>

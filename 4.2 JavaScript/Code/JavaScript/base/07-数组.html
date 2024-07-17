@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+</head>
+
+<body>
+<script>
+  // let arr=['qwe',123]
+  // console.log(arr)
+  // let uname='张三'  //单引号
+  // let gender="男"  //双引号
+  // let goods=`小米` //反引号
+  // let tel='1388888888' //看上去是数字，其实是字符串
+  // let str='' //空字符串
+  //
+  // let age=18
+  // document.write(`我今年${age}岁了`)
+  //
+  // let isCool = true
+  // console.log(isCool)
+
+  // let num=10
+  // console.log(typeof num)
+  //
+  // let str='zhangsan'
+  // console.log(typeof str)
+  //
+  // let str1='10'
+  // console.log(typeof str1)
+  //
+  // let flag = false
+  // console.log(typeof flag)
+
+  // let str = '123'
+  // console.log(Number(str))
+
+  //1.将用户输入的数字转换成字符型
+  let year = +prompt('请输入年份:')
+
+  //2.判断  注意&&的权重比||高
+  if (year % 4 === 0 && year % 100 !== 0 || year % 400 === 0) {
+    console.log('闰年')
+  } else {
+    console.log('平年')
+  }
+
+</script>
+</body>
+
+</html>
